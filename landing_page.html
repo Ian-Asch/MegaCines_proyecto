@@ -1,19 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/landing_page.css">
+    <title>MegaCines</title>
+
 </head>
 
 <body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
 
-    <div>
+    <main>
 
-    </div>
+        <!-- SLIDER SECTION-->
+        <section>
+            <div class="slider">
+                <ul>
+                    <li><img src="imgs/purga.jpg" alt="purga"></li>
+                    <li><img src="imgs/venom.jpg" alt="venom"></li>
+                    <li><img src="imgs/balck_friday.png" alt="black"></li>
+                    <li><img src="imgs/war.jpg" alt="war"></li>
+                </ul>
 
+            </div>
+        </section>
+        <!-- SLIDER SECTION (FIN)-->
+
+        <!-- SECTION OBJETIVO (INICIO)-->
+
+        <section>
+            <div class="objetivo">
+
+                <h1>El inicio</h1>
+                <br>
+                <p>
+                    La razón por la cual se ha decidido crear este sitio es para brindar al publico la mejor experiencia a la hora<br> de disfrutar del mundo cinemátrografico desde la selección de la película de preferencia hasta el momento en el que
+                    se <br> realice el pago de las entradas, dando así el poder al público de decisión, la liberdad de escojer su cadena, sala y horario preferido desde la <br> comodidad de su hogar.
+
+                </p>
+            </div>
+
+
+
+            <div class="objetivo">
+
+                <h1>El desenlace</h1>
+                <br>
+                <p>
+                    Nuestro sitio web no solo esta enfocado en vender sino tambien vamos mas alla de ello por lo que agregamos secciones en las cuales nos pueden brindar comentarios <br> para poder mejorar la experiencia que tengas a la hora de usar nuestros
+                    servicios, el stiio también le permite ver las calificaciones de cada película para así tener un referencia real al momento de escojer la película y poder tener <br> un mejor criterio a la hora de recomendar la misma.
+
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="">- Sobre nosotros</a>
+                <!-- meter link del landing page del equipo aqui -->
+                <p>- Sobre el producto</p>
+                <p>- Terminos y conidciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="">- Contactenos</a>
+                <!-- meter link del landing page del equipo aqui tambien -->
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
