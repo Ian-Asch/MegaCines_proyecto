@@ -27,12 +27,27 @@ label{
     width: 40%;
     text-align: center;
     /* height: 350px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    /* background-color: blueviolet; */
 }
 #secc-imagen img{
     width: 30%;
     margin-bottom: 10px;
     border-radius: 10px;
 }
+#secc-imagen button{
+    /* width: 30%; */
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+/* #secc-imagen div{
+    background-color: #eb8f38;
+    display: flex;
+} */
+
 #secc-botones{
     /* background-color: aqua; */
     padding-top: 10px;
@@ -47,9 +62,13 @@ input{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     /* border: solid 1px #eb8f38; */
-    color: #eb8f38;
+    color: rgb(220,220,200);
 }
 input:focus{
-    border: solid 2px red !important;
+    border: solid 2px #eb8f38 !important;
+    outline: none;
     background-color: black;
+}
+.esconder{
+    display: none;
 }

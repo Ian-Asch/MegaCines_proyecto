@@ -32,53 +32,50 @@
             <div class="info-div">
                 <label for="nombre-usuario">Nombre:</label>
                 <p class="label-p" id="nombre-usuario">Juan</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-nombre" required>
             </div>
 
             <div class="info-div">
                 <label for="primer-apellido">Primer apellido:</label>
                 <p class="label-p" id="primer-apellido">Oviedo</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-primer-apellido" required>
             </div>
 
             <div class="info-div">
                 <label for="segundo-apellido">Segundo apellido:</label>
                 <p class="label-p" id="segundo-apellido">murillo</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-segundo-apellido" required>
             </div>
 
             <div class="info-div">
                 <label for="correo-usuario">Correo electronico:</label>
                 <p class="label-p" id="correo-usuario">juan@gmail.com</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-correo" required>
             </div>
 
             <div class="info-div">
                 <label for="identificacion-usuario">Identificacion:</label>
                 <p class="label-p" id="identificacion-usuario">1-4235-8753</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-cedula" required>
             </div>
 
             <div class="info-div">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
                 <p class="label-p" id="fecha-nacimiento">5-2-1990</p>
-                <input type="text" class="input-editar" id="" required>
+                <input type="text" class="esconder" id="input-nacimiento" required>
             </div>
 
             <div class="info-div">
                 <label for="edad-usuario">Edad:</label>
                 <p class="label-p" id="edad-usuario">31</p>
             </div>
-
-            <button type="button">Editar informacion</button>
         </div>
 
         <div id="secc-imagen">
             <img src="imgs/blank-profile.png">
 
-            <div>
-                <button type="button">Cambiar imagen</button>
-            </div>
+            <button type="button">Cambiar imagen</button>
+            <button type="button" id="boton-editar-info">Editar informacion</button>
         </div>
 
         <div id="secc-botones">
@@ -118,6 +115,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="js/perfil_usuario.js"></script>
 </body>
 
 </html>
