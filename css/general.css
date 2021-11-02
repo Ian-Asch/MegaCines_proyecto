@@ -34,8 +34,6 @@ header {
 
 header img {
     height: 100%;
-}
-header img:hover{
     cursor: pointer;
 }
 
