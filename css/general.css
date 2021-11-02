@@ -2,24 +2,28 @@
 a menos a que el equipo apruebe. Si necesita hacer cambios en su pagina
 por favor cree otro archivo css dedicado para esa pagina */
 
-html{
-    background-image: linear-gradient(#69057e,#50035f 30%,black);
+html {
+    background-image: linear-gradient(#69057e, #50035f 30%, black);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
     font-family: "Montserrat";
-    /* font-family: "Scheherazade New"; */  /*Este es la otra fuente por si acaso*/
+    /* font-family: "Scheherazade New"; */
+    /*Este es la otra fuente por si acaso*/
 }
-main{
-    color: rgb(220,220,220);
+
+main {
+    color: rgb(0, 200, 255);
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-header{
+
+header {
     background-color: black;
     height: 70px;
     display: flex;
@@ -27,37 +31,43 @@ header{
     font-weight: 500;
     margin-bottom: 30px;
 }
-header img{
+
+header img {
     height: 100%;
 }
-header a{
+
+header a {
     color: white;
     margin: 10px;
 }
-nav{
+
+nav {
     width: 100%;
     margin-left: 18px;
 }
-#btn-cerrar-sesion{
+
+#btn-cerrar-sesion {
     min-width: 120px;
     margin-right: 20px;
 }
 
-button{
+button {
     background-color: #fad80f;
     padding: 8px;
     border-radius: 8px;
     border: none;
     font-size: 12pt;
 }
-button:hover{
+
+button:hover {
     background-color: #eb8f38;
 }
-button:active{
+
+button:active {
     background-color: #fad80f !important;
 }
 
-footer{
+footer {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px;
     color: #eb8f38;
@@ -67,20 +77,21 @@ footer{
     position: fixed; */
 }
 
-#div-logo-info{
+#div-logo-info {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-footer a{
+footer a {
     color: #eb8f38;
 }
 
-footer img{
+footer img {
     width: 6%
 }
-#iconos-footer{
+
+#iconos-footer {
     font-size: 16pt;
     display: flex;
     justify-content: center;
