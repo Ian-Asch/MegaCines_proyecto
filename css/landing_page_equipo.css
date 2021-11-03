@@ -1,0 +1,98 @@
+#logo_sct1 {
+    display: flow-root;
+    text-align: right;
+    max-height: 200px;
+    float: right;
+    background-color: rgba(255, 255, 255, 0);
+    padding-right: 60px;
+    padding-top: 30px;
+}
+
+#nombre_de_equipo {
+    height: 100px;
+    text-align: right;
+    padding-top: 100px;
+    padding-right: 200px;
+    font-weight: 700;
+    font-size: large;
+}
+
+#MegaCines_logo {
+    float: left;
+}
+
+.header-principal {
+    background: #000000;
+    padding: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #fc883a;
+}
+
+.header-principal .icono-menu {
+    display: none;
+}
+
+#equipo {
+    max-width: 200px;
+    float: left;
+    padding-top: 10%;
+    padding-left: 15%;
+}
+
+#texto_de_equipo {
+    height: 600px;
+}
+
+#div-logo-info {
+    background-color: auto;
+}
+
+#trabajo_equipo {
+    height: 200px;
+    padding-left: 100px;
+    display: block;
+    padding-top: 40px;
+}
+
+#div_imgn {
+    display: flow-root;
+}
+
+#mensaje_inspiracional {
+    display: flow-root;
+}
+
+@media(max-width:1020px) {
+    .sct-banner {
+        /*PADDING: ↑  →  ↓  ←*/
+        padding: 30px 0px 30px 0px !important;
+    }
+    .sct-banner div {
+        width: 75%;
+        padding: 20px 5px;
+    }
+    .sct-banner h1 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width:480px) {
+    .sct-banner h1 {
+        font-size: 25px;
+    }
+    .sct-servicios div {
+        float: none;
+        width: 100%;
+    }
+    .sct-servicios .info h2 {
+        font-size: 17px;
+    }
+}
