@@ -31,15 +31,55 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     </header>
 
     <main>
-        <form id="barra-busqueda">
-            <div class="search">
+        <h1>
+            Cartelera
+        </h1>
+        <section id="sct-buscar">
+            <form method="get" id="buscar-peli">
+                <div class="buscar">
+                    <input type="text" name="search" class="texto-buscar" placeholder="Busque su película por título..." />
+                    <input type="submit" class="btn-buscar" value="" />
+                </div>
+            </form>
+        </section>
+        <section id="sct-sidebar">
+            <h3>Filtrar por</h3>
+            <br>
+            <form method="get" id="filtrar-cine">
+                <legend>Cine:</legend><br>
+                <label><input type="checkbox" id="cine1" value="cine1" />Cine 1</label><br>
+                <label><input type="checkbox" id="cine2" value="cine2" />Cine 2</label><br>
+                <label><input type="checkbox" id="cine3" value="cine3" />Cine 3</label><br>
+                <label><input type="checkbox" id="cine4" value="cine4" />Cine 4</label><br>
+            </form>
+            <br>
+            <form method="get" id="filtrar-categoria">
+                <legend>Categoría:</legend><br>
+                <label><input type="checkbox" id="categ1" value="categ1" />Categoria 1</label><br>
+                <label><input type="checkbox" id="categ2" value="categ2" />Categoria 2</label><br>
+                <label><input type="checkbox" id="categ3" value="categ3" />Categoria 3</label><br>
+                <label><input type="checkbox" id="categ4" value="categ4" />Categoria 4</label><br>
+                <label><input type="checkbox" id="categ5" value="categ5" />Categoria 5</label><br>
+            </form>
+            <br>
+            <form method="get" id="filtrar-edad">
+                <legend>Clasificación por edad:</legend><br>
+                <label><input type="checkbox" id="publico" value="publico" />Todo público</label><br>
+                <label><input type="checkbox" id="mayor12" value="mayor12" />Mayores de 12</label><br>
+                <label><input type="checkbox" id="mayor16" value="mayor16" />Mayores de 16</label><br>
+                <label><input type="checkbox" id="mayor18" value="mayor18" />Mayores de 18</label><br>
+            </form>
+            <br>
+            <form method="get" id="filtrar-idioma">
+                <legend>Idioma:</legend><br>
+                <label><input type="checkbox" id="esp-original" value="esp-original" />Español original</label><br>
+                <label><input type="checkbox" id="esp-doblada" value="esp-doblada" />Español doblada</label><br>
+                <label><input type="checkbox" id="ing-sub-esp" value="ing-sub-esp" />Inglés / Sub Español</label><br>
+                <label><input type="checkbox" id="ing-sub-ing" value="ing-sub-ing" />Inglés / Sub Inglés</label><br>
+            </form>
 
-                <i class="fas fa-search"></i>
-                <input type="text" name="busqueda" class="text-busqueda" id="input-buscar" placeholder="Busca películas por título..." />
-                <!-- <input type="submit" class="submit-busqueda" value="" /> -->
-            </div>
-            
-        </form>
+        </section>
+
     </main>
 
     <footer>

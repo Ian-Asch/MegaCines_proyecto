@@ -1,25 +1,15 @@
-#barra-busqueda {
-    box-sizing: border-box;
+.texto-buscar {
     width: 100%;
-    border: 5px;
-    float: unset;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-}
-
-.text-busqueda {
-    width: 80%;
     border-radius: 15px;
     border: 1px #000 solid;
     padding: 5px 5px 5px 25px;
-    /* position: absolute; */
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 5;
 }
 
-.submit-busqueda {
+.btn-buscar {
     position: absolute;
     top: 3px;
     left: 5px;
@@ -28,18 +18,43 @@
     z-index: 10;
     border-radius: 10px;
     border: none;
-    background: #000;
+    background: url(../imgs/seach-icon.png) no-repeat;
+    background-size: contain;
     /* Set the bg image here. with "no-repeat" */
 }
 
-.search {
+.buscar {
     position: relative;
-    width: 90%;
+    box-sizing: border-box;
+    width: 80%;
+    border: 5px;
+    float: unset;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
     text-align: center;
     /* height: 30px; */
     /* background-color: blue; */
 }
-i{
-    display: inline-block;
-    font-size: 20pt;
+
+#sct-buscar {
+    height: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 0% 25% 0% 32%;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+}
+
+#sct-sidebar {
+    background-color: rgba(4, 8, 8, 0.199);
+    border: 3px solid rgb(0, 0, 0);
+    width: 180px;
+    padding: 25px 15px;
+    margin: 15px 15px;
 }
