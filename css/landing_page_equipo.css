@@ -1,20 +1,35 @@
 #logo_sct1 {
-    display: flow-root;
-    text-align: right;
+    /* display: flow-root; */
+    /* text-align: right; */
     max-height: 200px;
-    float: right;
+    /* float: right; */
     background-color: rgba(255, 255, 255, 0);
     padding-right: 60px;
     padding-top: 30px;
+    /* background-color: chartreuse;
+    width: 50%; */
 }
 
 #nombre_de_equipo {
-    height: 100px;
+    /* height: 100px; */
     text-align: right;
-    padding-top: 100px;
-    padding-right: 200px;
+    padding-top: 200px;
+    /* padding-right: 200px; */
+    /* padding-bottom: 200px; */
+    width: 50%;
     font-weight: 700;
     font-size: large;
+    background-color: brown;
+    vertical-align: bottom;
+}
+#div_gallo_logo{
+    background-color: chartreuse;
+    width: 50%;
+    padding-top: 100px;
+    /* float: right */
+}
+.sct-banner{
+    display: flex;
 }
 
 #MegaCines_logo {
@@ -57,14 +72,23 @@ nav a:hover {
 
 #trabajo_equipo {
     height: 200px;
-    padding-left: 100px;
+    /* padding-left: 100px; */
     display: block;
     padding-top: 40px;
 }
 
 #div_imgn {
-    display: flow-root;
+    /* display: flow-root; */
+    background-color: aqua;
+    width: 50%;
+    float: left;
 }
+#div_texto{
+    background-color: blue;
+    width: 50%;
+    margin-bottom: 200px;
+}
+
 
 #mensaje_inspiracional {
     display: flow-root;
@@ -73,7 +97,7 @@ nav a:hover {
 @media(max-width:1020px) {
     .sct-banner {
         /*PADDING: ↑  →  ↓  ←*/
-        padding: 30px 0px 30px 0px !important;
+        /* padding: 30px 0px 30px 0px !important; */
     }
     .sct-banner div {
         width: 75%;
