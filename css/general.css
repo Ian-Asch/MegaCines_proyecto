@@ -58,6 +58,7 @@ button {
     border-radius: 8px;
     border: none;
     font-size: 12pt;
+    cursor: pointer;
 }
 
 button:hover {

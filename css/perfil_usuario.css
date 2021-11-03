@@ -1,8 +1,8 @@
 main{
     padding: 2vw 5vw 2vw 5vw;
+    min-height: 55vh;
 }
 #info-usuario{
-    /* background-color: blue; */
     width: 60%;
     float: left;
 }
@@ -13,24 +13,19 @@ h1{
 }
 label{
     font-weight: bold;
+    margin-right: 5px;
 }
 .label-p{
     display: inline-block;
 }
 .info-div{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 10px 0 10px 0;
+    min-height: 20px;
 }
 #secc-imagen{
-    /* background-color: brown; */
     display: inline-block;
     width: 40%;
     text-align: center;
-    /* height: 350px; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
-    /* background-color: blueviolet; */
 }
 #secc-imagen img{
     width: 30%;
@@ -38,18 +33,12 @@ label{
     border-radius: 10px;
 }
 #secc-imagen button{
-    /* width: 30%; */
     display: block;
     margin: auto;
     margin-bottom: 10px;
 }
-/* #secc-imagen div{
-    background-color: #eb8f38;
-    display: flex;
-} */
 
 #secc-botones{
-    /* background-color: aqua; */
     padding-top: 10px;
     padding-bottom: 10px;
     clear: left;
@@ -61,14 +50,25 @@ label{
 input{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
-    /* border: solid 1px #eb8f38; */
     color: rgb(220,220,200);
+    
 }
 input:focus{
-    border: solid 2px #eb8f38 !important;
+    border: solid 2px #eb8f38;
     outline: none;
     background-color: black;
 }
 .esconder{
-    display: none;
+    display: none !important;
+}
+.error{
+    border: solid 2px red !important;
+}
+#boton-guardar{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #eb8f38;
+}
+
+#boton-guardar:hover{
+    background-color: rgba(0, 0, 0);
 }
