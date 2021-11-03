@@ -1,0 +1,22 @@
+@media (max-width:480px) {
+    /*Ocultar todos los elementos del menú*/
+    .header-principal a {
+        display: none;
+    }
+    /*Ponerle posicion fija al área de navegación, la barrita negra*/
+    .header-principal {
+        position: fixed;
+        display: block;
+        width: 100%;
+    }
+    .header-principal a.icono-menu {
+        position: fixed;
+        right: 0px;
+        display: block;
+        top: 8px;
+    }
+    .header-principal.responsive a {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
