@@ -20,54 +20,54 @@
         <nav>
             <a href="">Cartelera</a>
             <a href="">Cines</a>
-            <a href="">Perfil</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
         <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
     </header>
 
     <main>
         <div id="info-usuario">
-            <h1>Nombre usuario</h1>
+            <h1 id="nombre-completo"></h1>
 
             <div class="info-div">
                 <label for="nombre-usuario">Nombre:</label>
-                <p class="label-p" id="nombre-usuario">Juan</p>
+                <p class="label-p" id="nombre-usuario"></p>
                 <input type="text" class="esconder" id="input-nombre" required>
             </div>
 
             <div class="info-div">
                 <label for="primer-apellido">Primer apellido:</label>
-                <p class="label-p" id="primer-apellido">Oviedo</p>
+                <p class="label-p" id="primer-apellido"></p>
                 <input type="text" class="esconder" id="input-primer-apellido" required>
             </div>
 
             <div class="info-div">
                 <label for="segundo-apellido">Segundo apellido:</label>
-                <p class="label-p" id="segundo-apellido">murillo</p>
+                <p class="label-p" id="segundo-apellido"></p>
                 <input type="text" class="esconder" id="input-segundo-apellido" required>
             </div>
 
             <div class="info-div">
                 <label for="correo-usuario">Correo electronico:</label>
-                <p class="label-p" id="correo-usuario">juan@gmail.com</p>
+                <p class="label-p" id="correo-usuario"></p>
                 <input type="text" class="esconder" id="input-correo" required>
             </div>
 
             <div class="info-div">
                 <label for="identificacion-usuario">Identificacion:</label>
-                <p class="label-p" id="identificacion-usuario">1-4235-8753</p>
+                <p class="label-p" id="identificacion-usuario"></p>
                 <input type="text" class="esconder" id="input-cedula" required>
             </div>
 
             <div class="info-div">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-                <p class="label-p" id="fecha-nacimiento">5-2-1990</p>
+                <p class="label-p" id="fecha-nacimiento"></p>
                 <input type="text" class="esconder" id="input-nacimiento" required>
             </div>
 
             <div class="info-div">
                 <label for="edad-usuario">Edad:</label>
-                <p class="label-p" id="edad-usuario">31</p>
+                <p class="label-p" id="edad-usuario"></p>
             </div>
         </div>
 
@@ -76,6 +76,7 @@
 
             <button type="button">Cambiar imagen</button>
             <button type="button" id="boton-editar-info">Editar informacion</button>
+            <button type="button" class="esconder" id="boton-guardar">Guardar cambios</button>
         </div>
 
         <div id="secc-botones">
