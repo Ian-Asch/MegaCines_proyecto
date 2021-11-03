@@ -4,8 +4,8 @@
     max-height: 200px;
     /* float: right; */
     background-color: rgba(255, 255, 255, 0);
-    padding-right: 60px;
-    padding-top: 30px;
+    padding-bottom: 60px;
+    padding-left: 25%;
     /* background-color: chartreuse;
     width: 50%; */
 }
@@ -19,16 +19,20 @@
     width: 50%;
     font-weight: 700;
     font-size: large;
-    background-color: brown;
     vertical-align: bottom;
 }
-#div_gallo_logo{
-    background-color: chartreuse;
+
+#div_gallo_logo {
     width: 50%;
     padding-top: 100px;
     /* float: right */
 }
-.sct-banner{
+
+.header a {
+    margin: 0px !important;
+}
+
+.sct-banner {
     display: flex;
 }
 
@@ -70,28 +74,30 @@ nav a:hover {
     background-color: auto;
 }
 
-#trabajo_equipo {
+#trabajo_equipo_img {
     height: 200px;
     /* padding-left: 100px; */
     display: block;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-left: 25%;
 }
 
 #div_imgn {
     /* display: flow-root; */
-    background-color: aqua;
     width: 50%;
     float: left;
 }
-#div_texto{
-    background-color: blue;
-    width: 50%;
-    margin-bottom: 200px;
+
+#div_texto {
+    height: 200px;
+    padding-left: 55%;
+    padding-top: 30px;
 }
 
-
 #mensaje_inspiracional {
-    display: flow-root;
+    width: 50%;
+    display: flex;
+    text-align: center;
 }
 
 @media(max-width:1020px) {
@@ -110,7 +116,8 @@ nav a:hover {
 
 @media(max-width:480px) {
     .sct-banner h1 {
-        font-size: 25px;
+        font-size: 20px;
+        padding-top: 15px;
     }
     .sct-servicios div {
         float: none;
@@ -119,4 +126,36 @@ nav a:hover {
     .sct-servicios .info h2 {
         font-size: 17px;
     }
+    .header a {
+        margin: 0px !important;
+    }
+}
+
+#btn-cerrar-sesion {
+    height: 20px;
+    padding-top: 0.5%
+}
+
+
+/*equipo*/
+
+.Caja_de_persona {
+    width: fit-content;
+    display: inline;
+}
+
+.contenedor_personas {}
+
+#Caja_de_persona1 {
+    width: 100%;
+    text-align: center;
+}
+
+#Caja_de_persona2 {
+    width: 100%;
+    text-align: center;
+}
+
+#banner_misionVision {
+    width: 100%;
 }
