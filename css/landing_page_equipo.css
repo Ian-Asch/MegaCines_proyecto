@@ -1,161 +1,191 @@
-#logo_sct1 {
-    /* display: flow-root; */
-    /* text-align: right; */
-    max-height: 200px;
-    /* float: right; */
-    background-color: rgba(255, 255, 255, 0);
-    padding-bottom: 60px;
-    padding-left: 25%;
-    /* background-color: chartreuse;
+                #logo_sct1 {
+                    /* display: flow-root; */
+                    /* text-align: right; */
+                    max-height: 200px;
+                    /* float: right; */
+                    background-color: rgba(255, 255, 255, 0);
+                    padding-bottom: 60px;
+                    padding-left: 25%;
+                    /* background-color: chartreuse;
     width: 50%; */
-}
-
-#nombre_de_equipo {
-    /* height: 100px; */
-    text-align: right;
-    padding-top: 200px;
-    /* padding-right: 200px; */
-    /* padding-bottom: 200px; */
-    width: 50%;
-    font-weight: 700;
-    font-size: large;
-    vertical-align: bottom;
-}
-
-#div_gallo_logo {
-    width: 50%;
-    padding-top: 100px;
-    /* float: right */
-}
-
-.header a {
-    margin: 0px !important;
-}
-
-.sct-banner {
-    display: flex;
-}
-
-#MegaCines_logo {
-    float: left;
-}
-
-.header-principal {
-    background: #000000;
-    padding: 15px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-nav a:hover {
-    color: #fc883a;
-}
-
-.header-principal .icono-menu {
-    display: none;
-}
-
-#equipo {
-    max-width: 200px;
-    float: left;
-    padding-top: 10%;
-    padding-left: 15%;
-}
-
-#texto_de_equipo {
-    height: 600px;
-}
-
-#div-logo-info {
-    background-color: auto;
-}
-
-#trabajo_equipo_img {
-    height: 200px;
-    /* padding-left: 100px; */
-    display: block;
-    padding-top: 30px;
-    padding-left: 25%;
-}
-
-#div_imgn {
-    /* display: flow-root; */
-    width: 50%;
-    float: left;
-}
-
-#div_texto {
-    height: 200px;
-    padding-left: 55%;
-    padding-top: 30px;
-}
-
-#mensaje_inspiracional {
-    width: 50%;
-    display: flex;
-    text-align: center;
-}
-
-@media(max-width:1020px) {
-    .sct-banner {
-        /*PADDING: ↑  →  ↓  ←*/
-        /* padding: 30px 0px 30px 0px !important; */
-    }
-    .sct-banner div {
-        width: 75%;
-        padding: 20px 5px;
-    }
-    .sct-banner h1 {
-        font-size: 30px;
-    }
-}
-
-@media(max-width:480px) {
-    .sct-banner h1 {
-        font-size: 20px;
-        padding-top: 15px;
-    }
-    .sct-servicios div {
-        float: none;
-        width: 100%;
-    }
-    .sct-servicios .info h2 {
-        font-size: 17px;
-    }
-    .header a {
-        margin: 0px !important;
-    }
-}
-
-#btn-cerrar-sesion {
-    height: 20px;
-    padding-top: 0.5%
-}
-
-
-/*equipo*/
-
-.Caja_de_persona {
-    width: fit-content;
-    display: inline;
-}
-
-.contenedor_personas {}
-
-#Caja_de_persona1 {
-    width: 100%;
-    text-align: center;
-}
-
-#Caja_de_persona2 {
-    width: 100%;
-    text-align: center;
-}
-
-#banner_misionVision {
-    width: 100%;
-}
+                }
+                
+                #nombre_de_equipo {
+                    /* height: 100px; */
+                    text-align: right;
+                    padding-top: 200px;
+                    /* padding-right: 200px; */
+                    /* padding-bottom: 200px; */
+                    width: 50%;
+                    font-weight: 700;
+                    font-size: large;
+                    vertical-align: bottom;
+                }
+                
+                #div_gallo_logo {
+                    width: 50%;
+                    padding-top: 100px;
+                    /* float: right */
+                }
+                
+                .header a {
+                    margin: 0px !important;
+                }
+                
+                .sct-banner {
+                    display: flex;
+                }
+                
+                #MegaCines_logo {
+                    float: left;
+                }
+                
+                .header-principal {
+                    background: #000000;
+                    padding: 15px;
+                }
+                
+                nav a {
+                    color: #ffffff;
+                    text-decoration: none;
+                    margin-right: 20px;
+                }
+                
+                nav a:hover {
+                    color: #fc883a;
+                }
+                
+                .header-principal .icono-menu {
+                    display: none;
+                }
+                
+                #equipo {
+                    max-width: 200px;
+                    float: left;
+                    padding-top: 10%;
+                    padding-left: 15%;
+                }
+                
+                #texto_de_equipo {
+                    height: 600px;
+                }
+                
+                #div-logo-info {
+                    background-color: auto;
+                }
+                
+                #trabajo_equipo_img {
+                    height: 200px;
+                    /* padding-left: 100px; */
+                    display: block;
+                    padding-top: 30px;
+                    padding-left: 25%;
+                }
+                
+                #div_imgn {
+                    /* display: flow-root; */
+                    width: 50%;
+                    float: left;
+                }
+                
+                #div_texto {
+                    height: 200px;
+                    padding-left: 55%;
+                    padding-top: 30px;
+                }
+                
+                #mensaje_inspiracional {
+                    width: 50%;
+                    display: flex;
+                    text-align: center;
+                }
+                
+                @media(max-width:1020px) {
+                    .sct-banner {
+                        /*PADDING: ↑  →  ↓  ←*/
+                        /* padding: 30px 0px 30px 0px !important; */
+                    }
+                    .sct-banner div {
+                        width: 75%;
+                        padding: 20px 5px;
+                    }
+                    .sct-banner h1 {
+                        font-size: 30px;
+                    }
+                }
+                
+                @media(max-width:480px) {
+                    .sct-banner h1 {
+                        font-size: 20px;
+                        padding-top: 15px;
+                    }
+                    .sct-servicios div {
+                        float: none;
+                        width: 100%;
+                    }
+                    .sct-servicios .info h2 {
+                        font-size: 17px;
+                    }
+                    #btn-cerrar-sesion {
+                        margin-left: 30%;
+                    }
+                    #header-principal a {
+                        margin: 0px !important;
+                        text-align: center;
+                    }
+                }
+                
+                #btn-cerrar-sesion {
+                    height: 20px;
+                    padding-top: 0.5%
+                }
+                /*equipo*/
+                
+                .banner {
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    margin-top: 40px;
+                    margin-bottom: 40px;
+                    background: rgb(131, 58, 180);
+                    background: linear-gradient(0deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+                }
+                
+                .contenedor_personas {
+                    display: flex;
+                    margin-bottom: 40px;
+                    justify-content: space-evenly;
+                    text-align: center;
+                }
+                
+                #Caja_de_persona1 {
+                    display: flexbox;
+                }
+                
+                #Caja_de_persona2 {
+                    display: flexbox;
+                }
+                
+                #Caja_de_persona3 {
+                    display: flexbox;
+                }
+                
+                #Caja_de_persona4 {
+                    display: flexbox;
+                }
+                
+                #Caja_de_persona5 {
+                    display: flexbox;
+                }
+                
+                #banner_misionVision {
+                    width: 100%;
+                }
+                
+                .imgsEquipo {
+                    max-height: 100px;
+                    max-width: 100px;
+                    background-color: white;
+                }
