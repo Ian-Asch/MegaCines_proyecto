@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/registrar_cadena.css">
+    <title>Registrar cadena</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
+
+    <main>
+        <section>
+            <div class="estilo_form">
+                <form>
+                    <fieldset>
+                        <h1>Registro de cadena de cine</h1>
+                        <br>
+                        <label for="" class="labels">Codigo de cadena:</label>
+                        <input class="width" placeholder="ej: 31232"> <br> <br>
+
+                        <label for="" class="labels">Nombre de la cadena:</label>
+                        <input class="width" placeholder="Ingrese el nombre de la cadena"> <br> <br>
+
+                        <label for="" class="labels">Suba el logo de la cadena:</label> <input type="file"> <br> <br>
+
+                        <label for="" class="labels">Seleciones los tipos de ascientos:</label>
+                        <input type="radio" id="VIP" name="VIP" value="VIP" checked>
+                        <label for="VIP">VIP</label>
+                        <input type="radio" id="Ley" name="Ley" value="Ley">
+                        <label for="">Ley 7600</label>
+                        <input type="radio" id="regular" name="regular" value="regular">
+                        <label for="regular">Regular</label> <br> <br>
+
+
+
+                        <label for="" class="labels">Selecione las categorias para la cadena de cine:</label>
+                        <input type="radio" id="terror" name="terror" value="terror" checked>
+                        <label for="terror">Terror</label>
+                        <input type="radio" id="Ciencia" name="Ciencia" value="Ciencia">
+                        <label for="ciencia">Ciencia ficcion</label>
+                        <input type="radio" id="drama" name="drama" value="drama">
+                        <label for="drama">Drama</label>
+                        <input type="radio" id="accion" name="accion" value="accion">
+                        <label for="accion">Accion</label>
+                        <input type="radio" id="comedia" name="comedia" value="comedia">
+                        <label for="comedia">Comedia</label>
+                        <input type="radio" id="infantiles" name="infantiles" value="infantiles">
+                        <label for="infantiles">Infantiles</label> <br> <br>
+
+                        <label for="" class="labels">Tipo de salas:</label>
+                        <input type="radio" id="sala_regular" name="sala_regular" value="sala_regular" checked>
+                        <label for="sala_regular">Regular</label>
+                        <input type="radio" id="2d" name="2d" value="2d">
+                        <label for="2d">2D</label>
+                        <input type="radio" id="3d" name="3d" value="3d">
+                        <label for="3d">3D</label>
+                        <input type="radio" id="4d" name="4d" value="4d">
+                        <label for="4d">4D</label>
+                        <input type="radio" id="imax" name="imax" value="imax">
+                        <label for="imax">IMAX</label> <br> <br>
+
+                        <label for="" type="text" class="labels">Margen de ganacia:</label>
+                        <input type="radio" id="15" name="15" value="15" checked>
+                        <label for="15">15%</label>
+                        <input type="radio" id="20" name="20" value="20">
+                        <label for="20">20%</label>
+                        <input type="radio" id="25" name="25" value="25">
+                        <label for="25">25%</label>
+                        <input type="radio" id="30" name="30" value="30">
+                        <label for="30">30%</label>
+                        <input type="radio" id="35" name="35" value="35">
+                        <label for="35">35%</label> <br> <br>
+
+                        <label for="" class="labels">Selecione las ubicaciones donde esta ubicada la cadena:</label>
+
+                        <input type="checkbox" value="San Jose" id="sanjose"> <label for="sanjose">San Jose</label>
+                        <input type="checkbox" value="Heredia" id="heredia"> <label for="heredia">Heredia</label>
+                        <input type="checkbox" value="Cartago" id="cartago"> <label for="cartago">Cartago</label>
+                        <input type="checkbox" value="Alajuela" id="alajuela"> <label for="alajuela">Alejuela</label>
+                        <input type="checkbox" value="limon" id="limon"> <label for="limon">Limon</label>
+                        <input type="checkbox" value="guanacaste" id="guanacaste"> <label for="guanacaste">Guanacaste</label>
+                        <input type="checkbox" value="puntarenas" id="puntarenas"> <label for="puntarenas">Puntarenas</label>
+
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="">- Sobre nosotros</a>
+                <!-- meter link del landing page del equipo aqui -->
+                <p>- Sobre el producto</p>
+                <p>- Terminos y conidciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="">- Contactenos</a>
+                <!-- meter link del landing page del equipo aqui tambien -->
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <!-- Poner script de javascript en esta linea -->
+</body>
+
+</html>
