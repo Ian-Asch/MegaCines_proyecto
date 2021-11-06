@@ -1,71 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/reserva_asientos.css">
-    <title>Reserva de asientos</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/reserva_asientos.css">
+        <title>Reserva de asientos</title>
+    </head>
 
-<body>
-    <header>
-        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
-        <nav>
-            <a href="">Cartelera</a>
-            <a href="">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
-        </nav>
-        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
-    </header>
+    <body>
+        <header>
+            <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+            <nav>
+                <a href="">Cartelera</a>
+                <a href="">Cines</a>
+                <a href="perfil_usuario_cliente.html">Perfil</a>
+            </nav>
+            <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+        </header>
 
-    <main>
-        <div id="seccion-asientos">
+        <main>
+            <section id="secc-info-reserva">
+                <div id="contenedor-imagen">
+                    <img src="imgs/spiderman_poster.jpg">
+                </div>
+    
+                <form id="form-reserva">
+                    <h1>Spiderman Home Coming</h1>
 
-        </div>
-    </main>
+                    <div class="div-input">
+                        <label for="" class="labels">Cine:</label>
+                        <p class="label-p">cinemark</p>
+                    </div>
 
-    <footer>
-        <div id="div-logo-info">
-            <img src="imgs/gallo_pinto_development_logo_png.png">
-            <div>
-                <h6>CONTENIDO</h6>
-                <p>- Cines</p>
-                <p>- Cartelera</p>
-                <p>- Perfil</p>
+                    <div class="div-input">
+                        <label for="" class="labels">Sala:</label>
+                        <p class="label-p">A2</p>
+                    </div>
+
+                    <div class="div-input">
+                        <label for="" class="labels">Tanda:</label>
+                        <p class="label-p">febrero 25</p>
+                        <p class="label-p">1:00 - 3:00</p>
+                    </div>
+
+                    <div class="div-input">
+                        <label for="" class="labels">Cantidad de personas:</label>
+                        <input type="number">
+                    </div>
+    
+                    <div class="div-input">
+                        <label for="" class="labels">Seleccione el tipo de transaccion</label>
+                        <div class="radio-divs">
+                            <input type="radio" name="tipo-transaccion" id="radio-btn-reserva" value="reserva" checked>
+                            <label for="radio-btn-reserva">Reservar butacas</label>
+                        </div>
+        
+                        <div class="radio-divs">
+                            <input type="radio" name="tipo-transaccion" id="radio-btn-compra" value="compra">
+                            <label for="radio-btn-compra">Comprar butacas</label>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            
+            <section id="secc-butacas">
+                <div id="cuadro">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        <div id="pantalla"></div>
+                    </div>
+                </div>
+    
+                <div>
+                    <button type="button">Continuar con transaccion</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div id="div-logo-info">
+                <img src="imgs/gallo_pinto_development_logo_png.png">
+                <div>
+                    <h6>CONTENIDO</h6>
+                    <p>- Cines</p>
+                    <p>- Cartelera</p>
+                    <p>- Perfil</p>
+                </div>
+                <div>
+                    <h6>INFORMACION</h6>
+                    <a href="">- Sobre nosotros</a>
+                    <!-- meter link del landing page del equipo aqui -->
+                    <p>- Sobre el producto</p>
+                    <p>- Terminos y conidciones</p>
+                </div>
+                <div>
+                    <h6>AYUDA</h6>
+                    <p>- Preguntas frecuentes</p>
+                    <a href="">- Contactenos</a>
+                    <!-- meter link del landing page del equipo aqui tambien -->
+                </div>
             </div>
-            <div>
-                <h6>INFORMACION</h6>
-                <a href="">- Sobre nosotros</a>
-                <!-- meter link del landing page del equipo aqui -->
-                <p>- Sobre el producto</p>
-                <p>- Terminos y conidciones</p>
+            <div id="iconos-footer">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-google-plus-g"></i>
             </div>
-            <div>
-                <h6>AYUDA</h6>
-                <p>- Preguntas frecuentes</p>
-                <a href="">- Contactenos</a>
-                <!-- meter link del landing page del equipo aqui tambien -->
-            </div>
-        </div>
-        <div id="iconos-footer">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-google-plus-g"></i>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/json_asientos.js"></script> -->
-    <!-- <script src="js/reserva _asientos.js"></script> -->
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+        <!-- <script src="js/json_asientos.js"></script> -->
+        <!-- <script src="js/reserva _asientos.js"></script> -->
+    </body>
 
 </html>
