@@ -110,3 +110,9 @@ section {
 div {
     margin: 50px;
 }
+
+#button1,
+#button2 {
+    display: inline-block;
+    text-align: justify;
+}
