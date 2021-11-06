@@ -116,3 +116,22 @@ div {
     display: inline-block;
     text-align: justify;
 }
+
+table {
+    width: 600px;
+}
+
+td {
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px;
+}

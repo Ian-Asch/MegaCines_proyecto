@@ -20,7 +20,7 @@
     <!--link rel="stylesheet" href="css/reset.css"-->
     <!--reset no me esta dejando cambiar tama;o de fuentes-->
     <link rel="stylesheet" href="css/formularios.css">
-
+    <link rel="stylesheet" href="css/formularios.css">
 </head>
 
 <body>
@@ -45,35 +45,63 @@
 
             <form name="nombre" action="*" method="GET">
                 <div>
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre:</label>
                     <input type="text" name="nombre" id="nombre"></label>
                 </div>
 
                 <div>
-                    <label for="codigo_sala">Codigo de sala</label>
+                    <label for="codigo_sala">Codigo de sala:</label>
                     <input type="text" id="codigo_sala" />
                 </div>
 
                 <div>
-                    <label for=tipo_sala>Tipo de sala</label>
+                    <label for=tipo_sala>Tipo de sala:</label>
                     <input type="text" id="tipo_sala" />
                 </div>
 
                 <div>
-                    <label for="ubicacion">Ubicación</label>
+                    <label for="ubicacion">Ubicación:</label>
                     <input type="text" id="ubicacion" />
                 </div>
 
                 <div>
-                    <label for="cantidad_butacas">Cantidad de butacas</label>
+                    <label for="cantidad_butacas">Cantidad de butacas:</label>
                     <input type="number" id="cantidad_butacas" />
                 </div>
+
+                <div>
+                    <label for="butacas">Categoria(s) de butacas:</label>
+                    <table>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Cantidad</th>
+                            <th>Desactivar</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <label for="precio_butacas">Categoria(s) de butacas:</label>
+                    <table>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Precio</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="opciones_sala">
+                    <button type="button1">Eliminar sala</button>
+                    <button type="button2">Desactivar sala</button>
+                </div>
+
             </form>
 
-            <div id="opciones_sala">
-                <button type="button1">Eliminar sala</button>
-                <button type="button2">Desactivar sala</button>
-            </div>
+
+
 
         </section>
 
@@ -81,6 +109,10 @@
 
     </main>
 
+
+
 </body>
+
+
 
 </html>
