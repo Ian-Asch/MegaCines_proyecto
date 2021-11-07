@@ -107,6 +107,13 @@ section {
     margin-bottom: 40px;
 }
 
+section.type-a {
+    background-color: #02000500;
+    width: 100%;
+    background-size: auto;
+    margin: auto;
+}
+
 div {
     margin: 50px;
 }
