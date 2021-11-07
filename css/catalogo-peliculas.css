@@ -86,7 +86,6 @@
     #sct-slideshow {
         grid-area: slideshow;
         height: 50%;
-        object-position: contain;
     }
     
     #slider {
