@@ -8,7 +8,7 @@
         }
     </style>
 
-    <title>Nueva Sala</title>
+    <title>Registrar Usuario</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
+    <link rel="stylesheet" href="css/perfil_registro_usuario.css">
 
 </head>
 
@@ -37,8 +38,19 @@
         <h1 class="texto_centrado">Registro Usuario</h1>
 
 
-        <section>
-            <form name="data_usuario" action="*" method="GET">
+        <form name="data_usuario" action="*" method="GET">
+            <section>
+                <fieldset>
+                    <div>
+                        <label for="soporte">Soporte:</label>
+                        <input type="checkbox" id="soporte">
+                        <label for="soporte">Cliente:</label>
+                        <input type="checkbox" id="soporte">
+                    </div>
+                </fieldset>
+
+
+
                 <div>
                     <label for="nombre_usuario">Nombre:</label>
                     <input type="text" id="nombre">
@@ -72,7 +84,22 @@
                     <label for="correo">Correo electrónico:
                 <input type="email" id="correo"></label>
                 </div>
-        </section>
+                <fieldset>
+                    <div>
+                        <button type="button_eliminar_sala">Eliminar sala</button>
+                        <button type="button_desactivar_sala">Desactivar sala</button>
+                    </div>
+                </fieldset>
+                <div id="guardar-boton">
+                    <button type="button" id="boton-guardar">Guardar</button>
+                </div>
+            </section>
+
+            <div id="secc-imagen">
+                <img src="imgs/blank-profile.png">
+
+                <button type="button">Cambiar imagen</button>
+            </div>
 
     </main>
 </body>
