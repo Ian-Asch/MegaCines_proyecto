@@ -1,60 +1,108 @@
-.texto-buscar {
-    width: 100%;
-    border-radius: 15px;
-    border: 1px #000 solid;
-    padding: 5px 5px 5px 25px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-}
-
-.btn-buscar {
-    position: absolute;
-    top: 3px;
-    left: 5px;
-    height: 20px;
-    width: 20px;
-    z-index: 10;
-    border-radius: 10px;
-    border: none;
-    background: url(../imgs/seach-icon.png) no-repeat;
-    background-size: contain;
-    /* Set the bg image here. with "no-repeat" */
-}
-
-.buscar {
-    position: relative;
-    box-sizing: border-box;
-    width: 80%;
-    border: 5px;
-    float: unset;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    /* height: 30px; */
-    /* background-color: blue; */
-}
-
-#sct-buscar {
-    height: 25px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    padding: 0% 25% 0% 32%;
-}
-
-h1 {
-    font-size: 50px;
-    font-weight: bolder;
-    text-align: center;
-    font-style: italic;
-}
-
-#sct-sidebar {
-    background-color: rgba(4, 8, 8, 0.199);
-    border: 3px solid rgb(0, 0, 0);
-    width: 180px;
-    padding: 25px 15px;
-    margin: 15px 15px;
-}
+    .texto-buscar {
+        width: 100%;
+        border-radius: 15px;
+        border: 1px #000 solid;
+        padding: 5px 5px 5px 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+    }
+    
+    .btn-buscar {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        height: 20px;
+        width: 20px;
+        z-index: 10;
+        border-radius: 10px;
+        border: none;
+        background: url(../imgs/seach-icon.png) no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        /* Set the bg image here. with "no-repeat" */
+    }
+    
+    .buscar {
+        position: relative;
+        box-sizing: border-box;
+        width: 80%;
+        border: 5px;
+        float: unset;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* height: 30px; */
+        /* background-color: blue; */
+    }
+    
+    #sct-buscar {
+        grid-area: sct-buscar;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        padding: 0% 25% 20px 32%;
+    }
+    
+    h1 {
+        font-size: 50px;
+        font-weight: bolder;
+        text-align: center;
+        font-style: italic;
+    }
+    
+    #sct-sidebar {
+        grid-area: sidebar;
+        background-color: rgba(4, 8, 8, 0.199);
+        border: 3px solid rgb(0, 0, 0);
+        padding: 25px 15px;
+        margin: 15px 15px;
+    }
+    
+    #sct-lista-tandas {
+        grid-area: lista-tandas;
+        background-color: rgb(114, 250, 155);
+    }
+    
+    #titulo {
+        grid-area: titulo;
+    }
+    
+    footer {
+        grid-area: footer !important;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        color: #eb8f38;
+        margin-top: 30px;
+    }
+    
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template: "titulo     titulo" 35px "sct-buscar sct-buscar" 50px "sidebar    slideshow" auto "sidebar    lista-tandas" 30% "footer     footer" auto / 200px auto;
+    }
+    
+    #sct-slideshow {
+        grid-area: slideshow;
+        height: 50%;
+        object-position: contain;
+    }
+    
+    #slider {
+        overflow: hidden;
+    }
+    
+    #slider-figure {
+        position: relative;
+        width: 300%;
+        margin: 0;
+        left: 0;
+        animation: 20s infinite;
+    }
+    
+    .slider-image {
+        width: 33.33%;
+        float: left;
+        size: contain;
+    }
