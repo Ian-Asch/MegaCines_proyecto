@@ -2,6 +2,7 @@
     /*Ocultar todos los elementos del menú*/
     .header-principal a {
         display: none;
+        height: 10%;
     }
     /*Ponerle posicion fija al área de navegación, la barrita negra*/
     .header-principal {
@@ -18,5 +19,8 @@
     .header-principal.responsive a {
         display: block;
         margin-bottom: 5px;
+    }
+    #MegaCines_logo {
+        float: left;
     }
 }
