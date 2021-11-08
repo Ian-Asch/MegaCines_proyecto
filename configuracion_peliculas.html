@@ -1,0 +1,115 @@
+<!-- Por favor no editen este template. Si lo quieren usar solo
+copienlo y pegengo en el archivo de la pagina que estan haciendo -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/configuracion_peliculas.css">
+    <title>Configuracion peliculas</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
+
+    <main>
+        <!-- crear pagina web aqui -->
+
+        <section>
+
+            <div id="sct-buscar">
+                <form method="get" id="buscar-peli">
+                    <div class="buscar">
+                        <input type="text" name="search" class="texto-buscar" placeholder="Busque su película por título..." />
+                        <input type="submit" class="btn-buscar" value="" />
+                    </div>
+                </form>
+
+            </div>
+            <div class="listar">
+                <h1>Eternals</h1> <br>
+                <img src="imgs/eternals.jpg" alt="eternals">
+                <p> Codigo de cadena: <span>24123</span></p> <br>
+                <p>Sipnosis:<span> Narra la saga de los "Eternals", una raza de seres inmortales que vivieron en la Tierra y dieron forma a su historia y sus civilizaciones.</span> </p> <br>
+                <p>Reparto:<span> Richard Madden, Kit Harington, Angelina Jolie, Salma Haye </span>
+                </p> <button type="button" id="">Editar</button>
+
+            </div>
+
+            <div class="listar">
+                <h1>Venom</h1> <br>
+                <img src="imgs/venon_2.jfif" alt="Carnage">
+                <p> Codigo de la cadena: <span>91289</span> </p> <br>
+                <p>Sipnosis:<span> Tom Hardy vuelve a a vida al letal Venom, uno de los personajes más populares y complejos de Marvel. Dirigida por Andy Serkis, la película está también protagonizada por Michelle Williams, Naomie Harris y Woody Harrelson, en el papel del villano Cletus Kasady/Carnage</span></p><br>
+                <p>Reparto:<span> Tom Hardy, Michelle Williams, Woody Harrelson, Naomie Harri </span><br>
+                </p> <button type="button" id="">Editar</button>
+
+            </div>
+
+            <div class="listar">
+                <h1>Chernobil</h1> <br>
+                <img src="imgs/chernobil.jpg" alt="chernobil">
+                <p> Codigo de cadena de cine: <span>24983</span></p> <br>
+                <p>Sipnosis:<span> Chernobyl es el primer largometraje ruso importante sobre las consecuencias de la explosión en la central nuclear de Chernobyl, cuando cientos de personas sacrificaron sus vidas para limpiar el lugar de la catástrofe y para prevenir con éxito un desastre aún mayor que podría haber convertido en un desastre.</span></p><br>
+                <p>Reparto:<span> Danila Kozlovsky, Filipp Avdeev, Ravshana Kurkova, Oksana Akinshin </span><br>
+                </p> <button type="button" id="">Editar</button>
+
+            </div>
+        </section>
+
+        <!-- dentro del main -->
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="">- Sobre nosotros</a>
+                <!-- meter link del landing page del equipo aqui -->
+                <p>- Sobre el producto</p>
+                <p>- Terminos y conidciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="">- Contactenos</a>
+                <!-- meter link del landing page del equipo aqui tambien -->
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <!-- Poner script de javascript en esta linea -->
+</body>
+
+</html>

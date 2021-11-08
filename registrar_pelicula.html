@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/registrar_pelicula.css">
+    <title>Registrar pelicula</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
+
+    <main>
+        <!-- crear pagina web aqui -->
+
+        <section>
+            <div class="estilo_form">
+                <form>
+                    <fieldset>
+                        <h1>Registrar pelicula</h1>
+                        <br>
+
+                        <label for="" class="labels">Ingrese el titulo de la pelicula:</label>
+                        <input class="width" placeholder="Ingrese el titulo de la pelicula:"> <br> <br>
+
+                        <label for="" class="labels">Suba la imagen de la pelicula:</label> <input type="file"> <br> <br>
+
+
+
+                        <label for="" class="labels">Selecione la categoria de la pelicula:</label>
+                        <input type="radio" id="terror" name="terror" value="terror" checked>
+                        <label for="terror">Terror</label>
+                        <input type="radio" id="Ciencia" name="Ciencia" value="Ciencia">
+                        <label for="ciencia">Ciencia ficcion</label>
+                        <input type="radio" id="drama" name="drama" value="drama">
+                        <label for="drama">Drama</label>
+                        <input type="radio" id="accion" name="accion" value="accion">
+                        <label for="accion">Accion</label>
+                        <input type="radio" id="comedia" name="comedia" value="comedia">
+                        <label for="comedia">Comedia</label>
+                        <input type="radio" id="infantiles" name="infantiles" value="infantiles">
+                        <label for="infantiles">Infantiles</label> <br> <br>
+
+                        <label for="" class="labels">Idiomas disponibles y subtitulos:</label>
+                        <input type="radio" id="espanol" name="espanol" value="espanol" checked>
+                        <label for="VIP">Español</label>
+                        <input type="radio" id="ingles" name="ingles" value="ingles">
+                        <label for="">Ingles</label>
+                        <input type="radio" id="sub_espa" name="sub_espa" value="sub_espa">
+                        <label for="regular">Sub Español</label>
+                        <input type="radio" id="sub_ingles" name="sub_ingles" value="sub_ingles">
+                        <label for="regular">Sub Ingles</label> <br> <br>
+
+
+                        <label for="duracion" class="labels">Ingrese el tiempo que dura la pelicula:</label>
+                        <input type="text" id="duracion" name="duracion" value="" class="width" checked> <br><br>
+
+
+                        <label for="" type="text" class="labels">Clasificacion de edad:</label>
+                        <input type="radio" id="12" name="12" value="12" checked>
+                        <label for="12">Mayores de 12 (B)</label>
+                        <input type="radio" id="15" name="15" value="15">
+                        <label for="15">Mayores de 12 (B15)</label>
+                        <input type="radio" id="18" name="18" value="18">
+                        <label for="18">Mayores de 18 (C)</label>
+                        <br> <br>
+
+                        <label for="" class="labels">Salas en las que se presentara la pelicula:</label>
+
+                        <input type="checkbox" value="sala1" id="sala1"> <label for="sala1">Sala 1</label>
+                        <input type="checkbox" value="sala2" id="sala2"> <label for="sala2">Sala 2</label>
+                        <input type="checkbox" value="sala3" id="sala3"> <label for="sala3">Sala 3</label>
+                        <input type="checkbox" value="sala4" id="sala4"> <label for="sala4">Sala 4</label>
+                        <input type="checkbox" value="sala5" id="sala5"> <label for="sala5">Sala 5</label>
+                        <input type="checkbox" value="sala6" id="sala6"> <label for="sala6">Sala 6</label>
+                        <br><br>
+                        <label for="" class="labels">Rango de fechas disponibles:</label>
+                        <label for="">De:</label>
+                        <input type="text" class="width-2">
+                        <label for="">Hasta</label>
+                        <input type="text" class="width-2">
+                        <br><br>
+                        <label for="" class="labels">Horario de proyeccion:</label>
+                        <label for="">De:</label>
+                        <input type="text" class="width-2">
+                        <label for="">Hasta:</label>
+                        <input type="text" class="width-2">
+                        <label for="">Dias:</label>
+                        <input type="text">
+                        <br><br>
+                        <label for="" class="labels">Determine el costo de la entrada:</label>
+                        <input type="text" class="width-2">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <!-- dentro del main -->
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="">- Sobre nosotros</a>
+                <!-- meter link del landing page del equipo aqui -->
+                <p>- Sobre el producto</p>
+                <p>- Terminos y conidciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="">- Contactenos</a>
+                <!-- meter link del landing page del equipo aqui tambien -->
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <!-- Poner script de javascript en esta linea -->
+</body>
+
+</html>
