@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>
+        .texto_centrado {
+            text-align: center;
+        }
+    </style>
+
+    <title>Registrar Usuario</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- reset no me esta dejando cambiar tama;o de fuentes -->
+    <!-- <link rel="stylesheet" href="css/formularios.css"> -->
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
+    <!-- <link rel="stylesheet" href="css/perfil_registro_usuario.css"> -->
+
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
+    <main>
+        <h1 class="texto_centrado">Registro Usuario</h1>
+
+
+        <form name="data_usuario" action="*" method="GET">
+            <section>
+                <fieldset>
+                    <div>
+                        <label for="soporte">Soporte:</label>
+                        <input type="checkbox" id="soporte">
+                        <label for="soporte">Cliente:</label>
+                        <input type="checkbox" id="soporte">
+                    </div>
+                </fieldset>
+
+
+                <div id="div-inputs">
+
+                
+                    <div>
+                        <label for="nombre_usuario">Nombre:</label>
+                        <input type="text" id="nombre">
+                    </div>
+                    <div>
+                        <label for="segundo_nombre">Segundo nombre (opcional):</label>
+                        <input type="text" id="segundo_nombre">
+                    </div>
+                    <div>
+                        <label for="primer_apellido">Primer apelliddo:</label>
+                        <input type="text" id="primer_apellido">
+                    </div>
+                    <div>
+                        <label for="segundo_apellido">Segundo apelliddo:</label>
+                        <input type="text" id="segundo_apellido">
+                    </div>
+                    <div>
+                        <label for="cedula">identificación:</label>
+                        <input type="text" id="cedula">.
+                    </div>
+                    <div>
+                        <label for="nacimiento">Fecha de nacimiento:
+                    <input type="date" id="nacimiento"></label>
+                    </div>
+                    <div>
+                        <!--este debe ser calculado automaticamente con la fecha-->
+                        <label for="edad">Edad:
+                    <input type="number" id="edad"></label>
+                    </div>
+                    <div>
+                        <label for="correo">Correo electrónico:
+                    <input type="email" id="correo"></label>
+                    </div>
+                </div>
+
+                <div id="secc-imagen">
+                    <img src="imgs/blank-profile.png">
+    
+                    <button type="button">Cambiar imagen</button>
+                </div>
+                
+                <fieldset id="field-botones">
+                    <div>
+                        <button type="button_eliminar_sala">Eliminar sala</button>
+                        <button type="button_desactivar_sala">Desactivar sala</button>
+                    </div>
+                </fieldset>
+                <div id="guardar-boton">
+                    <button type="button" id="boton-guardar">Guardar</button>
+                </div>
+
+                
+            </section>
+        </form>
+            
+
+    </main>
+</body>
+
+</html>

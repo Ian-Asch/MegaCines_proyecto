@@ -1,0 +1,132 @@
+main {
+    padding: 2vw 5vw 2vw 5vw;
+}
+
+h1 {
+    font-family: "Scheherazade New";
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.labels {
+    font-weight: bold;
+}
+
+.label-p {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#secc-info-reserva {
+    display: flex;
+}
+
+#contenedor-imagen {
+    width: 30%;
+    text-align: center;
+}
+
+#contenedor-imagen img {
+    width: 70%;
+    border: solid 4px black;
+}
+
+#form-reserva {
+    width: 70%;
+}
+
+.div-input {
+    margin-top: 20px;
+}
+
+input[type=number] {
+    width: 35px;
+    margin-left: 10px;
+}
+
+input {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(220, 220, 200);
+}
+
+input:focus {
+    border: solid 2px #eb8f38;
+    outline: none;
+    background-color: black;
+}
+
+.radio-divs {
+    margin: 5px;
+}
+
+#secc-elegir-butacas {
+    margin-top: 3vw;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 14pt;
+    text-align: center;
+}
+
+#cuadro {
+    border: solid 2px #eb8f38;
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 80%;
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+#listar-asientos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.butaca {
+    border: solid 6px rgb(48, 100, 179);
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 500;
+    font-size: 14pt;
+    min-width: 40px;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butaca:hover {
+    border: solid 6px rgb(37, 115, 233);
+    cursor: pointer;
+}
+
+#margen-pantalla {
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#pantalla {
+    border: solid 2px #eb8f38;
+    text-align: center;
+    width: 60%;
+    height: 20px;
+    padding-top: 5px;
+    margin-bottom: -2px;
+}
+
+#contenedor-boton {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
+
+.seleccion {
+    border: solid 6px white !important;
+}

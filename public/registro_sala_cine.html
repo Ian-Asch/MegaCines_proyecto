@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <style>
+        .texto_centrado {
+            text-align: center;
+        }
+    </style>
+
+    <title>Nueva Sala</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <!--link rel="stylesheet" href="css/reset.css"-->
+    <!--reset no me esta dejando cambiar tama;o de fuentes-->
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+
+    </header>
+
+    <main>
+        <!--aqui comienza el contenido como tal-->
+        <h4 class="texto_centrado">Registrar nueva sala</h4>
+        <h1 class="texto_centrado">Nueva sala</h1>
+
+        <section>
+
+            <form name="datos_sala" action="*" method="GET">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre"></label>
+                </div>
+
+                <div>
+                    <label for="codigo_sala">Codigo de sala:</label>
+                    <input type="text" id="codigo_sala" />
+                </div>
+
+                <div>
+                    <label for=tipo_sala>Tipo de sala:</label>
+                    <input type="text" id="tipo_sala" />
+                </div>
+
+                <div>
+                    <label for="ubicacion">Ubicación:</label>
+                    <input type="text" id="ubicacion" />
+                </div>
+
+                <div>
+                    <label for="cantidad_butacas">Cantidad de butacas:</label>
+                    <input type="number" id="cantidad_butacas" />
+                </div>
+
+                <div>
+                    <label for="butacas">Categoria(s) de butacas:</label>
+                    <table>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Cantidad</th>
+                            <th>Desactivar</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>+</td>
+                            <td>+</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div>
+                    <label for="precio_butacas">Precio(s) de butacas:</label>
+                    <table>
+                        <tr>
+                            <th>Categoria</th>
+                            <th>Precio</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>+</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="opciones_sala">
+                    <button type="button1">Eliminar sala</button>
+                    <button type="button2">Desactivar sala</button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="type-a" ; id="secc-elegir-butacas">
+
+            <div id="cuadro">
+                <div id="listar-asientos">
+
+                    <div class="butaca">
+                        <p>A1</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A2</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A3</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A4</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A5</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A6</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A7</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A8</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A9</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A10</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>A11</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B1</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B2</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B3</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B4</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B5</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B6</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B7</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B8</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B9</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B10</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>B11</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C1</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C2</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C3</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C4</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C5</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C6</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C7</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C8</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C9</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C10</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>C11</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D1</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D2</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D3</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D4</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D5</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D6</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D7</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D8</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D9</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D10</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>D11</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E1</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E2</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E3</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E4</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E5</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E6</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E7</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E8</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E9</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E10</p>
+                    </div>
+
+                    <div class="butaca">
+                        <p>E11</p>
+                    </div>
+                </div>
+
+                <div id="margen-pantalla">
+                    <div id="pantalla">
+                        <p>Pantalla</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="guardar-boton">
+                <button type="button" id="boton-guardar">Guardar</button>
+            </div>
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+
+
+</html>
