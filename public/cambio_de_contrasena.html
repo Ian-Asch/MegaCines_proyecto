@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/cambio_de_contrasena.css">
+
 
     <!-- Agregar estilo de pagina en esta linea -->
     <title>Document</title>
@@ -35,24 +37,14 @@
             </div>
             <div id="login_Box">
                 <form>
-                    <h1>Iniciar Sesión</h1>
-                    <div>
-                        <label for="txt-usuario" class="ResetPSWRD">Dirección de correo electrónico </label>
-                        <input type="text" id="txt-usuario">
-                    </div>
-                    <div>
-                        <label for="txt-contrasenna">Contraseña</label>
-                        <input type="password" id="txt-contrasenna">
-                    </div>
-                    <div class="ResetPSWRD">
-                        <a href="../public/cambio_de_contrasena.html">Olvido su contrasena?</a>
+                    <h1>Asistente de contraseña
+                    </h1>
+                    <div id="txt_email">
+                        <label for="txt_email">Ingrese el correo electrónico asociado a su cuenta.</label>
+                        <input id="email" type="email" id="txt_email" value="Email">
                     </div>
                     <div class="sct-boton">
                         <button type="button" id="btn-ingresar">Ingresar</button>
-                    </div>
-                    <div>
-                        <p>Eres Nuevo?</p>
-                        <a href="">Crea Tu Cuenta</a>
                     </div>
             </div>
         </section>
