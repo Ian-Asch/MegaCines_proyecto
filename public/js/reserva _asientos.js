@@ -12,7 +12,7 @@ input_number.addEventListener("change",() => {
         input_number.value = "1";
     }
 
-    lista_asientos.forEach((butaca) => {
+    document.querySelectorAll(".seleccion").forEach((butaca) => {
         butaca.classList.remove("seleccion");
     });
     butacas_seleccionadas = 0;
