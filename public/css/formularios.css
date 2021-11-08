@@ -148,18 +148,28 @@ fieldset {
 }
 
 #secc-imagen img {
-    width: 10%;
+    width: 30%;
 }
 
 #secc-imagen {
     /* display: right; */
     /* display: inline-block; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: aquamarine; */
+    gap: 10px 0;
+    align-items: center;
+    /* text-align: center; */
+}
+#secc-imagen button{
+    /* display: block; */
+    width: 30%;
 }
 
 #div-inputs{
     /* display: inline-block; */
     float: left;
-    /* background-color: aquamarine; */
+    /* background-color: blue; */
     width: 50%;
 }
 section{
