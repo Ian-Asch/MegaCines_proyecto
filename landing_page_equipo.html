@@ -25,9 +25,9 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <header class="header-principal" id="header-principal">
         <img src="imgs/MegaCines_logo.jpg" id="MegaCines_logo">
         <nav>
-            <a href="">Cartelera</a>
-            <a href="">Cines</a>
-            <a href="">Perfil</a>
+            <a class="navbar" href="">Cartelera</a>
+            <a class="navbar" href="">Cines</a>
+            <a class="navbar" href="">Perfil</a>
             <a class="icono-menu" onclick="cambiar_estilo_navegacion()">≡</a>
         </nav>
         <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
@@ -74,8 +74,8 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                     </p>
                     <img class="imgsEquipo" src="imgs/IanAsch.jpeg" alt="Desarrollo">
                     <p>Desarrollo</p>
-                </div id="Caja_de_persona3">
-                <div>
+                </div>
+                <div id="Caja_de_persona3">
                     <p>
                         Enivin <br> Salas
                     </p>
@@ -93,7 +93,8 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                 <div id="Caja_de_persona5">
                     <p> Adrian <br> Oviedo </p>
                     <img class="imgsEquipo" src="imgs/AdrianOviedo.jpeg" alt="Soporte">
-                    <p>Soporte</p>
+                    <p class="Rol">Soporte</p>
+
                 </div>
 
             </div>
@@ -104,20 +105,128 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                 <h2 id="banner_misionVision">Mision y Vision</h2>
             </div>
             <div>
-                <h2>Mision</h2>
+                <h2 class="MisionVisionBanner">Misión</h2>
+
             </div>
             <div>
-                <h2>Vision</h2>
+                <h2 class="MisionVisionBanner">Visión</h2>
+
+
+            </div>
+            <div>
+                <p class="MisionVision" id="Mision">
+                    Crear proyectos con la implementación de las nuevas tecnologías web, con esto lograr soluciones duraderas y eficientes adaptadas a las necesidades de nuestros clientes.
+
+                </p>
+            </div>
+            <div>
+                <p class="MisionVision" id="Vision">
+                    Ser la empresa con las soluciones más innovadoras de la región.
+
+                </p>
             </div>
         </section>
         <section>
-            <div>
+            <div class="banner" id="Valores">
                 Valores
+
+            </div>
+            <div>
+                <div class="ValoresGeneral">
+                    <img src="imgs/Disciplina.png" alt="Disciplina" class="ValoresImg">
+
+                    <div class="ValoresBanner">
+                        <h3>
+                            Disciplina
+                            <p class="Valorestext">
+                                Siempre mantenerse trabajando con el fin de obtener los resultados deseados, sin importar los obstáculos.
+                            </p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="ValoresGeneral">
+                    <img src="imgs/Compromiso.png" alt="Compromiso" class="ValoresImg">
+
+                    <div class="ValoresBanner">
+                        <h3>
+                            Compromiso
+                            <p class="Valorestext">
+                                Cumplir con las responsabilidades y priorizar el objetivo del equipo por encima de objetivos personales dentro del tiempo estipulado para ello.
+                            </p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="ValoresGeneral">
+                    <img src="imgs/Companerismo.png" alt="Companerismo" class="ValoresImg">
+
+                    <div class="ValoresBanner">
+                        <h3>
+                            Compañerismo
+                            <p class="Valorestext">
+                                Tomar siempre en cuenta las opiniones de otros y respetarlas. Un equipo siempre avanza junto, nadie se queda atrás. </p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="ValoresGeneral">
+                    <img src="imgs/Transparencia.png" alt="Transparencia" class="ValoresImg">
+
+                    <div class="ValoresBanner">
+                        <h3>
+                            Transparencia
+                            <p class="Valorestext">
+                                Cumplir con las responsabilidades y priorizar el objetivo del equipo por encima de objetivos personales dentro del tiempo estipulado para ello.
+                            </p>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="ValoresGeneral">
+                    <img src="imgs/Comunicacion.png" alt="Comunicación" class="ValoresImg">
+
+                    <div class="ValoresBanner">
+                        <h3>
+                            Comunicación
+                            <p class="Valorestext">
+                                Se puede tener el mejor equipo con los mejores talentos y el grado más alto de disciplina, sin embargo, de no haber comunicación entre las partes no se lograrán los objetivos.
+                            </p>
+                        </h3>
+                    </div>
+                </div>
             </div>
         </section>
-        <section>Producto</section>
+        <section>
+            <div class="banner">Producto
+
+            </div>
+            <div class="contenedor">
+                <div>
+                    <img id="logoLinkProductoImg" src="imgs/gallo_pinto_development_logo_png.png" alt="GalloPintoDevelopment">
+                </div>
+                <div id="sct-producto-nombre-equipo_h2">
+                    <h2>Gallo Pinto Development</h2>
+                </div>
+                <div id="sct-producto-nombre-equipo_h4">
+                    <h4>Gallo Pinto Development</h4>
+                </div>
+
+                <div>
+                    Descripcion de la compania
+                </div>
+                <button type="button" id="LINK CATALOGO">
+                    <a href="/catalogo-peliculas.html">CATALOGO</a>                    
+                </button>
+            </div>
+        </section>
         <!-- dentro del main -->
     </main>
+
 
     <footer>
         <div id="div-logo-info">
@@ -150,9 +259,10 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
         </div>
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9 "></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js " crossorigin="anonymous "></script>
-    <script src="js/controlador-general.js"></script>
+    <script src="js/controlador-general.js "></script>
 </body>
 
 </html>
