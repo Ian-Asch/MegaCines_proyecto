@@ -9,7 +9,9 @@ html {
     font-family: "Montserrat";
     /* font-family: "Scheherazade New"; */
     /*Este es la otra fuente por si acaso*/
-    /* height: 100%; */
+
+    
+    /* height: 100%; <--- Esta linea hace que el color de fondo tenga la altura de la pagina */
 }
 
 main {
@@ -75,9 +77,9 @@ footer {
     padding: 30px;
     color: #eb8f38;
     margin-top: 30px;
-    /* width: 100%;
-    bottom: 0;
-    position: fixed; */
+    /*width: 100%; <---- Estas 3 lineas son las que hacen que el footer se vaya hacia abajo*/
+    /* bottom: 0; <---- */
+    /* position: fixed; <---- */
 }
 
 #div-logo-info {
