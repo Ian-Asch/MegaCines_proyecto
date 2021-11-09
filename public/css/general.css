@@ -9,6 +9,7 @@ html {
     font-family: "Montserrat";
     /* font-family: "Scheherazade New"; */
     /*Este es la otra fuente por si acaso*/
+    height: 100%;
 }
 
 main {
@@ -74,9 +75,9 @@ footer {
     padding: 30px;
     color: #eb8f38;
     margin-top: 30px;
-    /* width: 100%;
+    width: 100%;
     bottom: 0;
-    position: fixed; */
+    position: fixed;
 }
 
 #div-logo-info {
