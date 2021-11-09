@@ -1,0 +1,136 @@
+<!-- Por favor no editen este template. Si lo quieren usar solo
+copienlo y pegengo en el archivo de la pagina que estan haciendo -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/registro-usuario-cliente.css">
+    <!-- Agregar estilo de pagina en esta linea -->
+    <title>Registro Cliente</title>
+    <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+    </header>
+
+    <main>
+        <h1 class="texto_centrado">Registro Usuario</h1>
+
+
+        <form name="data-cliente" action="*" method="GET">
+            <section>
+
+                <div id="div-inputs">
+
+                    <div>
+                        <label for="nombre_usuario">Primer Nombre:</label>
+                        <input type="text" class="field" id="nombre">
+                    </div>
+                    <div>
+                        <label for="segundo_nombre">Segundo nombre (opcional):</label>
+                        <input type="text" class="field" id="segundo_nombre">
+                    </div>
+                    <div>
+                        <label for="primer_apellido">Primer apelliddo:</label>
+                        <input type="text" class="field" id="primer_apellido">
+                    </div>
+                    <div>
+                        <label for="segundo_apellido">Segundo apelliddo: (opcional)</label>
+                        <input type="text" class="field" id="segundo_apellido">
+                    </div>
+                    <div>
+                        <label for="cedula">Identificación:</label>
+                        <input type="text" class="field" id="cedula" placeholder="101230123">
+                    </div>
+                    <div>
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" class="field" id="nacimiento">
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="number" class="field" id="edad">
+                    </div>
+                    <div>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" class="field" id="correo" placeholder="abc@abc.com">
+                    </div>
+                </div>
+
+                <div id="secc-imagen">
+                    <img src="imgs/blank-profile.png">
+
+                    <button type="button">Cambiar imagen</button>
+                </div>
+
+                <fieldset id="field-botones">
+                    <div>
+                        <button type="button_eliminar_sala">Eliminar usuario</button>
+                        <button type="button_desactivar_sala">Desactivar usuario</button>
+                    </div>
+                </fieldset>
+                <div id="guardar-boton">
+                    <button type="button" id="boton-guardar">Guardar</button>
+                </div>
+
+
+            </section>
+        </form>
+
+
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="">- Sobre nosotros</a>
+                <!-- meter link del landing page del equipo aqui -->
+                <p>- Sobre el producto</p>
+                <p>- Terminos y condiciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="">- Contactenos</a>
+                <!-- meter link del landing page del equipo aqui tambien -->
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <!-- Poner script de javascript en esta linea -->
+</body>
+
+</html>
