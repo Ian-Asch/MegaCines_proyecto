@@ -15,8 +15,6 @@ const verificar_espacios = () => {
     });
 };
 
-const verificar_correo = (input) => {
-    let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
 
-    
-};
+let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
+let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/

@@ -29,9 +29,7 @@ main{
     color: black;
 }
 table{
-    /* background-color: darkcyan; */
     width: 75%;
-    /* margin-left: 10%; */
     margin: 3vw auto;
 }
 th{
@@ -49,7 +47,6 @@ tbody tr:hover{
     cursor: pointer;
 }
 td{
-    /* border: solid 2px chartreuse; */
     text-align: center;
     padding: 15px 0 15px 0;
 }

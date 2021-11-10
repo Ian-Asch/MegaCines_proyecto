@@ -103,5 +103,5 @@ footer img {
     gap: 10px;
 }
 .error{
-    border: solid 2px red;
+    border: solid 2px red !important;
 }

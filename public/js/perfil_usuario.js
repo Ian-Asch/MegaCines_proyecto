@@ -87,6 +87,11 @@ const mostrar_parrafos = () => {
 
 
 const verificar_espacios = () => {
+    let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
+    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
+    let expresion_solo_letras = /^[a-z\s]+$/i;
+    let expresion_cedula = /^\d{9,12}$/;
+    
     let verfificado = true;
 
     lista_inputs.forEach((element) => {
@@ -97,6 +102,30 @@ const verificar_espacios = () => {
             verfificado = false;
         }
     });
+
+
+    if (!expresion_solo_letras.test(input_nombre.value)){
+        input_nombre.classList.add("error");
+            verfificado = false;
+    }
+    if (!expresion_solo_letras.test(input_primer_apellido.value)){
+        input_primer_apellido.classList.add("error");
+            verfificado = false;
+    }
+    if (!expresion_solo_letras.test(input_segundo_apellido.value)){
+        input_segundo_apellido.classList.add("error");
+            verfificado = false;
+    }
+
+    if (!expresion_correo.test(input_correo.value)) {
+        input_correo.classList.add("error");
+            verfificado = false;
+    }
+
+    if (!expresion_cedula.test(input_cedula.value)) {
+        input_cedula.classList.add("error");
+            verfificado = false;
+    }
 
     return verfificado;
 };
