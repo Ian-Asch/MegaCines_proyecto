@@ -152,7 +152,7 @@
                                         .sct-servicios .info h2 {
                                             font-size: 17px;
                                         }
-                                        #btn-cerrar-sesion {
+                                        .boton-header {
                                             margin-left: 10%;
                                             margin-top: 5px;
                                         }
@@ -180,7 +180,7 @@
                                         }
                                     }
                                     
-                                    #btn-cerrar-sesion {
+                                    .boton-header {
                                         height: 15px;
                                         padding-top: 0px;
                                     }
