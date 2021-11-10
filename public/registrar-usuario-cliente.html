@@ -57,23 +57,16 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                     <input type="text" class="field" id="segundo_apellido">
                 </div>
                 <div>
-                    <label>Identificación:</label><br> <br>
-
-                    <input type="radio" id="cedula" name="identificacion" value="ced" checked />
-                    <label class="radio" for="cedula">Cédula</label>
-
-                    <input type="radio" id="pasaporte" name="identificacion" value="pas" />
-                    <label class="radio" for="pasaporte">Pasaporte</label>
-
-                    <input type="text" class="field" id="identificacion" required>
+                    <label for="identificacion">Identificación:</label>
+                    <input type="text" class="field" id="identificacion" required placeholder="Formato Cédula 101230123, Pasaporte 20123401234">
                 </div>
                 <div>
                     <label for="nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="field" id="nacimiento" required>
+                    <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
                 </div>
                 <div>
                     <label for="edad">Edad:</label>
-                    <input type="number" class="field" id="edad">
+                    <input type="text" class="field" id="edad">
                 </div>
                 <div>
                     <label for="correo">Correo electrónico:</label>

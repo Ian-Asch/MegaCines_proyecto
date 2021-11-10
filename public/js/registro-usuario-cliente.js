@@ -5,7 +5,6 @@ const input_nombre = document.querySelector("#primer_nombre");
 const input_sgnd_nombre = document.querySelector("#segundo_nombre");
 const input_apellido = document.querySelector("#primer_apellido");
 const input_sgnd_apellido = document.querySelector("#segundo_apellido");
-var input_tipo_id = document.getElementsByName("identificacion");
 const input_identificacion = document.querySelector("#identificacion");
 const input_nacimiento = document.querySelector("#nacimiento");
 const input_edad = document.querySelector("#edad");
@@ -70,9 +69,8 @@ const validar_vacios = () => {
 const validar = () => {
     let error = false;
 
-    let expReg_soloLetras = /^[a-z]+$/i;
-    let expReg_identificacion_ced = /'^[0-9]{9}'/; //Formato esperado  112341234
-    let expReg_identificacion_pasaporte = /'^[0-9]{11,12}'/; //Formato esperado  11 o 12 numeros seguidos
+    let expReg_soloLetras = /^[a-záéióúñ]+$/i;
+    let expReg_identificacion = RegExp('[0-9]{9,12}'); //Formato esperado  9 o 12 numeros seguidos
 
     let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i'); //texto@texto.com ó .net ...
 
@@ -116,8 +114,8 @@ const validar = () => {
     }
 
     //valida el formato del ID
-    if (input_tipo_id[0].checked = true) {
-        if (!expReg_identificacion_ced.test(input_identificacion.value)) {
+    if (input_identificacion.value != '') {
+        if (!expReg_identificacion.test(input_identificacion.value)) {
             error = true;
             input_identificacion.classList.add('error-input');
         } else {
@@ -125,14 +123,6 @@ const validar = () => {
         }
     }
 
-    if (input_tipo_id[1].checked = true) {
-        if (!expReg_identificacion_pasaporte.test(input_identificacion.value)) {
-            error = true;
-            input_identificacion.classList.add('error-input');
-        } else {
-            input_identificacion.classList.remove('error-input');
-        }
-    }
 
     //valida el formato del correo
     if (!expReg_Correo.test(input_correo.value)) {
@@ -169,5 +159,36 @@ const limpiar_pantalla = () => {
     input_contrasena.value = "";
     input_repcontrasena.value = "";
 }
+
+const calcularEdad = (input_nacimiento) => {
+    const fechaActual = new Date();
+    const anoActual = parseInt(fechaActual.getFullYear());
+    const mesActual = parseInt(fechaActual.getMonth()) + 1;
+    const diaActual = parseInt(fechaActual.getDay());
+
+    const anoNacimiento = parseInt(String(input_nacimiento).substring(0, 4));
+    const mesNacimiento = parseInt(String(input_nacimiento).substring(5, 7));
+    const diaNacimiento = parseInt(String(input_nacimiento).substring(8, 10));
+    let edad = anoActual - anoNacimiento;
+    if (mesActual < mesNacimiento) {
+        edad--;
+    } else if (mesActual == mesNacimiento) {
+        if (diaActual < diaNacimiento) {
+            edad--;
+        }
+
+    }
+
+    return edad;
+
+}
+
+input_nacimiento.addEventListener("change", function() {
+    if (input_nacimiento.value) {
+        let edad = (calcularEdad(input_nacimiento.value));
+        input_edad.value = edad;
+    }
+});
+
 
 boton_enviar.addEventListener('click', validar);
