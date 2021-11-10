@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/perfil_usuario.css">
+    <title>Perfil usuario</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+    </header>
+
+    <main>
+        <div id="info-usuario">
+            <h1 id="nombre-completo"></h1>
+
+            <div class="info-div">
+                <label for="nombre-usuario">Nombre:</label>
+                <p class="label-p" id="nombre-usuario"></p>
+                <input type="text" class="esconder" id="input-nombre" required>
+            </div>
+
+            <div class="info-div">
+                <label for="primer-apellido">Primer apellido:</label>
+                <p class="label-p" id="primer-apellido"></p>
+                <input type="text" class="esconder" id="input-primer-apellido" required>
+            </div>
+
+            <div class="info-div">
+                <label for="segundo-apellido">Segundo apellido:</label>
+                <p class="label-p" id="segundo-apellido"></p>
+                <input type="text" class="esconder" id="input-segundo-apellido" required>
+            </div>
+
+            <div class="info-div">
+                <label for="correo-usuario">Correo electronico:</label>
+                <p class="label-p" id="correo-usuario"></p>
+                <input type="text" class="esconder" id="input-correo" required>
+            </div>
+
+            <div class="info-div">
+                <label for="identificacion-usuario">Identificacion:</label>
+                <p class="label-p" id="identificacion-usuario"></p>
+                <input type="text" class="esconder" id="input-cedula" required>
+            </div>
+
+            <div class="info-div">
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <p class="label-p" id="fecha-nacimiento"></p>
+                <input type="date" class="esconder" id="input-nacimiento" required>
+            </div>
+
+            <div class="info-div">
+                <label for="edad-usuario">Edad:</label>
+                <p class="label-p" id="edad-usuario"></p>
+            </div>
+        </div>
+
+        <div id="secc-imagen">
+            <img src="imgs/blank-profile.png">
+
+            <button type="button">Cambiar imagen</button>
+            <button type="button" id="boton-editar-info">Editar informacion</button>
+            <button type="button" class="esconder" id="boton-guardar">Guardar cambios</button>
+        </div>
+
+        <div id="secc-botones">
+            <button type="button">Editar metodos de pago</button>
+            <button type="button" onclick="window.location.href='cambio_de_contrasena.html'">Cambiar contraseña</button>
+        </div>
+    </main>
+
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
+            </div>
+            <div>
+                <h6>INFORMACION</h6>
+                <a href="landing_page_equipo.html">- Sobre nosotros</a>
+                <p>- Sobre el producto</p>
+                <p>- Terminos y conidciones</p>
+            </div>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="landing_page_equipo.html">- Contactenos</a>
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="js/perfil_admin.js"></script>
+
+</body>
+
+</html>

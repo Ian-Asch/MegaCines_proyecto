@@ -17,7 +17,7 @@
 
 const lista_inputs_requeridos = document.querySelectorAll("[required]");
 const boton_ingresar = document.querySelector("#btn-ingresar");
-const input_correo = document.querySelector("#txt-correo");
+const input_correo = document.querySelector("#email");
 
 const icono_ojo = document.querySelector("#icono-ojo")
 
@@ -70,13 +70,3 @@ icono_ojo.addEventListener("click",() => {
     }
 })
 
-// function myFunction() {
-//     var x = document.getElementById("myInput");
-//     if (x.type === "password") {
-//       x.type = "text";
-//     } else {
-//       x.type = "password";
-//     }
-//   }
-
-// ! --> true ---> false
