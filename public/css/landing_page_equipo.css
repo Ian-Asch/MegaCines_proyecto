@@ -1,366 +1,372 @@
-                                    #logo_sct1 {
-                                        /* display: flow-root; */
-                                        /* text-align: right; */
-                                        max-height: 200px;
-                                        /* float: right; */
-                                        background-color: rgba(255, 255, 255, 0);
-                                        padding-bottom: 60px;
-                                        padding-left: 25%;
-                                        /* background-color: chartreuse;
+                                            html {
+                                                background: rgb(255, 0, 89);
+                                                background: linear-gradient(180deg, rgba(255, 0, 89, 1) 0%, rgba(105, 5, 126, 1) 32%, rgba(80, 3, 95, 1) 49%, rgba(0, 0, 0, 1) 84%);
+                                                ;
+                                            }
+                                            
+                                            #logo_sct1 {
+                                                /* display: flow-root; */
+                                                /* text-align: right; */
+                                                max-height: 200px;
+                                                /* float: right; */
+                                                background-color: rgba(255, 255, 255, 0);
+                                                padding-bottom: 60px;
+                                                padding-left: 25%;
+                                                /* background-color: chartreuse;
     width: 50%; */
-                                    }
-                                    
-                                    #sct-1 {
-                                        background-image: url(../imgs/butacas.jpg);
-                                        background-color: #69057e;
-                                        background-blend-mode: darken;
-                                    }
-                                    
-                                    #nombre_de_equipo {
-                                        /* height: 100px; */
-                                        text-align: right;
-                                        padding-top: 200px;
-                                        /* padding-right: 200px; */
-                                        /* padding-bottom: 200px; */
-                                        width: 50%;
-                                        font-weight: 700;
-                                        font-size: large;
-                                        vertical-align: bottom;
-                                    }
-                                    
-                                    #div_gallo_logo {
-                                        width: 50%;
-                                        padding-top: 100px;
-                                        /* float: right */
-                                    }
-                                    
-                                    .header a {
-                                        margin: 0px !important;
-                                    }
-                                    
-                                    .sct-banner {
-                                        display: flex;
-                                    }
-                                    
-                                    #MegaCines_logo {
-                                        float: left;
-                                    }
-                                    
-                                    .header-principal {
-                                        background: #000000;
-                                        padding-left: 5%;
-                                        margin-bottom: 0;
-                                    }
-                                    
-                                    .navbar {
-                                        width: 70%;
-                                    }
-                                    
-                                    nav a {
-                                        color: #fad80f;
-                                        text-decoration: none;
-                                        margin-right: 20px;
-                                    }
-                                    
-                                    nav a:hover {
-                                        color: #fc883a;
-                                    }
-                                    
-                                    .header-principal .icono-menu {
-                                        display: none;
-                                    }
-                                    
-                                    #equipo {
-                                        max-width: 200px;
-                                        float: left;
-                                        padding-top: 10%;
-                                        padding-left: 15%;
-                                    }
-                                    
-                                    #texto_de_equipo {
-                                        height: 600px;
-                                    }
-                                    
-                                    #div-logo-info {
-                                        background-color: auto;
-                                    }
-                                    
-                                    #trabajo_equipo_img {
-                                        height: 200px;
-                                        /* padding-left: 100px; */
-                                        display: block;
-                                        padding-top: 30px;
-                                        padding-left: 50%;
-                                    }
-                                    
-                                    #div_imgn {
-                                        /* display: flow-root; */
-                                        width: 50%;
-                                        float: left;
-                                    }
-                                    
-                                    #div_texto {
-                                        height: 200px;
-                                        padding-left: 55%;
-                                        padding-top: 30px;
-                                        padding-bottom: 100px;
-                                    }
-                                    
-                                    #mensaje_inspiracional {
-                                        display: flex;
-                                        text-align: center;
-                                        font-size: 1.5em;
-                                        padding-left: 10px;
-                                        padding-right: 10%;
-                                    }
-                                    
-                                    @media(max-width:1020px) {
-                                        .sct-banner {
-                                            /*PADDING: ↑  →  ↓  ←*/
-                                            /* padding: 30px 0px 30px 0px !important; */
-                                        }
-                                        .sct-banner div {
-                                            width: 75%;
-                                            padding: 20px 5px;
-                                        }
-                                        .sct-banner h1 {
-                                            font-size: 30px;
-                                        }
-                                        #mensaje_inspiracional {
-                                            width: 50%;
-                                            display: flex;
-                                            text-align: center;
-                                            font-size: 1.5em;
-                                            padding-left: 10px;
-                                            padding-right: 10%;
-                                            font-size: large;
-                                        }
-                                        #nombre_de_equipo {
-                                            font-size: large;
-                                        }
-                                    }
-                                    
-                                    @media(max-width:480px) {
-                                        .sct-banner h1 {
-                                            font-size: 20px;
-                                            padding-top: 15px;
-                                        }
-                                        .sct-servicios div {
-                                            float: none;
-                                            width: 100%;
-                                        }
-                                        .sct-servicios .info h2 {
-                                            font-size: 17px;
-                                        }
-                                        #btn-cerrar-sesion {
-                                            margin-left: 10%;
-                                            margin-top: 5px;
-                                        }
-                                        #header-principal a {
-                                            margin: 0px !important;
-                                            padding-left: 30%;
-                                        }
-                                        #mensaje_inspiracional {
-                                            width: 50%;
-                                            display: flex;
-                                            text-align: center;
-                                            font-size: 1.3em;
-                                            padding-left: 10px;
-                                            padding-right: 10px;
-                                        }
-                                        .header-principal .icono-menu {
-                                            font-size: 5em;
-                                        }
-                                        #trabajo_equipo_img {
-                                            height: 200px;
-                                            /* padding-left: 100px; */
-                                            display: block;
-                                            padding-top: 30px;
-                                            padding-left: 25%;
-                                        }
-                                    }
-                                    
-                                    #btn-cerrar-sesion {
-                                        height: 15px;
-                                        padding-top: 0px;
-                                    }
-                                    /*equipo*/
-                                    
-                                    .banner {
-                                        width: 100%;
-                                        text-align: center;
-                                        padding-top: 40px;
-                                        padding-bottom: 40px;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        margin-bottom: 40px;
-                                        font-size: 2em;
-                                    }
-                                    
-                                    .contenedor_personas {
-                                        display: flex;
-                                        justify-content: space-evenly;
-                                        text-align: center;
-                                        margin-bottom: 100px;
-                                        margin-top: 100px;
-                                    }
-                                    
-                                    #Caja_de_persona1 {
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        border-radius: 15px;
-                                        width: 17%;
-                                    }
-                                    
-                                    #Caja_de_persona2 {
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        width: 17%;
-                                        border-radius: 15px;
-                                    }
-                                    
-                                    #Caja_de_persona3 {
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        width: 17%;
-                                        border-radius: 15px;
-                                    }
-                                    
-                                    #Caja_de_persona4 {
-                                        width: 17%;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        border-radius: 15px;
-                                    }
-                                    
-                                    #Caja_de_persona5 {
-                                        width: 17%;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        border-radius: 15px;
-                                    }
-                                    
-                                    #banner_misionVision {
-                                        width: 100%;
-                                        display: flow-root;
-                                    }
-                                    
-                                    .imgsEquipo {
-                                        max-height: 100px;
-                                        max-width: 100px;
-                                        background-color: white;
-                                    }
-                                    
-                                    .MisionVisionBanner {
-                                        width: 50%;
-                                        display: flex;
-                                        height: 50px;
-                                        float: left;
-                                        justify-content: space-evenly;
-                                        text-align: center;
-                                        margin-bottom: 20px;
-                                        font-size: 2em;
-                                    }
-                                    
-                                    .MisionVision {
-                                        width: 40%;
-                                        display: flex;
-                                        height: auto;
-                                        float: left;
-                                        justify-content: space-evenly;
-                                        text-align: center;
-                                        margin-bottom: 40px;
-                                        padding: 5px;
-                                        border-radius: 15px;
-                                        margin-bottom: 100px;
-                                    }
-                                    
-                                    #Valores {
-                                        width: 100%;
-                                        display: flex;
-                                        justify-content: center;
-                                    }
-                                    
-                                    .Valores {
-                                        width: 100%;
-                                        text-align: center;
-                                    }
-                                    
-                                    #Vision {
-                                        margin-left: 4%;
-                                        margin-right: 4%;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        margin-top: 1%;
-                                    }
-                                    
-                                    #Mision {
-                                        margin-left: 4%;
-                                        margin-right: 4%;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                    }
-                                    
-                                    .ValoresGeneral {
-                                        width: 100%;
-                                        display: flex;
-                                    }
-                                    
-                                    .ValoresImg {
-                                        height: 100px;
-                                        margin-top: 60px;
-                                        margin-left: 35%;
-                                        min-width: 100px;
-                                        height: 100px;
-                                    }
-                                    
-                                    .ValoresBanner {
-                                        display: flex;
-                                        width: 65%;
-                                        margin-top: 60px;
-                                        background-color: rgba(255, 255, 255, 0.3);
-                                        margin-left: 5%;
-                                        padding: 2%;
-                                        border-radius: 15px;
-                                        font-size: 2em;
-                                        margin-right: 5%;
-                                    }
-                                    
-                                    .Valorestext {
-                                        font-size: medium;
-                                        margin-top: 5%;
-                                        padding-left: 5%;
-                                    }
-                                    
-                                    #logoLinkProductoImg {
-                                        display: flex;
-                                        width: 100px;
-                                        margin-left: 150%;
-                                    }
-                                    
-                                    .contenedor {
-                                        margin-top: 100px;
-                                        display: flex;
-                                        text-align: center;
-                                        justify-content: center;
-                                    }
-                                    
-                                    #sct-producto-nombre-equipo_h2 {
-                                        display: flex;
-                                        padding-top: 60px;
-                                        margin-left: 15%;
-                                    }
-                                    
-                                    #sct-producto-nombre-equipo_h4 {
-                                        display: flex;
-                                        padding-left: 40%;
-                                        margin-bottom: 5%;
-                                    }
-                                    
-                                    .SctPaddingPadding {
-                                        margin-bottom: 100px;
-                                    }
-                                    
-                                    #LINK_CATALOGO {
-                                        height: 30px;
-                                        margin-left: -5%;
-                                    }
-                                    
-                                    #Descripcion_MegaCines {
-                                        display: flex;
-                                        max-width: 45%;
-                                        padding-left: 25%;
-                                        margin-bottom: 5%;
-                                    }
+                                            }
+                                            
+                                            #sct-1 {
+                                                background-image: url(../imgs/butacas.jpg);
+                                                background-color: #69057e;
+                                                background-blend-mode: darken;
+                                            }
+                                            
+                                            #nombre_de_equipo {
+                                                /* height: 100px; */
+                                                text-align: right;
+                                                padding-top: 200px;
+                                                /* padding-right: 200px; */
+                                                /* padding-bottom: 200px; */
+                                                width: 50%;
+                                                font-weight: 700;
+                                                font-size: large;
+                                                vertical-align: bottom;
+                                            }
+                                            
+                                            #div_gallo_logo {
+                                                width: 50%;
+                                                padding-top: 100px;
+                                                /* float: right */
+                                            }
+                                            
+                                            .header a {
+                                                margin: 0px !important;
+                                            }
+                                            
+                                            .sct-banner {
+                                                display: flex;
+                                            }
+                                            
+                                            #MegaCines_logo {
+                                                float: left;
+                                            }
+                                            
+                                            .header-principal {
+                                                background: #000000;
+                                                padding-left: 5%;
+                                                margin-bottom: 0;
+                                            }
+                                            
+                                            .navbar {
+                                                width: 70%;
+                                            }
+                                            
+                                            nav a {
+                                                color: #fad80f;
+                                                text-decoration: none;
+                                                margin-right: 20px;
+                                            }
+                                            
+                                            nav a:hover {
+                                                color: #fc883a;
+                                            }
+                                            
+                                            .header-principal .icono-menu {
+                                                display: none;
+                                            }
+                                            
+                                            #equipo {
+                                                max-width: 200px;
+                                                float: left;
+                                                padding-top: 10%;
+                                                padding-left: 15%;
+                                            }
+                                            
+                                            #texto_de_equipo {
+                                                height: 600px;
+                                            }
+                                            
+                                            #div-logo-info {
+                                                background-color: auto;
+                                            }
+                                            
+                                            #trabajo_equipo_img {
+                                                height: 200px;
+                                                /* padding-left: 100px; */
+                                                display: block;
+                                                padding-top: 30px;
+                                                padding-left: 40%;
+                                            }
+                                            
+                                            #div_imgn {
+                                                /* display: flow-root; */
+                                                width: 50%;
+                                                float: left;
+                                            }
+                                            
+                                            #div_texto {
+                                                height: 200px;
+                                                padding-left: 55%;
+                                                padding-top: 30px;
+                                                padding-bottom: 100px;
+                                            }
+                                            
+                                            #mensaje_inspiracional {
+                                                display: flex;
+                                                text-align: center;
+                                                font-size: 1.5em;
+                                                padding-left: 10px;
+                                                padding-right: 10%;
+                                            }
+                                            
+                                            @media(max-width:1020px) {
+                                                .sct-banner {
+                                                    /*PADDING: ↑  →  ↓  ←*/
+                                                    /* padding: 30px 0px 30px 0px !important; */
+                                                }
+                                                .sct-banner div {
+                                                    width: 75%;
+                                                    padding: 20px 5px;
+                                                }
+                                                .sct-banner h1 {
+                                                    font-size: 30px;
+                                                }
+                                                #mensaje_inspiracional {
+                                                    width: 50%;
+                                                    display: flex;
+                                                    text-align: center;
+                                                    font-size: 1.5em;
+                                                    padding-left: 10px;
+                                                    padding-right: 10%;
+                                                    font-size: large;
+                                                }
+                                                #nombre_de_equipo {
+                                                    font-size: large;
+                                                }
+                                            }
+                                            
+                                            @media(max-width:480px) {
+                                                .sct-banner h1 {
+                                                    font-size: 20px;
+                                                    padding-top: 15px;
+                                                }
+                                                .sct-servicios div {
+                                                    float: none;
+                                                    width: 100%;
+                                                }
+                                                .sct-servicios .info h2 {
+                                                    font-size: 17px;
+                                                }
+                                                #btn-cerrar-sesion {
+                                                    margin-left: 10%;
+                                                    margin-top: 5px;
+                                                }
+                                                #header-principal a {
+                                                    margin: 0px !important;
+                                                    padding-left: 30%;
+                                                }
+                                                #mensaje_inspiracional {
+                                                    width: 50%;
+                                                    display: flex;
+                                                    text-align: center;
+                                                    font-size: 1.3em;
+                                                    padding-left: 10px;
+                                                    padding-right: 10px;
+                                                }
+                                                .header-principal .icono-menu {
+                                                    font-size: 5em;
+                                                }
+                                                #trabajo_equipo_img {
+                                                    height: 200px;
+                                                    /* padding-left: 100px; */
+                                                    display: block;
+                                                    padding-top: 30px;
+                                                    padding-left: 25%;
+                                                }
+                                            }
+                                            
+                                            #btn-cerrar-sesion {
+                                                height: 15px;
+                                                padding-top: 0px;
+                                            }
+                                            /*equipo*/
+                                            
+                                            .banner {
+                                                width: 100%;
+                                                text-align: center;
+                                                padding-top: 40px;
+                                                padding-bottom: 40px;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                margin-bottom: 40px;
+                                                font-size: 2em;
+                                            }
+                                            
+                                            .contenedor_personas {
+                                                display: flex;
+                                                justify-content: space-evenly;
+                                                text-align: center;
+                                                margin-bottom: 100px;
+                                                margin-top: 100px;
+                                            }
+                                            
+                                            #Caja_de_persona1 {
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                border-radius: 15px;
+                                                width: 17%;
+                                            }
+                                            
+                                            #Caja_de_persona2 {
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                width: 17%;
+                                                border-radius: 15px;
+                                            }
+                                            
+                                            #Caja_de_persona3 {
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                width: 17%;
+                                                border-radius: 15px;
+                                            }
+                                            
+                                            #Caja_de_persona4 {
+                                                width: 17%;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                border-radius: 15px;
+                                            }
+                                            
+                                            #Caja_de_persona5 {
+                                                width: 17%;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                border-radius: 15px;
+                                            }
+                                            
+                                            #banner_misionVision {
+                                                width: 100%;
+                                                display: flow-root;
+                                            }
+                                            
+                                            .imgsEquipo {
+                                                max-height: 100px;
+                                                max-width: 100px;
+                                                background-color: white;
+                                            }
+                                            
+                                            .MisionVisionBanner {
+                                                width: 50%;
+                                                display: flex;
+                                                height: 50px;
+                                                float: left;
+                                                justify-content: space-evenly;
+                                                text-align: center;
+                                                margin-bottom: 20px;
+                                                font-size: 2em;
+                                            }
+                                            
+                                            .MisionVision {
+                                                width: 40%;
+                                                display: flex;
+                                                height: auto;
+                                                float: left;
+                                                justify-content: space-evenly;
+                                                text-align: center;
+                                                margin-bottom: 40px;
+                                                padding: 5px;
+                                                border-radius: 15px;
+                                                margin-bottom: 100px;
+                                            }
+                                            
+                                            #Valores {
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: center;
+                                            }
+                                            
+                                            .Valores {
+                                                width: 100%;
+                                                text-align: center;
+                                            }
+                                            
+                                            #Vision {
+                                                margin-left: 4%;
+                                                margin-right: 4%;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                margin-top: 1%;
+                                            }
+                                            
+                                            #Mision {
+                                                margin-left: 4%;
+                                                margin-right: 4%;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                            }
+                                            
+                                            .ValoresGeneral {
+                                                width: 100%;
+                                                display: flex;
+                                            }
+                                            
+                                            .ValoresImg {
+                                                height: 100px;
+                                                margin-top: 60px;
+                                                margin-left: 35%;
+                                                min-width: 100px;
+                                                height: 100px;
+                                            }
+                                            
+                                            .ValoresBanner {
+                                                display: flex;
+                                                width: 65%;
+                                                margin-top: 60px;
+                                                background-color: rgba(255, 255, 255, 0.3);
+                                                margin-left: 5%;
+                                                padding: 2%;
+                                                border-radius: 15px;
+                                                font-size: 2em;
+                                                margin-right: 5%;
+                                            }
+                                            
+                                            .Valorestext {
+                                                font-size: medium;
+                                                margin-top: 5%;
+                                                padding-left: 5%;
+                                            }
+                                            
+                                            #logoLinkProductoImg {
+                                                display: flex;
+                                                width: 100px;
+                                                margin-left: 150%;
+                                            }
+                                            
+                                            .contenedor {
+                                                margin-top: 100px;
+                                                display: flex;
+                                                text-align: center;
+                                                justify-content: center;
+                                            }
+                                            
+                                            #sct-producto-nombre-equipo_h2 {
+                                                display: flex;
+                                                padding-top: 60px;
+                                                margin-left: 15%;
+                                            }
+                                            
+                                            #sct-producto-nombre-equipo_h4 {
+                                                display: flex;
+                                                padding-left: 40%;
+                                                margin-bottom: 5%;
+                                            }
+                                            
+                                            .SctPaddingPadding {
+                                                margin-bottom: 100px;
+                                            }
+                                            
+                                            #LINK_CATALOGO {
+                                                height: 30px;
+                                                margin-left: -5%;
+                                            }
+                                            
+                                            #Descripcion_MegaCines {
+                                                display: flex;
+                                                max-width: 45%;
+                                                padding-left: 25%;
+                                                margin-bottom: 5%;
+                                            }
