@@ -56,6 +56,12 @@ const funcion_verificar_expresiones = () => {
 const funcion_boton = () => {
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
+    if (verfificado) {
+        console.log("verificado completo")
+        if (input_correo.value = "cliente@gmail.com") {
+            window.location.href = "perfil_usuario_cliente.html"
+        }
+    }
 }
 
 
