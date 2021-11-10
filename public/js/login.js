@@ -58,8 +58,11 @@ const funcion_boton = () => {
     funcion_verificar_expresiones()
     if (verfificado) {
         console.log("verificado completo")
-        if (input_correo.value = "cliente@gmail.com") {
+        if (input_correo.value = "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
+        }
+        if (input_correo.value = "admin@MegaCines.com") {
+            window.location.href = ""
         }
     }
 }
