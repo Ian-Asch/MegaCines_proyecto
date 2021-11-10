@@ -9,27 +9,20 @@ const input_identificacion = document.querySelector("#identificacion");
 const input_nacimiento = document.querySelector("#nacimiento");
 const input_edad = document.querySelector("#edad");
 const input_correo = document.querySelector("#correo");
-const input_contrasena = document.querySelector("#contrasena");
+var input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
-const boton_ver_contrasena = document.querySelector("#boton-contrasena");
+var boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
 const obtenerDatos = () => {
     let nombre = input_nombre.value;
     let sgndNombre = input_sgnd_nombre.value;
     let apellido = input_apellido.value;
     let sgndApellido = input_sgnd_apellido.value;
-    let tipoId = input_tipo_id.value;
     let identificacion = input_identificacion.value;
     let edad = input_edad.value;
     let nacimiento = input_nacimiento.value;
     let correo = input_correo.value;
     let contraseña = input_contrasena.value;
-    let repcontraseña = input_repcontrasena.value;
-
-
-    console.log('El nombre es: ' + nombre);
-    console.log('El teléfono es: ', telefono);
-    console.log(`El correo es: ${correo} y el comentario es ${comentario}.`);
 
     Swal.fire({
         'icon': 'success',
@@ -71,8 +64,8 @@ const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
     let expReg_identificacion = RegExp('[0-9]{9,12}'); //Formato esperado  9 o 12 numeros seguidos
-
     let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i'); //texto@texto.com ó .net ...
+    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     //Llamemos a la funcion que vlaida los campos vacios
     error = validar_vacios();
@@ -132,6 +125,23 @@ const validar = () => {
         input_correo.classList.remove('error-input');
     }
 
+    //valida el formato de contraseña
+    if (!expReg_contrasena.test(input_contrasena.value)) {
+        error = true;
+        input_contrasena.classList.add('error-input');
+    } else {
+        input_contrasena.classList.remove('error-input');
+    }
+
+    //valida la contraseña se haya digitado bien 2 veces
+    if (input_contrasena.value != input_repcontrasena.value) {
+        error = true;
+        input_repcontrasena.classList.add('error-input');
+    } else {
+        input_repcontrasena.classList.remove('error-input');
+    }
+
+
     if (error == false) {
         obtenerDatos();
     } else {
@@ -141,23 +151,8 @@ const validar = () => {
             text: 'Por favor revise los campos resaltados'
         });
     }
-}
 
-const limpiar_pantalla = () => {
-    input_nombre.value = "";
-    input_correo.value = "";
-    input_nombre.value = "";
-    input_sgnd_nombre.value = "";
-    input_apellido.value = "";
-    input_sngd_apellido.value = "";
-    input_tipo_id_ced.value = "";
-    input_tipo_id_pas.value = "";
-    input_identificacion.value = "";
-    input_nacimiento.value = "";
-    input_edad.value = "";
-    input_correo.value = "";
-    input_contrasena.value = "";
-    input_repcontrasena.value = "";
+
 }
 
 const calcularEdad = (input_nacimiento) => {
@@ -183,12 +178,29 @@ const calcularEdad = (input_nacimiento) => {
 
 }
 
+function mostrarContrasena() {
+    var input_contrasena = document.querySelector("#contrasena");
+    var boton_ver_contrasena = document.querySelector("#boton-contrasena");
+    const input_repcontrasena = document.querySelector("#repcontrasena");
+    if (input_contrasena.type === "password") {
+        input_contrasena.type = "text";
+        input_repcontrasena.type = "text";
+        boton_ver_contrasena.innerHTML = "Ocultar contraseña";
+
+    } else {
+        input_contrasena.type = "password";
+        input_repcontrasena.type = "password";
+        boton_ver_contrasena.innerHTML = "Mostrar contraseña";
+
+    }
+}
+
 input_nacimiento.addEventListener("change", function() {
     if (input_nacimiento.value) {
         let edad = (calcularEdad(input_nacimiento.value));
-        input_edad.value = edad;
+        input_edad.value = (edad + " años");
     }
 });
 
-
+boton_ver_contrasena.addEventListener('click', mostrarContrasena);
 boton_enviar.addEventListener('click', validar);
