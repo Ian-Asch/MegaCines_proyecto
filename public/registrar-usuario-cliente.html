@@ -35,63 +35,74 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
         <h1 class="texto_centrado">Registro Usuario</h1>
 
 
-        <form name="data-cliente" action="*" method="GET">
-            <section>
+        <form name="data-cliente" action="*" method="POST">
 
-                <div id="div-inputs">
 
-                    <div>
-                        <label for="nombre_usuario">Primer Nombre:</label>
-                        <input type="text" class="field" id="nombre">
-                    </div>
-                    <div>
-                        <label for="segundo_nombre">Segundo nombre (opcional):</label>
-                        <input type="text" class="field" id="segundo_nombre">
-                    </div>
-                    <div>
-                        <label for="primer_apellido">Primer apelliddo:</label>
-                        <input type="text" class="field" id="primer_apellido">
-                    </div>
-                    <div>
-                        <label for="segundo_apellido">Segundo apelliddo: (opcional)</label>
-                        <input type="text" class="field" id="segundo_apellido">
-                    </div>
-                    <div>
-                        <label for="cedula">Identificación:</label>
-                        <input type="text" class="field" id="cedula" placeholder="101230123">
-                    </div>
-                    <div>
-                        <label for="nacimiento">Fecha de nacimiento:</label>
-                        <input type="date" class="field" id="nacimiento">
-                    </div>
-                    <div>
-                        <label for="edad">Edad:</label>
-                        <input type="number" class="field" id="edad">
-                    </div>
-                    <div>
-                        <label for="correo">Correo electrónico:</label>
-                        <input type="email" class="field" id="correo" placeholder="abc@abc.com">
-                    </div>
+            <div id="div-inputs">
+
+                <div>
+                    <label for="nombre_usuario">Primer nombre:</label>
+                    <input type="text" class="field" id="primer_nombre" required>
+                </div>
+                <div>
+                    <label for="segundo_nombre">Segundo nombre (opcional):</label>
+                    <input type="text" class="field" id="segundo_nombre">
+                </div>
+                <div>
+                    <label for="primer_apellido">Primer apellido:</label>
+                    <input type="text" class="field" id="primer_apellido" required>
+                </div>
+                <div>
+                    <label for="segundo_apellido">Segundo apellido (opcional):</label>
+                    <input type="text" class="field" id="segundo_apellido">
+                </div>
+                <div>
+                    <label>Identificación:</label><br> <br>
+
+                    <input type="radio" id="cedula" name="identificacion" value="ced" checked />
+                    <label class="radio" for="cedula">Cédula</label>
+
+                    <input type="radio" id="pasaporte" name="identificacion" value="pas" />
+                    <label class="radio" for="pasaporte">Pasaporte</label>
+
+                    <input type="text" class="field" id="identificacion" required>
+                </div>
+                <div>
+                    <label for="nacimiento">Fecha de nacimiento:</label>
+                    <input type="date" class="field" id="nacimiento" required>
+                </div>
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="field" id="edad">
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" class="field" id="correo" placeholder="abc@abc.com" required>
+                </div>
+            </div>
+
+            <div id="secc-imagen">
+                <img src="imgs/blank-profile.png">
+
+                <button type="button">Cambiar imagen</button>
+            </div>
+
+            <div id="sect-abajo">
+                <div>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" required>
+                    <button id="boton-contrasena" type="button" onclick="mostrarContraseña()">Mostrar contraseñas</button>
+                </div>
+                <div>
+                    <label for="contrasena-repetir">Repita la contraseña:</label>
+                    <input type="password" id="contrasena-repetir" required>
+
                 </div>
 
-                <div id="secc-imagen">
-                    <img src="imgs/blank-profile.png">
-
-                    <button type="button">Cambiar imagen</button>
-                </div>
-
-                <fieldset id="field-botones">
-                    <div>
-                        <button type="button_eliminar_sala">Eliminar usuario</button>
-                        <button type="button_desactivar_sala">Desactivar usuario</button>
-                    </div>
-                </fieldset>
                 <div id="guardar-boton">
                     <button type="button" id="boton-guardar">Guardar</button>
                 </div>
 
-
-            </section>
         </form>
 
 
@@ -129,6 +140,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <!-- Poner script de javascript en esta linea -->
+    <script src="js/registro-usuario-cliente.js"></script>
 </body>
 
 </html>
