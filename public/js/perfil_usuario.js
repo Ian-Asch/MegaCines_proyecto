@@ -153,6 +153,10 @@ boton_guardar.addEventListener('click', () => {
         mostrar_parrafos();
 
     } else {
-        //swal alert
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor llene los espacios correctamente'
+          })
     }
 });
