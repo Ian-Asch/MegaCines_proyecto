@@ -95,10 +95,6 @@ const verificar_espacios = () => {
         } else {
             element.classList.add("error");
             verfificado = false;
-            // if (element == input_segundo_apellido) {
-            //     verfificado = true;
-            //     element.classList.remove("error");
-            // }
         }
     });
 

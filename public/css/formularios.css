@@ -1,7 +1,7 @@
 /* Este archivo se usa en todas las paginas por eso este archivo no se cambia 
 a menos a que el equipo apruebe. Si necesita hacer cambios en su pagina
 por favor cree otro archivo css dedicado para esa pagina */
-                    
+
 html {
     background-image: linear-gradient(#69057e, #50035f 30%, black);
     background-repeat: no-repeat;
@@ -46,7 +46,7 @@ nav {
     margin-left: 50px;
 }
 
-#btn-cerrar-sesion {
+.boton-header {
     min-width: 120px;
     margin-right: 20px;
 }
@@ -161,20 +161,27 @@ fieldset {
     align-items: center;
     /* text-align: center; */
 }
-#secc-imagen button{
+
+#secc-imagen button {
     /* display: block; */
     width: 30%;
 }
 
-#div-inputs{
+#div-inputs {
     /* display: inline-block; */
     float: left;
     /* background-color: blue; */
     width: 50%;
 }
-section{
+
+section {
     width: 80%;
 }
-#field-botones{
+
+#field-botones {
     clear: both;
+}
+
+input {
+    border-radius: 5px;
 }

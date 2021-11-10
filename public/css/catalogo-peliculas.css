@@ -21,7 +21,6 @@
     background: url(../imgs/seach-icon.png) no-repeat;
     background-size: contain;
     cursor: pointer;
-    /* Set the bg image here. with "no-repeat" */
 }
 
 .buscar {
@@ -30,12 +29,9 @@
     width: 100%;
     border: 5px;
     float: unset;
-    /* background-color: aqua; */
     display: flex;
     justify-content: center;
     text-align: center;
-    /* height: 30px; */
-    /* background-color: blue; */
 }
 
 #sct-buscar {

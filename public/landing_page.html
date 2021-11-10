@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/landing_page.css">
+    <script src="https://kit.fontawesome.com/5ac2f45346.js" crossorigin="anonymous"></script>
     <title>MegaCines</title>
 
 </head>
@@ -19,24 +20,20 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="">Cartelera</a>
-            <a href="">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+
         </nav>
-        <button type="button" id="btn-cerrar-sesion">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='registrar-usuario-cliente.html'">Registrarse</button>
+        <button type="button" class="boton-header" onclick="window.location.href='login_page.html'">Iniciar sesion</button>
     </header>
 
     <main>
 
         <!-- SLIDER SECTION-->
         <section>
-            <div class="slider">
-                <ul>
-                    <li><img src="imgs/purga.jpg" alt="purga"></li>
-                    <li><img src="imgs/venom.jpg" alt="venom"></li>
-                    <li><img src="imgs/balck_friday.png" alt="black"></li>
-                    <li><img src="imgs/war.jpg" alt="war"></li>
-                </ul>
+            <div class="banner">
+
+                <img src="imgs/banner_2.png" alt="">
 
             </div>
         </section>
@@ -44,30 +41,35 @@
 
         <!-- SECTION OBJETIVO (INICIO)-->
 
-        <section>
-            <div class="objetivo">
+        <section class="container">
 
-                <h1>El inicio</h1>
-                <br>
+            <div class="card">
+                <h4>Facil de usar <i class="fas fa-check-circle"></i></h4>
+                <hr>
                 <p>
-                    La razón por la cual se ha decidido crear este sitio es para brindar al publico la mejor experiencia a la hora<br> de disfrutar del mundo cinemátrografico desde la selección de la película de preferencia hasta el momento en el que
-                    se <br> realice el pago de las entradas, dando así el poder al público de decisión, la liberdad de escojer su cadena, sala y horario preferido desde la <br> comodidad de su hogar.
-
+                    Nuestro sitio web esta pensado para que sea lo mas intuitivo posible, esto facilita el uso del mismo y de sus funcionalidades.
                 </p>
+                <img src="imgs/usabilidad.png" alt="usabilidad">
+            </div>
+
+            <div class="card">
+                <h4>Seguridad <i class="fas fa-lock"></i></h4>
+                <hr>
+                <p>
+                    La mayor seguridad a la hora de guardar tus datos personales y tu información bancaria.
+                </p>
+                <img src="imgs/pago.jpg" alt="pago">
+            </div>
+
+            <div class="card">
+                <h4>Rendimiento <i class="fas fa-clock"></i></h4>
+                <hr>
+                <p> El sitio es desarrollado con la tecnología más novedosa y actual, esto para garantizar que su funcionamiento sea rápido.
+                </p>
+                <img src="imgs/speed.PNG" alt="rendimiento">
             </div>
 
 
-
-            <div class="objetivo">
-
-                <h1>El desenlace</h1>
-                <br>
-                <p>
-                    Nuestro sitio web no solo esta enfocado en vender sino tambien vamos mas alla de ello por lo que agregamos secciones en las cuales nos pueden brindar comentarios <br> para poder mejorar la experiencia que tengas a la hora de usar nuestros
-                    servicios, el stiio también le permite ver las calificaciones de cada película para así tener un referencia real al momento de escojer la película y poder tener <br> un mejor criterio a la hora de recomendar la misma.
-
-                </p>
-            </div>
         </section>
     </main>
 
@@ -82,16 +84,19 @@
             </div>
             <div>
                 <h6>INFORMACION</h6>
+<<<<<<< HEAD
                 <a href="../public/landing_page_equipo.html">- Sobre nosotros</a>
                 <!-- meter link del landing page del equipo aqui -->
+=======
+                <a href="landing_page_equipo.html">- Sobre nosotros</a>
+>>>>>>> de0b5a3c5f46579ff4aa52d570e8b8da02952be5
                 <p>- Sobre el producto</p>
                 <p>- Terminos y conidciones</p>
             </div>
             <div>
                 <h6>AYUDA</h6>
                 <p>- Preguntas frecuentes</p>
-                <a href="">- Contactenos</a>
-                <!-- meter link del landing page del equipo aqui tambien -->
+                <a href="landing_page_equipo.html">- Contactenos</a>
             </div>
         </div>
         <div id="iconos-footer">

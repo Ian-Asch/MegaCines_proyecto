@@ -86,7 +86,7 @@ h2{
     align-items: center;
 }
 .butaca:hover{
-    border: solid 6px rgb(37, 115, 233);
+    border: solid 6px rgb(48, 126, 243);
     cursor: pointer;
 }
 #margen-pantalla{
@@ -110,5 +110,5 @@ h2{
     justify-content: right;
 }
 .seleccion{
-    border: solid 6px white !important;
+    border: solid 6px rgb(57, 199, 57) !important;
 }
