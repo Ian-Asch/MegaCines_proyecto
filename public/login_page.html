@@ -31,11 +31,14 @@
                     <h1>Iniciar Sesión</h1>
                     <div>
                         <label for="txt-usuario" class="ResetPSWRD">Dirección de correo electrónico </label>
-                        <input type="text" id="txt-usuario">
+                        <input type="text" id="txt-correo" required>
                     </div>
                     <div>
                         <label for="txt-contrasenna">Contraseña</label>
-                        <input type="password" id="txt-contrasenna">
+                        <div id="barra-input">
+                            <input type="password" id="txt-contrasenna" required>
+                            <i class="fas fa-eye-slash" id="icono-ojo"></i>
+                        </div>
                     </div>
                     <div class="ResetPSWRD">
                         <a href="../public/cambio_de_contrasena.html">Olvido su contrasena?</a>
@@ -45,7 +48,7 @@
                     </div>
                     <div>
                         <p>Eres Nuevo?</p>
-                        <a href="">Crea Tu Cuenta</a>
+                        <a href="registrar-usuario-cliente.html">Crea Tu Cuenta</a>
                     </div>
             </div>
             <div class="img-container">
@@ -88,7 +91,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
-    <!-- Poner script de javascript en esta linea -->
+    <script src="js/login.js"></script>
 </body>
 
 </html>

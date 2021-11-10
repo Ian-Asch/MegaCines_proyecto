@@ -1,6 +1,6 @@
 'use strict';
 
-const lista_inputs_requeridos =  document.querySelector("[required]");
+const lista_inputs_requeridos =  document.querySelectorAll("[required]");
 
 const verificar_espacios = () => {
     let verfificado = true;

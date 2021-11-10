@@ -4,6 +4,33 @@
                     margin-left: 37%;
                     padding: 5%;
                 }
+
+                #txt-contrasenna{
+                    width: 70%;
+                }
+
+                #barra-input{
+                    background-color: #fff;
+                    width: 168px;
+                    margin: auto;
+                    display: flex;
+                    height: 20px;
+                }
+
+                #barra-input input{
+                    width: 95%;
+                    border: none;
+                    outline: none;
+                }
+
+                #barra-input i{
+                    color: black;
+                    margin: auto;
+                }
+
+                #icono-ojo:hover{
+                    cursor: pointer;
+                }
                 
                 .sct-contenedor-principal {
                     justify-content: center;
