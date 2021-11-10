@@ -1,31 +1,24 @@
-section {
+main {
+    overflow: auto;
+}
+
+form {
+    overflow: auto;
     padding: 25px;
     background: hsla(266, 93%, 71%, 0.178);
     font-size: 20px;
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 40px;
-}
-
-section.type-a {
-    background-color: #02000500;
-    width: 100%;
-    background-size: auto;
-    margin: auto;
 }
 
 div {
     margin: 20px;
 }
 
-#button1,
-#button2 {
-    display: inline-block;
-    text-align: justify;
-}
-
 #secc-imagen img {
-    width: 30%;
+    width: 40%;
+    border-radius: 5px;
 }
 
 #secc-imagen {
@@ -37,6 +30,7 @@ div {
     gap: 10px 0;
     align-items: center;
     /* text-align: center; */
+    height: 460px;
 }
 
 #secc-imagen button {
@@ -45,11 +39,11 @@ div {
 }
 
 #div-inputs {
-    width: 60%;
+    width: 70%;
 }
 
 .field {
-    width: 47%;
+    width: 46%;
     padding: 5px;
     display: inline-block;
 }
@@ -58,7 +52,7 @@ div {
     border-color: #eb8f38;
 }
 
-#div-inputs label {
+label {
     width: 50%;
     display: inline-block;
 }
@@ -68,4 +62,31 @@ h1 {
     font-weight: bolder;
     text-align: center;
     margin: 20px;
+}
+
+.radio {
+    width: 22%;
+}
+
+#identificacion {
+    margin-left: 10px;
+}
+
+#boton-guardar {
+    margin-top: 2%;
+    margin-left: 40%;
+    padding: 18px 20px 18px 20px;
+}
+
+#sect-abajo label {
+    width: 35.5%;
+}
+
+#sect-abajo input {
+    width: 32.5%;
+    padding: 5px;
+}
+
+.error-input {
+    border: 2px solid red;
 }
