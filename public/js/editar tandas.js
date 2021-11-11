@@ -6,10 +6,8 @@ let usuario = {
     fecha_Retiro: "5-2-1990",
     Hora_de_Inicio: "5:00",
     Hora_de_Finalizacion: "4:00",
-    correo: "juan@gmail.com",
-    cedula: "112354538",
-
-    edad: 32
+    Sala: "C2",
+    
 }
 
 const boton_editar = document.querySelector("#boton-editar-info");
@@ -19,23 +17,20 @@ const boton_guardar = document.querySelector("#boton-guardar");
 const nombre_usuario_p = document.querySelector("#nombre-usuario");
 const Hora_de_Inicio_p = document.querySelector("#Hora-de-Inicio");
 const Hora_de_Finalizacion_p = document.querySelector("#Hora-de-Finalizacion");
-const correo_p = document.querySelector("#correo-usuario");
-const cedula_p = document.querySelector("#identificacion-usuario");
+const Sala_p = document.querySelector("#Sala");
 
 const fecha_Estreno_p = document.querySelector("#fecha-Estreno");
 const fecha_Retiro_p = document.querySelector("#fecha-Retiro");
 
 
 
-const edad_p = document.querySelector("#edad-usuario");
 const nombre_completo = document.querySelector("#nombre-completo");
 
 //lista de inputs
 const input_nombre = document.querySelector("#input-nombre");
 const input_Hora_de_Inicio = document.querySelector("#Hora-de-Inicio");
 const input_Hora_de_Finalizacion = document.querySelector("#Hora-de-Finalizacion");
-const input_correo = document.querySelector("#input-correo");
-const input_cedula = document.querySelector("#input-cedula");
+const input_Sala = document.querySelector("#input-Sala");
 
 const input_Estreno = document.querySelector("#input-Estreno");
 const input_Retiro = document.querySelector("#input-Retiro");
@@ -49,14 +44,12 @@ const llenar_espacios = () => {
     nombre_usuario_p.innerText = usuario.nombre;
     Hora_de_Inicio_p.innerText = usuario.Hora_de_Inicio;
     Hora_de_Finalizacion_p.innerText = usuario.Hora_de_Finalizacion;
-    correo_p.innerText = usuario.correo;
-    cedula_p.innerText = usuario.cedula;
+    Sala_p.innerText = usuario.Sala;
 
     fecha_Estreno_p.innerText = usuario.fecha_Estreno;
     fecha_Retiro_p.innerText = usuario.fecha_Retiro;
 
 
-    edad_p.innerText = usuario.edad;
     nombre_completo.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
 };
 
@@ -72,8 +65,7 @@ const mostrar_inputs = () => {
     input_nombre.value = usuario.nombre;
     input_Hora_de_Inicio.value = usuario.Hora_de_Inicio;
     input_Hora_de_Finalizacion.value = usuario.Hora_de_Finalizacion;
-    input_correo.value = usuario.correo;
-    input_cedula.value = usuario.cedula;
+    input_Sala.value = usuario.Sala;
 
     input_Retiro.value = usuario.fecha_Retiro;
     input_Estreno.value = usuario.fecha_Estreno;
@@ -102,10 +94,9 @@ const mostrar_parrafos = () => {
 
 
 const verificar_espacios = () => {
-    let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
+    let expresion_Sala = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
     // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
-    let expresion_cedula = /^\d{9,12}$/;
     
     let verfificado = true;
 
@@ -124,13 +115,8 @@ const verificar_espacios = () => {
             verfificado = false;
     }
 
-    if (!expresion_correo.test(input_correo.value)) {
-        input_correo.classList.add("error");
-            verfificado = false;
-    }
-
-    if (!expresion_cedula.test(input_cedula.value)) {
-        input_cedula.classList.add("error");
+    if (!expresion_Sala.test(input_Sala.value)) {
+        input_Sala.classList.add("error");
             verfificado = false;
     }
 
@@ -141,8 +127,7 @@ const guardar_cambios = () => {
     usuario.nombre = input_nombre.value;
     usuario.Hora_de_Inicio = input_Hora_de_Inicio.value;
     usuario.Hora_de_Finalizacion = input_Hora_de_Finalizacion.value;
-    usuario.correo = input_correo.value;
-    usuario.cedula = input_cedula.value;
+    usuario.Sala = input_Sala.value;
 
     usuario.fecha_Estreno = input_Estreno.value;
     usuario.fecha_Retiro = input_Retiro.value;
