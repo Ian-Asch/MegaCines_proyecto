@@ -1,8 +1,17 @@
                 #LOGOLOGIN {
                     max-width: 200px;
                     max-height: 200px;
-                    margin-left: 37%;
-                    padding: 5%;
+                    
+                    /* margin-left: 37%; */
+                    /* padding: 5%; */
+                }
+                .img-container{
+                    /* background-color: aqua; */
+                    text-align: center;
+                    margin: 5vh 0 10vh 0;
+                }
+                .img-container img{
+                    border-radius: 10px;
                 }
 
                 #txt-contrasenna{
@@ -36,7 +45,7 @@
                     justify-content: center;
                     width: 100%;
                     padding-top: 2%;
-                    padding-bottom: 30%;
+                    /* padding-bottom: 30%; */
                 }
                 
                 #login_Box {
@@ -47,7 +56,8 @@
                     justify-self: center;
                     display: flex;
                     align-items: center;
-                    margin-left: 40%;
+                    /* margin-left: 40%; */
+                    margin: auto;
                     padding: 10px;
                     border-radius: 15px;
                     background-color: rgba(255, 255, 255, 0.3);

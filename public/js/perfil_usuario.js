@@ -130,6 +130,32 @@ const verificar_espacios = () => {
     return verfificado;
 };
 
+const calcular_edad = (fecha_nacimiento) => {
+    let edad;
+
+    let anio_actual = new Date().getFullYear();
+    let mes_actual = new Date().getMonth();
+    let dia_actual = new Date().getDay();
+    
+    let anio_nacimiento = fecha_nacimiento.getFullYear();
+    let mes_nacimiento = fecha_nacimiento.getMonth();
+    let dia_nacimiento = fecha_nacimiento.getDay();
+
+    edad = anio_actual - anio_nacimiento - 1;
+
+    if (mes_actual > mes_nacimiento) {
+        edad++;
+    } else {
+        if (mes_actual == mes_nacimiento) {
+            if (dia_actual >= dia_nacimiento) {
+                edad++;
+            }
+        }
+    }
+
+    return edad;
+};
+
 const guardar_cambios = () => {
     usuario.nombre = input_nombre.value;
     usuario.primer_apellido = input_primer_apellido.value;
@@ -137,6 +163,7 @@ const guardar_cambios = () => {
     usuario.correo = input_correo.value;
     usuario.cedula = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;
+    usuario.edad = calcular_edad(new Date(input_nacimiento.value));
 };
 
 
