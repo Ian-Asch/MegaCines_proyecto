@@ -54,7 +54,7 @@ const llenar_espacios = () => {
     fecha_Retiro_p.innerText = usuario.fecha_Retiro;
 
 
-    nombre_completo.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
+    nombre_completo.innerText = `${usuario.nombre}`;
 };
 
 

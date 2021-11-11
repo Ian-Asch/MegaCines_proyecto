@@ -46,10 +46,6 @@ const funcion_verificar_expresiones = () => {
         input_correo.classList.add("error")
     }
 
-    if (!expresion_contraseña.test(lista_inputs_requeridos[1].value)) {
-        verfificado = false
-        lista_inputs_requeridos[1].classList.add("error")
-    }
 }
 
 
