@@ -7,6 +7,7 @@ let usuario = {
     Hora_de_Inicio: "5:00",
     Hora_de_Finalizacion: "4:00",
     Sala: "C2",
+    Precio: "2000"
     
 }
 
@@ -33,6 +34,9 @@ const input_Hora_de_Finalizacion = document.querySelector("#Hora-de-Finalizacion
 const input_Sala = document.querySelector("#input-Sala");
 
 const input_Estreno = document.querySelector("#input-Estreno");
+const input_Precio = document.querySelector("#input-Precio");
+
+
 const input_Retiro = document.querySelector("#input-Retiro");
 
 
@@ -68,6 +72,8 @@ const mostrar_inputs = () => {
     input_Sala.value = usuario.Sala;
 
     input_Retiro.value = usuario.fecha_Retiro;
+    input_Precio.value = usuario.Precio;
+
     input_Estreno.value = usuario.fecha_Estreno;
 
 
@@ -94,10 +100,7 @@ const mostrar_parrafos = () => {
 
 
 const verificar_espacios = () => {
-    let expresion_Sala = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
-    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
-    let expresion_solo_letras = /^[a-z\s]+$/i;
-    
+   
     let verfificado = true;
 
     lista_inputs.forEach((element) => {
@@ -110,16 +113,6 @@ const verificar_espacios = () => {
     });
 
 
-    if (!expresion_solo_letras.test(input_nombre.value)){
-        input_nombre.classList.add("error");
-            verfificado = false;
-    }
-
-    if (!expresion_Sala.test(input_Sala.value)) {
-        input_Sala.classList.add("error");
-            verfificado = false;
-    }
-
     return verfificado;
 };
 
@@ -130,6 +123,8 @@ const guardar_cambios = () => {
     usuario.Sala = input_Sala.value;
 
     usuario.fecha_Estreno = input_Estreno.value;
+    usuario.Precio = input_Precio.value;
+
     usuario.fecha_Retiro = input_Retiro.value;
 
 };
