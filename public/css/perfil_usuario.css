@@ -19,8 +19,18 @@ label{
     display: inline-block;
 }
 .info-div{
-    margin: 10px 0 10px 0;
+    margin: 15px 0 15px 0;
     min-height: 20px;
+}
+.info-div label{
+    width: 30%;
+    display: inline-block;
+}
+.info-div input{
+    height: 20px;
+    margin: -5px;
+    font-size: 12pt;
+    font-family: "Montserrat"
 }
 #secc-imagen{
     display: inline-block;
@@ -60,9 +70,6 @@ input:focus{
 .esconder{
     display: none !important;
 }
-.error{
-    border: solid 2px red !important;
-}
 #boton-guardar{
     background-color: rgba(0, 0, 0, 0.7);
     color: #eb8f38;
@@ -70,4 +77,5 @@ input:focus{
 
 #boton-guardar:hover{
     background-color: rgba(0, 0, 0);
+    outline: solid 1px #eb8f38;
 }

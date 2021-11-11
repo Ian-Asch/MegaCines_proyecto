@@ -14,28 +14,30 @@ h1{
     margin-left: 5px;
 }
 
-#secc-info-reserva{
-    display: flex;
-}
-
-#contenedor-imagen{
-    width: 30%;
-    text-align: center;
-}
-#contenedor-imagen img{
-    width: 70%;
-    border: solid 4px black;
-}
-
 #form-reserva{
-    width: 70%;
+    width: 75%;
+    /* background-color: rgba(0, 255, 255, 0.233); */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-.div-input{
-    margin-top: 20px;
+hr{
+    margin-top: -5px;
+    width: 100%;
+    /* border: solid 1px rgb(220,220,220); */
+    background-color: rgb(220,220,220);
 }
+.form-div{
+    display: flex;
+    justify-content: space-between;
+}
+
 input[type=number]{
-    width: 35px;
+    width: 40px;
     margin-left: 10px;
+    height: 20px;
+    font-size: 12pt;
 }
 input{
     border-radius: 5px;
@@ -52,6 +54,7 @@ input:focus{
 }
 #secc-elegir-butacas{
     margin-top: 3vw;
+    margin-bottom: 5vw;
 }
 h2{
     font-weight: bold;
@@ -86,7 +89,7 @@ h2{
     align-items: center;
 }
 .butaca:hover{
-    border: solid 6px rgb(37, 115, 233);
+    border: solid 6px rgb(48, 126, 243);
     cursor: pointer;
 }
 #margen-pantalla{
@@ -107,8 +110,29 @@ h2{
     width: 80%;
     margin: auto;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 .seleccion{
-    border: solid 6px white !important;
+    border: solid 6px rgb(57, 199, 57) !important;
+}
+
+#secc-pelicula{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+#info-pelicula{
+    width: 70%;
+}
+#info-pelicula p{
+    width: 70%;
+    margin-top: 20px;
+}
+#contenedor-imagen{
+    width: 30%;
+    text-align: center;
+}
+#contenedor-imagen img{
+    width: 70%;
+    border: solid 2px #eb8f38;
 }

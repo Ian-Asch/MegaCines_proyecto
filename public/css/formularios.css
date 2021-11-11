@@ -46,7 +46,7 @@ nav {
     margin-left: 50px;
 }
 
-#btn-cerrar-sesion {
+.boton-header {
     min-width: 120px;
     margin-right: 20px;
 }

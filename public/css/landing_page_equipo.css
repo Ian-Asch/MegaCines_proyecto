@@ -1,12 +1,21 @@
-                                    #logo_sct1 {
-                                        /* display: flow-root; */
-                                        /* text-align: right; */
-                                        max-height: 200px;
-                                        /* float: right; */
-                                        background-color: rgba(255, 255, 255, 0);
-                                        padding-bottom: 60px;
-                                        padding-left: 25%;
-                                        /* background-color: chartreuse;
+                                            html {
+                                                background: rgb(255, 0, 89);
+                                                background: linear-gradient(180deg, rgba(255, 0, 89, 1) 0%, rgba(105, 5, 126, 1) 32%, rgba(80, 3, 95, 1) 49%, rgba(0, 0, 0, 1) 84%);
+                                                ;
+                                            }
+                                            main{
+                                                margin-bottom: 10vh;
+                                            }
+                                            
+                                            #logo_sct1 {
+                                                /* display: flow-root; */
+                                                /* text-align: right; */
+                                                max-height: 200px;
+                                                /* float: right; */
+                                                background-color: rgba(255, 255, 255, 0);
+                                                padding-bottom: 60px;
+                                                padding-left: 25%;
+                                                /* background-color: chartreuse;
     width: 50%; */
                                     }
                                     
@@ -152,7 +161,7 @@
                                         .sct-servicios .info h2 {
                                             font-size: 17px;
                                         }
-                                        #btn-cerrar-sesion {
+                                        .boton-header {
                                             margin-left: 10%;
                                             margin-top: 5px;
                                         }
@@ -180,7 +189,7 @@
                                         }
                                     }
                                     
-                                    #btn-cerrar-sesion {
+                                    .boton-header {
                                         height: 15px;
                                         padding-top: 0px;
                                     }

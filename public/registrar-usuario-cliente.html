@@ -24,11 +24,8 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="catalogo-peliculas.html">Cartelera</a>
-            <a href="">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
-        <button type="button" id="btn-cerrar-sesion" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='login_page.html'">Iniciar sesion</button>
     </header>
 
     <main>
@@ -57,23 +54,16 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                     <input type="text" class="field" id="segundo_apellido">
                 </div>
                 <div>
-                    <label>Identificación:</label><br> <br>
-
-                    <input type="radio" id="cedula" name="identificacion" value="ced" checked />
-                    <label class="radio" for="cedula">Cédula</label>
-
-                    <input type="radio" id="pasaporte" name="identificacion" value="pas" />
-                    <label class="radio" for="pasaporte">Pasaporte</label>
-
-                    <input type="text" class="field" id="identificacion" required>
+                    <label for="identificacion">Identificación:</label>
+                    <input type="text" class="field" id="identificacion" required placeholder="Formato Cédula 101230123, Pasaporte 20123401234">
                 </div>
                 <div>
                     <label for="nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="field" id="nacimiento" required>
+                    <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
                 </div>
                 <div>
                     <label for="edad">Edad:</label>
-                    <input type="number" class="field" id="edad">
+                    <input type="text" class="field" id="edad" readonly>
                 </div>
                 <div>
                     <label for="correo">Correo electrónico:</label>
@@ -91,11 +81,11 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                 <div>
                     <label for="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" required>
-                    <button id="boton-contrasena" type="button" onclick="mostrarContraseña()">Mostrar contraseñas</button>
+                    <button id="boton-contrasena" type="button">Mostrar contraseña</button>
                 </div>
                 <div>
                     <label for="contrasena-repetir">Repita la contraseña:</label>
-                    <input type="password" id="contrasena-repetir" required>
+                    <input type="password" id="repcontrasena" required>
 
                 </div>
 

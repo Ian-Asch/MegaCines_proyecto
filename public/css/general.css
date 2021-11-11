@@ -50,7 +50,7 @@ nav {
     margin-left: 18px;
 }
 
-#btn-cerrar-sesion {
+.boton-header {
     min-width: 120px;
     margin-right: 20px;
 }
@@ -103,5 +103,5 @@ footer img {
     gap: 10px;
 }
 .error{
-    border: solid 2px red;
+    border: solid 2px red !important;
 }
