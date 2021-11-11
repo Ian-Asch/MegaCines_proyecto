@@ -36,7 +36,7 @@ const funcion = (input) => {
 
 
 let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
-let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
+let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).{8,15}$/;
 
 const funcion_verificar_expresiones = () => {
     if (expresion_correo.test(input_correo.value)) {
