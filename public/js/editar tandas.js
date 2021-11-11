@@ -4,8 +4,8 @@ let usuario = {
     nombre: "Spiderman Home Coming",
     fecha_Estreno: "5-2-1990",
     fecha_Retiro: "5-2-1990",
-    primer_apellido: "Oviedo",
-    segundo_apellido: "Murillo",
+    Hora_de_Inicio: "5:00",
+    Hora_de_Finalizacion: "4:00",
     correo: "juan@gmail.com",
     cedula: "112354538",
 
@@ -47,8 +47,8 @@ const lista_p = document.querySelectorAll(".label-p");
 
 const llenar_espacios = () => {
     nombre_usuario_p.innerText = usuario.nombre;
-    primer_apellido_p.innerText = usuario.primer_apellido;
-    segundo_apellido_p.innerText = usuario.segundo_apellido;
+    Hora_de_Inicio_p.innerText = usuario.primer_apellido;
+    Hora_de_Finalizacion_p.innerText = usuario.segundo_apellido;
     correo_p.innerText = usuario.correo;
     cedula_p.innerText = usuario.cedula;
 
@@ -70,8 +70,8 @@ const mostrar_inputs = () => {
     boton_guardar.classList.remove("esconder");
 
     input_nombre.value = usuario.nombre;
-    input_Hora_de_Inicio.value = usuario.primer_apellido;
-    input_Hora_de_Finalizacion.value = usuario.segundo_apellido;
+    input_Hora_de_Inicio.value = usuario.Hora_de_Inicio;
+    input_Hora_de_Finalizacion.value = usuario.Hora_de_Finalizacion;
     input_correo.value = usuario.correo;
     input_cedula.value = usuario.cedula;
 
@@ -123,14 +123,6 @@ const verificar_espacios = () => {
         input_nombre.classList.add("error");
             verfificado = false;
     }
-    if (!expresion_solo_letras.test(input_primer_apellido.value)){
-        input_primer_apellido.classList.add("error");
-            verfificado = false;
-    }
-    if (!expresion_solo_letras.test(input_segundo_apellido.value)){
-        input_segundo_apellido.classList.add("error");
-            verfificado = false;
-    }
 
     if (!expresion_correo.test(input_correo.value)) {
         input_correo.classList.add("error");
@@ -147,8 +139,8 @@ const verificar_espacios = () => {
 
 const guardar_cambios = () => {
     usuario.nombre = input_nombre.value;
-    usuario.primer_apellido = input_primer_apellido.value;
-    usuario.segundo_apellido = input_segundo_apellido.value;
+    usuario.Hora_de_Inicio = input_Hora_de_Inicio.value;
+    usuario.Hora_de_Finalizacion = input_Hora_de_Finalizacion.value;
     usuario.correo = input_correo.value;
     usuario.cedula = input_cedula.value;
 
