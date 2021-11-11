@@ -53,7 +53,7 @@ input:focus{
     margin: 5px;
 }
 #secc-elegir-butacas{
-    margin-top: 1vw;
+    margin-top: 3vw;
     margin-bottom: 5vw;
 }
 h2{
@@ -118,7 +118,8 @@ h2{
 
 #secc-pelicula{
     display: flex;
-    margin-top: 3vw;
+    width: 90%;
+    margin: auto;
 }
 #info-pelicula{
     width: 70%;
