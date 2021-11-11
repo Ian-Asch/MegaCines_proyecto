@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,42 +10,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/cambio_de_contrasena.css">
-
-
-    <!-- Agregar estilo de pagina en esta linea -->
-    <title>Cambio de contraseñat</title>
-    <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
+    <link rel="stylesheet" href="css/listar_cines.css">
+    <title>Cines</title>
 </head>
 
 <body>
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="listar_cines.html">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
     </header>
 
     <main>
-        <section class="sct-contenedor-principal">
-            <div class="img-container">
-                <img id="LOGOLOGIN" src="imgs/MegaCines_logo.jpg">
-            </div>
-            <div id="login_Box">
-                <form>
-                    <h1>Asistente de contraseña
-                    </h1>
-                    <div id="contenedor-input">
-                        <label for="txt_email">Ingrese el correo electrónico asociado a su cuenta.</label>
-                        <input type="email" id="txt_email" placeholder="Email">
-                    </div>
-                    <div class="sct-boton">
-                        <button type="button" id="btn-ingresar">Ingresar</button>
-                    </div>
-            </div>
-        </section>
-    </main>
+        <div id="barra-buscar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
 
+
+        <div class="div-cine">
+            <img src="imgs/CCM_cinemas.PNG" alt="CCM_cinemas">
+            <h1>CCM cinemas</h1> <br>
+            <p> Código de cadena de cine: <span>24123</span></p>
+            <p>Nombre de la cadena de cine:<span> CCM cinemas</span> </p>
+            <p>Ubicación de instalaciones:<span> San Ramón, San Carlos, Rohrmoser, Jaco. </span>
+            </p>
+
+        </div>
+
+        <div class="div-cine">
+            <img src="imgs/CinePolis.PNG" alt="CinePolis">
+            <h1>Cinepolis</h1> <br>
+            <p> Código de cadena de cine: <span>91289</span></p>
+            <p>Nombre de la cadena de cine:<span> Cinepolis</span> </p>
+            <p>Ubicación de instalaciones:<span> Desamparados, Heredia, Cartago, Escazú </span>
+            </p>
+
+        </div>
+
+        <div class="div-cine">
+            <img src="imgs/Nova.PNG" alt="Nova_cinemas">
+            <h1>Nova cinemas</h1> <br>
+            <p> Código de cadena de cine: <span>24983</span></p>
+            <p>Nombre de la cadena de cine:<span> Nova cinemas</span> </p>
+            <p>Ubicación de instalaciones:<span> Curridabat, San José, Alajuela </span>
+            </p>
+
+        </div>
+        
+    </main>
 
     <footer>
         <div id="div-logo-info">
@@ -78,7 +95,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
-    <script src="js/cambio_de_contrasena.js"></script>
+    <script src="js/listar_cines.js"></script>
 </body>
 
 </html>

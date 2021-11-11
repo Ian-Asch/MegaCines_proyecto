@@ -1,3 +1,11 @@
 #login_Box {
     height: 150px;
 }
+.img-container{
+    /* background-color: aqua; */
+    margin-bottom: 2vw;
+    margin-top: 0;
+}
+main{
+    margin-bottom: 10vh;
+}

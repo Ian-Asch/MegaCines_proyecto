@@ -1,7 +1,7 @@
 'use strict';
 
 let usuario = {
-    nombre: "Keisy",
+    nombre: "Carlos",
     primer_apellido: "Bermudez",
     segundo_apellido: "Solano",
     correo: "Admin@MegaCines.com",
