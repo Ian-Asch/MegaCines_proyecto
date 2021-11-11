@@ -50,23 +50,17 @@ const funcion_verificar_expresiones = () => {
         verfificado = false
         lista_inputs_requeridos[1].classList.add("error")
     }
-
-    if (verfificado) {
-        console.log(verfificado)
-    }
 }
 
 
 const funcion_boton = () => {
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
-    console.log(verfificado)
     if (verfificado) {
-        console.log("verificado completo")
-        if (input_correo.value = "cliente@MegaCines.com") {
+        if (input_correo.value == "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
-        if (input_correo.value = "admin@MegaCines.com") {
+        if (input_correo.value == "admin@MegaCines.com") {
             window.location.href = "perfil_usuario_admin.html"
         }
     } else {
