@@ -7,8 +7,6 @@ let usuario = {
     Hora_de_Inicio: "5:00",
     Hora_de_Finalizacion: "4:00",
     Sala: "C2",
-    Valor: "2000",
-    Precio:,
     
 }
 
@@ -26,7 +24,6 @@ const fecha_Retiro_p = document.querySelector("#fecha-Retiro");
 
 
 
-const edad_p = document.querySelector("#edad-usuario");
 const nombre_completo = document.querySelector("#nombre-completo");
 
 //lista de inputs
@@ -53,7 +50,6 @@ const llenar_espacios = () => {
     fecha_Retiro_p.innerText = usuario.fecha_Retiro;
 
 
-    edad_p.innerText = usuario.edad;
     nombre_completo.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
 };
 
@@ -101,7 +97,6 @@ const verificar_espacios = () => {
     let expresion_Sala = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
     // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
-    let expresion_cedula = /^\d{9,12}$/;
     
     let verfificado = true;
 
@@ -133,7 +128,6 @@ const guardar_cambios = () => {
     usuario.Hora_de_Inicio = input_Hora_de_Inicio.value;
     usuario.Hora_de_Finalizacion = input_Hora_de_Finalizacion.value;
     usuario.Sala = input_Sala.value;
-    usuario.cedula = input_cedula.value;
 
     usuario.fecha_Estreno = input_Estreno.value;
     usuario.fecha_Retiro = input_Retiro.value;
