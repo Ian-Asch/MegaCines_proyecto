@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/listar-tandas.css">
+        <link rel="stylesheet" href="css/perfil_usuario.css">
+
         <title>Lista de tandas</title>
     </head>
 
@@ -25,6 +27,68 @@
         </header>
 
         <main>
+            <div id="info-usuario">
+                <h1 id="nombre-completo"></h1>
+    
+                <div class="info-div">
+                    <label for="nombre-usuario">Nombre de la Pelicula:</label>
+                    <p class="label-p" id="nombre-usuario"></p>
+                    <input type="text" class="esconder" id="input-nombre" required>
+                </div>
+
+                <div class="info-div">
+                    <label for="fecha-Estreno">Fecha de Estreno:</label>
+                    <p class="label-p" id="fecha-Estreno"></p>
+                    <input type="date" class="esconder" id="input-Estreno" required>
+                </div>
+
+                <div class="info-div">
+                    <label for="fecha-Retiro">Fecha de Retiro:</label>
+                    <p class="label-p" id="fecha-Retiro"></p>
+                    <input type="date" class="esconder" id="input-Retiro" required>
+                </div>
+
+                <div class="info-div">
+                    <label for="Hora de Inicio">Hora de Inicio:</label>
+                    <p class="label-p" id="Hora-de-Inicio"></p>
+                    <input type="time" class="esconder" id="input-Hora-de-Inicio" required>
+                </div>
+    
+                <div class="info-div">
+                    <label for="Hora de Finalizacion">Hora de Finalizacion:</label>
+                    <p class="label-p" id="Hora-de-Finalizacion"></p>
+                    <input pla type="time" class="esconder" id="input_Hora-de-Finalizacion" required>
+                </div>
+    
+                <div class="info-div">
+                    <label for="correo-usuario">Correo electronico:</label>
+                    <p class="label-p" id="correo-usuario"></p>
+                    <input type="text" class="esconder" id="input-correo" required>
+                </div>
+    
+                <div class="info-div">
+                    <label for="identificacion-usuario">Identificacion:</label>
+                    <p class="label-p" id="identificacion-usuario"></p>
+                    <input type="text" class="esconder" id="input-cedula" required>
+                </div>
+    
+                
+    
+                <div class="info-div">
+                    <label for="edad-usuario">Edad:</label>
+                    <p class="label-p" id="edad-usuario"></p>
+                </div>
+            </div>
+    
+            <div id="secc-imagen">
+                <img src="imgs/blank-profile.png">
+    
+                <button type="button">Cambiar imagen</button>
+                <button type="button" id="boton-editar-info">Editar informacion</button>
+                <button type="button" class="esconder" id="boton-guardar">Guardar cambios</button>
+            </div>
+    
+
             <div id="barra-buscar">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="Buscar">
@@ -97,5 +161,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
         <script src="js/listar-tandas.js"></script>
+        <script src="js/editar tandas.js"></script>
+        
     </body>
 </html>

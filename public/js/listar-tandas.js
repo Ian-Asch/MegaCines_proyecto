@@ -7,3 +7,4 @@ lista_peliculas.forEach((table_row) => {
         window.location.href = "reserva_asientos.html";
     });
 });
+
