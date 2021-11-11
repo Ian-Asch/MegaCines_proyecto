@@ -27,44 +27,45 @@
 
     <main>
         <section id="secc-info-reserva">
-            <div id="contenedor-imagen">
-                <img src="imgs/spiderman_poster.jpg">
-            </div>
-
             <form id="form-reserva">
-                <h1>Spiderman Home Coming</h1>
-
-                <div class="div-input">
-                    <label for="" class="labels">Cine:</label>
-                    <p class="label-p">cinemark</p>
+                
+                <div class="form-div">
+                    <div class="div-input">
+                        <label for="" class="labels">Cine:</label>
+                        <p class="label-p">cinemark</p>
+                    </div>
+    
+                    <div class="div-input">
+                        <label for="" class="labels">Sala:</label>
+                        <p class="label-p">A2</p>
+                    </div>
+    
+                    <div class="div-input">
+                        <label for="" class="labels">Tanda:</label>
+                        <p class="label-p">febrero 25</p>
+                        <p class="label-p">1:00 - 3:00</p>
+                    </div>
                 </div>
 
-                <div class="div-input">
-                    <label for="" class="labels">Sala:</label>
-                    <p class="label-p">A2</p>
-                </div>
+                <hr>
 
-                <div class="div-input">
-                    <label for="" class="labels">Tanda:</label>
-                    <p class="label-p">febrero 25</p>
-                    <p class="label-p">1:00 - 3:00</p>
-                </div>
-
-                <div class="div-input">
-                    <label for="" class="labels">Cantidad de personas:</label>
-                    <input type="number" value="1" min="1">
-                </div>
-
-                <div class="div-input">
-                    <label for="" class="labels">Seleccione el tipo de transaccion</label>
-                    <div class="radio-divs">
-                        <input type="radio" name="tipo-transaccion" id="radio-btn-reserva" value="reserva" checked>
-                        <label for="radio-btn-reserva">Reservar butacas</label>
+                <div class="form-div">
+                    <div class="div-input">
+                        <label for="" class="labels">Seleccione el tipo de transaccion</label>
+                        <div class="radio-divs">
+                            <input type="radio" name="tipo-transaccion" id="radio-btn-reserva" value="reserva" checked>
+                            <label for="radio-btn-reserva">Reservar butacas</label>
+                        </div>
+    
+                        <div class="radio-divs">
+                            <input type="radio" name="tipo-transaccion" id="radio-btn-compra" value="compra">
+                            <label for="radio-btn-compra">Comprar butacas</label>
+                        </div>
                     </div>
 
-                    <div class="radio-divs">
-                        <input type="radio" name="tipo-transaccion" id="radio-btn-compra" value="compra">
-                        <label for="radio-btn-compra">Comprar butacas</label>
+                    <div class="div-input">
+                        <label for="" class="labels">Cantidad de personas:</label>
+                        <input type="number" value="1" min="1">
                     </div>
                 </div>
             </form>
@@ -309,6 +310,21 @@
                 <button type="button" id="boton-continuar">Continuar con transaccion</button>
             </div>
         </section>
+
+        <div id="secc-pelicula">
+            <div id="info-pelicula">
+                <h1>Spiderman Home Coming</h1>
+                <p>Peter Parker asume su nueva identidad como Spider-Man y regresa 
+                    a vivir con su tía después de su aventura con los Vengadores. 
+                    Al volver, mientras sigue bajo la tutela de Tony Stark, descubre 
+                    que ha surgido un nuevo y despiadado enemigo que pretende destruir 
+                    todo lo que ama: el Buitre.
+                </p>
+            </div>
+            <div id="contenedor-imagen">
+                <img src="imgs/spiderman_poster.jpg">
+            </div>
+        </div>
     </main>
 
     <footer>
