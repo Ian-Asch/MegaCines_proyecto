@@ -47,8 +47,8 @@ const lista_p = document.querySelectorAll(".label-p");
 
 const llenar_espacios = () => {
     nombre_usuario_p.innerText = usuario.nombre;
-    Hora_de_Inicio_p.innerText = usuario.primer_apellido;
-    Hora_de_Finalizacion_p.innerText = usuario.segundo_apellido;
+    Hora_de_Inicio_p.innerText = usuario.Hora_de_Inicio;
+    Hora_de_Finalizacion_p.innerText = usuario.Hora_de_Finalizacion;
     correo_p.innerText = usuario.correo;
     cedula_p.innerText = usuario.cedula;
 
