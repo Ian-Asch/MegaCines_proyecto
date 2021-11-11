@@ -157,6 +157,6 @@ boton_guardar.addEventListener('click', () => {
             icon: 'error',
             title: 'Error',
             text: 'Por favor llene los espacios correctamente'
-          })
+        });
     }
 });

@@ -57,10 +57,18 @@ const funcion_boton = () => {
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verfificado) {
-        console.log("verificado completo")
-        if (input_correo.value = "cliente@gmail.com") {
+        if (input_correo.value == "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
+        if (input_correo.value == "admin@MegaCines.com") {
+            window.location.href = "perfil_usuario_admin.html"
+        }
+    } else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor llene los espacios correctamente'
+        });
     }
 }
 
