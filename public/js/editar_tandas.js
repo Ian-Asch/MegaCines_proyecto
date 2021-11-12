@@ -23,6 +23,9 @@ const Sala_p = document.querySelector("#Sala");
 const fecha_Estreno_p = document.querySelector("#fecha-Estreno");
 const fecha_Retiro_p = document.querySelector("#fecha-Retiro");
 
+const precio_p = document.querySelector("#precio");
+
+
 
 
 const nombre_completo = document.querySelector("#nombre-completo");
@@ -52,9 +55,9 @@ const llenar_espacios = () => {
 
     fecha_Estreno_p.innerText = usuario.fecha_Estreno;
     fecha_Retiro_p.innerText = usuario.fecha_Retiro;
+    precio_p.innerText = `${usuario.Precio} ¢`
 
-
-    nombre_completo.innerText = `${usuario.nombre}`;
+    nombre_completo.innerText = usuario.nombre;
 };
 
 
