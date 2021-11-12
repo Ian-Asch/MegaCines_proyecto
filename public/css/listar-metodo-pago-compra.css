@@ -1,0 +1,63 @@
+html {
+    min-height: 100%;
+}
+
+main {
+    padding: 1vw 5vw 2vw 5vw;
+    min-height: 50vh;
+}
+
+table {
+    width: 75%;
+    margin: 30px auto 30px auto;
+}
+
+th {
+    background-color: black;
+    padding: 15px;
+    color: #eb8f38;
+}
+
+tbody tr {
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+tbody tr:hover {
+    background-color: #50035f;
+    outline: solid 2px #eb8f38;
+    cursor: pointer;
+}
+
+td {
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+
+h2 {
+    margin: 30px auto 30px 13%;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+a {
+    color: #fff;
+    ;
+}
+
+a:hover {
+    color: #fad80f;
+}
+
+#agregar-pago-boton {
+    margin: 30px auto 30px auto;
+}
+
+#agregar-pago-sect2 {
+    margin-left: 13%;
+}
+
+h3 {
+    margin: 30px auto 0px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
