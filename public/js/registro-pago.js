@@ -2,7 +2,8 @@
 
 const boton_enviar = document.querySelector("#boton-guardar");
 const input_nombre = document.querySelector("#nombre-tarjeta");
-const input_identificacion = document.querySelector("#num-tarjeta");
+var input_num_tarjeta = document.querySelector("#num-tarjeta");
+const input_tipo_tarjeta = document.querySelector("#tipo-tarjeta");
 const input_mes_exp = document.querySelector("#mes");
 const input_ano_exp = document.querySelector("#ano");
 const input_cvv = document.querySelector("#cvv");
@@ -50,9 +51,13 @@ const validar = () => {
     let error = false;
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
-    let expReg_identificacion = RegExp('[0-9]{16}'); //Formato esperado  9 o 12 numeros seguidos
-    let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i'); //texto@texto.com ó .net ...
-    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+    let expReg_identificacion = RegExp('[0-9]{16}');
+    let expReg_visa = RegExp('^4[0-9]{6,}$');
+    let expReg_mastercard = RegExp('^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$')
+    let expReg_amex = RegExp('^3[47][0-9]{5,}$0');
+
+    //let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i'); //texto@texto.com ó .net ...
+    //let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     //Llamemos a la funcion que vlaida los campos vacios
     error = validar_vacios();
@@ -74,80 +79,94 @@ const validar = () => {
     }
 
 
-
-    if (!expReg_identificacion.test(input_identificacion.value)) {
+    if (!expReg_identificacion.test(input_num_tarjeta.value)) {
         error = true;
-        input_identificacion.classList.add('error-input');
+        input_num_tarjeta.classList.add('error-input');
     } else {
-        input_identificacion.classList.remove('error-input');
+        input_num_tarjeta.classList.remove('error-input');
+    }
+
+
+    if (input_mes_exp < 1) {
+        error = true;
+        input_mes_exp.classList.add('error-input');
+    } else if (input_mes_exp > 12) {
+        error = true;
+        input_mes_exp.classList.add('error-input');
+    } else {
+        input_mes_exp.classList.remove('error-input');
+    }
+
+
+    if (input_ano_exp < 2021) {
+        error = true;
+        input_ano_exp.classList.add('error-input');
+    } else if (input_ano_exp > 2027) {
+        error = true;
+        input_ano_exp.classList.add('error-input');
+    } else {
+        input_ano_exp.classList.remove('error-input');
+    }
+
+
+    if (input_cvv < 0o001) {
+        error = true;
+        input_cvv.classList.add('error-input');
+    } else if (input_cvv > 999) {
+        error = true;
+        input_cvv.classList.add('error-input');
+    } else {
+        input_cvv.classList.remove('error-input');
+    }
+
+    if (input_codigo < 10101) {
+        error = true;
+        input_cvv.classList.add('error-input');
+    } else if (input_cvv > 70605) {
+        error = true;
+        input_cvv.classList.add('error-input');
+    } else {
+        input_cvv.classList.remove('error-input');
+    }
+
+    if (error == false) {
+        obtenerDatos();
+    } else {
+        Swal.fire({
+            icon: 'warning', //Success, error, warning
+            title: 'No se pudo registrar su método de pago',
+            text: 'Por favor revise los campos resaltados'
+        });
     }
 }
 
 
-//valida el formato del correo
-if (!expReg_Correo.test(input_correo.value)) {
-    error = true;
-    input_correo.classList.add('error-input');
-} else {
-    input_correo.classList.remove('error-input');
-}
-
-//valida el formato de contraseña
-if (!expReg_contrasena.test(input_contrasena.value)) {
-    error = true;
-    input_contrasena.classList.add('error-input');
-} else {
-    input_contrasena.classList.remove('error-input');
-}
-
-//valida la contraseña se haya digitado bien 2 veces
-if (input_contrasena.value != input_repcontrasena.value) {
-    error = true;
-    input_repcontrasena.classList.add('error-input');
-} else {
-    input_repcontrasena.classList.remove('error-input');
-}
-
-
-if (error == false) {
-    obtenerDatos();
-} else {
-    Swal.fire({
-        icon: 'warning', //Success, error, warning
-        title: 'No se pudo enviar su mensaje',
-        text: 'Por favor revise los campos resaltados'
-    });
-}
-
-
-
-const calcularEdad = (input_nacimiento) => {
-    const fechaActual = new Date();
-    const anoActual = parseInt(fechaActual.getFullYear());
-    const mesActual = parseInt(fechaActual.getMonth()) + 1;
-    const diaActual = parseInt(fechaActual.getDay());
-
-    const anoNacimiento = parseInt(String(input_nacimiento).substring(0, 4));
-    const mesNacimiento = parseInt(String(input_nacimiento).substring(5, 7));
-    const diaNacimiento = parseInt(String(input_nacimiento).substring(8, 10));
-    let edad = anoActual - anoNacimiento;
-    if (mesActual < mesNacimiento) {
-        edad--;
-    } else if (mesActual == mesNacimiento) {
-        if (diaActual < diaNacimiento) {
-            edad--;
-        }
-
+const identificarTarjeta = (input_num_tarjeta) => {
+    let tarjeta = '';
+    let expReg_visa = RegExp('^4[0-9]{6,}$');
+    let expReg_mastercard = RegExp('^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$')
+    let expReg_amex = RegExp('^3[47][0-9]{5,}$0');
+    if (expReg_visa.test(input_num_tarjeta.value)) {
+        tarjeta = "Visa";
+    } else if (expReg_mastercard.test(input_num_tarjeta.value)) {
+        tarjeta = "MasterCard";
+    } else if (expReg_amex.test(input_num_tarjeta.value)) {
+        tarjeta = "American Express";
+    } else {
+        tarjeta = "No identificado";
     }
 
-    return edad;
+
+
+    return tarjeta;
 
 }
 
-input_nacimiento.addEventListener("change", function() {
-    if (input_nacimiento.value) {
-        let edad = (calcularEdad(input_nacimiento.value));
-        input_edad.value = (edad + " años");
+input_num_tarjeta.addEventListener("keyup", function() {
+
+    if (input_num_tarjeta.value) {
+        let tarjeta = (identificarTarjeta(input_num_tarjeta.value));
+        input_tipo_tarjeta.value = tarjeta;
     }
 });
 
