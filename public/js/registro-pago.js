@@ -15,9 +15,9 @@ const obtenerDatos = () => {
     Swal.fire({
         'icon': 'success',
         'title': 'Metodo de pago registrado con éxito',
-        'text': 'Nos pondremos en contacto lo antes posible'
+
     }).then(() => {
-        limpiar_pantalla();
+        history.back();
     });
 }
 
@@ -52,6 +52,7 @@ const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
     let expReg_identificacion = RegExp('[0-9]{16}');
+    let expReg_cvv = RegExp('[0-9]{3}');
     let expReg_visa = RegExp('^4[0-9]{6,}$');
     let expReg_mastercard = RegExp('^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$')
     let expReg_amex = RegExp('^3[47][0-9]{5,}$0');
@@ -87,46 +88,23 @@ const validar = () => {
     }
 
 
-    if (input_mes_exp < 1) {
-        error = true;
-        input_mes_exp.classList.add('error-input');
-    } else if (input_mes_exp > 12) {
-        error = true;
-        input_mes_exp.classList.add('error-input');
-    } else {
-        input_mes_exp.classList.remove('error-input');
-    }
 
-
-    if (input_ano_exp < 2021) {
-        error = true;
-        input_ano_exp.classList.add('error-input');
-    } else if (input_ano_exp > 2027) {
-        error = true;
-        input_ano_exp.classList.add('error-input');
-    } else {
-        input_ano_exp.classList.remove('error-input');
-    }
-
-
-    if (input_cvv < 0o001) {
-        error = true;
-        input_cvv.classList.add('error-input');
-    } else if (input_cvv > 999) {
+    if (!expReg_cvv.test(input_cvv.value)) {
         error = true;
         input_cvv.classList.add('error-input');
     } else {
         input_cvv.classList.remove('error-input');
     }
 
-    if (input_codigo < 10101) {
+
+    if (input_codigo.value < 10101) {
         error = true;
-        input_cvv.classList.add('error-input');
-    } else if (input_cvv > 70605) {
+        input_codigo.classList.add('error-input');
+    } else if (input_codigo.value > 70605) {
         error = true;
-        input_cvv.classList.add('error-input');
+        input_codigo.classList.add('error-input');
     } else {
-        input_cvv.classList.remove('error-input');
+        input_codigo.classList.remove('error-input');
     }
 
     if (error == false) {
@@ -143,23 +121,30 @@ const validar = () => {
 
 const identificarTarjeta = (input_num_tarjeta) => {
     let tarjeta = '';
-    let expReg_visa = RegExp('^4[0-9]{6,}$');
+    let indicador = input_num_tarjeta.charAt(0);
+    /*let expReg_visa = RegExp('^4[0-9]{6,}$');
     let expReg_mastercard = RegExp('^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$')
-    let expReg_amex = RegExp('^3[47][0-9]{5,}$0');
-    if (expReg_visa.test(input_num_tarjeta.value)) {
-        tarjeta = "Visa";
-    } else if (expReg_mastercard.test(input_num_tarjeta.value)) {
-        tarjeta = "MasterCard";
-    } else if (expReg_amex.test(input_num_tarjeta.value)) {
-        tarjeta = "American Express";
-    } else {
-        tarjeta = "No identificado";
+    let expReg_amex = RegExp('^3[47][0-9]{5,}$0');*/
+
+    switch (indicador) {
+        case "2":
+            tarjeta = "MasterCard";
+            break;
+        case "3":
+            tarjeta = "American express";
+            break;
+        case "4":
+            tarjeta = "Visa";
+            break;
+
+        case "5":
+            tarjeta = "MasterCard";
+            break;
+        default:
+            tarjeta = "No identificada" //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+            break;
     }
-
-
-
     return tarjeta;
-
 }
 
 input_num_tarjeta.addEventListener("keyup", function() {

@@ -4,19 +4,20 @@ const btn_contrasena = document.querySelector("#btn-ingresar")
 let verfificado = true
 
 const verificar_correo = () => {
-  let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
+    let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
 
-  if (!expresion_correo.test(input_correo.value)) {
-    input_correo.classList.add("error");
+    if (!expresion_correo.test(input_correo.value)) {
+        input_correo.classList.add("error");
         verfificado = false;
-  } else {
-    input_correo.classList.remove("error");
+    } else {
+        input_correo.classList.remove("error");
         verfificado = true;
-  }
+    }
 
-  return verfificado
+    return verfificado
 }
 
+<<<<<<< Updated upstream
 btn_contrasena.addEventListener("click",() => {
   if (verificar_correo()) {
     Swal.fire({
@@ -36,4 +37,26 @@ btn_contrasena.addEventListener("click",() => {
     })
   }
 })
+=======
+btn_contrasena.addEventListener("click", () => {
+    if (verificar_correo()) {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Se ha enviado un correo de recuperación de contraseña',
+            showConfirmButton: true,
+>>>>>>> Stashed changes
 
+        }).then(() => {
+            history.back();
+        });
+    } else {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'No ha ingresado un correo electrónico válido',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
+})

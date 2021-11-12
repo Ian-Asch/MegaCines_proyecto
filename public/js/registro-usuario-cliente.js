@@ -29,7 +29,7 @@ const obtenerDatos = () => {
         'title': 'Ha registrado su usuario',
         'text': 'Hemos enviado un correo electrónico para completar la validación del mismo'
     }).then(() => {
-        limpiar_pantalla();
+        window.location.href = 'catalogo-peliculas.html';
     });
 }
 
