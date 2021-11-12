@@ -56,3 +56,13 @@ td{
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
+
+#guardar-boton{
+    width: 85%;
+    margin: auto;
+}
+
+#boton-guardar{
+    width: 100px;
+    height: 35px;
+}
