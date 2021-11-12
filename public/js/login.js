@@ -55,6 +55,8 @@ const funcion_verificar_expresiones = () => {
 
 
 const funcion_boton = () => {
+    verfificado = true;
+    
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verfificado) {
