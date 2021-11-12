@@ -53,6 +53,7 @@ td{
 
 [placeholder=Buscar]{
     background-color: #fff;
+    color: black;
 }
 
 [placeholder=Buscar]:focus{
