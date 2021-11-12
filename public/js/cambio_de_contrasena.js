@@ -20,19 +20,19 @@ const verificar_correo = () => {
 btn_contrasena.addEventListener("click",() => {
   if (verificar_correo()) {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'success',
-      title: 'Your work has been saved',
+      title: 'Un correo de cambio de contraseña ha sido enviado a tu cuenta',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2500
     })
   } else {
     Swal.fire({
-      position: 'top-end',
+      position: 'center',
       icon: 'error',
-      title: 'Your work has been saved',
+      title: 'Por favor llene los espacios correctamente',
       showConfirmButton: false,
-      timer: 1500
+      timer: 2000
     })
   }
 })
