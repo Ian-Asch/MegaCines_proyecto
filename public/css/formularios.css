@@ -100,3 +100,8 @@ label {
     width: 50%;
     display: inline-block;
 }
+
+.info-div label {
+    width: 30%;
+    display: inline-block
+}
