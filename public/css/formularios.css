@@ -1,106 +1,6 @@
-/* Este archivo se usa en todas las paginas por eso este archivo no se cambia 
-a menos a que el equipo apruebe. Si necesita hacer cambios en su pagina
-por favor cree otro archivo css dedicado para esa pagina */
-
-html {
-    background-image: linear-gradient(#69057e, #50035f 30%, black);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-family: "Montserrat";
-    /* font-family: "Scheherazade New"; */
-    /*Este es la otra fuente por si acaso*/
-}
-
-main {
-    color: rgb(220, 220, 220);
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-header {
-    background-color: black;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    margin-bottom: 0px;
-}
-
-header img {
-    height: 100%;
-}
-
-header a {
-    color: white;
-    margin: 10px;
-}
-
-nav {
-    width: 100%;
-    margin-left: 50px;
-}
-
-.boton-header {
-    min-width: 120px;
-    margin-right: 20px;
-}
-
-button {
-    background-color: #fad80f;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 12pt;
-}
-
-button:hover {
-    background-color: #eb8f38;
-}
-
-button:active {
-    background-color: #fad80f !important;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    color: #eb8f38;
-    margin-top: 30px;
-    /* width: 100%;
-    bottom: 0;
-    position: fixed; */
-}
-
-#div-logo-info {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-footer a {
-    color: #eb8f38;
-}
-
-footer img {
-    width: 6%
-}
-
-#iconos-footer {
-    font-size: 16pt;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
 section {
     padding: 25px;
-    background: #ad72fa60;
+    background: #ffffff10;
     font-size: 25px;
     width: 60%;
     margin: 0 auto;
@@ -108,7 +8,7 @@ section {
 }
 
 section.type-a {
-    background-color: #02000500;
+    background-color: #00000000;
     width: 100%;
     background-size: auto;
     margin: auto;
