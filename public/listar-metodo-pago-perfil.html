@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/perfil_cine.css">
-    <title>Perfil cine</title>
+    <link rel="stylesheet" href="css/listar-metodo-pago.css">
+    <title>Lista de métodos de pago</title>
 </head>
 
 <body>
@@ -26,50 +26,55 @@
     </header>
 
     <main>
-        <div id="info-cine">
-            <h1 id="nombre-cine">Cinemark</h1>
-            <p id="descripcion-cine">
-                Cinemark es una cine dedicado especialmente a películas emblemáticas, eventos deportivos, culturales, musicales y documentales que merecen ser vistos en la pantalla grande. Acomodamos a nuestros clientes con grandes salas, butacas comodas y una venta
-                de comida para disfrutar cuando se ve una pelicula.
-            </p>
-            <label for="direccion">Direccion:</label>
-            <p id="direccion" class="label-p">Mall san pedro, segundo piso</p>
-        </div>
+        <h2> Tus métodos de pago </h2>
 
-        <div id="secc-imagen-cine">
-            <img src="imgs/geoffrey-moffett-TFRezw7pQwI-unsplash.jpg">
-            <label for="calificacion-cine">Calificacion:</label>
-            <p id="calificacion-cine" class="label-p">7.3</p>
-        </div>
+        <section id="sct-lista-metodo-pago">
+            <table>
+                <tr>
+                    <th>Marca de tarjeta</th>
+                    <th>Terminación</th>
+                    <th>Duración</th>
+                    <th colspan="2"> Acciones</th>
+                </tr>
+                <tr>
+                    <td>Visa</td>
+                    <td>**** - 1234</td>
+                    <td>Juan Oviedo M</td>
+                    <td><a href="perfil_pelicula.html">Editar</a></td>
+                    <td><a href="perfil_pelicula.html">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>Visa</td>
+                    <td>**** - 5825</td>
+                    <td>Juan Oviedo Murillo</td>
+                    <td><a href="perfil_pelicula.html">Editar</a></td>
+                    <td><a href="perfil_pelicula.html">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>MasterCard</td>
+                    <td>**** - 0956</td>
+                    <td>María Oviedo Lopez</td>
+                    <td><a href="perfil_pelicula.html">Editar</a></td>
+                    <td><a href="perfil_pelicula.html">Eliminar</a></td>
+                </tr>
+                <tr>
+                    <td>American Express</td>
+                    <td>**** - 5569</td>
+                    <td>Juan Oviedo Murillo</td>
+                    <td><a href="perfil_pelicula.html">Editar</a></td>
+                    <td><a href="perfil_pelicula.html">Eliminar</a></td>
+                </tr>
 
-        <div id="secc-comentarios">
-            <div id="titulo-boton">
-                <h2>Comentarios</h2>
-                <button type="button">Escribir comentario</button>
-            </div>
-            <div id="comentarios-div">
-                <div class="comentario">
-                    <div class="usuario-img">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div>
-                        <h3>Mario</h3>
-                        <p>Es un muy buen cine estaba limpio y habia buen servicio
-                        </p>
-                    </div>
-                </div>
-                <div class="comentario">
-                    <div class="usuario-img">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <div>
-                        <h3>pablo</h3>
-                        <p>Los asientos eran muy comodos y tenian muy buenas ofertas
-                        </p>
-                    </div>
+            </table>
+
+            <div id="agregar-pago-sect">
+                <div id="agregar-pago-sect2">
+                    <button type="button" id="agregar-pago-boton">Agregue un nuevo método de pago</button>
                 </div>
             </div>
-        </div>
+        </section>
+
+
     </main>
 
     <footer>
@@ -103,6 +108,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

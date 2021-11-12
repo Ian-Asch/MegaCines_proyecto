@@ -51,11 +51,18 @@ td{
     padding: 15px 0 15px 0;
 }
 
-[placeholder=Buscar]{
-    background-color: #fff;
-    color: black;
+.texto_centrado{
+    /* background-color: aqua; */
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
-[placeholder=Buscar]:focus{
-    background-color: #fff;
+#guardar-boton{
+    width: 85%;
+    margin: auto;
+}
+
+#boton-guardar{
+    width: 100px;
+    height: 35px;
 }

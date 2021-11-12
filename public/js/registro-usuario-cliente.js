@@ -26,8 +26,8 @@ const obtenerDatos = () => {
 
     Swal.fire({
         'icon': 'success',
-        'title': 'Mensaje enviado exitosamente',
-        'text': 'Nos pondremos en contacto lo antes posible'
+        'title': 'Ha registrado su usuario',
+        'text': 'Hemos enviado un correo electrónico para completar la validación del mismo'
     }).then(() => {
         limpiar_pantalla();
     });
@@ -147,7 +147,7 @@ const validar = () => {
     } else {
         Swal.fire({
             icon: 'warning', //Success, error, warning
-            title: 'No se pudo enviar su mensaje',
+            title: 'No se pudo registrar su usuario',
             text: 'Por favor revise los campos resaltados'
         });
     }

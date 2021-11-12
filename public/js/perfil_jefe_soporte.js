@@ -1,13 +1,13 @@
 'use strict';
 
 let usuario = {
-    nombre: "Carlos",
-    primer_apellido: "Bermudez",
-    segundo_apellido: "Solano",
-    correo: "Admin@MegaCines.com",
-    cedula: "142358753",
-    fecha_nacimiento: "23-3-1999",
-    edad: 22
+    nombre: "Pablo",
+    primer_apellido: "Mendez",
+    segundo_apellido: "soto",
+    correo: "pablo@gmail.com",
+    cedula: "112354538",
+    fecha_nacimiento: "20-02-1995",
+    edad: 26
 }
 
 const boton_editar = document.querySelector("#boton-editar-info");
@@ -130,6 +130,32 @@ const verificar_espacios = () => {
     return verfificado;
 };
 
+const calcular_edad = (fecha_nacimiento) => {
+    let edad;
+
+    let anio_actual = new Date().getFullYear();
+    let mes_actual = new Date().getMonth();
+    let dia_actual = new Date().getDay();
+    
+    let anio_nacimiento = fecha_nacimiento.getFullYear();
+    let mes_nacimiento = fecha_nacimiento.getMonth();
+    let dia_nacimiento = fecha_nacimiento.getDay();
+
+    edad = anio_actual - anio_nacimiento - 1;
+
+    if (mes_actual > mes_nacimiento) {
+        edad++;
+    } else {
+        if (mes_actual == mes_nacimiento) {
+            if (dia_actual >= dia_nacimiento) {
+                edad++;
+            }
+        }
+    }
+
+    return edad;
+};
+
 const guardar_cambios = () => {
     usuario.nombre = input_nombre.value;
     usuario.primer_apellido = input_primer_apellido.value;
@@ -137,6 +163,7 @@ const guardar_cambios = () => {
     usuario.correo = input_correo.value;
     usuario.cedula = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;
+    usuario.edad = calcular_edad(new Date(input_nacimiento.value));
 };
 
 
@@ -153,6 +180,10 @@ boton_guardar.addEventListener('click', () => {
         mostrar_parrafos();
 
     } else {
-        //swal alert
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor llene los espacios correctamente'
+        });
     }
 });

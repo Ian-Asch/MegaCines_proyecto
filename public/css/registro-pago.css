@@ -1,0 +1,73 @@
+                main {
+                    overflow: auto;
+                }
+                
+                form {
+                    overflow: auto;
+                    padding: 25px;
+                    font-size: 20px;
+                    width: 85%;
+                    margin: 0 auto;
+                    margin-bottom: 40px;
+                }
+                
+                .field {
+                    width: 46%;
+                    padding: 5px;
+                    display: inline-block;
+                }
+                
+                .field:focus {
+                    border-color: #eb8f38;
+                }
+                
+                label {
+                    width: 35% !important;
+                }
+                
+                #mes,
+                #ano {
+                    width: 8%;
+                    padding: 5px;
+                    margin: 0px 10px;
+                }
+                
+                #cvv {
+                    width: 14.5%;
+                    padding: 5px;
+                }
+                
+                h1 {
+                    font-size: 50px;
+                    font-weight: bolder;
+                    margin: 30px auto 30px 16%;
+                }
+                
+                .error-input {
+                    border: 2px solid red;
+                }
+                
+                h2 {
+                    margin: 30px auto 30px 10%;
+                    font-weight: bolder;
+                    font-size: 30px;
+                }
+                
+                section {
+                    background-color: #0000006c !important;
+                }
+                
+                select {
+                    border-radius: 5px;
+                    margin-left: 8px;
+                    padding: 5px;
+                }
+                
+                #codigo {
+                    padding: 5px;
+                    width: 7%;
+                }
+                
+                #guardar-boton {
+                    margin-left: 10%;
+                }

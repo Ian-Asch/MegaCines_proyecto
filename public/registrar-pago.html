@@ -14,9 +14,9 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/formularios.css">
-    <link rel="stylesheet" href="css/registro-usuario-cliente.css">
+    <link rel="stylesheet" href="css/registro-pago.css">
     <!-- Agregar estilo de pagina en esta linea -->
-    <title>Registro Cliente</title>
+    <title>Registro nuevo método de pago</title>
     <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
 </head>
 
@@ -29,7 +29,75 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     </header>
 
     <main>
-        <h1 class="texto_centrado">Registro Usuario</h1>
+        <h1 class="texto_centrado">Agregue un nuevo método de pago</h1>
+
+
+        <form name="metodo-pago" action="*" method="POST">
+
+
+            <section id="data-pago">
+
+                <div>
+                    <label for="nombre-tarjeta">Nombre en la tarjeta:</label>
+                    <input type="text" class="field" id="nombre-tarjeta" required>
+                </div>
+
+                <div>
+                    <label for="num-tarjeta">Número de la tarjeta:</label>
+                    <input type="text" class="field" id="num-tarjeta" required>
+                </div>
+
+                <div>
+                    <label for="tipo-tarjeta">Tipo de tarjeta:</label>
+                    <input type="text" id="tipo-tarjeta" readonly>
+                </div>
+                <div>
+                    <label for="expiracion">Fecha de expiracion:</label> Mes <input type="number" id="mes" required min="1" max="12" placeholder="01"> Año <input type="number" id="ano" required min="2021" max="2027" placeholder="2021">
+
+                </div>
+                <div>
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" min="001" max="999" placeholder="001" required>
+                </div>
+
+            </section>
+            <h2 class="texto_centrado">Registre la dirección de facturación de su tarjeta</h2>
+            <section>
+
+
+                <div>
+                    <label for="direccion-nombre">Nombre completo:</label>
+                    <input type="text" class="field" id="direccion-nombre" required>
+                </div>
+
+
+                <div>
+                    <label for="direccion">Dirección exacta:</label>
+                    <input type="text" class="field" id="direccion" required>
+                </div>
+
+                <div>
+                    <label for="provincia">Provincia:</label><select required>
+                        <option>Alajuela</option>
+                        <option>Cartago</option>
+                        <option>Guanacaste</option>
+                        <option>Heredia</option>
+                        <option>Limón</option>
+                        <option>Puntarenas</option>
+                        <option>San José</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="codigo">Codigo Postal:</label>
+                    <input type="number" id="codigo" placeholder="10101" required>
+                </div>
+            </section>
+
+            <div id="guardar-boton">
+                <button type="button" id="boton-guardar">Guardar</button>
+            </div>
+        </form>
+
 
 
         <form name="data-cliente" action="*" method="POST">
@@ -37,63 +105,12 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
 
             <div id="div-inputs">
 
-                <div>
-                    <label for="nombre_usuario">Primer nombre:</label>
-                    <input type="text" class="field" id="primer_nombre" required>
-                </div>
-                <div>
-                    <label for="segundo_nombre">Segundo nombre (opcional):</label>
-                    <input type="text" class="field" id="segundo_nombre">
-                </div>
-                <div>
-                    <label for="primer_apellido">Primer apellido:</label>
-                    <input type="text" class="field" id="primer_apellido" required>
-                </div>
-                <div>
-                    <label for="segundo_apellido">Segundo apellido (opcional):</label>
-                    <input type="text" class="field" id="segundo_apellido">
-                </div>
-                <div>
-                    <label for="identificacion">Identificación:</label>
-                    <input type="text" class="field" id="identificacion" required placeholder="Formato Cédula 101230123, Pasaporte 20123401234">
-                </div>
-                <div>
-                    <label for="nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
-                </div>
-                <div>
-                    <label for="edad">Edad:</label>
-                    <input type="text" class="field" id="edad">
-                </div>
-                <div>
-                    <label for="correo">Correo electrónico:</label>
-                    <input type="email" class="field" id="correo" placeholder="abc@abc.com" required>
-                </div>
-            </div>
 
-            <div id="secc-imagen">
-                <img src="imgs/blank-profile.png">
-
-                <button type="button">Cambiar imagen</button>
-            </div>
-
-            <div id="sect-abajo">
-                <div>
-                    <label for="contrasena">Contraseña:</label>
-                    <input type="password" id="contrasena" required>
-                    <button id="boton-contrasena" type="button">Mostrar contraseña</button>
-                </div>
-                <div>
-                    <label for="contrasena-repetir">Repita la contraseña:</label>
-                    <input type="password" id="repcontrasena" required>
-
-                </div>
-
-                <div id="guardar-boton">
-                    <button type="button" id="boton-guardar">Guardar</button>
-                </div>
 
         </form>
+
+
+
 
 
     </main>
@@ -130,7 +147,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <!-- Poner script de javascript en esta linea -->
-    <script src="js/registro-usuario-cliente.js"></script>
+    <script src="js/registro-pago.js"></script>
 </body>
 
 </html>

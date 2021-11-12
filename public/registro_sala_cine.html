@@ -9,18 +9,19 @@
         }
     </style>
 
-    <title>Nueva Sala</title>
+    <title>Registrar nueva sala</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-    <!--link rel="stylesheet" href="css/reset.css"-->
+    <link rel="stylesheet" href="css/reset.css">
     <!--reset no me esta dejando cambiar tama;o de fuentes-->
-    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
+    <link rel="stylesheet" href="css/listar-salas.css">
 </head>
 
 <body>
@@ -28,45 +29,47 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="catalogo-peliculas.html">Cartelera</a>
-            <a href="listar_cines.html">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
+            <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
         <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
 
     </header>
 
     <main>
+
+        <div id="barra-buscar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar sala existente">
+        </div>
         <!--aqui comienza el contenido como tal-->
-        <h4 class="texto_centrado">Registrar nueva sala</h4>
-        <h1 class="texto_centrado">Nueva sala</h1>
+        <h1 class="texto_centrado">Registrar nueva sala</h1>
 
         <section>
 
             <form name="datos_sala" action="*" method="GET">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre"></label>
+                    <input type="text" name="nombre" id="nombre" required>
                 </div>
 
                 <div>
                     <label for="codigo_sala">Codigo de sala:</label>
-                    <input type="text" id="codigo_sala" />
+                    <input type="text" id="codigo_sala" required>
                 </div>
 
                 <div>
                     <label for=tipo_sala>Tipo de sala:</label>
-                    <input type="text" id="tipo_sala" />
+                    <input type="text" id="tipo_sala" required>
                 </div>
 
                 <div>
                     <label for="ubicacion">Ubicación:</label>
-                    <input type="text" id="ubicacion" />
+                    <input type="text" id="ubicacion" required>
                 </div>
 
                 <div>
                     <label for="cantidad_butacas">Cantidad de butacas:</label>
-                    <input type="number" id="cantidad_butacas" />
+                    <input type="number" id="cantidad_butacas" required>
                 </div>
 
                 <div>
@@ -350,10 +353,8 @@
 
     </main>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
 </body>
-
-
 
 </html>

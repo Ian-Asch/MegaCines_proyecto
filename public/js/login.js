@@ -58,12 +58,17 @@ const funcion_boton = () => {
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verfificado) {
+
         if (input_correo.value == "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
         if (input_correo.value == "admin@MegaCines.com") {
             window.location.href = "perfil_usuario_admin.html"
         }
+        if (input_correo.value == "soporte@MegaCines.com") {
+            window.location.href = "perfil_jefe_soporte.html"
+        }
+
     } else {
         Swal.fire({
             icon: 'error',

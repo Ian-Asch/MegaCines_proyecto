@@ -13,7 +13,7 @@ form {
 
 .width {
     width: 49%;
-    /* background-color: rgb(218, 210, 157); */
+    background-color: rgb(218, 210, 157);
     padding: 5px;
     border-radius: 5px;
     border: 1px solid black;

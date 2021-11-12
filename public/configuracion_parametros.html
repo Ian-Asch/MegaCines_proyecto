@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/configuracion_cadenas.css">
-    <title>Configuración cadenas de cines</title>
+    <link rel="stylesheet" href="css/configuracion_parametros.css">
+    <title>Configuración parámetros generales</title>
     <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
 </head>
 
@@ -19,8 +19,9 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-           
-            <a href="perfil_usuario_admin.html">Perfil</a>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
         <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
     </header>
@@ -33,7 +34,7 @@
             <div id="sct-buscar">
                 <form method="get" id="buscar-peli">
                     <div class="buscar">
-                        <input type="text" name="search" class="texto-buscar" placeholder="Busque su película por título..." />
+                        <input type="text" name="search" class="texto-buscar" placeholder="Ingrese la cadena que desea encontrar" />
                         <input type="submit" class="btn-buscar" value="" />
                     </div>
                 </form>
@@ -42,35 +43,38 @@
             <div class="listar">
                 <h1>CCM cinemas</h1> <br>
                 <img src="imgs/CCM_cinemas.PNG" alt="CCM_cinemas">
-                <p> Código de cadena de cine: <span>24123</span></p>
-                <p>Nombre de la cadena de cine:<span> CCM cinemas</span> </p>
-                <p>Ubicación de instalaciones:<span> San Ramón, San Carlos, Rohrmoser, Jaco. </span>
-                </p> <button type="button" id="" onclick="window.location.href='editar_cadena.html'">Editar</button>
+                <p> Tipo de asiento: <span>Regular, Ley 7600</span></p>
+                <p>Categorías:<span> Terror, Ciencia Ficción, Comedia, Drama.</span> </p>
+                <p>Tipos de sala:<span> 2D, Regular, 3D</span></p>
+                <p>Margen de ganancia: <span>25%</span> </p>
+                </p> <button type="button" id="" onclick="window.location.href='editar_parametros.html'">Editar</button>
 
             </div>
 
             <div class="listar">
-                <h1>Cinepolis</h1> <br>
+                <h1>CinePolis</h1> <br>
                 <img src="imgs/CinePolis.PNG" alt="CinePolis">
-                <p> Código de cadena de cine: <span>91289</span></p>
-                <p>Nombre de la cadena de cine:<span> Cinepolis</span> </p>
-                <p>Ubicación de instalaciones:<span> Desamparados, Heredia, Cartago, Escazú </span>
-                </p> <button type="button" id="" onclick="window.location.href='editar_cadena.html'">Editar</button>
+                <p> Tipo de asiento: <span>Regular, VIP</span></p>
+                <p>Categorías:<span> Terror, Ciencia Ficción, Acción, Infantiles.</span> </p>
+                <p>Tipos de sala:<span> 2D, Regular, 3D, IMAX</span>
+                    <p>Margen de ganancia: <span>25%</span> </p>
+                </p> <button type="button" id="" onclick="window.location.href='editar_parametros.html'">Editar</button>
 
             </div>
 
             <div class="listar">
-                <h1>Nova cinemas</h1> <br>
-                <img src="imgs/Nova.PNG" alt="Nova_cinemas">
-                <p> Código de cadena de cine: <span>24983</span></p>
-                <p>Nombre de la cadena de cine:<span> Nova cinemas</span> </p>
-                <p>Ubicación de instalaciones:<span> Curridabat, San José, Alajuela </span>
-                </p> <button type="button" id="" onclick="window.location.href= 'editar_cadena.html'">Editar</button>
+                <h1>Nova Cinemas</h1> <br>
+                <img src="imgs/Nova.PNG" alt="NovaCinemas">
+                <p> Tipo de asiento: <span>Regular, VIP.Ley 7600</span></p>
+                <p>Categorías:<span> Terror, Ciencia Ficción, Acción, Infantiles, Drama.</span> </p>
+                <p>Tipos de sala:<span> 2D, Regular, 3D, IMAX</span>
+                    <p>Margen de ganancia: <span>25%</span> </p>
+                </p> <button type="button" id="" onclick="window.location.href='editar_parametros.html'">Editar</button>
 
             </div>
             <div class="registrar">
-                <p>¿Deseas registrar una nueva cadena?</p> <br>
-                <button type="button" id="btn-registrar" onclick=" window.location.href='registrar_cadena.html' ">Registrar Nueva Cadena</button>
+                <p>¿Deseas registrar diferentes parámetros para un cadena?</p> <br>
+                <button type="button" id="btn-registrar" onclick=" window.location.href='registrar_parametros.html' ">Registrar nuevos parámetros</button>
             </div>
 
         </section>
@@ -91,12 +95,12 @@
                 <h6>INFORMACION</h6>
                 <a href="landing_page_equipo.html">- Sobre nosotros</a>
                 <p>- Sobre el producto</p>
-                <p>- Términos y condiciones</p>
+                <p>- Terminos y condiciones</p>
             </div>
             <div>
                 <h6>AYUDA</h6>
                 <p>- Preguntas frecuentes</p>
-                <a href="landing_page_equipo.html">- Contáctenos</a>
+                <a href="landing_page_equipo.html">- Contactenos</a>
             </div>
         </div>
         <div id="iconos-footer">

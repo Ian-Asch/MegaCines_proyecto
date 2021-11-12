@@ -18,9 +18,7 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="catalogo-peliculas.html">Cartelera</a>
-            <a href="listar_cines.html">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
+            <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
         <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
     </header>
@@ -38,55 +36,6 @@
                         <label for="" class="labels">Nombre de la cadena:</label>
                         <input class="width" placeholder="Ingrese el nombre de la cadena"> <br> <br>
 
-                        <label for="" class="labels">Suba el logo de la cadena:</label> <input type="file"> <br> <br>
-
-                        <label for="" class="labels">Selecione los tipos de asiento:</label>
-                        <input type="radio" id="VIP" name="VIP" value="VIP" checked>
-                        <label for="VIP">VIP</label>
-                        <input type="radio" id="Ley" name="Ley" value="Ley">
-                        <label for="">Ley 7600</label>
-                        <input type="radio" id="regular" name="regular" value="regular">
-                        <label for="regular">Regular</label> <br> <br>
-
-
-
-                        <label for="" class="labels">Selecione las categorías para la cadena de cine:</label>
-                        <input type="radio" id="terror" name="terror" value="terror" checked>
-                        <label for="terror">Terror</label>
-                        <input type="radio" id="Ciencia" name="Ciencia" value="Ciencia">
-                        <label for="ciencia">Ciencia ficción</label>
-                        <input type="radio" id="drama" name="drama" value="drama">
-                        <label for="drama">Drama</label>
-                        <input type="radio" id="accion" name="accion" value="accion">
-                        <label for="accion">Acción</label>
-                        <input type="radio" id="comedia" name="comedia" value="comedia">
-                        <label for="comedia">Comedia</label>
-                        <input type="radio" id="infantiles" name="infantiles" value="infantiles">
-                        <label for="infantiles">Infantiles</label> <br> <br>
-
-                        <label for="" class="labels">Tipo de salas:</label>
-                        <input type="radio" id="sala_regular" name="sala_regular" value="sala_regular" checked>
-                        <label for="sala_regular">Regular</label>
-                        <input type="radio" id="2d" name="2d" value="2d">
-                        <label for="2d">2D</label>
-                        <input type="radio" id="3d" name="3d" value="3d">
-                        <label for="3d">3D</label>
-                        <input type="radio" id="4d" name="4d" value="4d">
-                        <label for="4d">4D</label>
-                        <input type="radio" id="imax" name="imax" value="imax">
-                        <label for="imax">IMAX</label> <br> <br>
-
-                        <label for="" type="text" class="labels">Margen de ganacia:</label>
-                        <input type="radio" id="15" name="15" value="15" checked>
-                        <label for="15">15%</label>
-                        <input type="radio" id="20" name="20" value="20">
-                        <label for="20">20%</label>
-                        <input type="radio" id="25" name="25" value="25">
-                        <label for="25">25%</label>
-                        <input type="radio" id="30" name="30" value="30">
-                        <label for="30">30%</label>
-                        <input type="radio" id="35" name="35" value="35">
-                        <label for="35">35%</label> <br> <br>
 
                         <label for="" class="labels">Selecione las ubicaciones donde esta la cadena:</label>
 
@@ -99,8 +48,15 @@
                         <input type="checkbox" value="puntarenas" id="puntarenas"> <label for="puntarenas">Puntarenas</label>
 
                     </fieldset>
+
+
                 </form>
+                <div>
+                    <button type="button" id="btn-registrar" onclick=" window.location.href='' ">Registrar</button>
+                </div>
             </div>
+
+
         </section>
     </main>
 
