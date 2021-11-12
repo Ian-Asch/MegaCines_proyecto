@@ -85,3 +85,22 @@ section {
 input {
     border-radius: 5px;
 }
+
+#div-inputs {
+    width: 70%;
+}
+
+.field {
+    width: 46%;
+    padding: 5px;
+    display: inline-block;
+}
+
+.field:focus {
+    border-color: #eb8f38;
+}
+
+label {
+    width: 50%;
+    display: inline-block;
+}
