@@ -17,27 +17,6 @@ const verificar_correo = () => {
     return verfificado
 }
 
-<<<<<<< Updated upstream
-btn_contrasena.addEventListener("click",() => {
-  if (verificar_correo()) {
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Un correo de cambio de contraseña ha sido enviado a tu cuenta',
-      showConfirmButton: false,
-      timer: 2500
-    })
-  } else {
-    Swal.fire({
-      position: 'center',
-      icon: 'error',
-      title: 'Por favor llene los espacios correctamente',
-      showConfirmButton: false,
-      timer: 2000
-    })
-  }
-})
-=======
 btn_contrasena.addEventListener("click", () => {
     if (verificar_correo()) {
         Swal.fire({
@@ -45,7 +24,6 @@ btn_contrasena.addEventListener("click", () => {
             icon: 'success',
             title: 'Se ha enviado un correo de recuperación de contraseña',
             showConfirmButton: true,
->>>>>>> Stashed changes
 
         }).then(() => {
             history.back();
