@@ -103,5 +103,34 @@ td:last-child {
 h2 {
     font-size: 25px;
     font-weight: bold;
-    padding: 20px 0px 20px 172px
+    padding: 20px 0px 20px 72px
+}
+
+table {
+    width: 75%;
+    margin: auto;
+}
+
+th {
+    background-color: black;
+    color: #eb8f38;
+}
+
+tbody tr {
+    background-color: rgb(0, 0, 0, 0.6);
+}
+
+tbody tr:hover {
+    background-color: #50035f;
+    outline: solid 2px #eb8f38;
+    cursor: pointer;
+}
+
+a {
+    color: #fff;
+    ;
+}
+
+a:hover {
+    color: #fad80f;
 }
