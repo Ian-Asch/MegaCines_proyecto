@@ -50,3 +50,11 @@ td{
     text-align: center;
     padding: 15px 0 15px 0;
 }
+
+[placeholder=Buscar]{
+    background-color: #fff;
+}
+
+[placeholder=Buscar]:focus{
+    background-color: #fff;
+}
