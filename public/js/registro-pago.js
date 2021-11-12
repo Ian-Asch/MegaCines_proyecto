@@ -14,7 +14,7 @@ const obtenerDatos = () => {
 
     Swal.fire({
         'icon': 'success',
-        'title': 'Mensaje enviado exitosamente',
+        'title': 'Metodo de pago registrado con éxito',
         'text': 'Nos pondremos en contacto lo antes posible'
     }).then(() => {
         limpiar_pantalla();
