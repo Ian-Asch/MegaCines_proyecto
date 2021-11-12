@@ -20,7 +20,7 @@ const verificar_correo = () => {
 btn_contrasena.addEventListener("click", () => {
     if (verificar_correo()) {
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'success',
             title: 'Se ha enviado un correo de recuperación de contraseña',
             showConfirmButton: true,
@@ -30,7 +30,7 @@ btn_contrasena.addEventListener("click", () => {
         });
     } else {
         Swal.fire({
-            position: 'top-end',
+            position: 'center',
             icon: 'error',
             title: 'No ha ingresado un correo electrónico válido',
             showConfirmButton: false,
