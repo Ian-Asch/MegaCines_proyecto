@@ -13,6 +13,6 @@ form{
     margin-bottom: 100px;
 }
 
-label{
+.radio-label{
     display: inline;
 }
