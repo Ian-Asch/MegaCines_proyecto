@@ -87,17 +87,13 @@ input {
 }
 
 #div-inputs {
-    width: 70%;
+    width: 50%;
 }
 
 .field {
     width: 46%;
     padding: 5px;
     display: inline-block;
-}
-
-.field:focus {
-    border-color: #eb8f38;
 }
 
 label {
