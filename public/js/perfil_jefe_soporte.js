@@ -3,7 +3,7 @@
 let usuario = {
     nombre: "Pablo",
     primer_apellido: "Mendez",
-    segundo_apellido: "soto",
+    segundo_apellido: "Soto",
     correo: "pablo@gmail.com",
     cedula: "112354538",
     fecha_nacimiento: "20-02-1995",
