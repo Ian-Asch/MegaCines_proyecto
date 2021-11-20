@@ -51,4 +51,4 @@ router.get('/listar-usuarios', (req, res) => {
     });
 });
 
-model.exports = router;
+module.exports = router;
