@@ -1,4 +1,4 @@
-const input_correo = document.querySelector("#contenedor-input input");
+const input_correo = document.querySelector("#txt_email");
 const btn_contrasena = document.querySelector("#btn-ingresar")
 
 let verfificado = true
@@ -30,11 +30,9 @@ btn_contrasena.addEventListener("click", () => {
         });
     } else {
         Swal.fire({
-            position: 'center',
+            // position: 'center',
             icon: 'error',
-            title: 'No ha ingresado un correo electrónico válido',
-            showConfirmButton: false,
-            timer: 1500
+            title: 'No ha ingresado un correo electrónico válido'
         })
     }
 })
