@@ -10,54 +10,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/registrar_cadena.css">
-    <title>Registrar cadena</title>
+    <link rel="stylesheet" href="css/pagina-principal-admin.css">
+    <title>Pagina de configuracion</title>
 </head>
 
 <body>
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="pagina-configuracion-admin.html">Configuracion</a>
             <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
     </header>
 
     <main>
-        <section>
-            <div class="estilo_form">
-                <form>
-                    <fieldset>
-                        <h1>Registro de cadena de cine</h1>
-                        <br>
-                        <label for="" class="labels">Código de cadena:</label>
-                        <input class="width" placeholder="ej: 31232"> <br> <br>
-
-                        <label for="" class="labels">Nombre de la cadena:</label>
-                        <input class="width" placeholder="Ingrese el nombre de la cadena"> <br> <br>
-
-
-                        <label for="" class="labels">Selecione las ubicaciones donde esta la cadena:</label>
-
-                        <input type="checkbox" value="San Jose" id="sanjose"> <label for="sanjose">San José</label>
-                        <input type="checkbox" value="Heredia" id="heredia"> <label for="heredia">Heredia</label>
-                        <input type="checkbox" value="Cartago" id="cartago"> <label for="cartago">Cartago</label>
-                        <input type="checkbox" value="Alajuela" id="alajuela"> <label for="alajuela">Alejuela</label>
-                        <input type="checkbox" value="limon" id="limon"> <label for="limon">Limón</label>
-                        <input type="checkbox" value="guanacaste" id="guanacaste"> <label for="guanacaste">Guanacaste</label>
-                        <input type="checkbox" value="puntarenas" id="puntarenas"> <label for="puntarenas">Puntarenas</label>
-
-                    </fieldset>
-
-
-                </form>
+        <section id="secc-banner">
+            <h1>Pagina de configuracion</h1>
+        </section>
+        <section id="secc-cards">
+            <div class="card cartelera" onclick="window.location.href='configuracion_peliculas.html'">
                 <div>
-                    <button type="button" id="btn-registrar" onclick=" window.location.href='' ">Registrar</button>
+                    <p>Configuracion de peliculas</p>
                 </div>
             </div>
-
-
+            <div class="card cines" onclick="window.location.href='configuracion_cadenas.html'">
+                <div>
+                    <p>Configuracion de cadenas de cine</p>
+                </div>
+            </div>
+            <div class="card reservas" onclick="window.location.href='editar-tandas.html'">
+                <div>
+                    <p>Configuracion de tandas</p>
+                </div>
+            </div>
+            <div class="card" onclick="window.location.href='registrar_usuario_admin.html'">
+                <div>
+                    <p>Configuracion de usuarios</p>
+                </div>
+            </div>
+            <div class="card" onclick="window.location.href='registro_sala_cine.html'">
+                <div>
+                    <p>Configuracion de salas de cine</p>
+                </div>
+            </div>
+            <div class="card perfil" onclick="window.location.href='perfil_usuario_admin.html'">
+                <div>
+                    <p>Mi perfil</p>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -71,7 +71,7 @@
                 <p>- Perfil</p>
             </div>
             <div>
-                <h6>INFORMACIÓN</h6>
+                <h6>INFORMACION</h6>
                 <a href="landing_page_equipo.html">- Sobre nosotros</a>
                 <p>- Sobre el producto</p>
                 <p>- Términos y condiciones</p>
@@ -93,7 +93,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
-    <!-- Poner script de javascript en esta linea -->
 </body>
 
 </html>

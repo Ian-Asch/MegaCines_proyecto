@@ -1,0 +1,62 @@
+main{
+    padding-bottom: 50px;
+}
+header{
+    margin-bottom: 0;
+}
+#secc-banner{
+    margin: 50px;
+    text-align: center;
+}
+h1{
+    font-size: 26pt;
+    font-weight: bold;
+}
+#secc-cards{
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+    justify-content: center;
+    gap: 50px;
+}
+.card{
+    width: 25%;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.card div{
+    background-color: rgb(0,0,0,0.9);
+    width: 100%;
+    padding: 15px;
+}
+.card p{
+    font-size: 14pt;
+    font-weight: 500;
+    color: #eb8f38;
+}
+
+.cartelera{
+    background-image: url(../imgs/denise-jans-Lq6rcifGjOU-unsplash.jpg);
+    background-size: cover;
+}
+.cines{
+    background-image: url(../imgs/something-magical-SdjA-_Xzuxg-unsplash.jpg);
+    background-size: cover;
+}
+.perfil{
+    background-image: url(../imgs/gr-stocks-q8P8YoR6erg-unsplash.jpg);
+    background-size: cover;
+}
+.reservas{
+    background-image: url(../imgs/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg);
+    background-size: cover;
+}
