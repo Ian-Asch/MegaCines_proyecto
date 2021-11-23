@@ -1,11 +1,17 @@
 html{
     height: 100%;
 }
-body{
+/* body{
     display: flex;
     flex-flow: column;
     justify-content: space-between;
     height: 100%;
+} */
+main{
+    min-height: 425px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
 #txt-contrasenna{
     width: 70%;
