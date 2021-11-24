@@ -11,10 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/login.css">
-
-    <!-- Agregar estilo de pagina en esta linea -->
     <title>Iniciar sesion</title>
-    <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
 </head>
 
 <body>
@@ -29,30 +26,27 @@
             <div id="login_Box">
                 <form>
                     <h1>Iniciar Sesión</h1>
-                    <div>
-                        <label for="txt-usuario" class="ResetPSWRD">Dirección de correo electrónico </label>
+                    <div class="login-box-div correo">
+                        <label for="txt-usuario" class="ResetPSWRD">Correo electrónico </label>
                         <input type="text" id="email" required>
                     </div>
-                    <div>
+                    <div class="login-box-div">
                         <label for="txt-contrasenna">Contraseña</label>
                         <div id="barra-input">
                             <input type="password" id="txt-contrasenna" required>
                             <i class="fas fa-eye-slash" id="icono-ojo"></i>
                         </div>
                     </div>
-                    <div class="ResetPSWRD">
+                    <div class="ResetPSWRD login-box-div">
                         <a href="cambio_de_contrasena.html">¿Olvidó su contrasena?</a>
                     </div>
-                    <div class="sct-boton">
+                    <div class="sct-boton login-box-div">
                         <button type="button" id="btn-ingresar">Ingresar</button>
                     </div>
-                    <div>
+                    <div class="login-box-div">
                         <p>¿Eres Nuevo?</p>
                         <a href="registrar-usuario-cliente.html">Crea Tu Cuenta</a>
                     </div>
-            </div>
-            <div class="img-container">
-                <img id="LOGOLOGIN" src="imgs/MegaCines_logo.jpg">
             </div>
         </section>
     </main>
