@@ -107,3 +107,7 @@ label {
     width: 30%;
     display: inline-block
 }
+
+.error-input {
+    border: 2px solid red;
+}
