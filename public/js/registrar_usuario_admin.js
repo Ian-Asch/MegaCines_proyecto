@@ -9,6 +9,9 @@ const input_nacimiento_registro_admin = document.querySelector("#nacimiento");
 const input_edad_registro_admin = document.querySelector("#edad");
 const input_correo_registro_admin = document.querySelector("#correo");
 const botonGuardar = document.querySelector("#boton-guardar");
+const botonSoporte = document.querySelector("#soporte")
+const botonCliente = document.querySelector("#cliente")
+
 
 const obtenerDatos = () => {
     let nombre = input_nombre_registro.value;
@@ -19,6 +22,9 @@ const obtenerDatos = () => {
     let nacimiento = input_nacimiento_registro_admin.value;
     let edad = input_edad_registro_admin.value;
     let correo = input_correo_registro_admin.value;
+    let soporte = botonSoporte.value;
+    let cliente = botonCliente.value;
+
     Swal.fire({
         'icon': 'éxito',
         'title': 'información valida',
@@ -41,6 +47,7 @@ const validar_vacios = () => {
     return error_vacio;
 }
 
+
 const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
@@ -49,6 +56,13 @@ const validar = () => {
     let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     let error = false;
+
+    if (input_primer_apellido_registro.value == "") {
+        error = true;
+        input_primer_apellido_registro.classList.add("error-input");
+    } else {
+        input_primer_apellido_registro.classList.remove("error-input");
+    }
 
 
     if (!expReg_soloLetras.test(input_nombre_registro.value)) {
