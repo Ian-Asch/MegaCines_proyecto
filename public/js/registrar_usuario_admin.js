@@ -5,7 +5,7 @@ const input_segundo_nombre_registro = document.querySelector("#segundo_nombre");
 const input_primer_apellido_registro = document.querySelector("#primer_apellido");
 const input_segundo_apellido_registro = document.querySelector("#segundo_apellido");
 const input_identificacion_registro = document.querySelector("#cedula");
-const input_nacimiento_registro_admin = document.querySelector("nacimiento");
+const input_nacimiento_registro_admin = document.querySelector("#nacimiento");
 const input_edad_registro_admin = document.querySelector("#edad");
 const input_correo_registro_admin = document.querySelector("#correo");
 const botonGuardar = document.querySelector("#boton-guardar");
@@ -26,52 +26,78 @@ const obtenerDatos = () => {
     });
 }
 
+const validar_vacios = () => {
+    let error_vacio = false;
+    let campos_requeridos = document.querySelectorAll(':required');
 
+    campos_requeridos.forEach(campo => {
+        if (campo.value == '') {
+            error_vacio = true;
+            campo.classList.add("error-input");
+        } else {
+            campo.classList.remove("error-input");
+        }
+    });
+    return error_vacio;
+}
 
 const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
-    let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
-    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
-    let expresion_solo_letras = /^[a-z\s]+$/i;
-    let expresion_cedula = /^\d{9,12}$/;
+    let expReg_identificacion = RegExp('[0-9]{9,12}');
+    let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i');
+    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     let error = false;
 
-    if (input_nombre_registro.value == "") {
+
+    if (!expReg_soloLetras.test(input_nombre_registro.value)) {
         error = true;
-        input_nombre_registro.classList.add("error-input");
+        input_nombre_registro.classList.add('error-input');
     } else {
-        input_nombre_registro.classList.remove("error-input");
+        input_nombre_registro.classList.remove('error-input');
     }
 
-    if (input_primer_apellido_registro.value == "") {
-        error = true;
-        input_primer_apellido_registro.classList.add("error-input");
-    } else {
-        input_primer_apellido_registro.classList.remove("error-input");
+    if (input_segundo_nombre_registro.value != '') {
+        if (!expReg_soloLetras.test(input_segundo_nombre_registro.value)) {
+            error = true;
+            input_segundo_nombre_registro.classList.add('error-input');
+        } else {
+            input_segundo_nombre_registro.classList.remove('error-input');
+        }
     }
 
-    if (input_segundo_apellido_registro.value == "") {
+    if (!expReg_soloLetras.test(input_primer_apellido_registro.value)) {
         error = true;
-        input_segundo_apellido_registro.classList.add("error-input");
+        input_primer_apellido_registro.classList.add('error-input');
     } else {
-        input_segundo_apellido_registro.classList.remove("error-input");
+        input_primer_apellido_registro.classList.remove('error-input');
     }
 
-    if (input_identificacion_registro.value == "") {
-        error = true;
-        input_identificacion_registro.classList.add("error-input");
-    } else {
-        input_identificacion_registro.classList.remove("error-input");
+    if (input_segundo_apellido_registro.value != '') {
+        if (!expReg_soloLetras.test(input_segundo_apellido_registro.value)) {
+            error = true;
+            input_segundo_apellido_registro.classList.add('error-input');
+        } else {
+            input_segundo_apellido_registro.classList.remove('error-input');
+        }
+    }
+
+    if (input_identificacion_registro.value != '') {
+        if (!expReg_identificacion.test(input_identificacion_registro.value)) {
+            error = true;
+            input_identificacion_registro.classList.add('error-input');
+        } else {
+            input_identificacion_registro.classList.remove('error-input');
+        }
     }
 
 
-    if (input_correo_registro_admin.value == "") {
+    if (!expReg_Correo.test(input_correo_registro_admin.value)) {
         error = true;
-        input_correo_registro_admin.classList.add("error-input");
+        input_correo_registro_admin.classList.add('error-input');
     } else {
-        input_correo_registro_admin.classList.remove("error-input");
+        input_correo_registro_admin.classList.remove('error-input');
     }
 
     if (error == false) {
@@ -86,15 +112,15 @@ const validar = () => {
 
     }
 
-    const calcularEdad = (input_nacimiento) => {
+    const calcularEdad = (input_nacimiento_registro_admin) => {
         const fechaActual = new Date();
         const anoActual = parseInt(fechaActual.getFullYear());
         const mesActual = parseInt(fechaActual.getMonth()) + 1;
         const diaActual = parseInt(fechaActual.getDay());
 
-        const anoNacimiento = parseInt(String(input_nacimiento).substring(0, 4));
-        const mesNacimiento = parseInt(String(input_nacimiento).substring(5, 7));
-        const diaNacimiento = parseInt(String(input_nacimiento).substring(8, 10));
+        const anoNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(0, 4));
+        const mesNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(5, 7));
+        const diaNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(8, 10));
         let edad = anoActual - anoNacimiento;
         if (mesActual < mesNacimiento) {
             edad--;
