@@ -50,62 +50,41 @@
             <form name="datos_sala" action="*" method="GET">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre" required>
+                    <input type="text" class="field" name="nombre" id="nombre" required>
                 </div>
 
                 <div>
                     <label for="codigo_sala">Código de sala:</label>
-                    <input type="text" id="codigo_sala" required>
+                    <input type="text" class="field" id="codigo_sala" required>
                 </div>
 
                 <div>
                     <label for=tipo_sala>Tipo de sala:</label>
-                    <input type="text" id="tipo_sala" required>
+                    <input type="text" class="field" id="tipo_sala" required>
                 </div>
 
                 <div>
                     <label for="ubicacion">Ubicación:</label>
-                    <input type="text" id="ubicacion" required>
+                    <input type="text" class="field" id="ubicacion" required>
                 </div>
 
                 <div>
                     <label for="cantidad_butacas">Cantidad de butacas:</label>
-                    <input type="number" id="cantidad_butacas" required>
+                    <input type="number" class="field" id="cantidad_butacas" required>
                 </div>
 
                 <div>
-                    <label for="butacas">Categoria(s) de butacas:</label>
-                    <table>
-                        <tr>
-                            <th>Categoría</th>
-                            <th>Cantidad</th>
-                            <th>Desactivar</th>
-                        </tr>
-                        <tr>
-                            <td>+</td>
-                            <td>+</td>
-                            <td>+</td>
-                        </tr>
-                    </table>
+                    <label for="cantidad_butacas">Categoría de butacas:</label>
+                    <input type="text" class="field" id="categoria_butacas" required>
                 </div>
 
                 <div>
-                    <label for="precio_butacas">Precio(s) de butacas:</label>
-                    <table>
-                        <tr>
-                            <th>Categoría</th>
-                            <th>Precio</th>
-                        </tr>
-                        <tr>
-                            <td>+</td>
-                            <td>+</td>
-                        </tr>
-                    </table>
+                    <label for="cantidad_butacas">Precio por asiento:</label>
+                    <input type="text" class="field" id="cantidad_butacas" required>
                 </div>
 
-                <div id="opciones_sala">
-                    <button type="button1">Eliminar sala</button>
-                    <button type="button2">Desactivar sala</button>
+                <div id="guardar">
+                    <button type="button1">Guardar</button>
                 </div>
 
             </form>
