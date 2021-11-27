@@ -29,6 +29,8 @@ const obtenerDatos = () => {
 
 
 const validar = () => {
+
+    let expReg_soloLetras = /^[a-záéióúñ]+$/i;
     let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
     // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
@@ -64,12 +66,6 @@ const validar = () => {
         input_identificacion_registro.classList.remove("error-input");
     }
 
-    if (input_nacimiento_registro_admin.value == "") {
-        error = true;
-        input_nacimiento_registro_admin.classList.add("error-input");
-    } else {
-        input_nacimiento_registro_admin.classList.remove("error-input");
-    }
 
     if (input_correo_registro_admin.value == "") {
         error = true;
@@ -90,7 +86,35 @@ const validar = () => {
 
     }
 
+    const calcularEdad = (input_nacimiento) => {
+        const fechaActual = new Date();
+        const anoActual = parseInt(fechaActual.getFullYear());
+        const mesActual = parseInt(fechaActual.getMonth()) + 1;
+        const diaActual = parseInt(fechaActual.getDay());
 
+        const anoNacimiento = parseInt(String(input_nacimiento).substring(0, 4));
+        const mesNacimiento = parseInt(String(input_nacimiento).substring(5, 7));
+        const diaNacimiento = parseInt(String(input_nacimiento).substring(8, 10));
+        let edad = anoActual - anoNacimiento;
+        if (mesActual < mesNacimiento) {
+            edad--;
+        } else if (mesActual == mesNacimiento) {
+            if (diaActual < diaNacimiento) {
+                edad--;
+            }
+
+        }
+
+        return edad;
+
+    }
+
+    input_nacimiento_registro_admin.addEventListener("change", function() {
+        if (input_nacimiento_registro_admin.value) {
+            let edad = (calcularEdad(input_nacimiento_registro_admin.value));
+            input_edad_registro_admin.value = (edad + " años");
+        }
+    });
 
 }
 
