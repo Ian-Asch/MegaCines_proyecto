@@ -80,11 +80,7 @@
 
                 <div>
                     <label for="cantidad_butacas">Precio por asiento:</label>
-                    <input type="text" class="field" id="cantidad_butacas" required>
-                </div>
-
-                <div id="guardar">
-                    <button type="button1">Guardar</button>
+                    <input type="text" class="field" id="precio_butacas" required>
                 </div>
 
             </form>
@@ -324,11 +320,11 @@
                 </div>
 
             </div>
-
-            <div id="guardar-boton">
-
-                <button type="button" id="boton-cancelar" onclick="history.back()">Guardar</button>
-            </div>
+            <fieldset>
+                <div>
+                    <button type="button" id="guardar-boton" onclick="history.back()">Guardar</button>
+                </div>
+            </fieldset>
         </section>
 
 
@@ -338,6 +334,7 @@
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/registrar_nueva_sala.js"></script>
 </body>
 
 </html>

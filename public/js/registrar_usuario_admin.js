@@ -57,13 +57,6 @@ const validar = () => {
 
     let error = false;
 
-    if (input_primer_apellido_registro.value == "") {
-        error = true;
-        input_primer_apellido_registro.classList.add("error-input");
-    } else {
-        input_primer_apellido_registro.classList.remove("error-input");
-    }
-
 
     if (!expReg_soloLetras.test(input_nombre_registro.value)) {
         error = true;
@@ -97,14 +90,14 @@ const validar = () => {
         }
     }
 
-    if (input_identificacion_registro.value != '') {
-        if (!expReg_identificacion.test(input_identificacion_registro.value)) {
-            error = true;
-            input_identificacion_registro.classList.add('error-input');
-        } else {
-            input_identificacion_registro.classList.remove('error-input');
-        }
+
+    if (!expReg_identificacion.test(input_identificacion_registro.value)) {
+        error = true;
+        input_identificacion_registro.classList.add('error-input');
+    } else {
+        input_identificacion_registro.classList.remove('error-input');
     }
+
 
 
     if (!expReg_Correo.test(input_correo_registro_admin.value)) {

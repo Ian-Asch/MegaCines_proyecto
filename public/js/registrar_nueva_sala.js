@@ -1,29 +1,26 @@
 'use strict';
 
-const input_nombre_registro = document.querySelector("#nombre");
-const input_segundo_nombre_registro = document.querySelector("#segundo_nombre");
-const input_primer_apellido_registro = document.querySelector("#primer_apellido");
-const input_segundo_apellido_registro = document.querySelector("#segundo_apellido");
-const input_identificacion_registro = document.querySelector("#cedula");
-const input_nacimiento_registro_admin = document.querySelector("#nacimiento");
-const input_edad_registro_admin = document.querySelector("#edad");
-const input_correo_registro_admin = document.querySelector("#correo");
-const botonGuardar = document.querySelector("#boton-guardar");
-const botonSoporte = document.querySelector("#soporte")
-const botonCliente = document.querySelector("#cliente")
+const input_nombre = document.querySelector("#nombre");
+const input_codigo = document.querySelector("#codigo_sala");
+const input_tipo = document.querySelector("#tipo_sala");
+const input_ubicacion = document.querySelector("#ubicacion");
+const input_cantidad = document.querySelector("#cantidad_butacas");
+const input_categoria = document.querySelector("#categoria_butacas");
+const input_precio = document.querySelector("#precio_butacas");
+const botonGuardar = document.querySelector("#guardar-boton");
+
 
 
 const obtenerDatos = () => {
-    let nombre = input_nombre_registro.value;
-    let segundoNombre = input_segundo_nombre_registro.value;
-    let apellido = input_primer_apellido_registro.value;
-    let segundoApellido = input_segundo_apellido_registro.value;
-    let identificacion = input_identificacion_registro.value;
-    let nacimiento = input_nacimiento_registro_admin.value;
+    let nombre = input_nombre.value;
+    let codigo = input_codigo.value;
+    let tipo = input_tipo.value;
+    let ubicacion = input_ubicacion.value;
+    let cantidad = input_cantidad.value;
+    let categoria = input_categoria.value;
     let edad = input_edad_registro_admin.value;
-    let correo = input_correo_registro_admin.value;
-    let soporte = botonSoporte.value;
-    let cliente = botonCliente.value;
+    let precio = input_precio.value;
+    let guardar = botonGuardar.value;
 
     Swal.fire({
         'icon': 'éxito',
@@ -51,68 +48,61 @@ const validar_vacios = () => {
 const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
-    let expReg_identificacion = RegExp('[0-9]{9,12}');
-    let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i');
-    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
     let error = false;
 
-    if (input_primer_apellido_registro.value == "") {
+
+    if (!expReg_soloLetras.test(input_nombre.value)) {
         error = true;
-        input_primer_apellido_registro.classList.add("error-input");
+        input_nombre.classList.add('error-input');
     } else {
-        input_primer_apellido_registro.classList.remove("error-input");
+        input_nombre.classList.remove('error-input');
     }
 
-
-    if (!expReg_soloLetras.test(input_nombre_registro.value)) {
+    if (!expReg_soloLetras.test(input_codigo.value)) {
         error = true;
-        input_nombre_registro.classList.add('error-input');
+        input_codigo.classList.add('error-input');
     } else {
-        input_nombre_registro.classList.remove('error-input');
+        input_codigo.classList.remove('error-input');
     }
 
-    if (input_segundo_nombre_registro.value != '') {
-        if (!expReg_soloLetras.test(input_segundo_nombre_registro.value)) {
-            error = true;
-            input_segundo_nombre_registro.classList.add('error-input');
-        } else {
-            input_segundo_nombre_registro.classList.remove('error-input');
-        }
-    }
-
-    if (!expReg_soloLetras.test(input_primer_apellido_registro.value)) {
+    if (!expReg_soloLetras.test(input_tipo.value)) {
         error = true;
-        input_primer_apellido_registro.classList.add('error-input');
+        input_tipo.classList.add('error-input');
     } else {
-        input_primer_apellido_registro.classList.remove('error-input');
+        input_tipo.classList.remove('error-input');
     }
 
-    if (input_segundo_apellido_registro.value != '') {
-        if (!expReg_soloLetras.test(input_segundo_apellido_registro.value)) {
-            error = true;
-            input_segundo_apellido_registro.classList.add('error-input');
-        } else {
-            input_segundo_apellido_registro.classList.remove('error-input');
-        }
-    }
-
-    if (input_identificacion_registro.value != '') {
-        if (!expReg_identificacion.test(input_identificacion_registro.value)) {
-            error = true;
-            input_identificacion_registro.classList.add('error-input');
-        } else {
-            input_identificacion_registro.classList.remove('error-input');
-        }
-    }
-
-
-    if (!expReg_Correo.test(input_correo_registro_admin.value)) {
+    if (!expReg_soloLetras.test(input_ubicacion.value)) {
         error = true;
-        input_correo_registro_admin.classList.add('error-input');
+        input_ubicacion.classList.add('error-input');
     } else {
-        input_correo_registro_admin.classList.remove('error-input');
+        input_ubicacion.classList.remove('error-input');
     }
+
+    if (!expReg_soloLetras.test(input_cantidad.value)) {
+        error = true;
+        input_cantidad.classList.add('error-input');
+    } else {
+        input_cantidad.classList.remove('error-input');
+    }
+
+
+    if (!expReg_soloLetras.test(input_categoria.value)) {
+        error = true;
+        input_categoria.classList.add('error-input');
+    } else {
+        input_categoria.classList.remove('error-input');
+    }
+
+    if (!expReg_soloLetras.test(input_precio.value)) {
+        error = true;
+        input_precio.classList.add('error-input');
+    } else {
+        input_precio.classList.remove('error-input');
+    }
+
+
 
     if (error == false) {
         obtenerDatos()
@@ -125,36 +115,6 @@ const validar = () => {
 
 
     }
-
-    const calcularEdad = (input_nacimiento_registro_admin) => {
-        const fechaActual = new Date();
-        const anoActual = parseInt(fechaActual.getFullYear());
-        const mesActual = parseInt(fechaActual.getMonth()) + 1;
-        const diaActual = parseInt(fechaActual.getDay());
-
-        const anoNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(0, 4));
-        const mesNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(5, 7));
-        const diaNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(8, 10));
-        let edad = anoActual - anoNacimiento;
-        if (mesActual < mesNacimiento) {
-            edad--;
-        } else if (mesActual == mesNacimiento) {
-            if (diaActual < diaNacimiento) {
-                edad--;
-            }
-
-        }
-
-        return edad;
-
-    }
-
-    input_nacimiento_registro_admin.addEventListener("change", function() {
-        if (input_nacimiento_registro_admin.value) {
-            let edad = (calcularEdad(input_nacimiento_registro_admin.value));
-            input_edad_registro_admin.value = (edad + " años");
-        }
-    });
 
 }
 
