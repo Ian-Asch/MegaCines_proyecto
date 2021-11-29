@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <!-- Agregar estilo de pagina en esta linea -->
+    <link rel="stylesheet" href="css/listar-reservas.css">
     <title>Mis reservas</title>
 </head>
 
@@ -27,7 +27,52 @@
     </header>
 
     <main>
+        <div id="barra-buscar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar">
+        </div>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Dia</th>
+                    <th>Sala</th>
+                    <th>Cine</th>
+                    <th>Pelicula</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>3:00 - 5:00</td>
+                    <td>5 de marzo</td>
+                    <td>C2</td>
+                    <td>Cinemark</td>
+                    <td>Spiderman</td>
+                    <td>Reserva</td>
+                </tr>
+
+                <tr>
+                    <td>5:00 - 7:00</td>
+                    <td>6 de marzo</td>
+                    <td>D4</td>
+                    <td>Cinemark</td>
+                    <td>Ironman</td>
+                    <td>Compra</td>
+                </tr>
+
+                <tr>
+                    <td>1:00 - 3:00</td>
+                    <td>15 de marzo</td>
+                    <td>D4</td>
+                    <td>Cinepolis</td>
+                    <td>Joker</td>
+                    <td>Reserva</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <footer>
