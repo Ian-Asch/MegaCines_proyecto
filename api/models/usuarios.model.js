@@ -10,7 +10,7 @@ const schema_usuario = new mongoose.Schema({
     correo: {type: String, required: true, unique: true},
     contrasena: {type: String, required: true, unique: false},
     identificacion: {type: Number, required: true, unique: true},
-    fecha_nacimiento: {type: Date, required: true, unique: false},
+    fecha_nacimiento: {type: String, required: true, unique: false},
     edad: {type: Number, required: true, unique: false},
     tipo_usuario: {type: String, required: true, unique: false}
 

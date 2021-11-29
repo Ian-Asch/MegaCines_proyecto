@@ -1,3 +1,7 @@
+        /* div{ <-- Esto arruina los sweet alerts
+            margin: 20px;
+        } */
+
         main {
             overflow: auto;
         }
@@ -10,10 +14,6 @@
             width: 85%;
             margin: 0 auto;
             margin-bottom: 40px;
-        }
-        
-        div {
-            margin: 20px;
         }
         
         #secc-imagen img {
