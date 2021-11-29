@@ -18,7 +18,6 @@ const obtenerDatos = () => {
     let ubicacion = input_ubicacion.value;
     let cantidad = input_cantidad.value;
     let categoria = input_categoria.value;
-    let edad = input_edad_registro_admin.value;
     let precio = input_precio.value;
     let guardar = botonGuardar.value;
 
@@ -48,6 +47,8 @@ const validar_vacios = () => {
 const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
+    let numeros = RegExp('[0-9]{1,10}');
+
 
     let error = false;
 
@@ -80,7 +81,7 @@ const validar = () => {
         input_ubicacion.classList.remove('error-input');
     }
 
-    if (!expReg_soloLetras.test(input_cantidad.value)) {
+    if (!numeros.test(input_cantidad.value)) {
         error = true;
         input_cantidad.classList.add('error-input');
     } else {
@@ -95,13 +96,13 @@ const validar = () => {
         input_categoria.classList.remove('error-input');
     }
 
-    if (!expReg_soloLetras.test(input_precio.value)) {
+    if (!numeros.test(input_precio.value)) {
         error = true;
         input_precio.classList.add('error-input');
     } else {
         input_precio.classList.remove('error-input');
+        input_precio.value = (input_precio.value + "₡");
     }
-
 
 
     if (error == false) {
