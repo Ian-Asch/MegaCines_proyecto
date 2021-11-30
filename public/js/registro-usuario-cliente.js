@@ -13,6 +13,11 @@ var input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
 var boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
+// Swal.fire({
+//     title: "El usuario se registro correctamente",
+//     icon: 'success'
+// })
+
 let fecha_max = new Date();
 let dia_max = fecha_max.getDate();
 let mes_max = fecha_max.getMonth() + 1;
