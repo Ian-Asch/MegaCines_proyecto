@@ -35,3 +35,12 @@ h1 {
     margin-bottom: 3px;
     display: inline-block;
 }
+
+div button {
+    margin-left: 45%;
+    margin-top: 1%;
+}
+
+.error-input {
+    border: 2px solid red;
+}

@@ -1,6 +1,6 @@
 .listar {
     border: 1px solid black;
-    height: 120px;
+    height: 145px;
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.2);
@@ -106,6 +106,7 @@ button:active {
 
 .listar p {
     display: block;
+    line-height: 1.5em;
 }
 
 .listar img {
