@@ -13,24 +13,49 @@ var input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
 var boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
+let fecha_max = new Date();
+let dia_max = fecha_max.getDate();
+let mes_max = fecha_max.getMonth() + 1;
+let anio_max = fecha_max.getFullYear();
+
+if (dia_max < 10) {
+    dia_max = '0' + dia_max;
+}
+if (mes_max < 10) {
+    mes_max = '0' + mes_max;
+}
+
+let fecha_min = (anio_max - 100) + "-" + mes_max + "-" + dia_max;
+
+fecha_max = anio_max + "-" + mes_max + "-" + dia_max;
+
+input_nacimiento.min = fecha_min
+input_nacimiento.max = fecha_max
+
 const obtenerDatos = () => {
     let nombre = input_nombre.value;
     let sgndNombre = input_sgnd_nombre.value;
     let apellido = input_apellido.value;
     let sgndApellido = input_sgnd_apellido.value;
     let identificacion = input_identificacion.value;
-    let edad = input_edad.value;
     let nacimiento = input_nacimiento.value;
     let correo = input_correo.value;
-    let contraseña = input_contrasena.value;
+    let contrasena = input_contrasena.value;
 
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Mensaje enviado exitosamente',
-        'text': 'Nos pondremos en contacto lo antes posible'
-    }).then(() => {
-        limpiar_pantalla();
-    });
+    let registro_exitoso = registrar_usuario(nombre,sgndNombre,apellido,sgndApellido,correo,contrasena,identificacion,nacimiento,"cliente");
+
+    if (registro_exitoso) {
+        document.querySelectorAll("input").forEach((input) => {
+            input.value = "";
+        });
+    }
+    // Swal.fire({
+    //     'icon': 'success',
+    //     'title': 'Ha registrado su usuario',
+    //     'text': 'Hemos enviado un correo electrónico para completar la validación del mismo'
+    // }).then(() => {
+    //     window.location.href = 'catalogo-peliculas.html';
+    // });
 }
 
 const validar_vacios = () => {
@@ -64,8 +89,8 @@ const validar = () => {
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
     let expReg_identificacion = RegExp('[0-9]{9,12}'); //Formato esperado  9 o 12 numeros seguidos
-    let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i'); //texto@texto.com ó .net ...
-    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
+    let expReg_Correo = RegExp('^[a-z0-9._-]+@[a-z]+(.com|.net|.org|.ac|.cr|.es)$', 'i'); //texto@texto.com ó .net ...
+    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\d\s]).{8,15}$/;
 
     //Llamemos a la funcion que vlaida los campos vacios
     error = validar_vacios();
@@ -147,7 +172,7 @@ const validar = () => {
     } else {
         Swal.fire({
             icon: 'warning', //Success, error, warning
-            title: 'No se pudo enviar su mensaje',
+            title: 'No se pudo registrar su usuario',
             text: 'Por favor revise los campos resaltados'
         });
     }
@@ -195,12 +220,12 @@ function mostrarContrasena() {
     }
 }
 
-input_nacimiento.addEventListener("change", function() {
-    if (input_nacimiento.value) {
-        let edad = (calcularEdad(input_nacimiento.value));
-        input_edad.value = (edad + " años");
-    }
-});
+// input_nacimiento.addEventListener("change", function() {
+//     if (input_nacimiento.value) {
+//         let edad = (calcularEdad(input_nacimiento.value));
+//         input_edad.value = (edad + " años");
+//     }
+// });
 
 boton_ver_contrasena.addEventListener('click', mostrarContrasena);
 boton_enviar.addEventListener('click', validar);

@@ -14,16 +14,17 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/configuracion_peliculas.css">
-    <title>Configuracion películas</title>
+    <title>Configuración películas</title>
 </head>
 
 <body>
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
+            <a href="pagina-configuracion-admin.html">Configuracion</a>
+            <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
     </header>
 
     <main>
@@ -43,7 +44,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
             <div class="listar">
                 <h1>Eternals</h1> <br>
                 <img src="imgs/eternals.jpg" alt="Eternals">
-                <p> Código de cadena: <span>24123</span></p> <br>
+                <p> Código de película: <span>24123</span></p> <br>
                 <p>Sipnosis:<span> Narra la saga de los "Eternals", una raza de seres inmortales que vivieron en la Tierra y dieron forma a su historia y sus civilizaciones.</span> </p> <br>
                 <p>Reparto:<span> Richard Madden, Kit Harington, Angelina Jolie, Salma Hayek </span>
                 </p> <button type="button" id="" onclick="window.location.href='editar_pelicula.html'">Editar</button>
@@ -53,7 +54,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
             <div class="listar">
                 <h1>Venom</h1> <br>
                 <img src="imgs/venon_2.jfif" alt="Carnage">
-                <p> Codigo de la cadena: <span>91289</span> </p> <br>
+                <p> Codigo de la película: <span>91289</span> </p> <br>
                 <p>Sipnosis:<span> Tom Hardy vuelve a a vida al letal Venom, uno de los personajes más populares y complejos de Marvel. Dirigida por Andy Serkis, la película está también protagonizada por Michelle Williams, Naomie Harris y Woody Harrelson, en el papel del villano Cletus Kasady/Carnage</span></p><br>
                 <p>Reparto:<span> Tom Hardy, Michelle Williams, Woody Harrelson, Naomie Harri </span><br>
                 </p> <button type="button" id="" onclick="window.location.href='editar_pelicula.html'">Editar</button>
@@ -63,7 +64,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
             <div class="listar">
                 <h1>Chernobil</h1> <br>
                 <img src="imgs/chernobil.jpg" alt="chernobil">
-                <p> Código de cadena: <span>24983</span></p> <br>
+                <p> Código de película: <span>24983</span></p> <br>
                 <p>Sipnosis:<span> Chernobyl es el primer largometraje ruso importante sobre las consecuencias de la explosión en la central nuclear de Chernobyl, cuando cientos de personas sacrificaron sus vidas para limpiar el lugar de la catástrofe y para prevenir con éxito un desastre aún mayor que podría haber convertido en un desastre.</span></p><br>
                 <p>Reparto:<span> Danila Kozlovsky, Filipp Avdeev, Ravshana Kurkova, Oksana Akinshin </span><br>
                 </p> <button type="button" id="" onclick="window.location.href='editar_pelicula.html'">Editar</button>
@@ -89,7 +90,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                 <p>- Perfil</p>
             </div>
             <div>
-                <h6>INFORMACION</h6>
+                <h6>INFORMACIÓN</h6>
                 <a href="landing_page_equipo.html">- Sobre nosotros</a>
                 <p>- Sobre el producto</p>
                 <p>- Términos y condiciones</p>
@@ -110,6 +111,8 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <!-- Poner script de javascript en esta linea -->
 </body>
 

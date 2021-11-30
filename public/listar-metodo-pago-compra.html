@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/listar-metodo-pago-compra.css">
+    <title>Selección de método de pago</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="pagina-principal-cliente.html">Inicio</a>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="listar_cines.html">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+    </header>
+
+    <main>
+        <h2> Seleccione un método de pago para su compra </h2>
+
+        <section id="sct-lista-metodo-pago">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Marca de tarjeta</th>
+                    <th>Terminación</th>
+                    <th>Duración</th>
+                    <th> </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="radio">
+                            <input type="radio" id='tarjeta1' name="optradio" value="1" checked>
+                        </div>
+                    </td>
+                    <td>Visa</td>
+                    <td>**** - 1234</td>
+                    <td>Juan Oviedo M</td>
+                    <td><a href=>Editar</a></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="radio">
+                            <input type="radio" id='tarjeta1' name="optradio" value="2">
+                        </div>
+                    </td>
+                    <td>Visa</td>
+                    <td>**** - 5825</td>
+                    <td>Juan Oviedo Murillo</td>
+                    <td><a href=>Editar</a></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="radio">
+                            <input type="radio" id='tarjeta1' name="optradio" value="3">
+                        </div>
+                    </td>
+                    <td>MasterCard</td>
+                    <td>**** - 0956</td>
+                    <td>María Oviedo Lopez</td>
+                    <td><a href=>Editar</a></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <div class="radio">
+                            <input type="radio" id='tarjeta1' name="optradio" value="4">
+                        </div>
+                    </td>
+                    <td>American Express</td>
+                    <td>**** - 5569</td>
+                    <td>Juan Oviedo Murillo</td>
+                    <td><a href=>Editar</a></td>
+
+                </tr>
+
+            </table>
+
+            <div id="agregar-pago-sect">
+                <div id="agregar-pago-sect2">
+                    <button type="button" id="confirmar-compra" onclick="window.location.href='confirmacion-compra.html'">Confirmar compra</button>
+                    <h3>¿Desea uilizar un método de pago distinto?</h3><br><br>
+                    <button type=" button " id="agregar-pago-boton " onclick="window.location.href='registrar-pago.html'">Agregue un nuevo método de pago</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9 "></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/listar-metodo-pago.js "></script>
+</body>
+
+</html>

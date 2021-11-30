@@ -1,6 +1,6 @@
 .listar {
     border: 1px solid black;
-    height: 200px;
+    height: 225px;
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.2);
@@ -77,7 +77,7 @@
 
 /*ESTILOS PARA BOTON DE EDITAR*/
 
-button {
+/* button {
     background-color: #fad80f;
     padding: 8px;
     border-radius: 8px;
@@ -92,7 +92,7 @@ button:hover {
 
 button:active {
     background-color: #fad80f !important;
-}
+} */
 
 
 /*ESTILOS PARA BOTON DE EDITAR*/
@@ -101,14 +101,22 @@ button:active {
 /*ESTILOS PARA IMAGENES */
 
 .listar img {
-    height: 140px;
-    width: 160px;
+    height: 90%;
+    width: 25%;
+    object-fit: contain;
     float: right;
+    border-radius: 10px;
+    margin-top: -30px;
 }
 
 .listar p {
     font-weight: bold;
     font-size: 18px;
+    width: 70%;
+}
+
+.listar button{
+    margin-top: 20px;
 }
 
 h1 {
@@ -134,6 +142,7 @@ h1 {
     height: 120px;
     width: 80%;
     margin: auto;
+    margin-top: 15px;
     padding: 10px 100px 10px 100px;
 }
 

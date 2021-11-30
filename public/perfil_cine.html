@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,97 +13,99 @@
     <link rel="stylesheet" href="css/perfil_cine.css">
     <title>Perfil cine</title>
 </head>
-    <body>
-        <header>
-            <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
-            <nav>
-                <a href="catalogo-peliculas.html">Cartelera</a>
-                <a href="listar_cines.html">Cines</a>
-                <a href="perfil_usuario_cliente.html">Perfil</a>
-            </nav>
-            <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
-        </header>
 
-        <main>
-            <div id="info-cine">
-                <h1 id="nombre-cine">Cinemark</h1>
-                <p id="descripcion-cine">
-                    Cinemark es una cine dedicado especialmente a películas emblemáticas, 
-                    eventos deportivos, culturales, musicales y documentales que merecen 
-                    ser vistos en la pantalla grande. Acomodamos a nuestros clientes con grandes
-                    salas, butacas comodas y una venta de comida para disfrutar cuando se ve
-                    una pelicula.
-                </p>
-                <label for="direccion">Direccion:</label>
-                <p id="direccion" class="label-p">Mall san pedro, segundo piso</p>
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="pagina-principal-cliente.html">Inicio</a>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="listar_cines.html">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+    </header>
+
+    <main>
+        <div id="info-cine">
+            <h1 id="nombre-cine">Cinemark</h1>
+            <p id="descripcion-cine">
+                Cinemark es una cine dedicado especialmente a películas emblemáticas, eventos deportivos, culturales, musicales y documentales que merecen ser vistos en la pantalla grande. Acomodamos a nuestros clientes con grandes salas, butacas comodas y una venta
+                de comida para disfrutar cuando se ve una pelicula.
+            </p>
+            <label for="direccion">Dirección:</label>
+            <p id="direccion" class="label-p">Mall san pedro, segundo piso</p>
+        </div>
+
+        <div id="secc-imagen-cine">
+            <img src="imgs/geoffrey-moffett-TFRezw7pQwI-unsplash.jpg">
+            <label for="calificacion-cine">Calificación:</label>
+            <p id="calificacion-cine" class="label-p">7.3</p>
+        </div>
+
+        <div id="secc-comentarios">
+            <div id="titulo-boton">
+                <h2>Comentarios</h2>
+                <button type="button">Escribir comentario</button>
             </div>
-    
-            <div id="secc-imagen-cine">
-                <img src="imgs/geoffrey-moffett-TFRezw7pQwI-unsplash.jpg">
-                <label for="calificacion-cine">Calificacion:</label>
-                <p id="calificacion-cine" class="label-p">7.3</p>
-            </div>
-    
-            <div id="secc-comentarios">
-                <div id="titulo-boton">
-                    <h2>Comentarios</h2>
-                    <button type="button">Escribir comentario</button>
-                </div>
-                <div id="comentarios-div">
-                    <div class="comentario">
-                        <div class="usuario-img">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div>
-                            <h3>Mario</h3>
-                            <p>Es un muy buen cine estaba limpio y habia buen servicio
-                            </p>
-                        </div>
+            <div id="comentarios-div">
+                <div class="comentario">
+                    <div class="usuario-img">
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <div class="comentario">
-                        <div class="usuario-img">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div>
-                            <h3>pablo</h3>
-                            <p>Los asientos eran muy comodos y tenian muy buenas ofertas
-                            </p>
-                        </div>
+                    <div>
+                        <h3>Mario</h3>
+                        <p>Es un muy buen cine estaba limpio y habia buen servicio
+                        </p>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <div class="usuario-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div>
+                        <h3>Pablo</h3>
+                        <p>Los asientos eran muy comodos y tenian muy buenas ofertas
+                        </p>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <div id="div-logo-info">
-                <img src="imgs/gallo_pinto_development_logo_png.png">
-                <div>
-                    <h6>CONTENIDO</h6>
-                    <p>- Cines</p>
-                    <p>- Cartelera</p>
-                    <p>- Perfil</p>
-                </div>
-                <div>
-                    <h6>INFORMACION</h6>
-                    <a href="landing_page_equipo.html">- Sobre nosotros</a>
-                    <p>- Sobre el producto</p>
-                    <p>- Términos y condiciones</p>
-                </div>
-                <div>
-                    <h6>AYUDA</h6>
-                    <p>- Preguntas frecuentes</p>
-                    <a href="landing_page_equipo.html">- Contáctenos</a>
-                </div>
+    <footer>
+        <div id="div-logo-info">
+            <img src="imgs/gallo_pinto_development_logo_png.png">
+            <div>
+                <h6>CONTENIDO</h6>
+                <p>- Cines</p>
+                <p>- Cartelera</p>
+                <p>- Perfil</p>
             </div>
-            <div id="iconos-footer">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-google-plus-g"></i>
+            <div>
+                <h6>INFORMACIÓN</h6>
+                <a href="landing_page_equipo.html">- Sobre nosotros</a>
+                <p>- Sobre el producto</p>
+                <p>- Términos y condiciones</p>
             </div>
-        </footer>
+            <div>
+                <h6>AYUDA</h6>
+                <p>- Preguntas frecuentes</p>
+                <a href="landing_page_equipo.html">- Contáctenos</a>
+            </div>
+        </div>
+        <div id="iconos-footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus-g"></i>
+        </div>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-        <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+</body>
+
 </html>

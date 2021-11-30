@@ -18,6 +18,7 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
+            <a href="pagina-principal-cliente.html">Inicio</a>
             <a href="catalogo-peliculas.html">Cartelera</a>
             <a href="listar_cines.html">Cines</a>
             <a href="perfil_usuario_cliente.html">Perfil</a>
@@ -28,21 +29,21 @@
     <main>
         <section id="secc-info-reserva">
             <form id="form-reserva">
-                
+
                 <div class="form-div">
                     <div class="div-input">
                         <label for="" class="labels">Cine:</label>
-                        <p class="label-p">cinemark</p>
+                        <p class="label-p">Cinemark Heredia</p>
                     </div>
-    
+
                     <div class="div-input">
                         <label for="" class="labels">Sala:</label>
                         <p class="label-p">A2</p>
                     </div>
-    
+
                     <div class="div-input">
                         <label for="" class="labels">Tanda:</label>
-                        <p class="label-p">febrero 25</p>
+                        <p class="label-p">Febrero 25</p>
                         <p class="label-p">1:00 - 3:00</p>
                     </div>
                 </div>
@@ -51,12 +52,12 @@
 
                 <div class="form-div">
                     <div class="div-input">
-                        <label for="" class="labels">Seleccione el tipo de transaccion</label>
+                        <label for="" class="labels">Seleccione el tipo de transacción</label>
                         <div class="radio-divs">
                             <input type="radio" name="tipo-transaccion" id="radio-btn-reserva" value="reserva" checked>
                             <label for="radio-btn-reserva">Reservar butacas</label>
                         </div>
-    
+
                         <div class="radio-divs">
                             <input type="radio" name="tipo-transaccion" id="radio-btn-compra" value="compra">
                             <label for="radio-btn-compra">Comprar butacas</label>
@@ -307,18 +308,15 @@
             </div>
 
             <div id="contenedor-boton">
-                <button type="button" id="boton-continuar">Continuar con transaccion</button>
+                <button type="button" id="boton-continuar" onclick="window.location.href='listar-metodo-pago-compra.html'">Continuar con transaccion</button>
             </div>
         </section>
 
         <div id="secc-pelicula">
             <div id="info-pelicula">
                 <h1>Spiderman Home Coming</h1>
-                <p>Peter Parker asume su nueva identidad como Spider-Man y regresa 
-                    a vivir con su tía después de su aventura con los Vengadores. 
-                    Al volver, mientras sigue bajo la tutela de Tony Stark, descubre 
-                    que ha surgido un nuevo y despiadado enemigo que pretende destruir 
-                    todo lo que ama: el Buitre.
+                <p>Peter Parker asume su nueva identidad como Spider-Man y regresa a vivir con su tía después de su aventura con los Vengadores. Al volver, mientras sigue bajo la tutela de Tony Stark, descubre que ha surgido un nuevo y despiadado enemigo
+                    que pretende destruir todo lo que ama: El Buitre.
                 </p>
             </div>
             <div id="contenedor-imagen">
@@ -337,7 +335,7 @@
                 <p>- Perfil</p>
             </div>
             <div>
-                <h6>INFORMACION</h6>
+                <h6>INFORMACIÓN</h6>
                 <a href="landing_page_equipo.html">- Sobre nosotros</a>
                 <p>- Sobre el producto</p>
                 <p>- Términos y condiciones</p>
@@ -358,8 +356,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/json_asientos.js"></script> -->
-    <script src="js/reserva _asientos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/reserva_asientos.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/confirmacion-compra.css">
+    <title>Confirmación compra</title>
+</head>
+
+<body>
+    <header>
+        <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
+        <nav>
+            <a href="pagina-principal-cliente.html">Inicio</a>
+            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="listar_cines.html">Cines</a>
+            <a href="perfil_usuario_cliente.html">Perfil</a>
+        </nav>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+    </header>
+
+    <main>
+        <div id="info-cine">
+            <h1 id="nombre-cine">Gracias por su reservación</h1>
+            <br>
+            <h2>Detalles de la reservación:</h2><br>
+            <table>
+                <tr>
+                    <td>Película:</td>
+                    <td>Spiderman</td>
+                </tr>
+                <tr>
+                    <td>Cine:</td>
+                    <td>Cinemark Oxigeno</td>
+                </tr>
+                <tr>
+                    <td>Sala:</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Fecha reservada:</td>
+                    <td>01/12/2021</td>
+                </tr>
+                <tr>
+                    <td>Hora:</td>
+                    <td>19:20</td>
+                </tr>
+            </table>
+
+            <h2>Detalles de los asientos reservados:</h2><br>
+            <table>
+                <tr>
+                    <td>Cantidad:</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Tipos asiento:</td>
+                    <td>Regular</td>
+                </tr>
+                <tr>
+                    <td>Código asientos:</td>
+                    <td>A01, A02, A03</td>
+                </tr>
+
+            </table>
+
+            <h2>Detalles del usuario</h2><br>
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td>Juan Oviedo Murillo</td>
+                </tr>
+                <tr>
+                    <td>Identificación:</td>
+                    <td>112354538</td>
+                </tr>
+                <tr>
+                    <td>Método de pago:</td>
+                    <td>**** - 1234</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+        <div id="secc-imagen-cine">
+            <img src="imgs/spiderman_poster.jpg">
+
+
+        </div>
+
+        <div id="secc-comentarios">
+            <div id="titulo-boton">
+                <h1>Términos y condiciones</h1>
+
+            </div>
+
+            <p>Asientos reservados: son los asientos que se compran en línea con tarjeta de crédito o débito, desde el momento que compras tus asientos tus lugares están asegurados y puedes retirarlos hasta 10 mins. antes de iniciar la función.<br>
+                <br>Tus entradas las pagaste en línea al momento de realizar tu compra y solo el dueño de la tarjeta puede retirar las entradas compradas mostrando la confirmación de compra, debe de presentar la tarjeta con la cual se realizó la compra
+                y la identificación.<br><br> En caso de que la película tenga un límite de edad, los usuarios de las reservaciones deben mostrar su identificación al entrar al cine.</p>
+            <br><br><br><br> </div>
+
+        <button type="button" class="boton-header" onclick="window.location.href='catalogo-peliculas.html'">Volver a la cartelera</button>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+</body>
+
+</html>

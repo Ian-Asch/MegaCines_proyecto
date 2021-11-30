@@ -9,18 +9,19 @@
         }
     </style>
 
-    <title>Nueva Sala</title>
+    <title>Registrar nueva sala</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-    <!--link rel="stylesheet" href="css/reset.css"-->
+    <link rel="stylesheet" href="css/reset.css">
     <!--reset no me esta dejando cambiar tama;o de fuentes-->
-    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
+    <link rel="stylesheet" href="css/listar-salas.css">
 </head>
 
 <body>
@@ -28,80 +29,58 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="catalogo-peliculas.html">Cartelera</a>
-            <a href="listar_cines.html">Cines</a>
-            <a href="perfil_usuario_cliente.html">Perfil</a>
+            <a href="pagina-configuracion-admin.html">Configuracion</a>
+            <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
 
     </header>
 
     <main>
+
+        <div id="barra-buscar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar sala existente">
+        </div>
         <!--aqui comienza el contenido como tal-->
-        <h4 class="texto_centrado">Registrar nueva sala</h4>
-        <h1 class="texto_centrado">Nueva sala</h1>
+        <h1 class="texto_centrado">Registrar nueva sala</h1>
 
         <section>
 
             <form name="datos_sala" action="*" method="GET">
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="nombre"></label>
+                    <input type="text" class="field" name="nombre" id="nombre" required>
                 </div>
 
                 <div>
-                    <label for="codigo_sala">Codigo de sala:</label>
-                    <input type="text" id="codigo_sala" />
+                    <label for="codigo_sala">Código de sala:</label>
+                    <input type="text" class="field" id="codigo_sala" required>
                 </div>
 
                 <div>
                     <label for=tipo_sala>Tipo de sala:</label>
-                    <input type="text" id="tipo_sala" />
+                    <input type="text" class="field" id="tipo_sala" required>
                 </div>
 
                 <div>
                     <label for="ubicacion">Ubicación:</label>
-                    <input type="text" id="ubicacion" />
+                    <input type="text" class="field" id="ubicacion" required>
                 </div>
 
                 <div>
                     <label for="cantidad_butacas">Cantidad de butacas:</label>
-                    <input type="number" id="cantidad_butacas" />
+                    <input type="number" class="field" id="cantidad_butacas" required>
                 </div>
 
                 <div>
-                    <label for="butacas">Categoria(s) de butacas:</label>
-                    <table>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Cantidad</th>
-                            <th>Desactivar</th>
-                        </tr>
-                        <tr>
-                            <td>+</td>
-                            <td>+</td>
-                            <td>+</td>
-                        </tr>
-                    </table>
+                    <label for="cantidad_butacas">Categoría de butacas:</label>
+                    <input type="text" class="field" id="categoria_butacas" required>
                 </div>
 
                 <div>
-                    <label for="precio_butacas">Precio(s) de butacas:</label>
-                    <table>
-                        <tr>
-                            <th>Categoria</th>
-                            <th>Precio</th>
-                        </tr>
-                        <tr>
-                            <td>+</td>
-                            <td>+</td>
-                        </tr>
-                    </table>
-                </div>
-
-                <div id="opciones_sala">
-                    <button type="button1">Eliminar sala</button>
-                    <button type="button2">Desactivar sala</button>
+                    <label for="cantidad_butacas">Precio por asiento:</label>
+                    <input type="text" class="field" id="precio_butacas" value="₡" required>
                 </div>
 
             </form>
@@ -341,19 +320,21 @@
                 </div>
 
             </div>
-
-            <div id="guardar-boton">
-                <button type="button" id="boton-guardar">Guardar</button>
-            </div>
+            <fieldset>
+                <div>
+                    <button type="button" id="guardar-boton" onclick="history.back()">Guardar</button>
+                </div>
+            </fieldset>
         </section>
 
 
     </main>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/registrar_nueva_sala.js"></script>
 </body>
-
-
 
 </html>

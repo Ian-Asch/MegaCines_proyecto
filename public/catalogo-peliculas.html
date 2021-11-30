@@ -1,6 +1,3 @@
-<!-- Por favor no editen este template. Si lo quieren usar solo
-copienlo y pegengo en el archivo de la pagina que estan haciendo -->
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,20 +11,18 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/catalogo-peliculas.css">
-    <!-- Agregar estilo de pagina en esta linea -->
     <title>Catálogo Películas</title>
-    <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
 </head>
 
 <body>
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="catalogo-peliculas.html">Cartelera</a>
+            <a href="pagina-principal-cliente.html">Inicio</a>
             <a href="listar_cines.html">Cines</a>
             <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
     </header>
 
     <main class="grid-container">
@@ -47,19 +42,19 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
             <br>
             <form method="get" id="filtrar-cine">
                 <legend>Cine:</legend><br>
-                <label><input type="checkbox" id="cine1" value="cine1" />Cine 1</label><br>
-                <label><input type="checkbox" id="cine2" value="cine2" />Cine 2</label><br>
-                <label><input type="checkbox" id="cine3" value="cine3" />Cine 3</label><br>
-                <label><input type="checkbox" id="cine4" value="cine4" />Cine 4</label><br>
+                <label><input type="checkbox" id="cine1" value="cine1" />CCM San Pedro</label><br>
+                <label><input type="checkbox" id="cine2" value="cine2" />Cinepolis Desamparados</label><br>
+                <label><input type="checkbox" id="cine3" value="cine3" />Cinepolis Tres Ríos</label><br>
+                <label><input type="checkbox" id="cine4" value="cine4" />Cinemark Heredia</label><br>
             </form>
             <br>
             <form method="get" id="filtrar-categoria">
                 <legend>Categoría:</legend><br>
-                <label><input type="checkbox" id="categ1" value="categ1" />Categoria 1</label><br>
-                <label><input type="checkbox" id="categ2" value="categ2" />Categoria 2</label><br>
-                <label><input type="checkbox" id="categ3" value="categ3" />Categoria 3</label><br>
-                <label><input type="checkbox" id="categ4" value="categ4" />Categoria 4</label><br>
-                <label><input type="checkbox" id="categ5" value="categ5" />Categoria 5</label><br>
+                <label><input type="checkbox" id="Drama" value="categ1" />Drama</label><br>
+                <label><input type="checkbox" id="Acción" value="categ2" />Acción</label><br>
+                <label><input type="checkbox" id="Comedia" value="categ3" />Comedia</label><br>
+                <label><input type="checkbox" id="Terror" value="categ4" />Terror</label><br>
+                <label><input type="checkbox" id="Ciencia ficción" value="categ5" />Ciencia ficción</label><br>
             </form>
             <br>
             <form method="get" id="filtrar-edad">
@@ -179,7 +174,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                     <p>- Perfil</p>
                 </div>
                 <div>
-                    <h6>INFORMACION</h6>
+                    <h6>INFORMACIÓN</h6>
                     <a href="landing_page_equipo.html">- Sobre nosotros</a>
                     <p>- Sobre el producto</p>
                     <p>- Términos y condiciones</p>
@@ -203,6 +198,8 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
 </body>
 
 </html>

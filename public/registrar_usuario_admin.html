@@ -15,12 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/reset.css"> -->
-    <!-- reset no me esta dejando cambiar tama;o de fuentes -->
-    <!-- <link rel="stylesheet" href="css/formularios.css"> -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/formularios.css">
-    <link rel="stylesheet" href="css/reserva_asientos_formularios.css">
-    <!-- <link rel="stylesheet" href="css/perfil_registro_usuario.css"> -->
+    <link rel="stylesheet" href="css/registrar_usuario_admin.css">
 
 </head>
 
@@ -28,22 +26,23 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
+            <a href="pagina-configuracion-admin.html">Configuracion</a>
             <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
     </header>
     <main>
         <h1 class="texto_centrado">Registro Usuario</h1>
 
 
-        <form name="data_usuario" action="*" method="GET">
+        <form name="data-usuario" action="*" method="post">
             <section>
                 <fieldset>
                     <div>
-                        <label for="soporte">Soporte:</label>
-                        <input type="checkbox" id="soporte">
-                        <label for="soporte">Cliente:</label>
-                        <input type="checkbox" id="soporte">
+                        <label for="soporte" class="radio-label">Soporte:</label>
+                        <input type="radio" id="soporte" name="tipo-usuario">
+                        <label for="cliente" class="radio-label">Cliente:</label>
+                        <input type="radio" id="cliente" name="tipo-usuario">
                     </div>
                 </fieldset>
 
@@ -53,61 +52,60 @@
 
                     <div>
                         <label for="nombre_usuario">Nombre:</label>
-                        <input type="text" id="nombre">
+                        <input type="text" class="field" id="nombre" required>
                     </div>
                     <div>
                         <label for="segundo_nombre">Segundo nombre (opcional):</label>
-                        <input type="text" id="segundo_nombre">
+                        <input type="text" class="field" id="segundo_nombre">
                     </div>
                     <div>
-                        <label for="primer_apellido">Primer apelliddo:</label>
-                        <input type="text" id="primer_apellido">
+                        <label for="primer_apellido">Primer apellido:</label>
+                        <input type="text" class="field" id="primer_apellido" required>
                     </div>
                     <div>
-                        <label for="segundo_apellido">Segundo apelliddo:</label>
-                        <input type="text" id="segundo_apellido">
+                        <label for="segundo_apellido">Segundo apellido:</label>
+                        <input type="text" class="field" id="segundo_apellido">
                     </div>
                     <div>
-                        <label for="cedula">identificación:</label>
-                        <input type="text" id="cedula">.
+                        <label for="cedula">Identificación:</label>
+                        <input type="text" class="field" id="cedula" required placeholder="Formato Cédula 101230123, Pasaporte 20123401234">
                     </div>
                     <div>
-                        <label for="nacimiento">Fecha de nacimiento:
-                    <input type="date" id="nacimiento"></label>
+                        <label for="nacimiento">Fecha de nacimiento:</label>
+                        <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
                     </div>
                     <div>
                         <!--este debe ser calculado automaticamente con la fecha-->
-                        <label for="edad">Edad:
-                    <input type="number" id="edad"></label>
+                        <label for="edad">Edad:</label>
+                        <input type="text" class="field" id="edad">
                     </div>
                     <div>
-                        <label for="correo">Correo electrónico:
-                    <input type="email" id="correo"></label>
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" class="field" id="correo" placeholder="abc@abc.com" required>
                     </div>
                 </div>
-
-                <div id="secc-imagen">
-                    <img src="imgs/blank-profile.png">
-
-                    <button type="button">Cambiar imagen</button>
-                </div>
-
-                <fieldset id="field-botones">
-                    <div>
-                        <button type="button_eliminar_sala">Eliminar usuario</button>
-                        <button type="button_desactivar_sala">Desactivar usuario</button>
-                    </div>
-                </fieldset>
-                <div id="guardar-boton">
-                    <button type="button" id="boton-guardar">Guardar</button>
-                </div>
-
-
-            </section>
         </form>
 
+        <div id="secc-imagen">
+            <img src="imgs/blank-profile.png">
+
+            <button type="button">Cambiar imagen</button>
+        </div>
+
+        <fieldset id="field-botones">
+            <div>
+                <button type="button" id="boton-guardar" onclick="history.back()">Guardar</button>
+            </div>
+        </fieldset>
+
+        </section>
 
     </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>.
+    <script src="js/registrar_usuario_admin.js"></script>
 </body>
 
 </html>

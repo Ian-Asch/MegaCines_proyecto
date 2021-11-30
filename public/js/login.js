@@ -47,23 +47,30 @@ const funcion_verificar_expresiones = () => {
     }
 
 
-    if (!expresion_contraseña.test(lista_inputs_requeridos[1].value)){
+    if (!expresion_contraseña.test(lista_inputs_requeridos[1].value)) {
         lista_inputs_requeridos[1].classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
 }
 
 
 const funcion_boton = () => {
+    verfificado = true;
+    
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verfificado) {
-        if (input_correo.value == "cliente@MegaCines.com") {
+
+        if (input_correo.value == "cliente@megacines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
-        if (input_correo.value == "admin@MegaCines.com") {
+        if (input_correo.value == "admin@megacines.com") {
             window.location.href = "perfil_usuario_admin.html"
         }
+        if (input_correo.value == "soporte@megacines.com") {
+            window.location.href = "perfil_jefe_soporte.html"
+        }
+
     } else {
         Swal.fire({
             icon: 'error',
@@ -75,13 +82,12 @@ const funcion_boton = () => {
 
 
 
-boton_ingresar.addEventListener("click",funcion_boton);
+boton_ingresar.addEventListener("click", funcion_boton);
 
-icono_ojo.addEventListener("click",() => {
+icono_ojo.addEventListener("click", () => {
     if (lista_inputs_requeridos[1].type === "password") {
         lista_inputs_requeridos[1].type = "text";
     } else {
         lista_inputs_requeridos[1].type = "password";
     }
 })
-

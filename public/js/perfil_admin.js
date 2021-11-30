@@ -5,7 +5,7 @@ let usuario = {
     primer_apellido: "Bermudez",
     segundo_apellido: "Solano",
     correo: "Admin@MegaCines.com",
-    cedula: "1-4235-8753",
+    cedula: "142358753",
     fecha_nacimiento: "23-3-1999",
     edad: 22
 }

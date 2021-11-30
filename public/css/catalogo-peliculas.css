@@ -77,7 +77,7 @@ footer {
 .grid-container {
     display: grid;
     gap: 10px;
-    grid-template: "titulo     titulo" 40px "sct-buscar sct-buscar" 80px "sidebar    slideshow" auto "sidebar    lista-tandas" auto "footer     footer" auto / 200px auto;
+    grid-template: "titulo     titulo" 40px "sct-buscar sct-buscar" 80px "sidebar    slideshow" auto "sidebar    lista-tandas" auto "footer     footer" auto / 300px auto;
 }
 
 #sct-slideshow {
