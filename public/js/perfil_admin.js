@@ -1,11 +1,11 @@
 'use strict';
 
 let usuario = {
-    nombre: "Carlos",
+    nombre: "Keisy",
     primer_apellido: "Bermudez",
     segundo_apellido: "Solano",
     correo: "Admin@MegaCines.com",
-    cedula: "142358753",
+    cedula: "1-4235-8753",
     fecha_nacimiento: "23-3-1999",
     edad: 22
 }
@@ -91,7 +91,7 @@ const verificar_espacios = () => {
     // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
     let expresion_cedula = /^\d{9,12}$/;
-    
+
     let verfificado = true;
 
     lista_inputs.forEach((element) => {
@@ -104,27 +104,27 @@ const verificar_espacios = () => {
     });
 
 
-    if (!expresion_solo_letras.test(input_nombre.value)){
+    if (!expresion_solo_letras.test(input_nombre.value)) {
         input_nombre.classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
-    if (!expresion_solo_letras.test(input_primer_apellido.value)){
+    if (!expresion_solo_letras.test(input_primer_apellido.value)) {
         input_primer_apellido.classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
-    if (!expresion_solo_letras.test(input_segundo_apellido.value)){
+    if (!expresion_solo_letras.test(input_segundo_apellido.value)) {
         input_segundo_apellido.classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
 
     if (!expresion_correo.test(input_correo.value)) {
         input_correo.classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
 
     if (!expresion_cedula.test(input_cedula.value)) {
         input_cedula.classList.add("error");
-            verfificado = false;
+        verfificado = false;
     }
 
     return verfificado;

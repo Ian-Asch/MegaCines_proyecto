@@ -20,7 +20,7 @@
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='login_page.html'">Iniciar sesión</button>
+        <button type="button" class="boton-header" onclick="window.location.href='login_page.html'">Iniciar sesion</button>
     </header>
 
     <main>
@@ -54,7 +54,11 @@
                 </div>
                 <div>
                     <label for="nacimiento">Fecha de nacimiento:</label>
-                    <input type="date" class="field" id="nacimiento" required>
+                    <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
+                </div>
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input type="text" class="field" id="edad" readonly>
                 </div>
                 <div>
                     <label for="correo">Correo electrónico:</label>

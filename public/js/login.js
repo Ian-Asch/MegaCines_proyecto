@@ -46,31 +46,23 @@ const funcion_verificar_expresiones = () => {
         input_correo.classList.add("error")
     }
 
-
     if (!expresion_contraseña.test(lista_inputs_requeridos[1].value)) {
-        lista_inputs_requeridos[1].classList.add("error");
-        verfificado = false;
+        verfificado = false
+        lista_inputs_requeridos[1].classList.add("error")
     }
 }
 
 
 const funcion_boton = () => {
-    verfificado = true;
-    
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verfificado) {
-
-        if (input_correo.value == "cliente@megacines.com") {
+        if (input_correo.value == "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
-        if (input_correo.value == "admin@megacines.com") {
+        if (input_correo.value == "admin@MegaCines.com") {
             window.location.href = "perfil_usuario_admin.html"
         }
-        if (input_correo.value == "soporte@megacines.com") {
-            window.location.href = "perfil_jefe_soporte.html"
-        }
-
     } else {
         Swal.fire({
             icon: 'error',
