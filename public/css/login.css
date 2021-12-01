@@ -1,108 +1,100 @@
-html{
-    height: 100%;
-}
-/* body{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    height: 100%;
-} */
-main{
-    min-height: 425px;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-}
-#txt-contrasenna{
-    width: 70%;
-}
-#barra-input{
-    background-color: #fff;
-    width: 82%;
-    margin: auto;
-    display: flex;
-    height: 30px;
-    border-radius: 7px;
-    overflow: hidden;
-}
-#barra-input input{
-    width: 85%;
-    border: none;
-    outline: none;
-}
-#barra-input i{
-    color: black;
-    margin: auto;
-}
-#icono-ojo:hover{
-    cursor: pointer;
-}
-
-.sct-contenedor-principal {
-    justify-content: center;
-    width: 100%;
-}
-h1{
-    font-size: 16pt;
-    font-weight: 600;
-}
-
-input{
-    font-size: 12pt;
-}
-
-#login_Box {
-    background-color: rgb(0,0,0,0.4);
-    width: 275px;
-    padding-top: 20px;
-    text-align: center;
-    justify-self: center;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    border-radius: 15px;
-    /* background-color: rgba(255, 255, 255, 0.3); */
-}
-
-.login-box-div{
-    margin: 20px 0 20px 0;
-}
-.correo input{
-    width: 80%;
-    height: 26px;
-    border-radius: 8px;
-}
-
-#login_Box div label {
-    font-size: 14pt;
-}
-
-#login_Box div p {
-    font-size: small;
-    margin: 10px;
-}
-
-.ResetPSWRD {
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-.ResetPSWRD a {
-    padding-top: 6px;
-    padding-bottom: 6px;
-}
-
-#txt_email {
-    padding-top: 6px;
-    font-size: small;
-}
-
-#txt_email #email {
-    padding-top: 6px;
-    margin-bottom: 19px;
-    margin-top: 10px;
-}
-
-#login_Box a {
-    color: #fad80f;
-}
+                #LOGOLOGIN {
+                    max-width: 200px;
+                    max-height: 200px;
+                    /* margin-left: 37%; */
+                    /* padding: 5%; */
+                }
+                
+                .img-container {
+                    /* background-color: aqua; */
+                    text-align: center;
+                    margin: 5vh 0 5vh 0;
+                }
+                
+                .img-container img {
+                    border-radius: 10px;
+                }
+                
+                #txt-contrasenna {
+                    width: 70%;
+                }
+                
+                #barra-input {
+                    background-color: #fff;
+                    width: 168px;
+                    margin: auto;
+                    display: flex;
+                    height: 20px;
+                }
+                
+                #barra-input input {
+                    width: 95%;
+                    border: none;
+                    outline: none;
+                }
+                
+                #barra-input i {
+                    color: black;
+                    margin: auto;
+                }
+                
+                #icono-ojo:hover {
+                    cursor: pointer;
+                }
+                
+                .sct-contenedor-principal {
+                    justify-content: center;
+                    width: 100%;
+                    padding-top: 2%;
+                    /* padding-bottom: 30%; */
+                }
+                
+                #login_Box {
+                    background-color: gray;
+                    width: 200px;
+                    height: 250px;
+                    text-align: center;
+                    justify-self: center;
+                    display: flex;
+                    align-items: center;
+                    /* margin-left: 40%; */
+                    margin: auto;
+                    padding: 10px;
+                    border-radius: 15px;
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+                
+                #login_Box div label {
+                    font-size: small;
+                    margin: 10px;
+                }
+                
+                #login_Box div p {
+                    font-size: small;
+                    margin: 10px;
+                }
+                
+                .ResetPSWRD {
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                }
+                
+                .ResetPSWRD a {
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                }
+                
+                #txt_email {
+                    padding-top: 6px;
+                    font-size: small;
+                }
+                
+                #txt_email #email {
+                    padding-top: 6px;
+                    margin-bottom: 19px;
+                    margin-top: 10px;
+                }
+                
+                #login_Box a {
+                    color: rgb(255, 242, 104);
+                }

@@ -15,7 +15,9 @@
     color: black;
 }
 
+
 /*  ESTILOS PARA LA BARRA DE BUSQUEDA*/
+
 .buscar {
     height: 25px;
     height: 30px;
@@ -75,6 +77,7 @@
 
 /*ESTILOS PARA BOTON DE EDITAR*/
 
+
 /* button {
     background-color: #fad80f;
     padding: 8px;
@@ -106,13 +109,14 @@ button:active {
 
 .listar p {
     display: block;
+    line-height: 1.5em;
 }
 
 .listar img {
     display: block;
 }
 
-.listar button{
+.listar button {
     margin-top: 15px;
     /* margin-bottom: 10px; */
 }

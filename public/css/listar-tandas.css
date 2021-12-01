@@ -1,11 +1,13 @@
-html{
+html {
     min-height: 100%;
 }
-main{
+
+main {
     padding: 1vw 5vw 2vw 5vw;
     min-height: 50vh;
 }
-#barra-buscar{
+
+#barra-buscar {
     background-color: #fff;
     width: 50%;
     margin: auto;
@@ -17,45 +19,42 @@ main{
     border-radius: 30px;
     overflow: hidden;
 }
-#barra-buscar input{
+
+#barra-buscar input {
     width: 95%;
     height: 100%;
     border: none;
     outline: none;
     font-size: 12pt;
 }
-#barra-buscar i{
+
+#barra-buscar i {
     margin: auto;
     color: black;
 }
-table{
+
+table {
     width: 75%;
     margin: 3vw auto;
 }
-th{
+
+th {
     background-color: black;
     padding: 15px;
     color: #eb8f38;
 }
-tbody tr{
-    background-color: rgb(0,0,0,0.6);
 
+tbody tr {
+    background-color: rgb(0, 0, 0, 0.6);
 }
-tbody tr:hover{
+
+tbody tr:hover {
     background-color: #50035f;
     outline: solid 2px #eb8f38;
     cursor: pointer;
 }
-td{
+
+td {
     text-align: center;
     padding: 15px 0 15px 0;
-}
-
-[placeholder=Buscar]{
-    background-color: #fff;
-    color: black;
-}
-
-[placeholder=Buscar]:focus{
-    background-color: #fff;
 }
