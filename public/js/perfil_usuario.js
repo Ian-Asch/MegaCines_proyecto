@@ -92,68 +92,42 @@ const verificar_espacios = () => {
     let expresion_solo_letras = /^[a-z\s]+$/i;
     let expresion_cedula = /^\d{9,12}$/;
 
-    let verfificado = true;
+    let verificado = true;
 
     lista_inputs.forEach((element) => {
         if (element.value) {
             element.classList.remove("error");
         } else {
             element.classList.add("error");
-            verfificado = false;
+            verificado = false;
         }
     });
 
 
     if (!expresion_solo_letras.test(input_nombre.value)) {
         input_nombre.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
     if (!expresion_solo_letras.test(input_primer_apellido.value)) {
         input_primer_apellido.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
     if (!expresion_solo_letras.test(input_segundo_apellido.value)) {
         input_segundo_apellido.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
     if (!expresion_correo.test(input_correo.value)) {
         input_correo.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
     if (!expresion_cedula.test(input_cedula.value)) {
         input_cedula.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
-    return verfificado;
-};
-
-const calcular_edad = (fecha_nacimiento) => {
-    let edad;
-
-    let anio_actual = new Date().getFullYear();
-    let mes_actual = new Date().getMonth();
-    let dia_actual = new Date().getDay();
-
-    let anio_nacimiento = fecha_nacimiento.getFullYear();
-    let mes_nacimiento = fecha_nacimiento.getMonth();
-    let dia_nacimiento = fecha_nacimiento.getDay();
-
-    edad = anio_actual - anio_nacimiento - 1;
-
-    if (mes_actual > mes_nacimiento) {
-        edad++;
-    } else {
-        if (mes_actual == mes_nacimiento) {
-            if (dia_actual >= dia_nacimiento) {
-                edad++;
-            }
-        }
-    }
-
-    return edad;
+    return verificado;
 };
 
 const guardar_cambios = () => {

@@ -1,20 +1,20 @@
 const input_correo = document.querySelector("#txt_email");
 const btn_contrasena = document.querySelector("#btn-ingresar")
 
-let verfificado = true
+let verificado = true
 
 const verificar_correo = () => {
     let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
 
     if (!expresion_correo.test(input_correo.value)) {
         input_correo.classList.add("error");
-        verfificado = false;
+        verificado = false;
     } else {
         input_correo.classList.remove("error");
-        verfificado = true;
+        verificado = true;
     }
 
-    return verfificado
+    return verificado
 }
 
 btn_contrasena.addEventListener("click", () => {

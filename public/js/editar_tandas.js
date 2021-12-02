@@ -104,19 +104,19 @@ const mostrar_parrafos = () => {
 
 const verificar_espacios = () => {
    
-    let verfificado = true;
+    let verificado = true;
 
     lista_inputs.forEach((element) => {
         if (element.value) {
             element.classList.remove("error");
         } else {
             element.classList.add("error");
-            verfificado = false;
+            verificado = false;
         }
     });
 
 
-    return verfificado;
+    return verificado;
 };
 
 const guardar_cambios = () => {

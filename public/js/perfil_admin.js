@@ -5,7 +5,7 @@ let usuario = {
     primer_apellido: "Bermudez",
     segundo_apellido: "Solano",
     correo: "Admin@MegaCines.com",
-    cedula: "1-4235-8753",
+    cedula: "142358753",
     fecha_nacimiento: "23-3-1999",
     edad: 22
 }
@@ -92,42 +92,42 @@ const verificar_espacios = () => {
     let expresion_solo_letras = /^[a-z\s]+$/i;
     let expresion_cedula = /^\d{9,12}$/;
 
-    let verfificado = true;
+    let verificado = true;
 
     lista_inputs.forEach((element) => {
         if (element.value) {
             element.classList.remove("error");
         } else {
             element.classList.add("error");
-            verfificado = false;
+            verificado = false;
         }
     });
 
 
     if (!expresion_solo_letras.test(input_nombre.value)) {
         input_nombre.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
     if (!expresion_solo_letras.test(input_primer_apellido.value)) {
         input_primer_apellido.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
     if (!expresion_solo_letras.test(input_segundo_apellido.value)) {
         input_segundo_apellido.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
     if (!expresion_correo.test(input_correo.value)) {
         input_correo.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
     if (!expresion_cedula.test(input_cedula.value)) {
         input_cedula.classList.add("error");
-        verfificado = false;
+        verificado = false;
     }
 
-    return verfificado;
+    return verificado;
 };
 
 const guardar_cambios = () => {

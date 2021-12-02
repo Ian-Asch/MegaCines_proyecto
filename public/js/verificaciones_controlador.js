@@ -3,14 +3,14 @@
 const lista_inputs_requeridos = document.querySelectorAll("[required]");
 
 const verificar_espacios = () => {
-    let verfificado = true;
+    let verificado = true;
 
     lista_inputs_requeridos.forEach((element) => {
         if (element.value) {
             element.classList.remove("error");
         } else {
             element.classList.add("error");
-            verfificado = false;
+            verificado = false;
         }
     });
 };

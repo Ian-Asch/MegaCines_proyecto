@@ -19,11 +19,12 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
+            <a href="pagina-principal-cliente.html">Inicio</a>
             <a href="catalogo-peliculas.html">Cartelera</a>
-            <a href="">Cines</a>
+            <a href="listar_cines.html">Cines</a>
             <a href="perfil_usuario_cliente.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesion</button>
+        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
     </header>
 
     <main>
@@ -31,7 +32,7 @@
             <img src="imgs/pelicula_the_thing.jpg">
 
             <div>
-                <label for="calificaion-pelicula">Calificacion:</label>
+                <label for="calificaion-pelicula">Calificación:</label>
                 <p id="calificaion-pelicula" class="label-p">7.3</p>
             </div>
         </div>
@@ -73,54 +74,66 @@
                 <p id="subtitulos-pelicula" class="label-p">Español</p>
             </div>
 
-            <div id="secc-tandas">
-                <div class="titulo-boton">
-                    <h2>Tandas</h2>
-                    <button type="button" onclick="window.location.href='listar-tandas.html'">Reservar/Comprar asientos</button>
-                </div>
+            <div>
+                <label for="categoria-edad">Classificación de edad:</label>
+                <p id="categoria-edad" class="label-p">+18</p>
+            </div>
+        </div>
 
-                <div>
-                    <div class="tanda">
-                        <p class="label-p">23 de febrero</p>
-                        <p class="label-p">5:00 pm - 7:00 pm</p>
-                        <p class="label-p">Cinemark</p>
+        <div id="secc-tandas">
+            <div class="titulo-boton">
+                <h2>Tandas</h2>
+                <button type="button" onclick="window.location.href='listar-tandas.html'">Reservar/Comprar asientos</button>
+            </div>
+
+            <div class="titulo-boton tandas-h4">
+                <h4 class="label-p">Día</h4>
+                <h4 class="label-p">Hora</h4>
+                <h4 class="label-p">Cine</h4>
+            </div>
+
+            <div>
+                <div class="tanda">
+                    <p class="label-p">23 de febrero</p>
+                    <p class="label-p">5:00 pm - 7:00 pm</p>
+                    <p class="label-p">Cinemark</p>
+                </div>
+                <div class="tanda">
+                    <p class="label-p">23 de febrero</p>
+                    <p class="label-p">7:00 pm - 9:00 pm</p>
+                    <p class="label-p">Cinemark</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="secc-comentarios">
+            <div class="titulo-boton">
+                <h2>Comentarios</h2>
+                <button type="button">Escribir comentario</button>
+            </div>
+            <div>
+                <div class="comentario">
+                    <div class="usuario-img">
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <div class="tanda">
-                        <p class="label-p">23 de febrero</p>
-                        <p class="label-p">7:00 pm - 9:00 pm</p>
-                        <p class="label-p">Cinemark</p>
+                    <div>
+                        <h3>María</h3>
+                        <p>Si me gustó mucho la película. hubo mucho suspenso
+                        </p>
+                    </div>
+                </div>
+                <div class="comentario">
+                    <div class="usuario-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div>
+                        <h3>Juan</h3>
+                        <p>La película da mucho miedo. valió la pena verla
+                        </p>
                     </div>
                 </div>
             </div>
-
-            <div id="secc-comentarios">
-                <div class="titulo-boton">
-                    <h2>Comentarios</h2>
-                    <button type="button">Escribir comentario</button>
-                </div>
-                <div>
-                    <div class="comentario">
-                        <div class="usuario-img">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div>
-                            <h3>María</h3>
-                            <p>Si me gustó mucho la película. hubo mucho suspenso
-                            </p>
-                        </div>
-                    </div>
-                    <div class="comentario">
-                        <div class="usuario-img">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <div>
-                            <h3>Juan</h3>
-                            <p>La película da mucho miedo. valió la pena verla
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
     </main>
 
     <footer>

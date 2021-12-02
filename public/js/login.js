@@ -21,13 +21,13 @@ const input_correo = document.querySelector("#email");
 
 const icono_ojo = document.querySelector("#icono-ojo")
 
-let verfificado = true;
+let verificado = true;
 
 const funcion = (input) => {
     if (input.value) {
         input.classList.remove("error");
     } else {
-        verfificado = false
+        verificado = false
         input.classList.add("error");
     }
 };
@@ -42,21 +42,23 @@ const funcion_verificar_expresiones = () => {
     if (expresion_correo.test(input_correo.value)) {
 
     } else {
-        verfificado = false
+        verificado = false
         input_correo.classList.add("error")
     }
 
     if (!expresion_contraseña.test(lista_inputs_requeridos[1].value)) {
-        verfificado = false
+        verificado = false
         lista_inputs_requeridos[1].classList.add("error")
     }
 }
 
 
 const funcion_boton = () => {
+    verificado = true;
+    
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
-    if (verfificado) {
+    if (verificado) {
         if (input_correo.value == "cliente@MegaCines.com") {
             window.location.href = "perfil_usuario_cliente.html"
         }
