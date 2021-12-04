@@ -65,3 +65,38 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
 
     return registro_exitoso;
 };
+
+const iniciar_sesion = async(correo, contrasena) => {
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/iniciar-sesion',
+        responseType: 'json',
+        params: {correo: correo, contrasena: contrasena}
+    }).then((response) => {
+        if (response.data.error) {
+            Swal.fire({
+                'title': "Error",
+                'text': response.data.msj,
+                'icon': "error"
+            });
+        } else {
+            // El usuario inicia sesion
+            localStorage.setItem('info-usuario',JSON.stringify(response.data))
+            if (response.data.tipo_usuario == "cliente") {
+                window.location.href = "pagina-principal-cliente.html";
+            }
+            if (response.data.tipo_usuario == "soporte") {
+                window.location.href = "pagina-configuracion-soporte.html";
+            }
+            if (response.data.tipo_usuario == "admin") {
+                window.location.href = "pagina-configuracion-admin.html";
+            }
+        }
+    }).catch((error) => {
+        Swal.fire({
+            'title': 'Error',
+            'text': response.err,
+            'icon': 'error'
+        })
+    });
+};

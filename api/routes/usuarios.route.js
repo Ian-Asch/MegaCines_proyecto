@@ -58,27 +58,35 @@ router.get('/iniciar-sesion', (req,res) => {
     Usuario.findOne({correo: query.correo}, (err, usuario) => {
         if (err) {
             res.json({
-                msj: "La contraseña no es válida route",
+                msj: "Error iniciar sesion en route",
                 err
             });
         } else {
-            if (usuario.contrasena == query.contrasena) {
-                res.json({
-                    id: usuario._id,
-                    nombre: usuario.nombre,
-                    segundo_nombre: usuario.segundo_nombre,
-                    primer_apellido: usuario.primer_apellido,
-                    segundo_apellido: usuario.segundo_apellido,
-                    correo: usuario.correo,
-                    identificacion: usuario.identificacion,
-                    fecha_nacimiento: usuario.fecha_nacimiento,
-                    edad: usuario.edad,
-                    tipo_usuario: usuario.tipo_usuario
-                });
+            if (usuario) {
+                if (usuario.contrasena == query.contrasena) {
+                    res.json({
+                        id: usuario._id,
+                        nombre: usuario.nombre,
+                        segundo_nombre: usuario.segundo_nombre,
+                        primer_apellido: usuario.primer_apellido,
+                        segundo_apellido: usuario.segundo_apellido,
+                        correo: usuario.correo,
+                        identificacion: usuario.identificacion,
+                        fecha_nacimiento: usuario.fecha_nacimiento,
+                        edad: usuario.edad,
+                        tipo_usuario: usuario.tipo_usuario
+                    });
+                } else {
+                    res.json({
+                        msj: "La contraseña no es valida route",
+                        error: true
+                    });
+                }
             } else {
                 res.json({
-                    msj: "La contraseña no es valida route",
-                    err
+                    msj: "El correo electronico no es correcto",
+                    error: true
+                    // En este caso el usuario es igual a null
                 });
             }
         }

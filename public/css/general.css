@@ -105,3 +105,6 @@ footer img {
 .error{
     border: solid 2px red !important;
 }
+.esconder{
+    display: none !important;
+}

@@ -19,7 +19,8 @@ const lista_inputs_requeridos = document.querySelectorAll("[required]");
 const boton_ingresar = document.querySelector("#btn-ingresar");
 const input_correo = document.querySelector("#email");
 
-const icono_ojo = document.querySelector("#icono-ojo")
+const icono_ojo_esconder = document.querySelector("#icono-ojo-esconder");
+const icono_ojo_mostrar = document.querySelector("#icono-ojo-mostrar");
 
 let verificado = true;
 
@@ -59,12 +60,7 @@ const funcion_boton = () => {
     lista_inputs_requeridos.forEach(funcion)
     funcion_verificar_expresiones()
     if (verificado) {
-        if (input_correo.value == "cliente@MegaCines.com") {
-            window.location.href = "perfil_usuario_cliente.html"
-        }
-        if (input_correo.value == "admin@MegaCines.com") {
-            window.location.href = "perfil_usuario_admin.html"
-        }
+        iniciar_sesion(lista_inputs_requeridos[0].value,lista_inputs_requeridos[1].value);
     } else {
         Swal.fire({
             icon: 'error',
@@ -78,10 +74,13 @@ const funcion_boton = () => {
 
 boton_ingresar.addEventListener("click", funcion_boton);
 
-icono_ojo.addEventListener("click", () => {
-    if (lista_inputs_requeridos[1].type === "password") {
-        lista_inputs_requeridos[1].type = "text";
-    } else {
-        lista_inputs_requeridos[1].type = "password";
-    }
+icono_ojo_esconder.addEventListener("click", () => {
+    lista_inputs_requeridos[1].type = "text";
+    icono_ojo_mostrar.classList.remove("esconder");
+    icono_ojo_esconder.classList.add("esconder");
+})
+icono_ojo_mostrar.addEventListener("click", () => {
+    lista_inputs_requeridos[1].type = "password";
+    icono_ojo_mostrar.classList.add("esconder");
+    icono_ojo_esconder.classList.remove("esconder");
 })

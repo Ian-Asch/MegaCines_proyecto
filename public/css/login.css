@@ -34,7 +34,7 @@ main{
     color: black;
     margin: auto;
 }
-#icono-ojo:hover{
+.i-ojo:hover{
     cursor: pointer;
 }
 

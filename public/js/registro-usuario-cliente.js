@@ -49,6 +49,7 @@ const obtenerDatos = () => {
         document.querySelectorAll("input").forEach((input) => {
             input.value = "";
         });
+        window.location.href = "login_page.html";
     }
 
 
