@@ -1,4 +1,4 @@
-const lista_cines = document.querySelectorAll(".div-cine");
+const lista_cines = document.querySelectorAll(".div-usuario");
 
 lista_cines.forEach((cine) => {
     cine.addEventListener("click", () => {
