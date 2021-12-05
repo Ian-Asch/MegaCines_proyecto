@@ -1,5 +1,22 @@
 'use strict';
 
+const primera_letra_mayuscula = (palabra) => {
+    let nueva_palabra = "";
+    let letra;
+
+    for(let i = 0; i < palabra.length; i++) {
+        if (i == 0) {
+            letra = palabra[i].toUpperCase();
+        } else {
+            letra = palabra[i].toLowerCase();
+        }
+
+        nueva_palabra += letra;
+    }
+
+    return nueva_palabra;
+};
+
 const calcular_edad = (fecha_nacimiento) => {
     let edad;
 
@@ -38,10 +55,10 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
         url: 'http://localhost:3000/api/registrar-usuario',
         responseType: 'json',
         data:{
-            nombre: nombre,
-            segundo_nombre: segundo_nombre,
-            primer_apellido: primer_apellido,
-            segundo_apellido: segundo_apellido,
+            nombre: primera_letra_mayuscula(nombre),
+            segundo_nombre: primera_letra_mayuscula(segundo_nombre),
+            primer_apellido: primera_letra_mayuscula(primer_apellido),
+            segundo_apellido: primera_letra_mayuscula(segundo_apellido),
             correo: correo,
             contrasena: contrasena,
             identificacion: identificacion,
@@ -97,6 +114,27 @@ const iniciar_sesion = async(correo, contrasena) => {
             'title': 'Error',
             'text': response.err,
             'icon': 'error'
+        })
+    });
+};
+
+const modificar_usuario = async(info_usuario) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/modificar-usuario',
+        responseType: 'json',
+        data: info_usuario
+    }).then((response) => {
+        Swal.fire({
+            'title': 'El usuario se modificó correctamente',
+            'icon': 'success',
+            'text': response.msj
+        })
+    }).catch((error) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
         })
     });
 };
