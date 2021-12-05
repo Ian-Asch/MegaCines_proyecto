@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/listar_cines.css">
-    <title>Lista de usuarios</title>
+    <link rel="stylesheet" href="css/listar_salas_cine.css">
+    <title>Tipos de Salas</title>
 </head>
 
 <body>
@@ -26,78 +26,28 @@
     </header>
 
     <main>
-        <div id="barra-buscar">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Buscar">
+
+        <div class="div-sala">
+            <h1>Regular</h1> <br>
+            <p> Butacas no reclinables, con soporte para bebidas, con capacidad para peliculas 2D unicamente.</p>
         </div>
 
-
-        <div class="div-cine">
-            <img src="imgs/CCM_cinemas.PNG" alt="CCM_cinemas">
-            <h1>CCM cinemas</h1> <br>
-            <p> Código de cadena de cine: <span>24123</span></p>
-            <p>Nombre de la cadena de cine:<span> CCM cinemas</span> </p>
-            <p>Ubicación de instalaciones:<span> San Ramón, San Carlos, Rohrmoser, Jaco. </span>
-            </p>
-
+        <div class="div-sala">
+            <h1>VIP</h1> <br>
+            <p> Butacas reclinables con soporte para bebidas y comida, sonido envolvente, capacidad 2D y 3D. </p>
         </div>
 
-        <div class="div-cine">
-            <img src="imgs/CinePolis.PNG" alt="CinePolis">
-            <h1>Cinepolis</h1> <br>
-            <p> Código de cadena de cine: <span>91289</span></p>
-            <p>Nombre de la cadena de cine:<span> Cinepolis</span> </p>
-            <p>Ubicación de instalaciones:<span> Desamparados, Heredia, Cartago, Escazú </span>
-            </p>
-
-        </div>
-
-        <div class="div-cine">
-            <img src="imgs/Nova.PNG" alt="Nova_cinemas">
-            <h1>Nova cinemas</h1> <br>
-            <p> Código de cadena de cine: <span>24983</span></p>
-            <p>Nombre de la cadena de cine:<span> Nova cinemas</span> </p>
-            <p>Ubicación de instalaciones:<span> Curridabat, San José, Alajuela </span>
-            </p>
-
+        <div class="div-sala">
+            <h1>Ultimate</h1> <br>
+            <p> Butacas reclinables tipo sofá, soporte para bebidas y comida, sonido envolvente, capacidad 2D y 3D, servicio al asiento.</p>
         </div>
 
     </main>
 
-    <footer>
-        <div id="div-logo-info">
-            <img src="imgs/gallo_pinto_development_logo_png.png">
-            <div>
-                <h6>CONTENIDO</h6>
-                <p>- Cines</p>
-                <p>- Cartelera</p>
-                <p>- Perfil</p>
-            </div>
-            <div>
-                <h6>INFORMACIÓN</h6>
-                <a href="landing_page_equipo.html">- Sobre nosotros</a>
-                <p>- Sobre el producto</p>
-                <p>- Términos y condiciones</p>
-            </div>
-            <div>
-                <h6>AYUDA</h6>
-                <p>- Preguntas frecuentes</p>
-                <a href="landing_page_equipo.html">- Contáctenos</a>
-            </div>
-        </div>
-        <div id="iconos-footer">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-google-plus-g"></i>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-    <script src="js/listar_cines.js"></script>
+    <script src="js/listar_salas_cine.js"></script>
 </body>
 
 </html>
