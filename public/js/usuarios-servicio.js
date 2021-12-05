@@ -139,3 +139,25 @@ const modificar_usuario = async(info_usuario) => {
         })
     });
 };
+
+const listar_usuarios = async() => {
+    let lista_usuarios = [];
+    
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-usuarios',
+        responseType: 'json'
+    }).then((response) => {
+        lista_usuarios = response.data.lista_usuarios;
+    })
+
+    return lista_usuarios;
+
+    // Esta es la manera en la que se usa esta funcion:
+
+    // let variable = await listar_usuarios();
+
+    // De esta manera se puede agarrar el valor del return
+    // Recordar usar el 'await' esto es muy importante
+    // Si no se usa el await no se puede agarrar el valor del return
+};

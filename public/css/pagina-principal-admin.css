@@ -28,6 +28,8 @@ h1{
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.2s ease-in-out;
+    background-size: cover;
+    background-position: center;
 }
 .card:hover{
     cursor: pointer;
@@ -46,17 +48,19 @@ h1{
 
 .cartelera{
     background-image: url(../imgs/denise-jans-Lq6rcifGjOU-unsplash.jpg);
-    background-size: cover;
 }
 .cines{
     background-image: url(../imgs/something-magical-SdjA-_Xzuxg-unsplash.jpg);
-    background-size: cover;
 }
 .perfil{
     background-image: url(../imgs/gr-stocks-q8P8YoR6erg-unsplash.jpg);
-    background-size: cover;
 }
 .reservas{
     background-image: url(../imgs/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg);
-    background-size: cover;
+}
+.usuarios{
+    background-image: url(../imgs/felipe-bustillo-4VDRCoNuvE0-unsplash.jpg);
+}
+.salas{
+    background-image: url(../imgs/augusto-oazi-KWOcA8_Vu10-unsplash.jpg);
 }
