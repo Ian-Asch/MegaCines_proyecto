@@ -1,16 +1,6 @@
 'use strict';
 
-let usuario = JSON.parse(localStorage.getItem('info-usuario'))
-
-/*{
-    nombre: "Juan",
-    primer_apellido: "Oviedo",
-    segundo_apellido: "Murillo",
-    correo: "juan@gmail.com",
-    cedula: "112354538",
-    fecha_nacimiento: "5-2-1990",
-    edad: 32
-}*/
+let usuario = JSON.parse(localStorage.getItem('info-usuario'));
 
 const boton_editar = document.querySelector("#boton-editar-info");
 const boton_guardar = document.querySelector("#boton-guardar");
@@ -94,7 +84,7 @@ const mostrar_parrafos = () => {
 
 const verificar_espacios = () => {
     let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
-    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
+    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).{8,15}$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
     let expresion_cedula = /^\d{9,12}$/;
 
@@ -137,15 +127,17 @@ const verificar_espacios = () => {
 };
 
 const guardar_cambios = () => {
-    usuario.nombre = input_nombre.value;
-    usuario.primer_apellido = input_primer_apellido.value;
-    usuario.segundo_apellido = input_segundo_apellido.value;
+    usuario.nombre = primera_letra_mayuscula(input_nombre.value);
+    usuario.segundo_nombre = primera_letra_mayuscula(input_segundo_nombre.value);
+    usuario.primer_apellido = primera_letra_mayuscula(input_primer_apellido.value);
+    usuario.segundo_apellido = primera_letra_mayuscula(input_segundo_apellido.value);
     usuario.correo = input_correo.value;
-    usuario.cedula = input_cedula.value;
+    usuario.identificacion = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;
     usuario.edad = calcular_edad(new Date(input_nacimiento.value));
 
     modificar_usuario(usuario);
+    // localStorage.setItem("info-usuario",JSON.stringify(usuario));
 };
 
 

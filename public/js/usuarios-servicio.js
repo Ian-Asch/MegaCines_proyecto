@@ -130,6 +130,7 @@ const modificar_usuario = async(info_usuario) => {
             'icon': 'success',
             'text': response.msj
         })
+        localStorage.setItem("info-usuario",JSON.stringify(info_usuario));
     }).catch((error) => {
         Swal.fire({
             'title': response.msj,
