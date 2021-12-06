@@ -3,7 +3,7 @@
 let usuario = {
     nombre: "Keisy",
     primer_apellido: "Bermudez",
-    segundo_apellido: "Solano",
+    segundo_apellido: "Solís",
     correo: "Admin@MegaCines.com",
     cedula: "142358753",
     fecha_nacimiento: "23-3-1999",
