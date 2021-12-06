@@ -39,12 +39,12 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
 
                 <div>
                     <label for="nombre-tarjeta">Nombre en la tarjeta:</label>
-                    <input type="text" class="field" id="nombre-tarjeta" required>
+                    <input type="text" class="field" id="nombre-tarjeta" maxlength="19" required>
                 </div>
 
                 <div>
                     <label for="num-tarjeta">Número de la tarjeta:</label>
-                    <input type="text" class="field" id="num-tarjeta" required>
+                    <input type="text" class="field" id="num-tarjeta" maxlength="16" required>
                 </div>
 
                 <div>
@@ -67,14 +67,7 @@ copienlo y pegengo en el archivo de la pagina que estan haciendo -->
                         <option>11</option>
                         <option>12</option>
                         </select> Año
-                    <select required>
-                        <option>2021</option>
-                        <option>2022</option>
-                        <option>2023</option>
-                        <option>2024</option>
-                        <option>2025</option>
-                        <option>2026</option>
-                        <option>2027</option>
+                    <select ID="selectYear" required>
                         </select>
                 </div>
 
