@@ -1,0 +1,76 @@
+main {
+    padding-bottom: 50px;
+}
+
+header {
+    margin-bottom: 0;
+}
+
+#secc-banner {
+    margin: 50px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 26pt;
+    font-weight: bold;
+}
+
+#secc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: aqua; */
+    justify-content: center;
+    gap: 50px;
+}
+
+.card {
+    width: 25%;
+    height: 350px;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-color: #eb8f38;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card div {
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 15px;
+}
+
+.card p {
+    font-size: 14pt;
+    font-weight: 500;
+    color: #eb8f38;
+}
+
+.ganancia {
+    background-image: url(../imgs/ganancias.jpg);
+}
+
+.cines {
+    background-image: url(../imgs/something-magical-SdjA-_Xzuxg-unsplash.jpg);
+}
+
+.taquillera {
+    background-image: url(../imgs/taquilla.jpg);
+}
+
+.peliculas {
+    background-image: url(../imgs/calificacion.jpg);
+}
+
+.categoria {
+    background-image: url(../imgs/grafico.jpg);
+}
