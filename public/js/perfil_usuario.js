@@ -137,7 +137,6 @@ const guardar_cambios = () => {
     usuario.edad = calcular_edad(new Date(input_nacimiento.value));
 
     modificar_usuario(usuario);
-    // localStorage.setItem("info-usuario",JSON.stringify(usuario));
 };
 
 

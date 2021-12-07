@@ -1,20 +1,13 @@
 'use strict';
 
-let usuario = {
-    nombre: "Keisy",
-    primer_apellido: "Bermudez",
-    segundo_apellido: "Solís",
-    correo: "Admin@MegaCines.com",
-    cedula: "142358753",
-    fecha_nacimiento: "23-3-1999",
-    edad: 22
-}
+let usuario = JSON.parse(localStorage.getItem('info-usuario'));
 
 const boton_editar = document.querySelector("#boton-editar-info");
 const boton_guardar = document.querySelector("#boton-guardar");
 
 //lista de "p"s que muestran la informacion
 const nombre_usuario_p = document.querySelector("#nombre-usuario");
+const segundo_nombre_p = document.querySelector("#segundo-nombre-usuario");
 const primer_apellido_p = document.querySelector("#primer-apellido");
 const segundo_apellido_p = document.querySelector("#segundo-apellido");
 const correo_p = document.querySelector("#correo-usuario");
@@ -25,6 +18,7 @@ const nombre_completo = document.querySelector("#nombre-completo");
 
 //lista de inputs
 const input_nombre = document.querySelector("#input-nombre");
+const input_segundo_nombre = document.querySelector("#input-segundo-nombre");
 const input_primer_apellido = document.querySelector("#input-primer-apellido");
 const input_segundo_apellido = document.querySelector("#input-segundo-apellido");
 const input_correo = document.querySelector("#input-correo");
@@ -38,14 +32,15 @@ const lista_p = document.querySelectorAll(".label-p");
 
 const llenar_espacios = () => {
     nombre_usuario_p.innerText = usuario.nombre;
+    segundo_nombre_p.innerText = usuario.segundo_nombre;
     primer_apellido_p.innerText = usuario.primer_apellido;
     segundo_apellido_p.innerText = usuario.segundo_apellido;
     correo_p.innerText = usuario.correo;
-    cedula_p.innerText = usuario.cedula;
+    cedula_p.innerText = usuario.identificacion;
     fecha_nacimiento_p.innerText = usuario.fecha_nacimiento;
     edad_p.innerText = usuario.edad;
 
-    nombre_completo.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
+    nombre_completo.innerText = `${usuario.nombre} ${usuario.segundo_nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
 };
 
 
@@ -58,10 +53,11 @@ const mostrar_inputs = () => {
     boton_guardar.classList.remove("esconder");
 
     input_nombre.value = usuario.nombre;
+    input_segundo_nombre.value = usuario.segundo_nombre;
     input_primer_apellido.value = usuario.primer_apellido;
     input_segundo_apellido.value = usuario.segundo_apellido;
     input_correo.value = usuario.correo;
-    input_cedula.value = usuario.cedula;
+    input_cedula.value = usuario.identificacion;
     input_nacimiento.value = usuario.fecha_nacimiento;
 
     lista_inputs.forEach((element) => {
@@ -88,7 +84,7 @@ const mostrar_parrafos = () => {
 
 const verificar_espacios = () => {
     let expresion_correo = /^[a-z]+@[a-z]+\.(com|net|org|ac|cr)$/i;
-    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).+$/;
+    // let expresion_contraseña = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s\d]).{8,15}$/;
     let expresion_solo_letras = /^[a-z\s]+$/i;
     let expresion_cedula = /^\d{9,12}$/;
 
@@ -131,12 +127,16 @@ const verificar_espacios = () => {
 };
 
 const guardar_cambios = () => {
-    usuario.nombre = input_nombre.value;
-    usuario.primer_apellido = input_primer_apellido.value;
-    usuario.segundo_apellido = input_segundo_apellido.value;
+    usuario.nombre = primera_letra_mayuscula(input_nombre.value);
+    usuario.segundo_nombre = primera_letra_mayuscula(input_segundo_nombre.value);
+    usuario.primer_apellido = primera_letra_mayuscula(input_primer_apellido.value);
+    usuario.segundo_apellido = primera_letra_mayuscula(input_segundo_apellido.value);
     usuario.correo = input_correo.value;
-    usuario.cedula = input_cedula.value;
+    usuario.identificacion = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;
+    usuario.edad = calcular_edad(new Date(input_nacimiento.value));
+
+    modificar_usuario(usuario);
 };
 
 
@@ -153,6 +153,10 @@ boton_guardar.addEventListener('click', () => {
         mostrar_parrafos();
 
     } else {
-        //swal alert
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Por favor llene los espacios correctamente'
+        });
     }
 });
