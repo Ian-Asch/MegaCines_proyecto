@@ -4,7 +4,6 @@ const titulo = document.querySelector("#txt_titulo");
 const duracion = document.querySelector("#txt_duracion");
 const horario1 = document.querySelector("#horario_1");
 const horario2 = document.querySelector("#horario_2");
-const dias = document.querySelector("#txt_dias");
 const costoEntrada = document.querySelector("#costo_entrada");
 
 const registrar = document.querySelector("#btn-registrar");
@@ -17,12 +16,11 @@ const obtenerDatos = () => {
     let duracion_input = duracion.value;
     let horario1_input = horario1.value;
     let horario2_input = horario2.value;
-    let dias_input = dias.value;
     let costo_input = costoEntrada.value;
 
     console.log("El titulo de la pelicula es:" + titulo_input);
     console.log("La duracion de la pelicula es:" + duracion_input);
-    console.log("El horario de la pelicula es de:" + horario1_input + "hasta:" + horario2_input + "Los dias: " + dias_input);
+    console.log("El horario de la pelicula es de:" + horario1_input + "hasta:" + horario2_input);
     console.log("El costo de la entrada es: " + costo_input);
 
     Swal.fire({
@@ -36,7 +34,10 @@ const obtenerDatos = () => {
 const validar = () => {
     let error = false;
 
-    if (titulo.value == "") {
+    let expReg_tiempo = /^[0-9]+$/i;
+    let expReg_titulo = /^[a-z]+$/i;
+
+    if (titulo.value == "" || !expReg_titulo.test(titulo.value)) {
         error = true;
         titulo.classList.add("error-input");
 
@@ -67,13 +68,7 @@ const validar = () => {
     } else {
         horario2.classList.remove("error-input");
     }
-    if (dias.value == "") {
-        error = true;
-        dias.classList.add("error-input");
 
-    } else {
-        dias.classList.remove("error-input");
-    }
 
     if (costoEntrada.value == "") {
         error = true;

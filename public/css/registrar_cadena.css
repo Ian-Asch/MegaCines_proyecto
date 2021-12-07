@@ -38,11 +38,16 @@ button {
     border: none;
     font-size: 12pt;
     cursor: pointer;
+    display: inline-block;
 }
 
 div button {
     margin-left: 45%;
     margin-top: 1%;
+}
+
+#btn-regresar {
+    margin-left: 0;
 }
 
 .error-input {
