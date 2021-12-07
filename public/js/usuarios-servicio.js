@@ -38,10 +38,10 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
         url: 'http://localhost:3000/api/registrar-usuario',
         responseType: 'json',
         data:{
-            nombre: nombre,
-            segundo_nombre: segundo_nombre,
-            primer_apellido: primer_apellido,
-            segundo_apellido: segundo_apellido,
+            nombre: primera_letra_mayuscula(nombre),
+            segundo_nombre: primera_letra_mayuscula(segundo_nombre),
+            primer_apellido: primera_letra_mayuscula(primer_apellido),
+            segundo_apellido: primera_letra_mayuscula(segundo_apellido),
             correo: correo,
             contrasena: contrasena,
             identificacion: identificacion,
@@ -99,4 +99,48 @@ const iniciar_sesion = async(correo, contrasena) => {
             'icon': 'error'
         })
     });
+};
+
+const modificar_usuario = async(info_usuario) => {
+    await axios({
+        method: 'put',
+        url: 'http://localhost:3000/api/modificar-usuario',
+        responseType: 'json',
+        data: info_usuario
+    }).then((response) => {
+        Swal.fire({
+            'title': 'El usuario se modificó correctamente',
+            'icon': 'success',
+            'text': response.msj
+        })
+        localStorage.setItem("info-usuario",JSON.stringify(info_usuario));
+    }).catch((error) => {
+        Swal.fire({
+            'title': response.msj,
+            'icon': 'error',
+            'text': response.err
+        })
+    });
+};
+
+const listar_usuarios = async() => {
+    let lista_usuarios = [];
+    
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-usuarios',
+        responseType: 'json'
+    }).then((response) => {
+        lista_usuarios = response.data.lista_usuarios;
+    })
+
+    return lista_usuarios;
+
+    // Esta es la manera en la que se usa esta funcion:
+
+    // let variable = await listar_usuarios();
+
+    // De esta manera se puede agarrar el valor del return
+    // Recordar usar el 'await' esto es muy importante
+    // Si no se usa el await no se puede agarrar el valor del return
 };

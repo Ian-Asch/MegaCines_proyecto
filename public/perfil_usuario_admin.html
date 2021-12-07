@@ -20,7 +20,7 @@
         <nav>
             <a href="pagina-configuracion-admin.html">Configuracion</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+        <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
     </header>
 
     <main>
@@ -28,9 +28,15 @@
             <h1 id="nombre-completo"></h1>
 
             <div class="info-div">
-                <label for="nombre-usuario">Nombre:</label>
+                <label for="nombre-usuario">Primer nombre:</label>
                 <p class="label-p" id="nombre-usuario"></p>
                 <input type="text" class="esconder" id="input-nombre" required>
+            </div>
+
+            <div class="info-div">
+                <label for="segundo-nombre-usuario">Segundo nombre:</label>
+                <p class="label-p" id="segundo-nombre-usuario"></p>
+                <input type="text" class="esconder" id="input-segundo-nombre">
             </div>
 
             <div class="info-div">
@@ -115,6 +121,8 @@
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/controlador-general.js"></script>
+    <script src="js/usuarios-servicio.js"></script>
     <script src="js/perfil_admin.js"></script>
 
 </body>

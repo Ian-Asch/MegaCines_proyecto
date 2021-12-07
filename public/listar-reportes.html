@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -10,55 +10,50 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/editar_pelicula.css">
-    <title>Editar Película</title>
+    <link rel="stylesheet" href="css/listar-reportes.css">
+    <title>Lista de reportes</title>
 </head>
 
 <body>
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-
-            <a href="perfil_usuario_admin.html">Perfil</a>
+            <a href="pagina-configuracion-admin.html">Menú de configuración</a>
         </nav>
-        <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
+        <button type="button" class="boton-header btn-cerrar-sesion" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
     </header>
 
     <main>
-
-        <div class="container">
-
-            <Table>
-                <tr>
-                    <th>Nombre de pelicula:</th>
-                    <th>Eternals</th>
-                </tr>
-                <tr>
-                    <th>Código de cadena:</th>
-                    <th>24123</th>
-                </tr>
-                <tr>
-                    <th>Sipnosis:</th>
-                    <th>Narra la saga de los "Eternals", una raza de seres inmortales que vivieron en la Tierra y dieron forma a su historia y sus civilizaciones</th>
-                </tr>
-                <tr>
-                    <th>Reparto:</th>
-                    <th>Richard Madden, Kit Harington, Angelina Jolie, Salma Hayek></th>
-                </tr>
-
-                <tr>
-                    <th>Portada de película:</th>
-                    <th><img src="imgs/eternals.jpg" alt="eternals"></th>
-                </tr>
-            </Table>
-
-            <div>
-                <button type="button" id="btn-registrar" onclick=" window.location.href='' ">Guardar cambios</button>
+        <section id="secc-banner">
+            <h1>Reportes</h1>
+        </section>
+        <section id="secc-cards">
+            <div class="card ganancia" onclick="window.location.href=''">
+                <div>
+                    <p>Ganancias por cine</p>
+                </div>
             </div>
-
-        </div>
-
-
+            <div class="card taquillera" onclick="window.location.href=''">
+                <div>
+                    <p>Películas más taquilleras</p>
+                </div>
+            </div>
+            <div class="card cines" onclick="window.location.href=''">
+                <div>
+                    <p>Cines mejor calificados</p>
+                </div>
+            </div>
+            <div class="card peliculas" onclick="window.location.href=''">
+                <div>
+                    <p>Películas mejor calificadas</p>
+                </div>
+            </div>
+            <div class="card categoria" onclick="window.location.href=''">
+                <div>
+                    <p>Películas por categoría</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

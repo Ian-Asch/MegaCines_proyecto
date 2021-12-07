@@ -20,7 +20,7 @@ const obtenerDatos = () => {
 
     Swal.fire({
         'icon': 'success',
-        'title': 'Metodo de pago registrado con éxito',
+        'title': 'Método de pago editado con éxito',
 
     }).then(() => {
         history.back();
@@ -118,7 +118,7 @@ const validar = () => {
     } else {
         Swal.fire({
             icon: 'warning', //Success, error, warning
-            title: 'No se pudo registrar su método de pago',
+            title: 'No se pudo editar su método de pago',
             text: 'Por favor revise los campos resaltados'
         });
     }

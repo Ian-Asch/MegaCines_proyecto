@@ -1,10 +1,10 @@
 .listar {
     border: 1px solid black;
-    height: 180px;
+    overflow: hidden;
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.2);
-    padding: 10px 100px 10px 100px;
+    padding: 15px 100px 15px 100px;
 }
 
 .editar {

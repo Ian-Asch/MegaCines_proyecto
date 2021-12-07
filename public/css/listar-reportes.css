@@ -1,25 +1,30 @@
-main{
+main {
     padding-bottom: 50px;
 }
-header{
+
+header {
     margin-bottom: 0;
 }
-#secc-banner{
+
+#secc-banner {
     margin: 50px;
     text-align: center;
 }
-h1{
+
+h1 {
     font-size: 26pt;
     font-weight: bold;
 }
-#secc-cards{
+
+#secc-cards {
     display: flex;
     flex-wrap: wrap;
     /* background-color: aqua; */
     justify-content: center;
     gap: 50px;
 }
-.card{
+
+.card {
     width: 25%;
     height: 350px;
     text-align: center;
@@ -30,37 +35,42 @@ h1{
     transition: all 0.2s ease-in-out;
     background-size: cover;
     background-position: center;
+    background-color: #eb8f38;
 }
-.card:hover{
+
+.card:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
-.card div{
-    background-color: rgb(0,0,0,0.9);
+
+.card div {
+    background-color: rgb(0, 0, 0, 0.9);
     width: 100%;
     padding: 15px;
 }
-.card p{
+
+.card p {
     font-size: 14pt;
     font-weight: 500;
     color: #eb8f38;
 }
 
-.cartelera{
-    background-image: url(../imgs/denise-jans-Lq6rcifGjOU-unsplash.jpg);
+.ganancia {
+    background-image: url(../imgs/ganancias.jpg);
 }
-.cines{
+
+.cines {
     background-image: url(../imgs/something-magical-SdjA-_Xzuxg-unsplash.jpg);
 }
-.perfil{
-    background-image: url(../imgs/gr-stocks-q8P8YoR6erg-unsplash.jpg);
+
+.taquillera {
+    background-image: url(../imgs/taquilla.jpg);
 }
-.reservas{
-    background-image: url(../imgs/kilyan-sockalingum-nW1n9eNHOsc-unsplash.jpg);
+
+.peliculas {
+    background-image: url(../imgs/calificacion.jpg);
 }
-.usuarios{
-    background-image: url(../imgs/felipe-bustillo-4VDRCoNuvE0-unsplash.jpg);
-}
-.salas{
-    background-image: url(../imgs/augusto-oazi-KWOcA8_Vu10-unsplash.jpg);
+
+.categoria {
+    background-image: url(../imgs/grafico.jpg);
 }

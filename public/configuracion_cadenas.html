@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/configuracion_cadenas.css">
     <title>Configuración cadenas de cines</title>
-    <!-- Cambiar nombre de pagina al nombre de la pagina debida -->
 </head>
 
 <body>
@@ -22,7 +21,7 @@
             <a href="pagina-configuracion-admin.html">Configuracion</a>
             <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+        <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
     </header>
 
     <main>
@@ -72,9 +71,6 @@
                 <p>¿Deseas registrar una nueva cadena?</p> <br>
                 <button type="button" id="btn-registrar" onclick=" window.location.href='registrar_cadena.html' ">Registrar Nueva Cadena</button>
             </div>
-            <div class="registrar">
-            </div>
-
 
         </section>
 
@@ -114,6 +110,7 @@
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="js/controlador-general.js"></script>
     <!-- Poner script de javascript en esta linea -->
 </body>
 
