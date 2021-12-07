@@ -11,6 +11,7 @@ const schema_pelicula = new mongoose.Schema({
     idioma: {type: String, required: true, unique: false},
     subtitulos: {type: Boolean, required: true, unique: false},//Este atributo es bolean entonces su valor solo puede ser true o false.
     idioma_subtitulos: {type: String, required: false, unique: false}/*,
+    categoria_edad: {type: String, required: false, unique: false},
     tandas: [{ //Esta parte no se si se va a usar. Por ahora no tocar
         fecha: , //La fecha y la hora podrian ser un mismo atributo de tipo Date
         hora: ,
