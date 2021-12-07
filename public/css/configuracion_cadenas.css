@@ -147,3 +147,7 @@ h1 {
 .registrar p {
     display: block;
 }
+
+button {
+    margin-left: 1%;
+}
