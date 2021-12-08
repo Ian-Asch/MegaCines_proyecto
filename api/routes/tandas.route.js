@@ -30,18 +30,4 @@ router.post('/registrar-tanda',(req,res) => {
     });
 });
 
-// const sumar = (num1,num2) => {
-//     return num1 + num2;
-// };
-
-// const func2 = (func_ejecutar) => {
-//     func_ejecutar(3,6)
-// }
-
-// func2(sumar)
-
-//La linea 41 es exactamente lo mismo que los de las lineas 45, 46 y 47
-
-// func2((num1,num2) => {
-//     return num1 + num2;
-// })
+module.exports = router;

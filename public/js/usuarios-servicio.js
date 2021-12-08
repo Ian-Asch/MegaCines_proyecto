@@ -132,6 +132,7 @@ const listar_usuarios = async() => {
         responseType: 'json'
     }).then((response) => {
         lista_usuarios = response.data.lista_usuarios;
+        console.log(response)
     })
 
     return lista_usuarios;

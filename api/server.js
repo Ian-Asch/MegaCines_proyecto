@@ -53,3 +53,4 @@ function handleError(res, reason, message, code) {
 //app.use('/api', require('./routes/comentarios.route')); <-- Esto es un ejemplo
 app.use('/api', require('./routes/usuarios.route'));
 // app.use('/api', require('./routes/peliculas.route')); <-- Aun no
+app.use('/api', require('./routes/tandas.route'));
