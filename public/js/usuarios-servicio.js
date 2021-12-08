@@ -58,7 +58,7 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
     }).catch((error) => {
         Swal.fire({
             'title': 'Error',
-            'text': response.err,
+            'text': response.data.err,
             'icon': 'error'
         })
     });

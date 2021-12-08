@@ -9,9 +9,9 @@ const input_identificacion = document.querySelector("#identificacion");
 const input_nacimiento = document.querySelector("#nacimiento");
 const input_edad = document.querySelector("#edad");
 const input_correo = document.querySelector("#correo");
-var input_contrasena = document.querySelector("#contrasena");
+const input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
-var boton_ver_contrasena = document.querySelector("#boton-contrasena");
+const boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
 
 let fecha_max = new Date();
@@ -51,8 +51,6 @@ const obtenerDatos = () => {
         });
         window.location.href = "login_page.html";
     }
-
-
 }
 
 const validar_vacios = () => {
