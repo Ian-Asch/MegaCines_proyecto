@@ -17,7 +17,7 @@ const registrar_tanda = async(pelicula,fecha_inicio,sala,cine,precio,duracion) =
         }
     });
 
-    if (response.err) {
+    if (response.data.err) {
         Swal.fire({
             title: "No se pudo registrar la tanda",
             icon: 'error',
