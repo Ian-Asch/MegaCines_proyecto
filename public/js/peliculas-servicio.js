@@ -45,4 +45,12 @@ const listar_peliculas = async() => {
     });
 
     return lista_peliculas;
+
+    // Esta es la manera en la que se usa esta funcion:
+
+    // let variable = await listar_peliculas();
+
+    // De esta manera se puede agarrar el valor del return
+    // Recordar usar el 'await' esto es muy importante
+    // Si no se usa el await no se puede agarrar el valor del return
 };

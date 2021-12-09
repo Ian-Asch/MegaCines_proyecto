@@ -132,16 +132,9 @@ const listar_usuarios = async() => {
         responseType: 'json'
     }).then((response) => {
         lista_usuarios = response.data.lista_usuarios;
-        console.log(response)
-    })
+    }).catch((error) => {});
 
     return lista_usuarios;
 
-    // Esta es la manera en la que se usa esta funcion:
-
-    // let variable = await listar_usuarios();
-
-    // De esta manera se puede agarrar el valor del return
-    // Recordar usar el 'await' esto es muy importante
-    // Si no se usa el await no se puede agarrar el valor del return
+    //Consegur el valor de este return puede ser complicado
 };
