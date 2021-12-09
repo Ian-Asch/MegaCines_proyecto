@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 const registrar_tanda = async(pelicula,fecha_inicio,sala,cine,precio,duracion) => {
     let registro_exitoso = false;
