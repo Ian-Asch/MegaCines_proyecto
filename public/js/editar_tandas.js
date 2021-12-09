@@ -20,8 +20,8 @@ const Hora_de_Inicio_p = document.querySelector("#Hora-de-Inicio");
 const Hora_de_Finalizacion_p = document.querySelector("#Hora-de-Finalizacion");
 const Sala_p = document.querySelector("#Sala");
 
-const fecha_Estreno_p = document.querySelector("#fecha-Estreno");
-const fecha_Retiro_p = document.querySelector("#fecha-Retiro");
+// const fecha_Estreno_p = document.querySelector("#fecha-Estreno");
+// const fecha_Retiro_p = document.querySelector("#fecha-Retiro");
 
 const precio_p = document.querySelector("#precio");
 
@@ -53,8 +53,8 @@ const llenar_espacios = () => {
     Hora_de_Finalizacion_p.innerText = usuario.Hora_de_Finalizacion;
     Sala_p.innerText = usuario.Sala;
 
-    fecha_Estreno_p.innerText = usuario.fecha_Estreno;
-    fecha_Retiro_p.innerText = usuario.fecha_Retiro;
+    // fecha_Estreno_p.innerText = usuario.fecha_Estreno;
+    // fecha_Retiro_p.innerText = usuario.fecha_Retiro;
     precio_p.innerText = `${usuario.Precio} ¢`
 
     nombre_completo.innerText = usuario.nombre;
@@ -136,6 +136,7 @@ const guardar_cambios = () => {
 llenar_espacios();
 
 boton_editar.addEventListener('click', () => {
+    console.log("presionar boton")
     mostrar_inputs()
 });
 

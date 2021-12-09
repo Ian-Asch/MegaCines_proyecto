@@ -30,7 +30,7 @@ router.post('/registrar-tanda',(req,res) => {
     });
 });
 router.get('/listar-tandas', (req, res) => {
-    Usuario.find((err,lista_tandas) => {
+    Tanda.find((err,lista_tandas) => {
         if (err) {
             res.json({
                 msj: 'No se puedo listar las tandas',
@@ -47,7 +47,7 @@ router.get('/listar-tandas', (req, res) => {
 router.put('/modificar-tandas', (req,res) => {
     let body = req.body;
 
-    tandas.updateOne({_id: body.id}, {$set: body}, (err, info) => {
+    Tanda.updateOne({_id: body.id}, {$set: body}, (err, info) => {
         if (err) {
             res.json({
                 msj: "No se pudo modificar la tanda route",

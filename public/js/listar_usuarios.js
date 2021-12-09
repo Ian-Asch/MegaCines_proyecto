@@ -11,7 +11,8 @@ const input_buscar = document.querySelector("#input-buscar");
 
 
 const todo = async() => {
-
+    const usuarios_lista = await listar_usuarios();
+    
     const mostrar_usuarios = (lista) => {
         secc_usuarios.innerHTML = "";
     
@@ -35,8 +36,6 @@ const todo = async() => {
         });
     };
 
-    const usuarios_lista = await listar_usuarios();
-    
     mostrar_usuarios(usuarios_lista);
 
     input_buscar.addEventListener('keyup',() => {
