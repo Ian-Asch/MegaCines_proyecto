@@ -29,5 +29,37 @@ router.post('/registrar-tanda',(req,res) => {
         }
     });
 });
+router.get('/listar-tandas', (req, res) => {
+    Usuario.find((err,lista_tandas) => {
+        if (err) {
+            res.json({
+                msj: 'No se puedo listar las tandas',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'Las tandas se listaron exitosamente',
+                lista_tandas
+            });
+        }
+    });
+});
+router.put('/modificar-tandas', (req,res) => {
+    let body = req.body;
+
+    tandas.updateOne({_id: body.id}, {$set: body}, (err, info) => {
+        if (err) {
+            res.json({
+                msj: "No se pudo modificar la tanda route",
+                err
+            });
+        } else {
+            res.json({
+                msj: "La tanda se modifico correctamente",
+                info
+            });
+        }
+    });
+});
 
 module.exports = router;

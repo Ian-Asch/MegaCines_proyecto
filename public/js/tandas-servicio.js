@@ -33,3 +33,18 @@ const registrar_tanda = async(pelicula,fecha_inicio,sala,cine,precio,duracion) =
 
     return registro_exitoso;
 };
+const listar_tandas = async() => {
+    let lista_tandas = [];
+    
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-tandas',
+        responseType: 'json'
+    }).then((response) => {
+        lista_tandas = response.data.lista_tandas;
+    }).catch((error) => {});
+
+    return lista_tandas;
+
+    //Consegur el valor de este return puede ser complicado
+};
