@@ -1,5 +1,5 @@
 .estilo_form {
-    height: 450px;
+    height: 650px;
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.1);
@@ -9,6 +9,9 @@
 
 form {
     text-align: justify;
+    font-size: 18px;
+    padding: 25px;
+    margin-bottom: 40px;
 }
 
 .width {
@@ -19,11 +22,6 @@ form {
     border: 1px solid black;
     margin-bottom: 3px;
     display: inline-block;
-}
-
-h1 {
-    font-size: 26px;
-    font-weight: bold;
 }
 
 .labels {
@@ -38,13 +36,26 @@ button {
     border: none;
     font-size: 12pt;
     cursor: pointer;
+    display: inline-block;
 }
 
 div button {
     margin-left: 45%;
     margin-top: 1%;
+    padding: 14px 16px 14px 16px;
+}
+
+#btn-regresar {
+    margin-left: 0;
 }
 
 .error-input {
     border: 2px solid red;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px;
 }

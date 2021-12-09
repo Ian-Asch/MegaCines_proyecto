@@ -28,54 +28,55 @@
         <!-- crear pagina web aqui -->
 
         <section>
+            <h1 class="texto_centrado">Registrar película</h1>
+
             <div class="estilo_form">
-                <form>
+                <form method="post" name="registrar_pelicula">
                     <fieldset>
-                        <h1>Registrar película</h1>
                         <br>
 
                         <label for="txt_titulo" class="labels">Ingrese el título de la película:</label>
                         <input class="width" placeholder="Ingrese el titulo de la pelicula:" id="txt_titulo"> <br> <br>
 
-                        <label for="" class="labels">Suba la imagen de la película:</label> <input type="file"> <br> <br>
+                        <label class="labels" for="">Suba la imagen de la película:</label> <input type="file"> <br> <br>
 
 
 
                         <label for="" class="labels">Selecione la categoría de la película:</label>
-                        <input type="radio" id="terror" name="terror" value="terror" checked>
+                        <input type="checkbox" id="terror" name="terror" value="terror">
                         <label for="terror">Terror</label>
-                        <input type="radio" id="Ciencia" name="Ciencia" value="Ciencia">
+                        <input type="checkbox" id="ciencia" name="Ciencia" value="Ciencia">
                         <label for="ciencia">Ciencia ficción</label>
-                        <input type="radio" id="drama" name="drama" value="drama">
+                        <input type="checkbox" id="drama" name="drama" value="drama">
                         <label for="drama">Drama</label>
-                        <input type="radio" id="accion" name="accion" value="accion">
+                        <input type="checkbox" id="accion" name="accion" value="accion">
                         <label for="accion">Acción</label>
-                        <input type="radio" id="comedia" name="comedia" value="comedia">
+                        <input type="checkbox" id="comedia" name="comedia" value="comedia">
                         <label for="comedia">Comedia</label>
-                        <input type="radio" id="infantiles" name="infantiles" value="infantiles">
+                        <input type="checkbox" id="infantiles" name="infantiles" value="infantiles">
                         <label for="infantiles">Infantiles</label> <br> <br>
 
                         <label for="" class="labels">Idiomas disponibles y subtítulos:</label>
-                        <input type="radio" id="espanol" name="espanol" value="espanol" checked>
+                        <input type="checkbox" id="espanol" name="espanol" value="espanol">
                         <label for="VIP">Español</label>
-                        <input type="radio" id="ingles" name="ingles" value="ingles">
+                        <input type="checkbox" id="ingles" name="ingles" value="ingles">
                         <label for="">Inglés</label>
-                        <input type="radio" id="sub_espa" name="sub_espa" value="sub_espa">
+                        <input type="checkbox" id="sub_espa" name="sub_espa" value="sub_espa">
                         <label for="regular">Sub Español</label>
-                        <input type="radio" id="sub_ingles" name="sub_ingles" value="sub_ingles">
+                        <input type="checkbox" id="sub_ingles" name="sub_ingles" value="sub_ingles">
                         <label for="regular">Sub Inglés</label> <br> <br>
 
 
-                        <label for="txt_duracion" class="labels">Ingrese el tiempo que dura la película:</label>
-                        <input type="text" id="txt_duracion" name="duracion" value="" class="width" checked> <br><br>
+                        <label for="txt_duracion" class="labels">Ingrese el tiempo que dura la película: <span>(minutos)</span></label>
+                        <input type="text" id="txt_duracion" name="duracion" value="" class="width"> <br><br>
 
 
                         <label for="" type="text" class="labels">Clasificación de edad:</label>
-                        <input type="radio" id="12" name="12" value="12" checked>
+                        <input type="radio" id="12" name="clasificacion" value="12">
                         <label for="12">Mayores de 12 (B)</label>
-                        <input type="radio" id="15" name="15" value="15">
-                        <label for="15">Mayores de 12 (B15)</label>
-                        <input type="radio" id="18" name="18" value="18">
+                        <input type="radio" id="15" name="clasificacion" value="15">
+                        <label for="15">Mayores de 15 (B15)</label>
+                        <input type="radio" id="18" name="clasificacion" value="18">
                         <label for="18">Mayores de 18 (C)</label>
                         <br> <br>
 
@@ -99,14 +100,13 @@
                         <input type="text" class="width-2" id="horario_1">
                         <label for="">Hasta:</label>
                         <input type="text" class="width-2" id="horario_2">
-                        <label for="">Días:</label>
-                        <input type="text" id="txt_dias">
                         <br><br>
                         <label for="" class="labels">Determine el costo de la entrada:</label>
                         <input type="text" class="width-2" id="costo_entrada">
                     </fieldset>
                 </form>
-                <button type="button" id="boton-cancelar" onclick="history.back()">Guardar</button>
+                <div><button type="button" id="btn-regresar" onclick="window.location.href='configuracion_peliculas.html'">Regresar</button></div>
+                <button type="button" id="btn-registrar">Guardar</button>
             </div>
         </section>
 
@@ -148,6 +148,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/controlador-general.js"></script>
+    <script src="js/peliculas-servicio.js"></script>
     <!-- Poner script de javascript en esta linea -->
 </body>
 

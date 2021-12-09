@@ -9,9 +9,9 @@ const input_identificacion = document.querySelector("#identificacion");
 const input_nacimiento = document.querySelector("#nacimiento");
 const input_edad = document.querySelector("#edad");
 const input_correo = document.querySelector("#correo");
-var input_contrasena = document.querySelector("#contrasena");
+const input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
-var boton_ver_contrasena = document.querySelector("#boton-contrasena");
+const boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
 
 let fecha_max = new Date();
@@ -43,7 +43,7 @@ const obtenerDatos = () => {
     let correo = input_correo.value;
     let contrasena = input_contrasena.value;
 
-    let registro_exitoso = registrar_usuario(nombre,sgndNombre,apellido,sgndApellido,identificacion,nacimiento,correo,contrasena,"cliente");
+    let registro_exitoso = registrar_usuario(nombre,sgndNombre,apellido,sgndApellido,correo,contrasena,identificacion,nacimiento,"cliente");
 
     if (registro_exitoso) {
         document.querySelectorAll("input").forEach((input) => {
@@ -51,8 +51,6 @@ const obtenerDatos = () => {
         });
         window.location.href = "login_page.html";
     }
-
-
 }
 
 const validar_vacios = () => {

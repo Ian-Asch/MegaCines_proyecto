@@ -4,12 +4,18 @@ const boton_enviar = document.querySelector("#boton-guardar");
 const input_nombre = document.querySelector("#nombre-tarjeta");
 var input_num_tarjeta = document.querySelector("#num-tarjeta");
 const input_tipo_tarjeta = document.querySelector("#tipo-tarjeta");
-const input_mes_exp = document.querySelector("#mes");
-const input_ano_exp = document.querySelector("#ano");
+const select_ano_exp = document.querySelector("#selectYear");
 const input_cvv = document.querySelector("#cvv");
 const input_dir_nombre = document.querySelector("#direccion-nombre");
 const input_codigo = document.querySelector("#codigo");
 
+const yearActual = new Date().getFullYear();
+for (let i = yearActual; i <= yearActual + 8; i++) {
+    let opcion = document.createElement('option');
+    opcion.value = i;
+    opcion.innerText = i;
+    select_ano_exp.appendChild(opcion);
+}
 const obtenerDatos = () => {
 
     Swal.fire({
