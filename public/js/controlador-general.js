@@ -4,7 +4,7 @@
 // Por favor no borren nada del codigo que esta aqui
 
 const boton_cerrar_sesion = document.querySelector(".btn-cerrar-sesion");
-
+const boton_registrar_tandas = document.querySelector(".boton-registrar-tanda")
 
 const primera_letra_mayuscula = (palabra) => {
     let nueva_palabra = "";
@@ -28,6 +28,11 @@ const cerrar_sesion = () => {
     localStorage.clear();
     window.location.href = "landing_page.html";
 };
+const registrar_tandas = () => {
+    window.location.href = "registrar-tanda.html";
+};
+
 
 
 boton_cerrar_sesion.addEventListener("click",cerrar_sesion);
+boton_registrar_tandas.addEventListener("click",registrar_tandas);
