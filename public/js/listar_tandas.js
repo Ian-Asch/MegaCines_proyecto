@@ -2,6 +2,18 @@
 
 const tabla = document.querySelector("tbody");
 
+
+
+const boton_registrar_tandas = document.querySelector(".boton-registrar-tanda")
+
+const registrar_tandas = () => {
+    window.location.href = "registrar-tanda.html";
+};
+
+boton_registrar_tandas.addEventListener("click",registrar_tandas);
+
+
+
 const mostarar_tandas_todo = async() => {
     let lista_tandas = await listar_tandas();
 
@@ -44,6 +56,7 @@ const mostarar_tandas_todo = async() => {
         tabla.appendChild(table_row);
 
         boton_editar.addEventListener("click",() => {
+            localStorage.setItem("tanda-seleccionada",JSON.stringify(tanda))
             window.location.href = "editar-tandas.html"
         });
 

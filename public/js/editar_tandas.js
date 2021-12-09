@@ -1,15 +1,17 @@
 'use strict';
 
-let usuario = {
-    nombre: "Spiderman Home Coming",
-    fecha_Estreno: "5-2-1990",
-    fecha_Retiro: "5-2-1990",
-    Hora_de_Inicio: "5:00",
-    Hora_de_Finalizacion: "4:00",
-    Sala: "C2",
-    Precio: "2000"
+// let usuario = {
+//     nombre: "Spiderman Home Coming",
+//     fecha_Estreno: "5-2-1990",
+//     fecha_Retiro: "5-2-1990",
+//     Hora_de_Inicio: "5:00",
+//     Hora_de_Finalizacion: "4:00",
+//     Sala: "C2",
+//     Precio: "2000"
     
-}
+// }
+
+let usuario = JSON.parse(localStorage.getItem("tanda-seleccionada"))
 
 const boton_editar = document.querySelector("#boton-editar-info");
 const boton_guardar = document.querySelector("#boton-guardar");
@@ -48,16 +50,16 @@ const lista_p = document.querySelectorAll(".label-p");
 
 
 const llenar_espacios = () => {
-    nombre_usuario_p.innerText = usuario.nombre;
-    Hora_de_Inicio_p.innerText = usuario.Hora_de_Inicio;
+    nombre_usuario_p.innerText = usuario.pelicula;
+    Hora_de_Inicio_p.innerText = usuario.fecha;
     Hora_de_Finalizacion_p.innerText = usuario.Hora_de_Finalizacion;
-    Sala_p.innerText = usuario.Sala;
+    Sala_p.innerText = usuario.sala;
 
     // fecha_Estreno_p.innerText = usuario.fecha_Estreno;
     // fecha_Retiro_p.innerText = usuario.fecha_Retiro;
-    precio_p.innerText = `${usuario.Precio} ¢`
+    precio_p.innerText = `${usuario.precio} ¢`
 
-    nombre_completo.innerText = usuario.nombre;
+    nombre_completo.innerText = usuario.pelicula;
 };
 
 
