@@ -21,44 +21,46 @@
             <a href="pagina-configuracion-admin.html">Configuracion</a>
             <a href="perfil_usuario_admin.html">Perfil</a>
         </nav>
-        <button type="button" class="boton-header" onclick="window.location.href='landing_page.html'">Cerrar sesión</button>
+        <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
     </header>
 
     <main>
         <div id="barra-buscar">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Buscar">
+            <input type="text" id="input-buscar" placeholder="Buscar">
         </div>
 
-
-        <div class="div-usuario">
-            <h1>Enivin Salas</h1> <br>
-            <p> Soporte</p>
-        </div>
-
-        <div class="div-usuario">
-            <h1>Ian Asch</h1> <br>
-            <p> Cliente </p>
-        </div>
-
-        <div class="div-usuario">
-            <h1>Keisy Bermudez Solano</h1> <br>
-            <p> Administrador </p>
-        </div>
-
-        <div class="div-usuario">
-            <h1>Mauricio Brenes</h1> <br>
-            <p> Soporte </p>
-        </div>
-
-        <div class="div-usuario">
-            <h1>Adrian Oviedo</h1> <br>
-            <p> Cliente </p>
-        </div>
-
-        <div class="div-usuario">
-            <h1>Erick Ulloa</h1> <br>
-            <p> Cliente </p>
+        <div id="secc-usuarios">
+            <!-- LA base de datos ya puede listar los usuarios -->
+            <div class="div-usuario">
+                <h1>Enivin Salas</h1> <br>
+                <p> Soporte</p>
+            </div>
+    
+            <div class="div-usuario">
+                <h1>Ian Asch</h1> <br>
+                <p> Cliente </p>
+            </div>
+    
+            <div class="div-usuario">
+                <h1>Keisy Bermudez Solano</h1> <br>
+                <p> Administrador </p>
+            </div>
+    
+            <div class="div-usuario">
+                <h1>Mauricio Brenes</h1> <br>
+                <p> Soporte </p>
+            </div>
+    
+            <div class="div-usuario">
+                <h1>Adrian Oviedo</h1> <br>
+                <p> Cliente </p>
+            </div>
+    
+            <div class="div-usuario">
+                <h1>Erick Ulloa</h1> <br>
+                <p> Cliente </p>
+            </div>
         </div>
 
     </main>
@@ -67,6 +69,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/controlador-general.js"></script>
+    <script src="js/usuarios-servicio.js"></script>
     <script src="js/listar_usuarios.js"></script>
 
 </body>
