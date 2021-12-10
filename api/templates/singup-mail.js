@@ -39,7 +39,7 @@ this.enviar_mail = (pcorreo, pnombre, pcontrasena) => {
         
         `
     };
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.sendMail(mail_options, (error, info) => {
         if (error) {
             console.log(error);
         } else {
