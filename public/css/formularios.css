@@ -115,12 +115,11 @@ section.type-a {
     margin: auto;
 }
 
-div { /*AQUI HAY UN ERROR CON LOS SWEET ALERTS POR FAVOR ARREGLENLO*/
-
+div {
+    /*AQUI HAY UN ERROR CON LOS SWEET ALERTS POR FAVOR ARREGLENLO*/
     /*Este archivo de formularios.css esta linkeado a varias paginas html
     entonces si este arhivo se modifica va a terminar cambiando los estilos 
     de cada pagina asi que esten atentos*/
-    
     margin: 20px;
 }
 

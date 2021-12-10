@@ -8,28 +8,32 @@ const input_identificacion_registro = document.querySelector("#cedula");
 const input_nacimiento_registro_admin = document.querySelector("#nacimiento");
 const input_edad_registro_admin = document.querySelector("#edad");
 const input_correo_registro_admin = document.querySelector("#correo");
+const field_usuario = document.getElementById("field_usuario")
 const botonGuardar = document.querySelector("#boton-guardar");
-const botonSoporte = document.querySelector("#soporte")
-const botonCliente = document.querySelector("#cliente")
+const tipo_usuario = document.getElementsByName("tipo-usuario");
+
+
 
 
 const obtenerDatos = () => {
     let nombre = input_nombre_registro.value;
-    let segundoNombre = input_segundo_nombre_registro.value;
+    let sgndNombre = input_segundo_nombre_registro.value;
     let apellido = input_primer_apellido_registro.value;
-    let segundoApellido = input_segundo_apellido_registro.value;
+    let sgndApellido = input_segundo_apellido_registro.value;
     let identificacion = input_identificacion_registro.value;
     let nacimiento = input_nacimiento_registro_admin.value;
-    let edad = input_edad_registro_admin.value;
     let correo = input_correo_registro_admin.value;
-    let soporte = botonSoporte.value;
-    let cliente = botonCliente.value;
+    let contrasena = contrasena_random();
+    let tipo_usuario = usuario();
 
-    Swal.fire({
-        'icon': 'éxito',
-        'title': 'información valida',
-        'text': 'usuario guardado exitosamente'
-    });
+    let registro_exitoso = registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, tipo_usuario);
+
+    if (registro_exitoso) {
+        document.querySelectorAll("input").forEach((input) => {
+            input.value = "";
+
+        });
+    }
 }
 
 const validar_vacios = () => {
@@ -47,15 +51,54 @@ const validar_vacios = () => {
     return error_vacio;
 }
 
+const usuario = () => {
+    let usuario_checked = "";
+    let campos_requeridos = document.getElementsByName("tipo-usuario");
+
+    campos_requeridos.forEach(campo => {
+        if (campo.checked == true) {
+            usuario_checked = campo.value;
+        }
+    });
+    return usuario_checked;
+}
+
+const contrasena_random = () => {
+    var pass = '';
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+        'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+    var i = 1;
+
+    for (i = 1; i <= 6; i++) {
+        var char = Math.floor(Math.random() *
+            str.length + 1);
+
+        pass += str.charAt(char);
+    }
+
+    pass += "Mc1!";
+
+    return pass;
+}
+
+
 
 const validar = () => {
+    let error = false;
 
     let expReg_soloLetras = /^[a-záéióúñ]+$/i;
     let expReg_identificacion = RegExp('[0-9]{9,12}');
     let expReg_Correo = RegExp('^[a-z0-9._-]+\@{1}[a-z]+(.com|.net|.org|.ac.cr|.es)$', 'i');
-    let expReg_contrasena = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/;
 
-    let error = false;
+    error = validar_vacios();
+
+    if (tipo_usuario[0].checked == false && tipo_usuario[1].checked == false) {
+        console.log("No se escogió usuario");
+        error = true;
+        field_usuario.classList.add("error-input");
+    } else {
+        field_usuario.classList.remove("error-input");
+    }
 
 
     if (!expReg_soloLetras.test(input_nombre_registro.value)) {
@@ -112,43 +155,45 @@ const validar = () => {
     } else {
         Swal.fire({
             icon: 'warning',
-            title: 'información incompleta',
-            text: 'por favor llene todos los espacios'
+            title: 'Información incompleta',
+            text: 'Por favor llene todos los espacios'
         });
 
 
     }
 
-    const calcularEdad = (input_nacimiento_registro_admin) => {
-        const fechaActual = new Date();
-        const anoActual = parseInt(fechaActual.getFullYear());
-        const mesActual = parseInt(fechaActual.getMonth()) + 1;
-        const diaActual = parseInt(fechaActual.getDay());
 
-        const anoNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(0, 4));
-        const mesNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(5, 7));
-        const diaNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(8, 10));
-        let edad = anoActual - anoNacimiento;
-        if (mesActual < mesNacimiento) {
+
+}
+
+const calcularEdad = (input_nacimiento_registro_admin) => {
+    const fechaActual = new Date();
+    const anoActual = parseInt(fechaActual.getFullYear());
+    const mesActual = parseInt(fechaActual.getMonth()) + 1;
+    const diaActual = parseInt(fechaActual.getDay());
+
+    const anoNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(0, 4));
+    const mesNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(5, 7));
+    const diaNacimiento = parseInt(String(input_nacimiento_registro_admin).substring(8, 10));
+    let edad = anoActual - anoNacimiento;
+    if (mesActual < mesNacimiento) {
+        edad--;
+    } else if (mesActual == mesNacimiento) {
+        if (diaActual < diaNacimiento) {
             edad--;
-        } else if (mesActual == mesNacimiento) {
-            if (diaActual < diaNacimiento) {
-                edad--;
-            }
-
         }
-
-        return edad;
 
     }
 
-    input_nacimiento_registro_admin.addEventListener("change", function() {
-        if (input_nacimiento_registro_admin.value) {
-            let edad = (calcularEdad(input_nacimiento_registro_admin.value));
-            input_edad_registro_admin.value = (edad + " años");
-        }
-    });
+    return edad;
 
 }
+
+input_nacimiento_registro_admin.addEventListener("change", function() {
+    if (input_nacimiento_registro_admin.value) {
+        let edad = (calcularEdad(input_nacimiento_registro_admin.value));
+        input_edad_registro_admin.value = (edad + " años");
+    }
+});
 
 botonGuardar.addEventListener('click', validar)

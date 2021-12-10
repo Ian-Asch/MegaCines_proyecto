@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const Usuario = require('../models/usuarios.model');
+const mailer = require('../templates/singup-mail');
 
 router.post('/registrar-usuario', (req, res) => {
     let body = req.body;
@@ -31,6 +32,8 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: 'El usuario se registro exitosamente',
                 usuario_db
             });
+            mailer.enviar_mail(usuario_db.correo, usuario_db.nombre, usuario_db.contrasena);
+
         }
     });
 

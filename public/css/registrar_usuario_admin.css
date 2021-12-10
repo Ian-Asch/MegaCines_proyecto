@@ -1,18 +1,21 @@
-h1{
+h1 {
     font-size: 25pt;
     font-weight: bold;
     margin: 50px 0 50px 0;
 }
 
-fieldset{
-    border: solid 1px rgb(220, 220, 220);
+fieldset {
     padding: 20px;
 }
 
-form{
+form {
     margin-bottom: 100px;
 }
 
-.radio-label{
+.radio-label {
     display: inline;
+}
+
+h2 {
+    font-weight: bolder;
 }

@@ -32,17 +32,19 @@
         <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
     </header>
     <main>
-        <h1 class="texto_centrado">Registro Usuario</h1>
+        <h1 class="texto_centrado">Registro nuevo usuario</h1>
 
 
         <form name="data-usuario" action="*" method="post">
             <section>
-                <fieldset>
+                <fieldset id="field_usuario">
                     <div>
+                        <h2>Tipo de usuario</h2>
+                        <br>
                         <label for="soporte" class="radio-label">Soporte:</label>
-                        <input type="radio" id="soporte" name="tipo-usuario">
+                        <input type="radio" id="soporte" name="tipo-usuario" value="soporte" required>
                         <label for="cliente" class="radio-label">Cliente:</label>
-                        <input type="radio" id="cliente" name="tipo-usuario">
+                        <input type="radio" id="cliente" name="tipo-usuario" value="cliente" required>
                     </div>
                 </fieldset>
 
@@ -51,7 +53,7 @@
 
 
                     <div>
-                        <label for="nombre_usuario">Nombre:</label>
+                        <label for="nombre_usuario">Primer nombre:</label>
                         <input type="text" class="field" id="nombre" required>
                     </div>
                     <div>
@@ -63,7 +65,7 @@
                         <input type="text" class="field" id="primer_apellido" required>
                     </div>
                     <div>
-                        <label for="segundo_apellido">Segundo apellido:</label>
+                        <label for="segundo_apellido">Segundo apellido (opcional):</label>
                         <input type="text" class="field" id="segundo_apellido">
                     </div>
                     <div>
@@ -75,9 +77,8 @@
                         <input type="date" class="field" id="nacimiento" required min="1921-01-01" max="2012-01-01">
                     </div>
                     <div>
-                        <!--este debe ser calculado automaticamente con la fecha-->
                         <label for="edad">Edad:</label>
-                        <input type="text" class="field" id="edad">
+                        <input type="text" class="field" id="edad" readonly>
                     </div>
                     <div>
                         <label for="correo">Correo electrónico:</label>
@@ -105,7 +106,8 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-    <script src="js/controlador-general.js"></script>.
+    <script src="js/controlador-general.js"></script>
+    <script src="js/usuarios-admin-servicio.js"></script>
     <script src="js/registrar_usuario_admin.js"></script>
 </body>
 

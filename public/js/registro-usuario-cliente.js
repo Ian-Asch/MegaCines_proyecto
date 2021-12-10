@@ -43,7 +43,7 @@ const obtenerDatos = () => {
     let correo = input_correo.value;
     let contrasena = input_contrasena.value;
 
-    let registro_exitoso = registrar_usuario(nombre,sgndNombre,apellido,sgndApellido,correo,contrasena,identificacion,nacimiento,"cliente");
+    let registro_exitoso = registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, "cliente");
 
     if (registro_exitoso) {
         document.querySelectorAll("input").forEach((input) => {
