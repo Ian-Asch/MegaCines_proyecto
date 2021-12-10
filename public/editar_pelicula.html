@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/editar_pelicula.css">
     <title>Editar Película</title>
 </head>
@@ -25,39 +26,64 @@
     </header>
 
     <main>
+        <h1 class="texto_centrado">Editar película</h1>
+        <section>
+            <form name="editar_cadena" action="*" method="post">
+                <div>
+                    <label for="titulo_pelicula">Título de película:</label>
+                    <input type="text" class="field" id="titulo_pelicula" value="Eternals" required>
+                </div>
+                <div>
+                    <label for="categorias">Categorías:</label>
+                    <input type="text" class="field" id="categorias" value="Terror,Acción,Comedia,Drama">
+                </div>
+                <div>
+                    <label for="idiomas">Idiomas disponibles:</label>
+                    <input type="text" class="field" id="idiomas" value="Español,Inglés">
+                </div>
+                <div>
+                    <label for="duracion">Duración de la película:</label>
+                    <input type="text" class="field" id="duracion" value="140" required>
+                </div>
+                <div>
+                    <label for="clasificacion">Película clasificada:</label>
+                    <input type="text" class="field" id="clasificacion" value="Mayores de 15(B15)">
+                </div>
 
-        <div class="container">
+                <div>
+                    <label for="salas">Salas en las que se presentará:</label>
+                    <input type="text" class="field" id="salas" value="Sala 4,Sala 6">
+                </div>
+                <div>
+                    <!--este debe ser calculado automaticamente con la fecha-->
+                    <label for="fecha">Rango de fechas:</label>
+                    <input type="date" class="field" id="fecha">
+                </div>
+                <div>
+                    <label for="">Horario de proyección:</label>
+                    <label for="horario_1">De:</label>
+                    <input type="text" class="field" id="horario_1" value="13:00">
+                    <label for="horario_2">Hasta:</label>
+                    <input type="text" class="field" id="horario_2" value="15:20">
+                </div>
+                <div>
+                    <label for="entradas">Costo de entradas:</label>
+                    <input type="text" class="field" id="entradas" value="3000">
+                </div>
+                <br><br>
 
-            <Table>
-                <tr>
-                    <th>Nombre de pelicula:</th>
-                    <th>Eternals</th>
-                </tr>
-                <tr>
-                    <th>Código de cadena:</th>
-                    <th>24123</th>
-                </tr>
-                <tr>
-                    <th>Sipnosis:</th>
-                    <th>Narra la saga de los "Eternals", una raza de seres inmortales que vivieron en la Tierra y dieron forma a su historia y sus civilizaciones</th>
-                </tr>
-                <tr>
-                    <th>Reparto:</th>
-                    <th>Richard Madden, Kit Harington, Angelina Jolie, Salma Hayek></th>
-                </tr>
-
-                <tr>
-                    <th>Portada de película:</th>
-                    <th><img src="imgs/eternals.jpg" alt="eternals"></th>
-                </tr>
-            </Table>
+                </div>
+            </form>
 
             <div>
-                <button type="button" id="btn-registrar" onclick=" window.location.href='' ">Guardar cambios</button>
+
             </div>
 
-        </div>
+            <div>
+                <button type="button" id="btn-regresar" onclick="window.location.href='configuracion_cadenas.html'">Regresar</button> <button type="button" id="btn-registrar" onclick="history.back()">Guardar cambios</button>
+            </div>
 
+        </section>
 
     </main>
 
@@ -91,6 +117,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="js/editar_peliculas.js"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>

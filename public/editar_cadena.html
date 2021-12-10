@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/formularios.css">
     <link rel="stylesheet" href="css/editar_cadena.css">
     <title>Editar Cadena</title>
 </head>
@@ -26,29 +27,53 @@
 
     <main>
 
-        <div class="container">
+        <h1 class="texto_centrado">Editar cadena</h1>
+        <section>
+            <div>
 
-            <Table>
-                <tr>
-                    <th>Nombre de cadena:</th>
-                    <th>CinePolis</th>
-                </tr>
-                <tr>
-                    <th>Código de cadena:</th>
-                    <th>24123</th>
-                </tr>
-                <tr>
-                    <th>Ubicaciones de la cadena:</th>
-                    <th>Desamparados, Heredia, Cartago, Escazú</th>
-                </tr>
+                <form name="editar_cadena" action="*" method="post">
+                    <div>
+                        <label for="codigo_cadena">Código de cadena:</label>
+                        <input type="text" class="field" id="codigo_cadena" value="234234" required>
+                    </div>
+                    <div>
+                        <label for="nombre_cadena">Nombre de cadena:</label>
+                        <input type="text" class="field" id="nombre_cadena" value="Cinemark">
+                    </div>
+                    <div>
+                        <label for="ubicaciones_cadena">Ubicaciones:</label>
+                        <input type="text" class="field" id="ubicaciones_cadena" value="San José,Alajuela,Heredia" required>
+                    </div>
+                    <div>
+                        <label for="tipos_asiento">Tipos de asiento:</label>
+                        <input type="text" class="field" id="tipos_asiento" value="Regular,Ley 7600">
+                    </div>
+                    <div>
+                        <label for="categorias">Categorías:</label>
+                        <input type="text" class="field" id="categorias" value="Terror,Acción,Comedia,Drama">
+                    </div>
+                    <div>
+                        <label for="tipo_salas">Tipo de salas:</label>
+                        <input type="text" class="field" id="tipo_salas" value="Regular,3D,IMAX">
+                    </div>
+                    <div>
+                        <!--este debe ser calculado automaticamente con la fecha-->
+                        <label for="ganancia">Margen de ganancia:</label>
+                        <input type="text" class="field" id="ganancia" value="25%">
+                    </div>
 
-            </Table>
+            </div>
+            </form>
 
             <div>
-                <button type="button" id="btn-registrar" onclick="history.back()">Guardar cambios</button>
+
             </div>
 
-        </div>
+            <div>
+                <button type="button" id="btn-regresar" onclick="window.location.href='configuracion_cadenas.html'">Regresar</button> <button type="button" id="btn-registrar" onclick="history.back()">Guardar cambios</button>
+            </div>
+
+        </section>
 
 
     </main>

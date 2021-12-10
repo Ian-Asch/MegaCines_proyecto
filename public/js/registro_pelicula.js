@@ -37,6 +37,7 @@ const validar = () => {
     let expReg_hora = /^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/i;
     let expReg_tiempo = /^[0-9]+$/i;
     let expReg_titulo = /^[a-z]+$/i;
+    let expReg_costo = /^[0-9]{4}$/;
 
     //Validacion de titulo de pelicula
     if (titulo.value == "" || !expReg_titulo.test(titulo.value)) {
@@ -252,6 +253,22 @@ const validar = () => {
             icon: 'warning',
             title: 'No se pudo registrar la película',
             text: 'Por favor ingrese la información requerida'
+        })
+    }
+
+    if (costoEntrada.value == "" || !expReg_costo.test(costoEntrada.value)) {
+        error = true;
+        costoEntrada.classList.add("error-input");
+
+
+    } else {
+        costoEntrada.classList.remove("error-input");
+        console.log('El costo de la entrada es de: ' + costoEntrada.value);
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Película registrada exitosamente'
+
         })
     }
 }

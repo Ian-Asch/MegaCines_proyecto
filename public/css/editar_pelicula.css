@@ -36,3 +36,30 @@ th img {
     width: 450px;
     height: 200px;
 }
+
+h1 {
+    font-size: 25pt;
+    font-weight: bold;
+    margin: 50px 0 50px 0;
+}
+
+fieldset {
+    border: solid 1px rgb(220, 220, 220);
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 100px;
+}
+
+.radio-label {
+    display: inline;
+}
+
+.texto_centrado {
+    text-align: center;
+}
+
+#btn-regresar {
+    margin: auto;
+}
