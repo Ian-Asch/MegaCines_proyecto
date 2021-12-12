@@ -1,70 +1,44 @@
 'use strict';
 
-const tabla = document.querySelector("tbody");
+const secc_usuarios = document.querySelector("#secc-usuarios");
+const input_buscar = document.querySelector("#input-buscar");
 
 
+const todo = async() => {
+    const usuarios_lista = await listar_usuarios();
 
-const boton_registrar_tandas = document.querySelector(".boton-registrar-tanda")
+    const mostrar_usuarios = (lista) => {
+        secc_usuarios.innerHTML = "";
 
-const registrar_tandas = () => {
-    window.location.href = "registrar-tanda.html";
+        lista.forEach((usuario) => {
+            let div = document.createElement("div");
+            div.classList.add("div-usuario");
+
+            let nombre = document.createElement("h1");
+            nombre.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
+
+            let tipo_usuario = document.createElement("p");
+            tipo_usuario.innerText = usuario.tipo_usuario;
+
+            div.appendChild(nombre);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(tipo_usuario);
+
+            // div.addEventListener("click",() => {window.location.href = ""})
+
+            secc_usuarios.appendChild(div);
+        });
+    };
+
+    mostrar_usuarios(usuarios_lista);
+
+    input_buscar.addEventListener('keyup', () => {
+        let filtro_texto = input_buscar.value
+        let lista_filtrada = usuarios_lista.filter((usuario) => {
+            return usuario.nombre.toLowerCase().includes(filtro_texto.toLowerCase());
+        })
+        mostrar_usuarios(lista_filtrada);
+    });
 };
 
-boton_registrar_tandas.addEventListener("click", registrar_tandas);
-
-
-
-const mostarar_tandas_todo = async() => {
-    let lista_tandas = await listar_tandas();
-
-    lista_tandas.forEach((tanda) => {
-        let table_row = document.createElement("tr");
-
-        let td_nombre_pelicula = document.createElement("td");
-        td_nombre_pelicula.innerText = tanda.pelicula;
-
-        let td_fecha = document.createElement("td");
-        td_fecha.innerText = tanda.fecha
-
-        let td_sala = document.createElement("td");
-        td_sala.innerText = tanda.sala
-
-        let td_cine = document.createElement("td");
-        td_cine.innerText = tanda.cine
-
-        let td_btn_editar = document.createElement("td");
-        let boton_editar = document.createElement("button");
-        boton_editar.type = "button";
-        boton_editar.innerText = "Editar";
-
-        td_btn_editar.appendChild(boton_editar)
-
-        let td_btn_eliminar = document.createElement("td");
-        let boton_eliminar = document.createElement("button");
-        boton_eliminar.type = "button";
-        boton_eliminar.innerText = "Eliminar";
-
-        td_btn_eliminar.appendChild(boton_eliminar)
-
-        table_row.appendChild(td_nombre_pelicula)
-        table_row.appendChild(td_fecha)
-        table_row.appendChild(td_sala)
-        table_row.appendChild(td_cine)
-        table_row.appendChild(td_btn_editar)
-        table_row.appendChild(td_btn_eliminar)
-
-        tabla.appendChild(table_row);
-
-        boton_editar.addEventListener("click", () => {
-            localStorage.setItem("tanda-seleccionada", JSON.stringify(tanda))
-            window.location.href = "editar-tandas.html"
-        });
-
-
-        // new Date(tanda.fecha).getFullYear();
-        // new Date(tanda.fecha).getMonth();
-        // new Date(tanda.fecha).getDay();
-    });
-}
-
-mostarar_tandas_todo()
+todo()
