@@ -30,7 +30,7 @@ const calcular_edad = (fecha_nacimiento) => {
     return edad;
 };
 
-const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_apellido,correo,contrasena,identificacion,fecha_nacimiento,tipo_usuario) => {
+const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_apellido,correo,contrasena,identificacion,fecha_nacimiento,tipo_usuario,foto=null) => {
     let registro_exitoso = false;
     
     await axios({
@@ -47,7 +47,8 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
             identificacion: identificacion,
             fecha_nacimiento: fecha_nacimiento,
             edad: calcular_edad(fecha_nacimiento),
-            tipo_usuario: tipo_usuario
+            tipo_usuario: tipo_usuario,
+            foto: foto
         }
     }).then((response) => {
         Swal.fire({

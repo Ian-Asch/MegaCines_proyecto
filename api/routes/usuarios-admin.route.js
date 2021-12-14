@@ -18,7 +18,8 @@ router.post('/registrar-usuario', (req, res) => {
         identificacion: body.identificacion,
         fecha_nacimiento: body.fecha_nacimiento,
         edad: body.edad,
-        tipo_usuario: body.tipo_usuario
+        tipo_usuario: body.tipo_usuario,
+        foto: body.foto
     });
 
     nuevo_usuario.save((err, usuario_db) => {
@@ -77,7 +78,8 @@ router.get('/iniciar-sesion', (req, res) => {
                         identificacion: usuario.identificacion,
                         fecha_nacimiento: usuario.fecha_nacimiento,
                         edad: usuario.edad,
-                        tipo_usuario: usuario.tipo_usuario
+                        tipo_usuario: usuario.tipo_usuario,
+                        foto: usuario.foto
                     });
                 } else {
                     res.json({

@@ -13,6 +13,8 @@ const input_contrasena = document.querySelector("#contrasena");
 const input_repcontrasena = document.querySelector("#repcontrasena");
 const boton_ver_contrasena = document.querySelector("#boton-contrasena");
 
+const boton_subir_imagen = document.querySelector("#btn-subir-imagen");
+const contenedor_foto = document.querySelector("#contenedor-foto");
 
 let fecha_max = new Date();
 let dia_max = fecha_max.getDate();
@@ -49,7 +51,15 @@ const obtenerDatos = () => {
         document.querySelectorAll("input").forEach((input) => {
             input.value = "";
         });
-        window.location.href = "login_page.html";
+        Swal.fire({
+            icon: "success",
+            title: "Registro exitoso",
+            text: "Ahora puede iniciar sesion"
+        }).then((res) => {
+            if (res.isConfirmed) {
+                window.location.href = "login_page.html";
+            }
+        });
     }
 }
 
@@ -171,31 +181,6 @@ const validar = () => {
             text: 'Por favor revise los campos resaltados'
         });
     }
-
-
-}
-
-const calcularEdad = (input_nacimiento) => {
-    const fechaActual = new Date();
-    const anoActual = parseInt(fechaActual.getFullYear());
-    const mesActual = parseInt(fechaActual.getMonth()) + 1;
-    const diaActual = parseInt(fechaActual.getDay());
-
-    const anoNacimiento = parseInt(String(input_nacimiento).substring(0, 4));
-    const mesNacimiento = parseInt(String(input_nacimiento).substring(5, 7));
-    const diaNacimiento = parseInt(String(input_nacimiento).substring(8, 10));
-    let edad = anoActual - anoNacimiento;
-    if (mesActual < mesNacimiento) {
-        edad--;
-    } else if (mesActual == mesNacimiento) {
-        if (diaActual < diaNacimiento) {
-            edad--;
-        }
-
-    }
-
-    return edad;
-
 }
 
 function mostrarContrasena() {
@@ -215,5 +200,6 @@ function mostrarContrasena() {
     }
 }
 
+boton_subir_imagen.addEventListener("click",subir_imagen(contenedor_foto));
 boton_ver_contrasena.addEventListener('click', mostrarContrasena);
 boton_enviar.addEventListener('click', validar);

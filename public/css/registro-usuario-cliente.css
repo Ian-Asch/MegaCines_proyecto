@@ -35,7 +35,7 @@
         
         #secc-imagen button {
             /* display: block; */
-            width: 30%;
+            width: auto !important;
         }
         
         #div-inputs {

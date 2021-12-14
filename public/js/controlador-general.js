@@ -18,9 +18,28 @@ const primera_letra_mayuscula = (palabra) => {
 
         nueva_palabra += letra;
     }
-
+    
     return nueva_palabra;
 };
+
+
+const subir_imagen = (contenedor_img) => {
+    //Usar esta funcion en un event listener
+    //contenedor_img es un elemento <img> en donde se va a mostrar la imagen subida
+
+    //Ejemplo:
+    // boton_subir_imagen.addEventListener("click",subir_imagen(contenedor_foto));
+
+    const myWidget = cloudinary.createUploadWidget({cloudName: 'MegaCines',uploadPreset: 'yyuc70y1'}, (error, result) => { 
+        if (!error && result && result.event === "success") {
+            console.log('Imagen guardada', result.info);
+            contenedor_img.src = result.info.secure_url;
+        }
+    });
+    
+    return () => {myWidget.open();};
+};
+
 
 const cerrar_sesion = () => {
     localStorage.clear();
