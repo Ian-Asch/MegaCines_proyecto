@@ -123,6 +123,14 @@ div {
     margin: 20px;
 }
 
+.swal2-container{
+    margin: unset;
+}
+
+.swal2-header *{
+    margin: unset;
+}
+
 #button1,
 #button2 {
     display: inline-block;

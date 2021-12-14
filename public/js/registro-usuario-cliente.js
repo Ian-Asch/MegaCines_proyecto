@@ -35,7 +35,7 @@ fecha_max = anio_max + "-" + mes_max + "-" + dia_max;
 input_nacimiento.min = fecha_min
 input_nacimiento.max = fecha_max
 
-const obtenerDatos = () => {
+const obtenerDatos = async() => {
     let nombre = input_nombre.value;
     let sgndNombre = input_sgnd_nombre.value;
     let apellido = input_apellido.value;
@@ -44,13 +44,16 @@ const obtenerDatos = () => {
     let nacimiento = input_nacimiento.value;
     let correo = input_correo.value;
     let contrasena = input_contrasena.value;
+    let foto = contenedor_foto.src;
 
-    let registro_exitoso = registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, "cliente");
+    let registro_exitoso = await registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, "cliente", foto);
+    console.log(registro_exitoso)
 
     if (registro_exitoso) {
         document.querySelectorAll("input").forEach((input) => {
             input.value = "";
         });
+        contenedor_foto.src = "imgs/blank-profile.png";
         Swal.fire({
             icon: "success",
             title: "Registro exitoso",

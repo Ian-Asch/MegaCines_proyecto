@@ -71,12 +71,12 @@ input:focus{
 .esconder{
     display: none !important;
 }
-#boton-guardar{
+.boton2{
     background-color: rgba(0, 0, 0, 0.7);
     color: #eb8f38;
 }
 
-#boton-guardar:hover{
+.boton2:hover{
     background-color: rgba(0, 0, 0);
     outline: solid 1px #eb8f38;
 }

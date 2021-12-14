@@ -2,8 +2,12 @@
 
 let usuario = JSON.parse(localStorage.getItem('info-usuario'));
 
+const boton_subir_imagen = document.querySelector("#btn-subir-imagen");
 const boton_editar = document.querySelector("#boton-editar-info");
 const boton_guardar = document.querySelector("#boton-guardar");
+const boton_cancelar = document.querySelector("#boton-cancelar");
+
+const contenedor_imagen = document.querySelector("#imagen-usuario");
 
 //lista de "p"s que muestran la informacion
 const nombre_usuario_p = document.querySelector("#nombre-usuario");
@@ -39,8 +43,13 @@ const llenar_espacios = () => {
     cedula_p.innerText = usuario.identificacion;
     fecha_nacimiento_p.innerText = usuario.fecha_nacimiento;
     edad_p.innerText = usuario.edad;
+    if (usuario.foto) {
+        contenedor_imagen.src = usuario.foto;
+    } else {
+        contenedor_imagen.src = "imgs/blank-profile.png";
+    }
 
-    nombre_completo.innerText = `${usuario.nombre} ${usuario.segundo_nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
+    nombre_completo.innerText = usuario.nombre_completo;
 };
 
 
@@ -50,7 +59,9 @@ const mostrar_inputs = () => {
     });
 
     boton_editar.classList.add("esconder");
+    boton_subir_imagen.classList.remove("esconder");
     boton_guardar.classList.remove("esconder");
+    boton_cancelar.classList.remove("esconder");
 
     input_nombre.value = usuario.nombre;
     input_segundo_nombre.value = usuario.segundo_nombre;
@@ -72,7 +83,9 @@ const mostrar_parrafos = () => {
     });
 
     boton_editar.classList.remove("esconder");
+    boton_subir_imagen.classList.add("esconder");
     boton_guardar.classList.add("esconder");
+    boton_cancelar.classList.add("esconder");
 
     llenar_espacios();
 
@@ -90,7 +103,7 @@ const verificar_espacios = () => {
 
     let verificado = true;
 
-    lista_inputs.forEach((element) => {
+    document.querySelectorAll("[required]").forEach((element) => {
         if (element.value) {
             element.classList.remove("error");
         } else {
@@ -106,10 +119,6 @@ const verificar_espacios = () => {
     }
     if (!expresion_solo_letras.test(input_primer_apellido.value)) {
         input_primer_apellido.classList.add("error");
-        verificado = false;
-    }
-    if (!expresion_solo_letras.test(input_segundo_apellido.value)) {
-        input_segundo_apellido.classList.add("error");
         verificado = false;
     }
 
@@ -135,6 +144,7 @@ const guardar_cambios = () => {
     usuario.identificacion = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;
     usuario.edad = calcular_edad(new Date(input_nacimiento.value));
+    usuario.foto = contenedor_imagen.src;
 
     modificar_usuario(usuario);
 };
@@ -142,9 +152,8 @@ const guardar_cambios = () => {
 
 llenar_espacios();
 
-boton_editar.addEventListener('click', () => {
-    mostrar_inputs()
-});
+
+boton_editar.addEventListener('click',mostrar_inputs);
 
 boton_guardar.addEventListener('click', () => {
     if (verificar_espacios()) {
@@ -160,3 +169,7 @@ boton_guardar.addEventListener('click', () => {
         });
     }
 });
+
+boton_cancelar.addEventListener("click",mostrar_parrafos)
+
+boton_subir_imagen.addEventListener("click",subir_imagen(contenedor_imagen))

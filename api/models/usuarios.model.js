@@ -7,6 +7,7 @@ const schema_usuario = new mongoose.Schema({
     segundo_nombre: {type: String, required: false, unique: false},
     primer_apellido: {type: String, required: true, unique: false},
     segundo_apellido: {type: String, required: false, unique: false},
+    nombre_completo: {type: String, required: true, unique: false},
     correo: {type: String, required: true, unique: true},
     contrasena: {type: String, required: true, unique: false},
     identificacion: {type: Number, required: true, unique: true},
