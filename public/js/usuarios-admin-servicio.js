@@ -156,3 +156,12 @@ const listar_usuarios = async() => {
 
     //Consegur el valor de este return puede ser complicado
 };
+
+const eliminar_usuario = async(id_usuario) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-usuario',
+        responseType: 'json',
+        data: { id: id_usuario }
+    });
+};

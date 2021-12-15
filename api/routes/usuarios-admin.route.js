@@ -118,4 +118,19 @@ router.put('/modificar-usuario', (req, res) => {
     });
 });
 
+router.delete('/eliminar-usuario',(req,res) => {
+    Usuario.findOneAndRemove({ _id: req.body.id }, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar el usuario',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'El usuario se eliminó correctamente'
+            });
+        }
+    });
+});
+
 module.exports = router;

@@ -45,12 +45,13 @@ const listar_peliculas = async() => {
     });
 
     return lista_peliculas;
+};
 
-    // Esta es la manera en la que se usa esta funcion:
-
-    // let variable = await listar_peliculas();
-
-    // De esta manera se puede agarrar el valor del return
-    // Recordar usar el 'await' esto es muy importante
-    // Si no se usa el await no se puede agarrar el valor del return
+const eliminar_pelicula = async(id_pelicula) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-pelicula',
+        responseType: 'json',
+        data: { id: id_pelicula }
+    });
 };

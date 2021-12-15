@@ -48,7 +48,6 @@ router.get('/listar-peliculas',(req,res) => {
 });
 
 // router.get('/buscar-pelicula',(req,res) => {}); //Estas funciones no se si se van a usar al final
-// router.put('/modificar-tanda',(req,res) => {});
 
 router.put('/modificar-pelicula',(req,res) => {
     Pelicula.updateOne({_id: req.body.id},{$set: req.body},(err,info) => {
@@ -61,6 +60,21 @@ router.put('/modificar-pelicula',(req,res) => {
             res.json({
                 msj: "La pelicula se modifico exitosamente",
                 info
+            });
+        }
+    });
+});
+
+router.delete('/eliminar-pelicula',(req,res) => {
+    Pelicula.findOneAndRemove({ _id: req.body.id }, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar la pelicula',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'La pelicula se eliminó correctamente'
             });
         }
     });
