@@ -140,6 +140,7 @@ const guardar_cambios = () => {
     usuario.segundo_nombre = primera_letra_mayuscula(input_segundo_nombre.value);
     usuario.primer_apellido = primera_letra_mayuscula(input_primer_apellido.value);
     usuario.segundo_apellido = primera_letra_mayuscula(input_segundo_apellido.value);
+    usuario.nombre_completo = generar_nombre_completo(input_nombre.value,input_segundo_nombre.value,input_primer_apellido.value,input_segundo_apellido.value);
     usuario.correo = input_correo.value;
     usuario.identificacion = input_cedula.value;
     usuario.fecha_nacimiento = input_nacimiento.value;

@@ -18,7 +18,7 @@
     <header>
         <img src="imgs/MegaCines_logo.jpg" onclick="window.location.href = 'landing_page.html'">
         <nav>
-            <a href="perfil_jefe_soporte.html">Perfil</a>
+            <a href="pagina-configuracion-soporte.html">Configuracion</a>
         </nav>
         <button type="button" class="boton-header btn-cerrar-sesion">Cerrar sesión</button>
     </header>
@@ -48,7 +48,7 @@
             <div class="info-div">
                 <label for="segundo-apellido">Segundo apellido:</label>
                 <p class="label-p" id="segundo-apellido"></p>
-                <input type="text" class="esconder" id="input-segundo-apellido" required>
+                <input type="text" class="esconder" id="input-segundo-apellido">
             </div>
 
             <div class="info-div">
@@ -76,11 +76,12 @@
         </div>
 
         <div id="secc-imagen">
-            <img src="imgs/blank-profile.png">
+            <img id="imagen-usuario">
 
-            <button type="button">Cambiar imagen</button>
+            <button type="button" class="esconder" id="btn-subir-imagen">Subir imagen</button>
             <button type="button" id="boton-editar-info">Editar información</button>
-            <button type="button" class="esconder" id="boton-guardar">Guardar cambios</button>
+            <button type="button" class="esconder boton2" id="boton-guardar">Guardar cambios</button>
+            <button type="button" class="esconder boton2" id="boton-cancelar">Cancelar</button>
         </div>
 
         <div id="secc-botones">

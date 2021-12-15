@@ -31,16 +31,16 @@ const calcular_edad = (fecha_nacimiento) => {
 };
 
 const generar_nombre_completo = (nombre,segundo_nombre,primer_apellido,segundo_apellido) => {
-    let nombre_completo = nombre;
+    let nombre_completo = primera_letra_mayuscula(nombre);
 
     if (segundo_nombre) {
-        nombre_completo += ` ${segundo_nombre}`;
+        nombre_completo += ` ${primera_letra_mayuscula(segundo_nombre)}`;
     }
 
-    nombre_completo += ` ${primer_apellido}`;
+    nombre_completo += ` ${primera_letra_mayuscula(primer_apellido)}`;
 
     if (segundo_apellido) {
-        nombre_completo += ` ${segundo_apellido}`;
+        nombre_completo += ` ${primera_letra_mayuscula(segundo_apellido)}`;
     }
     
     return nombre_completo;
