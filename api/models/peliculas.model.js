@@ -11,7 +11,8 @@ const schema_pelicula = new mongoose.Schema({
     idioma: {type: String, required: true, unique: false},
     subtitulos: {type: Boolean, required: true, unique: false},//Este atributo es bolean entonces su valor solo puede ser true o false.
     idioma_subtitulos: {type: String, required: false, unique: false},
-    categoria_edad: {type: String, required: false, unique: false}
+    categoria_edad: {type: String, required: false, unique: false},
+    imagen: {type: String, required: false, unique: false}
 });
 
 module.exports = mongoose.model('Pelicula',schema_pelicula,'Peliculas')

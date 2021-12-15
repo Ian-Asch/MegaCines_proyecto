@@ -13,7 +13,8 @@ router.post('/registrar-pelicula',(req,res) => {
         categorias: req.body.categorias,
         idioma: req.body.idioma,
         subtitulos: req.body.subtitulos,
-        idioma_subtitulos: req.body.idioma_subtitulos
+        idioma_subtitulos: req.body.idioma_subtitulos,
+        imagen: req.body.imagen
     });
 
     nueva_pelicula.save((err, pelicula_bd) => {

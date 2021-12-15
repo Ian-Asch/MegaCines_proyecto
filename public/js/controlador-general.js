@@ -34,7 +34,7 @@ const subir_imagen = (contenedor_img) => {
 
     const myWidget = cloudinary.createUploadWidget({cloudName: 'MegaCines',uploadPreset: 'yyuc70y1'}, (error, result) => { 
         if (!error && result && result.event === "success") {
-            console.log('Imagen guardada', result.info);
+            console.log('Imagen guardada');
             contenedor_img.src = result.info.secure_url;
         }
     });

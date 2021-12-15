@@ -36,39 +36,26 @@
                         <br>
 
                         <label for="txt_titulo" class="labels">Ingrese el título de la película:</label>
-                        <input class="width" placeholder="Ingrese el titulo de la pelicula:" id="txt_titulo"> <br> <br>
+                        <input class="width" placeholder="Ingrese el titulo de la pelicula:" id="txt_titulo" required> <br>
 
-                        <label class="labels" for="">Suba la imagen de la película:</label> <input type="file"> <br> <br>
+                        <label for="text-descripcion" class="labels">Descripcion de la película:</label>
+                        <textarea class="width" id="text-descripcion" cols="30" rows="10"></textarea> <br>
 
+                        <label for="anio-pelicula" class="labels">Año de la película:</label>
+                        <input class="width" type="number" placeholder="Ingrese el año de la pelicula:" id="anio-pelicula" required> <br>
 
-
-                        <label for="" class="labels">Selecione la categoría de la película:</label>
-                        <input type="checkbox" id="terror" name="terror" value="terror">
-                        <label for="terror">Terror</label>
-                        <input type="checkbox" id="ciencia" name="Ciencia" value="Ciencia">
-                        <label for="ciencia">Ciencia ficción</label>
-                        <input type="checkbox" id="drama" name="drama" value="drama">
-                        <label for="drama">Drama</label>
-                        <input type="checkbox" id="accion" name="accion" value="accion">
-                        <label for="accion">Acción</label>
-                        <input type="checkbox" id="comedia" name="comedia" value="comedia">
-                        <label for="comedia">Comedia</label>
-                        <input type="checkbox" id="infantiles" name="infantiles" value="infantiles">
-                        <label for="infantiles">Infantiles</label> <br> <br>
-
-                        <label for="" class="labels">Idiomas disponibles y subtítulos:</label>
-                        <input type="checkbox" id="espanol" name="espanol" value="espanol">
-                        <label for="VIP">Español</label>
-                        <input type="checkbox" id="ingles" name="ingles" value="ingles">
-                        <label for="">Inglés</label>
-                        <input type="checkbox" id="sub_espa" name="sub_espa" value="sub_espa">
-                        <label for="regular">Sub Español</label>
-                        <input type="checkbox" id="sub_ingles" name="sub_ingles" value="sub_ingles">
-                        <label for="regular">Sub Inglés</label> <br> <br>
+                        <label for="text-categoria" class="labels">Ingrese la categoría de la película:</label>
+                        <input type="text" class="width" id="text-categoria"> <br>
+                    
+                        <label for="txt-idioma" class="labels">Idioma</label>
+                        <input type="text" class="width" id="txt-idioma" required> <br>
+                            
+                        <label for="txt-idioma-subtitulos" class="labels">Idioma subtítulos:</label>
+                        <input type="text" class="width" id="txt-idioma-subtitulos"> <br>
 
 
-                        <label for="txt_duracion" class="labels">Ingrese el tiempo que dura la película: <span>(minutos)</span></label>
-                        <input type="text" id="txt_duracion" name="duracion" value="" class="width"> <br><br>
+                        <label for="txt_duracion" class="labels">Duracion de la película:</label>
+                        <input type="text" id="txt_duracion" class="width" required> <br>
 
 
                         <label for="" type="text" class="labels">Clasificación de edad:</label>
@@ -78,35 +65,16 @@
                         <label for="15">Mayores de 15 (B15)</label>
                         <input type="radio" id="18" name="clasificacion" value="18">
                         <label for="18">Mayores de 18 (C)</label>
-                        <br> <br>
+                        <br>
 
-                        <label for="" class="labels">Salas en las que se presentará la película:</label>
-
-                        <input type="checkbox" value="sala1" id="sala1"> <label for="sala1">Sala 1</label>
-                        <input type="checkbox" value="sala2" id="sala2"> <label for="sala2">Sala 2</label>
-                        <input type="checkbox" value="sala3" id="sala3"> <label for="sala3">Sala 3</label>
-                        <input type="checkbox" value="sala4" id="sala4"> <label for="sala4">Sala 4</label>
-                        <input type="checkbox" value="sala5" id="sala5"> <label for="sala5">Sala 5</label>
-                        <input type="checkbox" value="sala6" id="sala6"> <label for="sala6">Sala 6</label>
-                        <br><br>
-                        <label for="" class="labels">Rango de fechas disponibles:</label>
-                        <label for="">De:</label>
-                        <input type="date" class="width-2" id="rango_1">
-                        <label for="">Hasta</label>
-                        <input type="date" class="width-2" id="rango_2">
-                        <br><br>
-                        <label for="" class="labels">Horario de proyección:</label>
-                        <label for="">De:</label>
-                        <input type="text" class="width-2" id="horario_1">
-                        <label for="">Hasta:</label>
-                        <input type="text" class="width-2" id="horario_2">
-                        <br><br>
-                        <label for="" class="labels">Determine el costo de la entrada:</label>
-                        <input type="text" class="width-2" id="costo_entrada">
+                        <label class="labels" for="">Suba la imagen de la película:</label> 
+                        <button type="button" id="btn-subir-imagen">Subir imagen</button>
+                        <img id="imagen-pelicula">
                     </fieldset>
                 </form>
                 <div>
-                    <button type="button" id="btn-regresar" onclick="window.location.href='configuracion_peliculas.html'">Regresar</button> <button type="button" id="btn-registrar">Guardar</button>
+                    <button type="button" id="btn-regresar" onclick="window.location.href='configuracion_peliculas.html'">Regresar</button> 
+                    <button type="button" id="btn-registrar">Registrar pelicula</button>
                 </div>
             </div>
         </section>
@@ -144,12 +112,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="js/registro_pelicula.js"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/controlador-general.js"></script>
     <script src="js/peliculas-servicio.js"></script>
+    <script src="js/registro_pelicula.js"></script>
     <!-- Poner script de javascript en esta linea -->
 </body>
 

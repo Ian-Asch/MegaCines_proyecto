@@ -1,5 +1,5 @@
 .estilo_form {
-    height: 650px;
+    /* height: 650px; */
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.1);
@@ -24,6 +24,7 @@ h1 {
 .labels {
     width: 40%;
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .width {
@@ -32,8 +33,13 @@ h1 {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid black;
-    margin-bottom: 3px;
+    margin-bottom:10px;
     display: inline-block;
+}
+
+textarea{
+    resize: none;
+    height: 75px;
 }
 
 div button {
@@ -49,6 +55,10 @@ div button {
 label span {
     color: rgb(175, 175, 175);
     font-size: 13px;
+}
+
+#imagen-pelicula{
+    width: 20%;
 }
 
 #btn-regresar {

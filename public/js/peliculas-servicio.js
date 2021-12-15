@@ -1,6 +1,8 @@
 'use strict';
 
-const registrar_pelicula = async(titulo,descripcion,anio,duracion,idioma,subtitulos,categorias=null,idioma_subtitulos=null,categoria_edad=null) => {
+const registrar_pelicula = async(titulo,descripcion,anio,duracion,idioma,subtitulos,categorias=null,idioma_subtitulos=null,categoria_edad=null,imagen=null) => {
+    let registro_exitoso = false;
+    
     let response = await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-pelicula',
@@ -14,7 +16,8 @@ const registrar_pelicula = async(titulo,descripcion,anio,duracion,idioma,subtitu
             idioma: idioma,
             subtitulos: subtitulos,
             idioma_subtitulos: idioma_subtitulos,
-            categoria_edad: categoria_edad
+            categoria_edad: categoria_edad,
+            imagen: imagen
         }
     });
 
@@ -29,8 +32,10 @@ const registrar_pelicula = async(titulo,descripcion,anio,duracion,idioma,subtitu
             title: "La pelicula se registro exitosamente",
             icon: 'success'
         });
-        console.log(response.data.err);
+        registro_exitoso = true;
     }
+
+    return registro_exitoso;
 };
 
 const listar_peliculas = async() => {
