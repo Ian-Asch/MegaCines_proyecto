@@ -1,21 +1,23 @@
 'use strict';
 
-const secc_usuarios = document.querySelector("#secc-usuarios");
-const input_buscar = document.querySelector("#input-buscar");
+const lista_metodos = document.querySelector("#sct-lista-metodo-pago");
+const agregar_pago = document.querySelector("#agregar-pago-sect");
+const agregar_pago_sect2 = document.querySelector("#agregar-pago-sect2");
+const buscar_pagos = document.querySelector("#buscar-pagos");
 
 
 const todo = async() => {
-    const usuarios_lista = await listar_usuarios();
+    const pagos_lista = await listar_pagos();
 
     const mostrar_usuarios = (lista) => {
-        secc_usuarios.innerHTML = "";
+        lista_metodos.innerHTML = "";
 
         lista.forEach((usuario) => {
             let div = document.createElement("div");
-            div.classList.add("div-usuario");
+            div.classList.add("div-pago");
 
             let nombre = document.createElement("h1");
-            nombre.innerText = `${usuario.nombre} ${usuario.primer_apellido} ${usuario.segundo_apellido}`;
+            nombre.innerText = `${pago.nombre} ${pago.primer_apellido} ${pago.segundo_apellido}`;
 
             let tipo_usuario = document.createElement("p");
             tipo_usuario.innerText = usuario.tipo_usuario;
@@ -26,16 +28,16 @@ const todo = async() => {
 
             // div.addEventListener("click",() => {window.location.href = ""})
 
-            secc_usuarios.appendChild(div);
+            lista_metodos.appendChild(div);
         });
     };
 
-    mostrar_usuarios(usuarios_lista);
+    mostrar_usuarios(pagos_lista);
 
-    input_buscar.addEventListener('keyup', () => {
-        let filtro_texto = input_buscar.value
-        let lista_filtrada = usuarios_lista.filter((usuario) => {
-            return usuario.nombre.toLowerCase().includes(filtro_texto.toLowerCase());
+    buscar_pagos.addEventListener('keyup', () => {
+        let filtro_texto = buscar_pagos.value
+        let lista_filtrada = pagos_lista.filter((pago) => {
+            return pago.nombre.toLowerCase().includes(filtro_texto.toLowerCase());
         })
         mostrar_usuarios(lista_filtrada);
     });
