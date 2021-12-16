@@ -53,4 +53,20 @@ router.put('/modificar-pago', (req, res) => {
     });
 });
 
+router.get('/listar-pagos',(req,res) => {
+    Pago.find((err,lista_pagos) => {
+        if (err) {
+            res.json({
+                msj: "No se pudo listar los pagos",
+                err
+            });
+        } else {
+            res.json({
+                msj: "Los pagos se listaron exitosamente",
+                lista_pagos
+            });
+        }
+    });
+});
+
 module.exports = router;

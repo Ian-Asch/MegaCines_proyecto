@@ -34,15 +34,15 @@ const registrar_pago = async(nombre_tarjeta, numero, tipo, expiracion, cvv, nomb
     }
 };
 
-const listar_peliculas = async() => {
-    let lista_peliculas = [];
+const listar_pagos = async() => {
+    let lista_pagos = [];
 
     await axios({
         method: 'get',
-        url: 'http://localhost:3000/api//listar-pago',
+        url: 'http://localhost:3000/api/listar-pagos',
         responseType: 'json'
     }).then((response) => {
-        lista_peliculas = response.data.lista_peliculas;
+        lista_pagos = response.data.lista_pagos;
     });
-    return lista_peliculas;
+    return lista_pagos;
 };
