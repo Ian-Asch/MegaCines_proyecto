@@ -1,6 +1,6 @@
 'use strict';
 
-const registrar_pelicula = async(nombre_tarjeta, numero, tipo, expiracion, cvv, nombre_dueno, direccion, provincia, postal) => {
+const registrar_pago = async(nombre_tarjeta, numero, tipo, expiracion, cvv, nombre_dueno, direccion, provincia, postal) => {
     let response = await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-pago',
