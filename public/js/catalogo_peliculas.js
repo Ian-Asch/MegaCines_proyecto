@@ -24,7 +24,7 @@ const mostrar_peliculas = (lista) => {
         secc_peliculas.appendChild(div_pelicula);
 
         div_pelicula.addEventListener("click",() => {
-            window.location.href = "perfil_pelicula.html";
+            window.location.href = `perfil_pelicula.html?=${pelicula.titulo}`;
         });
     });
 };

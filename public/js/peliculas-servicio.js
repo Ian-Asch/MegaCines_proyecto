@@ -53,14 +53,14 @@ const listar_peliculas = async() => {
 };
 
 const conseguir_pelicula = async(titulo_pelicula) => {
-    await axios({
+    let response = await axios({
         method: "get",
         url: 'http://localhost:3000/api/buscar-pelicula',
         responseType: "json",
         params: {titulo: titulo_pelicula}
-    }).then((response) => {
-        console.log(response.data.pelicula);
     });
+
+    return response.data.pelicula;
 };
 
 const eliminar_pelicula = async(id_pelicula) => {

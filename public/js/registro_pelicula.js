@@ -7,7 +7,6 @@ const input_categoria = document.querySelector("#text-categoria");
 const input_idioma = document.querySelector("#txt-idioma");
 const input_sub_idioma = document.querySelector("#txt-idioma-subtitulos");
 const duracion = document.querySelector("#txt_duracion");
-// const input_clasificacion_edad = document.querySelector("input:checked");
 
 const imagen_pelicula = document.querySelector("#imagen-pelicula");
 
@@ -34,6 +33,8 @@ const obtenerDatos = () => {
     let clasificacion_edad;
     if (document.querySelector("input:checked")) {
         clasificacion_edad = document.querySelector("input:checked").value
+    } else {
+        clasificacion_edad = "Para todo publico"
     }
     let imagen = imagen_pelicula.src;
     

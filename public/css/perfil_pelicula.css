@@ -8,7 +8,8 @@ main{
 }
 #imagen-div img{
     object-fit: cover;
-    height: 350px;
+    height: 400px;
+    width: 275px;
     margin-bottom: 20px;
     border: solid 4px black;
 }
@@ -26,6 +27,7 @@ label{
 #info-pelicula{
     width: 60%;
     display: inline-block;
+    /* margin-bottom: 50px; */
 }
 #descripcion-pelicula{
     margin-top: 20px;
@@ -47,7 +49,7 @@ h2{
     display: inline;
 }
 #secc-tandas{
-    margin-top: 8vh;
+    margin-top: 15vh;
 }
 .tanda{
     /* background: linear-gradient(#69057e,#50035f); */
@@ -63,6 +65,7 @@ h2{
 .tanda:hover{
     /* background: #50035f; */
     background-color: black;
+    cursor: pointer;
 }
 .titulo-boton{
     margin-bottom: 20px;

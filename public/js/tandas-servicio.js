@@ -49,6 +49,16 @@ const listar_tandas = async() => {
     //Consegur el valor de este return puede ser complicado
 };
 
+const conseguir_tandas_pelicula = async(pelicula) => {
+    let lista_tandas = await listar_tandas();
+
+    let lista_filtrada = lista_tandas.filter((tanda) => {
+        return tanda.pelicula == pelicula;
+    });
+
+    return lista_filtrada
+};
+
 const eliminar_tanda = async(id_tanda) => {
     await axios({
         method: 'delete',

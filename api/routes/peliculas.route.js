@@ -14,6 +14,7 @@ router.post('/registrar-pelicula',(req,res) => {
         idioma: req.body.idioma,
         subtitulos: req.body.subtitulos,
         idioma_subtitulos: req.body.idioma_subtitulos,
+        categoria_edad: req.body.categoria_edad,
         imagen: req.body.imagen
     });
 
