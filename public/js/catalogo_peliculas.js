@@ -22,8 +22,14 @@ const mostrar_peliculas = (lista) => {
         div_pelicula.appendChild(titulo_pelicula);
 
         secc_peliculas.appendChild(div_pelicula);
+
+        div_pelicula.addEventListener("click",() => {
+            window.location.href = "perfil_pelicula.html";
+        });
     });
 };
+
+
 
 const todo = async() => {
     const peliculas_lista = await listar_peliculas();

@@ -101,6 +101,10 @@ footer {
     text-align: center;
 }
 
+.div-pelicula:hover{
+    cursor: pointer;
+}
+
 h3{
     margin-top: 10px;
     font-weight: 600;

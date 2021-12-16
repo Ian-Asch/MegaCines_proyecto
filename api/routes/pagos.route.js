@@ -8,15 +8,15 @@ router.post('/registrar-pago', (req, res) => {
     let body = req.body;
 
     let nuevo_pago = new Pago({
-        nombre_tarjeta: body.nombre,
-        numero: body.segundo_nombre,
-        tipo: body.primer_apellido,
-        expiracion: body.segundo_apellido,
-        cvv: body.correo,
-        nombre_dueno: body.contrasena,
-        direccion: body.identificacion,
-        provincia: body.fecha_nacimiento,
-        postal: body.edad,
+        nombre_tarjeta: body.nombre_tarjeta,
+        numero: body.numero,
+        tipo: body.tipo,
+        expiracion: body.expiracion,
+        cvv: body.cvv,
+        nombre_dueno: body.nombre_dueno,
+        direccion: body.direccion,
+        provincia: body.provincia,
+        postal: body.postal,
     });
 
     nuevo_pago.save((err, usuario_db) => {

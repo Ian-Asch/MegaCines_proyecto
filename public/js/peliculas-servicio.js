@@ -43,13 +43,24 @@ const listar_peliculas = async() => {
     
     await axios({
         method: 'get',
-        url: 'http://localhost:3000/api//listar-peliculas',
+        url: 'http://localhost:3000/api/listar-peliculas',
         responseType: 'json'
     }).then((response) => {
         lista_peliculas = response.data.lista_peliculas;
     });
 
     return lista_peliculas;
+};
+
+const conseguir_pelicula = async(titulo_pelicula) => {
+    await axios({
+        method: "get",
+        url: 'http://localhost:3000/api/buscar-pelicula',
+        responseType: "json",
+        params: {titulo: titulo_pelicula}
+    }).then((response) => {
+        console.log(response.data.pelicula);
+    });
 };
 
 const eliminar_pelicula = async(id_pelicula) => {

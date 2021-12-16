@@ -24,12 +24,13 @@ const registrar_pago = async(nombre_tarjeta, numero, tipo, expiracion, cvv, nomb
             text: "Hubo un error al registrar el metodo de pago",
             icon: 'error'
         });
+        console.log(response.data);
     } else {
         Swal.fire({
             title: "El metodo de pago se registró exitósamente",
             icon: 'success'
         });
-        console.log(response.data.err);
+        console.log(response.data);
     }
 };
 

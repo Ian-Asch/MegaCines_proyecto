@@ -48,7 +48,21 @@ router.get('/listar-peliculas',(req,res) => {
     });
 });
 
-// router.get('/buscar-pelicula',(req,res) => {}); //Estas funciones no se si se van a usar al final
+router.get('/buscar-pelicula',(req,res) => {
+    Pelicula.findOne({titulo: req.query.titulo},(err,pelicula) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo encontrar la pelicula',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'Se encontro la pelicula',
+                pelicula
+            });
+        }
+    });
+});
 
 router.put('/modificar-pelicula',(req,res) => {
     Pelicula.updateOne({_id: req.body.id},{$set: req.body},(err,info) => {

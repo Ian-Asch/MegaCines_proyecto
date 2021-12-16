@@ -2,12 +2,15 @@
 
 const boton_enviar = document.querySelector("#boton-guardar");
 const input_nombre = document.querySelector("#nombre-tarjeta");
-var input_num_tarjeta = document.querySelector("#num-tarjeta");
+const input_num_tarjeta = document.querySelector("#num-tarjeta");
 const input_tipo_tarjeta = document.querySelector("#tipo-tarjeta");
+const select_mes = document.querySelector("#select-mes");
 const select_ano_exp = document.querySelector("#selectYear");
 const input_cvv = document.querySelector("#cvv");
 const input_dir_nombre = document.querySelector("#direccion-nombre");
+const input_direccion = document.querySelector("#direccion");
 const input_codigo = document.querySelector("#codigo");
+const input_provincia = document.querySelector("#provincia");
 
 const yearActual = new Date().getFullYear();
 for (let i = yearActual; i <= yearActual + 8; i++) {
@@ -17,14 +20,26 @@ for (let i = yearActual; i <= yearActual + 8; i++) {
     select_ano_exp.appendChild(opcion);
 }
 const obtenerDatos = () => {
+    let nombre_tarjeta = input_nombre.value;
+    let numero_tarjeta = input_num_tarjeta.value;
+    let tipo_tarjeta = input_tipo_tarjeta.value;
+    let fecha_expiracion = `${select_mes.value}-${select_ano_exp.value}`;
+    let numero_cvv = input_cvv.value;
+    let nombre_dueno = input_dir_nombre.value;
+    let direccion = input_direccion.value;
+    let provincia = input_provincia.value;
+    let codigo_postal = input_codigo.value;
 
-    Swal.fire({
-        'icon': 'success',
-        'title': 'Metodo de pago registrado con éxito',
+    registrar_pago(nombre_tarjeta,numero_tarjeta,tipo_tarjeta,fecha_expiracion,numero_cvv,nombre_dueno,direccion,provincia,codigo_postal);
+    
 
-    }).then(() => {
-        history.back();
-    });
+    // Swal.fire({
+    //     'icon': 'success',
+    //     'title': 'Metodo de pago registrado con éxito',
+
+    // }).then(() => {
+    //     history.back();
+    // });
 }
 
 const validar_vacios = () => {
@@ -56,8 +71,8 @@ const validar_vacios = () => {
 const validar = () => {
     let error = false;
 
-    let expReg_soloLetras = /^[a-záéióúñ]+$/i;
-    let expReg_identificacion = RegExp('[0-9]{16}');
+    let expReg_soloLetras = /^[a-záéióúñ\s]+$/i;
+    let expReg_identificacion = RegExp('[0-9]{16,}');
     let expReg_cvv = RegExp('[0-9]{3}');
     let expReg_visa = RegExp('^4[0-9]{6,}$');
     let expReg_mastercard = RegExp('^5[1-5][0-9]{5,}|222[1-9][0-9]{3,}|22[3-9][0-9]{4,}|2[3-6][0-9]{5,}|27[01][0-9]{4,}|2720[0-9]{3,}$')
