@@ -34,7 +34,7 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: 'El usuario se registro exitosamente',
                 usuario_db
             });
-            console.log("se supone que se manda el correo a " + usuario_db.correo);
+            console.log("Se envió correo de bienvenida a " + usuario_db.correo);
             mailer.enviar_mail(usuario_db.correo, usuario_db.nombre, usuario_db.contrasena);
         }
     });
