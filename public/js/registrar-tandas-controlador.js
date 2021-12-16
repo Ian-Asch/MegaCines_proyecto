@@ -8,7 +8,19 @@ const input_sala = document.querySelector("#input-Sala");
 const input_precio = document.querySelector("#input-Precio");
 const boton_enviar = document.querySelector("#boton-guardar");
 
+const llenar_select = async() => {
+    let lista_peliculas = await listar_peliculas();
 
+    lista_peliculas.forEach((pelicula) => {
+        let opcion = document.createElement("option");
+        opcion.innerText = pelicula.titulo;
+        opcion.value = pelicula.titulo;
+
+        input_pelicula.appendChild(opcion);
+    });
+}
+
+llenar_select()
 
 
 const obtenerDatos = () => {
@@ -17,10 +29,10 @@ const obtenerDatos = () => {
     let finalizacion = input_finalizacion.value;
     let hora = input_hora_inicio.value;
     let sala = input_sala.value;
-    let precio = input_precio.value;
+    let precio = Number(input_precio.value);
 
 
-    let registro_exitoso = registrar_tanda(pelicula, inicio, finalizacion, hora, sala, precio);
+    let registro_exitoso = registrar_tanda(inicio, finalizacion, hora, sala, precio, pelicula);
 
     if (registro_exitoso) {
         document.querySelectorAll("input").forEach((input) => {
@@ -59,6 +71,9 @@ input_finalizacion.max = fecha_max
 const validar = () => {
     let error = false;
 
+    if (!input_pelicula.value) {
+        error = true;
+    }
 
     if (error == false) {
         obtenerDatos();
