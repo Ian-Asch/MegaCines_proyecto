@@ -31,7 +31,7 @@ main {
 
 .div-usuario {
     border: 1px solid black;
-    height: 70px;
+    /* height: 70px; */
     width: 70%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.2);

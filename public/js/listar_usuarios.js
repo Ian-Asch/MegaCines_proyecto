@@ -8,10 +8,10 @@
 
 const secc_usuarios = document.querySelector("#secc-usuarios");
 const input_buscar = document.querySelector("#input-buscar");
-
+let usuarios_lista;
 
 const todo = async() => {
-    const usuarios_lista = await listar_usuarios();
+    usuarios_lista = await listar_usuarios();
     
     const mostrar_usuarios = (lista) => {
         secc_usuarios.innerHTML = "";
@@ -25,14 +25,28 @@ const todo = async() => {
         
             let tipo_usuario = document.createElement("p");
             tipo_usuario.innerText = usuario.tipo_usuario;
+
+            let boton_eliminar = document.createElement("button");
+            boton_eliminar.type = "button";
+            boton_eliminar.innerText = "Eliminar usuario";
         
             div.appendChild(nombre);
             div.appendChild(document.createElement("br"));
             div.appendChild(tipo_usuario);
-
-            // div.addEventListener("click",() => {window.location.href = ""})
+            div.appendChild(document.createElement("br"));
+            div.appendChild(boton_eliminar);
         
             secc_usuarios.appendChild(div);
+
+            boton_eliminar.addEventListener("click",async() => {
+                eliminar_usuario(usuario._id);
+                Swal.fire({
+                    title: "El usuario ha sido eliminado",
+                    icon: "success"
+                });
+                usuarios_lista = await listar_usuarios();
+                mostrar_usuarios(usuarios_lista);
+            });
         });
     };
 
