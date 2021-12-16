@@ -17,6 +17,8 @@ boton_registrar_tandas.addEventListener("click",registrar_tandas);
 const mostarar_tandas_todo = async() => {
     let lista_tandas = await listar_tandas();
 
+    tabla.innerHTML = "";
+
     lista_tandas.forEach((tanda) => {
         let table_row = document.createElement("tr");
 
@@ -60,6 +62,16 @@ const mostarar_tandas_todo = async() => {
             window.location.href = "editar-tandas.html"
         });
 
+        boton_eliminar.addEventListener("click",() => {
+            eliminar_tanda(tanda._id)
+
+            Swal.fire({
+                title: "Se elimino la tanda",
+                icon: "success"
+            })
+
+            mostarar_tandas_todo()
+        })
 
         // new Date(tanda.fecha).getFullYear();
         // new Date(tanda.fecha).getMonth();

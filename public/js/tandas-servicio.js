@@ -48,3 +48,12 @@ const listar_tandas = async() => {
 
     //Consegur el valor de este return puede ser complicado
 };
+
+const eliminar_tanda = async(id_tanda) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-tanda',
+        responseType: 'json',
+        data: { id: id_tanda }
+    });
+};

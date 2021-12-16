@@ -6,7 +6,7 @@ const input_finalizacion = document.querySelector("#input-finalizacion");
 const input_hora_inicio = document.querySelector("#input-Hora-de-Inicio");
 const input_sala = document.querySelector("#input-Sala");
 const input_precio = document.querySelector("#input-Precio");
-
+const boton_enviar = document.querySelector("#boton-guardar");
 
 
 

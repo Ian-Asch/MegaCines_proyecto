@@ -62,4 +62,19 @@ router.put('/modificar-tandas', (req,res) => {
     });
 });
 
+router.delete('/eliminar-tanda',(req,res) => {
+    Tanda.findOneAndRemove({ _id: req.body.id }, (err) => {
+        if (err) {
+            res.json({
+                msj: 'No se pudo eliminar la tanda',
+                err
+            });
+        } else {
+            res.json({
+                msj: 'La tanda se eliminó correctamente'
+            });
+        }
+    });
+});
+
 module.exports = router;
