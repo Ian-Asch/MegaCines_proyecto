@@ -8,7 +8,7 @@ const registrar_pelicula = async(titulo,descripcion,anio,duracion,idioma,subtitu
         url: 'http://localhost:3000/api/registrar-pelicula',
         responseType: 'json',
         data: {
-            titulo: titulo,
+            titulo: primera_letra_mayuscula(titulo),
             descripcion: descripcion,
             ano: anio,
             duracion: duracion,

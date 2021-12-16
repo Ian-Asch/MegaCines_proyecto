@@ -36,11 +36,7 @@ const todo = async() => {
     } else {
         subtitulos_pelicula.innerText = "N/A"
     }
-    if (pelicula.categoria_edad) {
-        clasificacion_edad.innerText = pelicula.categoria_edad;
-    } else {
-        clasificacion_edad.innerText = "Para todo publico";
-    }
+    clasificacion_edad.innerText = pelicula.categoria_edad;
 
     let lista_tandas_pelicula = await conseguir_tandas_pelicula(nombre_pelicula);
 
