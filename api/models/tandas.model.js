@@ -8,7 +8,7 @@ const schema_tandas = new mongoose.Schema({
     hora: {type: String, required: true, unique: false},
     sala: {type: String, required: true, unique: false},
     precio: {type: Number, required: false, unique: false},
-    pelicula: {type: String, required: true, unique: false}
+    pelicula: {type: String, required: false, unique: false}
 });
 
 module.exports = mongoose.model('Tanda',schema_tandas,'Tandas');
