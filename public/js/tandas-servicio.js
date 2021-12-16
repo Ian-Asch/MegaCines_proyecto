@@ -1,6 +1,6 @@
   'use strict';
 
-const registrar_tanda = async(pelicula,fecha_inicio,sala,cine,precio,duracion) => {
+const registrar_tanda = async(inicio,finalizacion,hora,sala,precio,pelicula) => {
     let registro_exitoso = false;
 
     let response = await axios({
@@ -8,12 +8,12 @@ const registrar_tanda = async(pelicula,fecha_inicio,sala,cine,precio,duracion) =
         url: 'http://localhost:3000/api/registrar-tanda',
         responseType: 'json',
         data:{
-            pelicula: pelicula,
-            fecha: fecha_inicio,
+            inicio: inicio,
+            finalizacion: finalizacion,
+            hora: hora,
             sala: sala,
-            cine: cine,
             precio: precio,
-            duracion: duracion
+            pelicula: pelicula
         }
     });
 

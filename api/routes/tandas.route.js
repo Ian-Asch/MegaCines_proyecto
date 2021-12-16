@@ -7,12 +7,12 @@ const Tanda = require('../models/tandas.model');
 router.post('/registrar-tanda',(req,res) => {
     //El req.body es igual al data del archivo servicio.js
     let nueva_tanda = new Tanda ({
-    pelicula: req.body.pelicula,
-    fecha: req.body.fecha,
+    inicio: req.body.inicio,
+    finalizacion: req.body.finalizacion,
+    hora: req.body.hora,
     sala: req.body.sala,
-    cine: req.body.cine,
     precio: req.body.precio,
-    duracion: req.body.duracion
+    pelicula: req.body.pelicula
     })
 
     nueva_tanda.save((err,tanda_bd) => {
