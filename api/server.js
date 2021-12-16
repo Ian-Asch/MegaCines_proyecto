@@ -52,7 +52,6 @@ function handleError(res, reason, message, code) {
 // Conexión a todas la rutas.
 //app.use('/api', require('./routes/comentarios.route')); <-- Esto es un ejemplo
 app.use('/api', require('./routes/usuarios.route'));
-app.use('/api', require('./routes/usuarios-admin.route'));
 app.use('/api', require('./routes/peliculas.route'));
 app.use('/api', require('./routes/tandas.route'));
 app.use('/api', require('./routes/pagos.route'));
