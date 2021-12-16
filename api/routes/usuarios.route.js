@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const Usuario = require('../models/usuarios.model');
+const mailer = require('../templates/singup-mail');
 
 router.post('/registrar-usuario', (req, res) => {
     let body = req.body;
@@ -33,6 +34,8 @@ router.post('/registrar-usuario', (req, res) => {
                 msj: 'El usuario se registro exitosamente',
                 usuario_db
             });
+            console.log("se supone que se manda el correo a " + usuario_db.correo);
+            mailer.enviar_mail(usuario_db.correo, usuario_db.nombre, usuario_db.contrasena);
         }
     });
 
@@ -115,7 +118,7 @@ router.put('/modificar-usuario', (req, res) => {
     });
 });
 
-router.delete('/eliminar-usuario',(req,res) => {
+router.delete('/eliminar-usuario', (req, res) => {
     Usuario.findOneAndRemove({ _id: req.body.id }, (err) => {
         if (err) {
             res.json({

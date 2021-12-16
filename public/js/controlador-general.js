@@ -11,7 +11,7 @@ const primera_letra_mayuscula = (palabra) => {
     let nueva_palabra = "";
     let letra;
 
-    for(let i = 0; i < palabra.length; i++) {
+    for (let i = 0; i < palabra.length; i++) {
         if (i == 0) {
             letra = palabra[i].toUpperCase();
         } else {
@@ -20,7 +20,7 @@ const primera_letra_mayuscula = (palabra) => {
 
         nueva_palabra += letra;
     }
-    
+
     return nueva_palabra;
 };
 
@@ -32,14 +32,14 @@ const subir_imagen = (contenedor_img) => {
     //Ejemplo:
     // boton_subir_imagen.addEventListener("click",subir_imagen(contenedor_foto));
 
-    const myWidget = cloudinary.createUploadWidget({cloudName: 'MegaCines',uploadPreset: 'yyuc70y1'}, (error, result) => { 
+    const myWidget = cloudinary.createUploadWidget({ cloudName: 'MegaCines', uploadPreset: 'yyuc70y1' }, (error, result) => {
         if (!error && result && result.event === "success") {
             console.log('Imagen guardada');
             contenedor_img.src = result.info.secure_url;
         }
     });
-    
-    return () => {myWidget.open();};
+
+    return () => { myWidget.open(); };
 };
 
 
@@ -49,7 +49,7 @@ const cerrar_sesion = () => {
 };
 
 
-boton_cerrar_sesion.addEventListener("click",cerrar_sesion);
+boton_cerrar_sesion.addEventListener("click", cerrar_sesion);
 
 
 let usuario_tipo = JSON.parse(localStorage.getItem("info-usuario")).tipo_usuario;

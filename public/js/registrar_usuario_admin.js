@@ -12,6 +12,8 @@ const field_usuario = document.getElementById("field_usuario")
 const botonGuardar = document.querySelector("#boton-guardar");
 const tipo_usuario = document.getElementsByName("tipo-usuario");
 
+const boton_subir_imagen = document.querySelector("#btn-subir-imagen");
+const contenedor_foto = document.querySelector("#contenedor-foto");
 
 
 
@@ -25,8 +27,9 @@ const obtenerDatos = () => {
     let correo = input_correo_registro_admin.value;
     let contrasena = contrasena_random();
     let tipo_usuario = usuario();
+    let foto = contenedor_foto.src;
 
-    let registro_exitoso = registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, tipo_usuario);
+    let registro_exitoso = registrar_usuario(nombre, sgndNombre, apellido, sgndApellido, correo, contrasena, identificacion, nacimiento, tipo_usuario, foto);
 
     if (registro_exitoso) {
         document.querySelectorAll("input").forEach((input) => {
@@ -196,4 +199,5 @@ input_nacimiento_registro_admin.addEventListener("change", function() {
     }
 });
 
+boton_subir_imagen.addEventListener("click", subir_imagen(contenedor_foto));
 botonGuardar.addEventListener('click', validar)

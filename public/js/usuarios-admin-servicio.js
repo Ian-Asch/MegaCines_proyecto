@@ -30,7 +30,7 @@ const calcular_edad = (fecha_nacimiento) => {
     return edad;
 };
 
-const generar_nombre_completo = (nombre,segundo_nombre,primer_apellido,segundo_apellido) => {
+const generar_nombre_completo = (nombre, segundo_nombre, primer_apellido, segundo_apellido) => {
     let nombre_completo = nombre;
 
     if (segundo_nombre) {
@@ -42,11 +42,11 @@ const generar_nombre_completo = (nombre,segundo_nombre,primer_apellido,segundo_a
     if (segundo_apellido) {
         nombre_completo += ` ${segundo_apellido}`;
     }
-    
+
     return nombre_completo;
 }
 
-const registrar_usuario = async(nombre, segundo_nombre, primer_apellido, segundo_apellido, correo, contrasena, identificacion, fecha_nacimiento, tipo_usuario, foto=null) => {
+const registrar_usuario = async(nombre, segundo_nombre, primer_apellido, segundo_apellido, correo, contrasena, identificacion, fecha_nacimiento, tipo_usuario, foto = null) => {
     let registro_exitoso = false;
 
     await axios({
@@ -58,7 +58,7 @@ const registrar_usuario = async(nombre, segundo_nombre, primer_apellido, segundo
             segundo_nombre: primera_letra_mayuscula(segundo_nombre),
             primer_apellido: primera_letra_mayuscula(primer_apellido),
             segundo_apellido: primera_letra_mayuscula(segundo_apellido),
-            nombre_completo: generar_nombre_completo(nombre,segundo_nombre,primer_apellido,segundo_apellido),
+            nombre_completo: generar_nombre_completo(nombre, segundo_nombre, primer_apellido, segundo_apellido),
             correo: correo,
             contrasena: contrasena,
             identificacion: identificacion,
@@ -67,19 +67,27 @@ const registrar_usuario = async(nombre, segundo_nombre, primer_apellido, segundo
             tipo_usuario: tipo_usuario,
             foto: foto
         }
+
+
     }).then((response) => {
-        Swal.fire({
-            title: "El usuario se registro correctamente",
-            icon: 'success'
-        })
-        registro_exitoso = true;
-    }).catch((error) => {
-        Swal.fire({
-            'title': 'Error',
-            'text': response.data.err,
-            'icon': 'error'
-        })
+        if (response.data.err) {
+            Swal.fire({
+                'title': 'Error',
+                'text': 'Ya existe un usuario con las mismas credenciales',
+                'icon': 'error'
+            }).then(() => {
+                document.location.reload();
+            });
+
+        } else {
+            Swal.fire({
+                title: "El usuario se registro correctamente",
+                icon: 'success'
+            })
+            registro_exitoso = true;
+        }
     });
+
 
     return registro_exitoso;
 };
