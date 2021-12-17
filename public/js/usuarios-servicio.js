@@ -10,7 +10,7 @@ const calcular_edad = (fecha_nacimiento) => {
     let anio_actual = new Date().getFullYear();
     let mes_actual = new Date().getMonth();
     let dia_actual = new Date().getDay();
-    
+
     let anio_nacimiento = fecha_nacimiento.getFullYear();
     let mes_nacimiento = fecha_nacimiento.getMonth();
     let dia_nacimiento = fecha_nacimiento.getDay();
@@ -30,7 +30,7 @@ const calcular_edad = (fecha_nacimiento) => {
     return edad;
 };
 
-const generar_nombre_completo = (nombre,segundo_nombre,primer_apellido,segundo_apellido) => {
+const generar_nombre_completo = (nombre, segundo_nombre, primer_apellido, segundo_apellido) => {
     let nombre_completo = primera_letra_mayuscula(nombre);
 
     if (segundo_nombre) {
@@ -42,23 +42,23 @@ const generar_nombre_completo = (nombre,segundo_nombre,primer_apellido,segundo_a
     if (segundo_apellido) {
         nombre_completo += ` ${primera_letra_mayuscula(segundo_apellido)}`;
     }
-    
+
     return nombre_completo;
 }
 
-const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_apellido,correo,contrasena,identificacion,fecha_nacimiento,tipo_usuario,foto=null) => {
+const registrar_usuario = async(nombre, segundo_nombre, primer_apellido, segundo_apellido, correo, contrasena, identificacion, fecha_nacimiento, tipo_usuario, foto = null) => {
     let registro_exitoso = false;
-    
+
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-usuario',
         responseType: 'json',
-        data:{
+        data: {
             nombre: primera_letra_mayuscula(nombre),
             segundo_nombre: primera_letra_mayuscula(segundo_nombre),
             primer_apellido: primera_letra_mayuscula(primer_apellido),
             segundo_apellido: primera_letra_mayuscula(segundo_apellido),
-            nombre_completo: generar_nombre_completo(nombre,segundo_nombre,primer_apellido,segundo_apellido),
+            nombre_completo: generar_nombre_completo(nombre, segundo_nombre, primer_apellido, segundo_apellido),
             correo: correo,
             contrasena: contrasena,
             identificacion: identificacion,
@@ -71,7 +71,7 @@ const registrar_usuario = async(nombre,segundo_nombre,primer_apellido,segundo_ap
         if (response.data.err) {
             Swal.fire({
                 'title': 'Error',
-                'text': response.data.err,
+                'text': 'Ya existe un usuario con las mismas credenciales',
                 'icon': 'error'
             })
         } else {
@@ -87,7 +87,7 @@ const iniciar_sesion = async(correo, contrasena) => {
         method: 'get',
         url: 'http://localhost:3000/api/iniciar-sesion',
         responseType: 'json',
-        params: {correo: correo, contrasena: contrasena}
+        params: { correo: correo, contrasena: contrasena }
     }).then((response) => {
         if (response.data.error) {
             Swal.fire({
@@ -97,7 +97,7 @@ const iniciar_sesion = async(correo, contrasena) => {
             });
         } else {
             // El usuario inicia sesion
-            localStorage.setItem('info-usuario',JSON.stringify(response.data))
+            localStorage.setItem('info-usuario', JSON.stringify(response.data))
             if (response.data.tipo_usuario == "cliente") {
                 window.location.href = "pagina-principal-cliente.html";
             }
@@ -129,7 +129,7 @@ const modificar_usuario = async(info_usuario) => {
             'icon': 'success',
             'text': response.msj
         })
-        localStorage.setItem("info-usuario",JSON.stringify(info_usuario));
+        localStorage.setItem("info-usuario", JSON.stringify(info_usuario));
     }).catch((error) => {
         Swal.fire({
             'title': response.msj,
@@ -141,7 +141,7 @@ const modificar_usuario = async(info_usuario) => {
 
 const listar_usuarios = async() => {
     let lista_usuarios = [];
-    
+
     await axios({
         method: 'get',
         url: 'http://localhost:3000/api/listar-usuarios',
