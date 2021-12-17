@@ -14,4 +14,4 @@ const schema_pago = new mongoose.Schema({
     postal: { type: String, required: false, unique: false }
 });
 
-module.exports = mongoose.model('Pago', schema_pago, 'Pagos')
+module.exports = mongoose.model('Pago', schema_pago, 'Pagos');
