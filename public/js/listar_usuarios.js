@@ -40,11 +40,24 @@ const todo = async() => {
             secc_usuarios.appendChild(div);
 
             boton_eliminar.addEventListener("click", async() => {
-                eliminar_usuario(usuario._id);
-                Swal.fire({
-                    title: "El usuario ha sido eliminado",
-                    icon: "success"
+                const { value: accept } = await Swal.fire({
+                    icon: 'warning',
+                    text: '¿Está seguro que desea eliminar el usuario?',
+                    confirmButtonText: 'Si',
+                    showCancelButton: true,
+                    cancelButtonText: 'No'
                 });
+
+                if (accept) {
+
+                    eliminar_usuario(usuario._id);
+                    Swal.fire({
+                        title: "El usuario ha sido eliminado",
+                        icon: "success"
+                    });
+                }
+
+
                 usuarios_lista = await listar_usuarios();
                 mostrar_usuarios(usuarios_lista);
             });
