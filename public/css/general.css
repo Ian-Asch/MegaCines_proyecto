@@ -1,4 +1,4 @@
-/* Este archivo se usa en todas las paginas por eso este archivo no se cambia 
+    /* Este archivo se usa en todas las paginas por eso este archivo no se cambia 
 a menos a que el equipo apruebe. Si necesita hacer cambios en su pagina
 por favor cree otro archivo css dedicado para esa pagina */
 
@@ -9,14 +9,12 @@ html {
     font-family: "Montserrat";
     /* font-family: "Scheherazade New"; */
     /*Este es la otra fuente por si acaso*/
-
-
     /* height: 100%; <--- Esta linea hace que el color de fondo tenga la altura de la pagina */
 }
 
 main {
-    color: rgb(220,220,220);
-    min-height: 62vh;
+    color: rgb(220, 220, 220);
+    min-height: 950px;
 }
 
 a {
@@ -103,9 +101,38 @@ footer img {
     justify-content: center;
     gap: 10px;
 }
-.error{
+
+.error {
     border: solid 2px red !important;
 }
-.esconder{
+
+.esconder {
     display: none !important;
 }
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #fad80f;
