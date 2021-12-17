@@ -15,8 +15,8 @@ const todo = async() => {
         let inicio = row.insertCell();
         inicio.innerText = tanda.inicio;
 
-        let finalizacion = row.insertCell();
-        finalizacion.innerText = tanda.finalizacion;
+        // let finalizacion = row.insertCell();
+        // finalizacion.innerText = tanda.finalizacion;
 
         let hora = row.insertCell();
         hora.innerText = tanda.hora;

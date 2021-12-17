@@ -56,7 +56,7 @@ const mostarar_tandas_todo = async() => {
 
         table_row.appendChild(td_nombre_pelicula);
         table_row.appendChild(td_fecha_inicio);
-        table_row.appendChild(td_fecha_finalizacion);
+        // table_row.appendChild(td_fecha_finalizacion);
         table_row.appendChild(td_hora);
         table_row.appendChild(td_sala);
         table_row.appendChild(td_precio);
