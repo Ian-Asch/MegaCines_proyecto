@@ -19,10 +19,7 @@ const todo = async() => {
         lista.forEach((usuario) => {
             let div = document.createElement("div");
             div.classList.add("div-usuario");
-            div.addEventListener("click", () => {
-                localStorage.setItem('usuario-seleccionado', usuario.data);
-                window.location.href = "reserva_asientos.html";
-            });
+
 
             let nombre = document.createElement("h1");
             nombre.innerText = usuario.nombre_completo;
@@ -66,11 +63,3 @@ const todo = async() => {
 };
 
 todo()
-
-
-
-lista_usuarios.forEach(() => {
-            div.addEventListener("click", () => {
-                localStorage.setItem('usuario-seleccionado', usuario.data);
-                window.location.href = "reserva_asientos.html";
-            });
