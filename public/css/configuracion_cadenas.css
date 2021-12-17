@@ -1,3 +1,7 @@
+.center{
+    text-align: center;
+    margin-bottom: 20px;
+}
 .listar {
     border: 1px solid black;
     overflow: hidden;
