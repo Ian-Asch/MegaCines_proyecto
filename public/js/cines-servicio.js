@@ -33,7 +33,7 @@ const conseguir_cine = async(id_cine) => {
         responseType: "json",
         params: {id: id_cine}
     });
-
+    console.log(response.data)
     return response.data.cine;
 };
 

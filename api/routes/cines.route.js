@@ -47,7 +47,7 @@ router.get('/listar-cines',(req,res) => {
 });
 
 router.get('/buscar-cine',(req,res) => {
-    Cine.findOne({_id: req.query.id},(err,pelicula) => {
+    Cine.findOne({_id: req.query.id},(err,cine) => {
         if (err) {
             res.json({
                 msj: 'No se pudo encontrar el cine',
@@ -56,7 +56,7 @@ router.get('/buscar-cine',(req,res) => {
         } else {
             res.json({
                 msj: 'Se encontro el cine',
-                pelicula
+                cine
             });
         }
     });

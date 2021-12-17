@@ -1,8 +1,11 @@
 main{
     padding: 2vw 10vw 1vw 10vw;
+    height: 56vh;
+    display: flex;
+    justify-content: space-between;
 }
 #info-cine{
-    max-width: 60%;
+    max-width: 70%;
     margin-bottom: 40px;
     /* background-color: blue; */
     float: left;
@@ -13,7 +16,7 @@ h1{
     font-family: "Scheherazade New";
 }
 #descripcion-cine{
-    width: 70%;
+    /* width: 100%; */
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
@@ -29,11 +32,11 @@ label{
 #secc-imagen-cine{
     /* background-color: rgb(255, 144, 144); */
     display: inline-block;
-    width: 40%;
+    width: 30%;
     text-align: center;
 }
 #secc-imagen-cine img{
-    width: 90%;
+    width: 60%;
     margin-bottom: 20px;
     border: solid 2px black;
 }

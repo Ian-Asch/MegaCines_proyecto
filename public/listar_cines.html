@@ -28,39 +28,40 @@
     <main>
         <div id="barra-buscar">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Buscar">
+            <input type="text" placeholder="Buscar" id="input-buscar">
         </div>
 
-
-        <div class="div-cine">
-            <img src="imgs/CCM_cinemas.PNG" alt="CCM_cinemas">
-            <h1>CCM cinemas</h1> <br>
-            <p> Código de cadena de cine: <span>24123</span></p>
-            <p>Nombre de la cadena de cine:<span> CCM cinemas</span> </p>
-            <p>Ubicación de instalaciones:<span> San Ramón, San Carlos, Rohrmoser, Jaco. </span>
-            </p>
-
-        </div>
-
-        <div class="div-cine">
-            <img src="imgs/CinePolis.PNG" alt="CinePolis">
-            <h1>Cinepolis</h1> <br>
-            <p> Código de cadena de cine: <span>91289</span></p>
-            <p>Nombre de la cadena de cine:<span> Cinepolis</span> </p>
-            <p>Ubicación de instalaciones:<span> Desamparados, Heredia, Cartago, Escazú </span>
-            </p>
-
-        </div>
-
-        <div class="div-cine">
-            <img src="imgs/Nova.PNG" alt="Nova_cinemas">
-            <h1>Nova cinemas</h1> <br>
-            <p> Código de cadena de cine: <span>24983</span></p>
-            <p>Nombre de la cadena de cine:<span> Nova cinemas</span> </p>
-            <p>Ubicación de instalaciones:<span> Curridabat, San José, Alajuela </span>
-            </p>
-
-        </div>
+        <section id="secc-cines">
+            <div class="div-cine">
+                <img src="imgs/CCM_cinemas.PNG" alt="CCM_cinemas">
+                <h1>CCM cinemas</h1> <br>
+                <p> Código de cadena de cine: <span>24123</span></p>
+                <p>Nombre de la cadena de cine:<span> CCM cinemas</span> </p>
+                <p>Ubicación de instalaciones:<span> San Ramón, San Carlos, Rohrmoser, Jaco. </span>
+                </p>
+    
+            </div>
+    
+            <div class="div-cine">
+                <img src="imgs/CinePolis.PNG" alt="CinePolis">
+                <h1>Cinepolis</h1> <br>
+                <p> Código de cadena de cine: <span>91289</span></p>
+                <p>Nombre de la cadena de cine:<span> Cinepolis</span> </p>
+                <p>Ubicación de instalaciones:<span> Desamparados, Heredia, Cartago, Escazú </span>
+                </p>
+    
+            </div>
+    
+            <div class="div-cine">
+                <img src="imgs/Nova.PNG" alt="Nova_cinemas">
+                <h1>Nova cinemas</h1> <br>
+                <p> Código de cadena de cine: <span>24983</span></p>
+                <p>Nombre de la cadena de cine:<span> Nova cinemas</span> </p>
+                <p>Ubicación de instalaciones:<span> Curridabat, San José, Alajuela </span>
+                </p>
+    
+            </div>
+        </section>
 
     </main>
 
@@ -98,6 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/controlador-general.js"></script>
+    <script src="js/cines-servicio.js"></script>
     <script src="js/listar_cines.js"></script>
 </body>
 
