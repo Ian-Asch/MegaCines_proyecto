@@ -8,7 +8,7 @@
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.2);
-    padding: 15px 100px 15px 100px;
+    padding: 20px 100px 20px 100px;
 }
 
 .editar {
@@ -75,40 +75,12 @@
     padding: 0% 25% 0% 32%;
 }
 
-
-/*  ESTILOS PARA LA BARRA DE BUSQUEDA*/
-
-
-/*ESTILOS PARA BOTON DE EDITAR*/
-
-
-/* button {
-    background-color: #fad80f;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 12pt;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #eb8f38;
-}
-
-button:active {
-    background-color: #fad80f !important;
-} */
-
-
-/*ESTILOS PARA BOTON DE EDITAR*/
-
-
-/*ESTILOS PARA IMAGENES */
-
 .listar img {
-    /* height: 60px; */
-    width: 20%;
+    height: 150px;
+    width: 225px;
     float: right;
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .listar p {
