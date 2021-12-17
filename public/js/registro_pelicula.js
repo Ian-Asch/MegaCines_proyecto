@@ -54,7 +54,7 @@ const obtenerDatos = () => {
 const validar = () => {
     let error = false;
     //Expresiones regularess
-    let expReg_titulo = /^[a-z\s]+$/i;
+    let expReg_titulo = /^[a-z\s0-9áéíóú]+$/i;
 
     document.querySelectorAll("[required]").forEach((input) => {
         if (input.value) {

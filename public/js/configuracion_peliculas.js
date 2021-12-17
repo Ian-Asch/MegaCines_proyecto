@@ -20,7 +20,7 @@ const mostrar_peliculas = (lista) => {
         imagen_pelicula.src = pelicula.imagen;
 
         let descripcion_p = document.createElement("p");
-        descripcion_p.innerText = "Descripcion";
+        descripcion_p.innerText = "Descripcion: ";
         let des_span = document.createElement("span");
         des_span.innerText = pelicula.descripcion;
         descripcion_p.appendChild(des_span);
