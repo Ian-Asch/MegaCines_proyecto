@@ -1,3 +1,7 @@
+main{
+    min-height: 62vh;
+}
+
 .center{
     text-align: center;
     margin-bottom: 20px;
