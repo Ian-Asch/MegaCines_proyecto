@@ -30,86 +30,29 @@
             <div class="estilo_form">
                 <form>
                     <fieldset>
-
-                        <br>
-                        <label for="txt_codigo" class="labels">Código de cadena:</label>
-                        <input class="width" placeholder="ej: 31232" id="txt_codigo"> <br> <br>
-
                         <label for="txt_nombre" class="labels">Nombre de la cadena:</label>
-                        <input class="width" placeholder="Ingrese el nombre de la cadena" id="txt_cadena"> <br> <br>
-
-
-                        <label for="" class="labels">Selecione las ubicaciones donde está la cadena:</label>
-
-                        <input type="checkbox" value="San Jose" id="sanjose"> <label for="sanjose">San José</label>
-                        <input type="checkbox" value="Heredia" id="heredia"> <label for="heredia">Heredia</label>
-                        <input type="checkbox" value="Cartago" id="cartago"> <label for="cartago">Cartago</label>
-                        <input type="checkbox" value="Alajuela" id="alajuela"> <label for="alajuela">Alajuela</label>
-                        <input type="checkbox" value="limon" id="limon"> <label for="limon">Limón</label>
-                        <input type="checkbox" value="guanacaste" id="guanacaste"> <label for="guanacaste">Guanacaste</label>
-                        <input type="checkbox" value="puntarenas" id="puntarenas"> <label for="puntarenas">Puntarenas</label>
-
-
+                        <input class="width" placeholder="Ingrese el nombre de la cadena" id="txt_nombre">
                         <br> <br>
-                        <label for="" class="labels">Suba el logo de la cadena:</label> <input type="file"> <br> <br>
 
-                        <label for="" class="labels">Selecione los tipos de asiento:</label>
-                        <input type="checkbox" id="VIP" name="VIP" value="VIP">
-                        <label for="VIP">VIP</label>
-                        <input type="checkbox" id="ley" name="Ley" value="Ley">
-                        <label for="">Ley 7600</label>
-                        <input type="checkbox" id="regular" name="regular" value="regular">
-                        <label for="regular">Regular</label> <br> <br>
+                        <label for="descripcion-cine" class="labels">Descripcion</label>
+                        <input type="text" class="width" id="descripcion-cine">
+                        <br> <br>
 
+                        <label for="direccion-cine" class="labels">Direccion</label>
+                        <input type="text" class="width" id="direccion-cine">
+                        <br> <br>
 
+                        <label for="" class="labels">Suba el logo de la cadena:</label>
+                        <button type="button" id="btn-subir-imagen">Subir imagen</button>
+                        <br> <br>
 
-                        <label for="" class="labels">Selecione las categorías para la cadena de cine:</label>
-                        <input type="checkbox" id="terror" name="terror" value="terror">
-                        <label for="terror">Terror</label>
-                        <input type="checkbox" id="ciencia" name="Ciencia" value="Ciencia">
-                        <label for="ciencia">Ciencia ficción</label>
-                        <input type="checkbox" id="drama" name="drama" value="drama">
-                        <label for="drama">Drama</label>
-                        <input type="checkbox" id="accion" name="accion" value="accion">
-                        <label for="accion">Acción</label>
-                        <input type="checkbox" id="comedia" name="comedia" value="comedia">
-                        <label for="comedia">Comedia</label>
-                        <input type="checkbox" id="infantiles" name="infantiles" value="infantiles">
-                        <label for="infantiles">Infantiles</label> <br> <br>
-
-                        <label for="" class="labels">Tipo de salas:</label>
-                        <input type="checkbox" id="sala_regular" name="sala_regular" value="sala_regular">
-                        <label for="sala_regular">Regular</label>
-                        <input type="checkbox" id="2d" name="2d" value="2d">
-                        <label for="2d">2D</label>
-                        <input type="checkbox" id="3d" name="3d" value="3d">
-                        <label for="3d">3D</label>
-                        <input type="checkbox" id="4d" name="4d" value="4d">
-                        <label for="4d">4D</label>
-                        <input type="checkbox" id="imax" name="imax" value="imax">
-                        <label for="imax">IMAX</label> <br> <br>
-
-                        <label for="" type="text" class="labels">Margen de ganacia:</label>
-                        <input type="radio" id="15" name="porcentaje" value="15" checked>
-                        <label for="15">15%</label>
-                        <input type="radio" id="20" name="porcentaje" value="20">
-                        <label for="20">20%</label>
-                        <input type="radio" id="25" name="porcentaje" value="25">
-                        <label for="25">25%</label>
-                        <input type="radio" id="30" name="porcentaje" value="30">
-                        <label for="30">30%</label>
-                        <input type="radio" id="35" name="porcentaje" value="35">
-                        <label for="35">35%</label> <br> <br>
+                        <img id="logo-cine">
                     </fieldset>
-
-                    </fieldset>
-
-
                 </form>
 
                 <div>
-
-                    <button type="button" id="btn-regresar" onclick="window.location.href='configuracion_cadenas.html'">Regresar</button> <button type="button" id="btn-registrar">Registrar</button>
+                    <button type="button" id="btn-regresar">Regresar</button>
+                    <button type="button" id="btn-registrar">Registrar cine</button>
                 </div>
             </div>
 
@@ -148,11 +91,12 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="js/registrar_cadena.js"></script>
     <script src="https://kit.fontawesome.com/997ce7a125.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js "></script>
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="js/controlador-general.js"></script>
+    <script src="js/cines-servicio.js"></script>
+    <script src="js/registrar_cadena.js"></script>
     <!-- Poner script de javascript en esta linea -->
 </body>
 

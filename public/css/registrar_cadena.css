@@ -1,5 +1,12 @@
+#logo-cine{
+    width: 350px;
+    max-height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 .estilo_form {
-    height: 650px;
+    min-height: 250px;
     width: 80%;
     margin: auto;
     background-color: rgba(223, 223, 223, 0.1);

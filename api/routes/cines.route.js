@@ -10,7 +10,8 @@ router.post('/registrar-cine', (req, res) => {
     let nuevo_cine = new Cine({
         nombre: body.nombre,
         descripcion: body.descripcion,
-        direccion: body.direccion
+        direccion: body.direccion,
+        imagen: body.imagen
     });
 
     nuevo_cine.save((err, cine_db) => {

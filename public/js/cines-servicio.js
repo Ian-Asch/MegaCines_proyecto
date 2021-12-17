@@ -1,4 +1,4 @@
-const registrar_cine = async(nombre,descripcion,direccion) => {
+const registrar_cine = async(nombre,descripcion,direccion,imagen=null) => {
     await axios({
         method: 'post',
         url: 'http://localhost:3000/api/registrar-cine',
@@ -6,22 +6,23 @@ const registrar_cine = async(nombre,descripcion,direccion) => {
         data: {
             nombre: nombre,
             descripcion: descripcion,
-            direccion: direccion
+            direccion: direccion,
+            imagen: imagen
         }
     }).then((response) => {
         if (response.data.err) {
             Swal.fire({
                 title: 'Error',
-                text: response.data.err,
+                text: "No se pudo registrar el cine",
                 icon: 'error'
             })
+            console.log(response.data)
         } else {
             Swal.fire({
                 title: 'Se registro el cine exitosamente',
                 icon: 'success'
             })
         }
-        console.log(response.data);
     });
 };
 
@@ -36,3 +37,25 @@ const conseguir_cine = async(id_cine) => {
     return response.data.cine;
 };
 
+const listar_cines = async() => {
+    let lista_cines = [];
+
+    await axios({
+        method: 'get',
+        url: 'http://localhost:3000/api/listar-cines',
+        responseType: 'json'
+    }).then((response) => {
+        lista_cines = response.data.lista_cines;
+    });
+
+    return lista_cines;
+};
+
+const eliminar_cine = async(id_cine) => {
+    await axios({
+        method: 'delete',
+        url: 'http://localhost:3000/api/eliminar-cine',
+        responseType: 'json',
+        data: { id: id_cine }
+    });
+};
