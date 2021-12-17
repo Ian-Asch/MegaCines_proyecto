@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/formularios.css">
-    <link rel="stylesheet" href="css/registrar_usuario_admin.css">
+    <link rel="stylesheet" href="css/registrar_tandas.css">
 
 </head>
 
@@ -36,12 +36,11 @@
     <main>
         <h1 class="texto_centrado">Registro Tanda</h1>
 
-
         <form name="data-tanda" action="*" method="POST" id="formtanda">
 
-
             <div id="div-inputs">
-                <div> 
+                <div>
+                    <label for="slt-pelicula">Seleccione la pelicula</label>
                     <select name="slt-pelicula" id="slt-pelicula">
                         <option value=""></option>
                     </select>
@@ -68,19 +67,15 @@
                 </div>
             </div>
 
-           
 
             <div id="sect-abajo">
              
                 <div id="guardar-boton">
                     <button type="button" id="boton-guardar">Guardar</button>
                 </div>
-
+            </div>
         </form>
-
-
     </main>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

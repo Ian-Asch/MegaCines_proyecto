@@ -1,0 +1,40 @@
+html{
+    height: 100%;
+}
+
+#slt-pelicula{
+    width: 48%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+option{
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 25pt;
+    font-weight: bold;
+    margin: 50px 0 50px 0;
+}
+
+fieldset {
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 100px;
+    padding-bottom: 0 !important;
+}
+
+.radio-label {
+    display: inline;
+}
+
+h2 {
+    font-weight: bolder;
+}
+
+#sect-abajo{
+    clear: both;
+}
