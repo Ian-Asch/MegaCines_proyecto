@@ -15,21 +15,21 @@ const mostrar_peliculas = (lista) => {
 
         let titulo_pelicula = document.createElement("h1");
         titulo_pelicula.innerText = pelicula.titulo;
-        
+
         let imagen_pelicula = document.createElement("img");
         imagen_pelicula.src = pelicula.imagen;
 
         let descripcion_p = document.createElement("p");
-        descripcion_p.innerText = "Descripcion: ";
+        descripcion_p.innerText = "Descripción: ";
         let des_span = document.createElement("span");
         des_span.innerText = pelicula.descripcion;
         descripcion_p.appendChild(des_span);
 
-        let boton_editar =  document.createElement("button");
+        let boton_editar = document.createElement("button");
         boton_editar.type = "button";
         boton_editar.innerText = "Editar";
 
-        let boton_eliminar =  document.createElement("button");
+        let boton_eliminar = document.createElement("button");
         boton_eliminar.type = "button";
         boton_eliminar.innerText = "Eliminar";
 
@@ -43,11 +43,11 @@ const mostrar_peliculas = (lista) => {
 
         secc_peliculas.appendChild(div_pelicula);
 
-        boton_editar.addEventListener("click",() => {
+        boton_editar.addEventListener("click", () => {
             window.location.href = `editar_pelicula.html`;
         })
 
-        boton_eliminar.addEventListener("click",async() => {
+        boton_eliminar.addEventListener("click", async() => {
             eliminar_pelicula(pelicula._id);
             Swal.fire({
                 title: "Se elimino la pelicula",
@@ -65,7 +65,7 @@ const todo = async() => {
 
     mostrar_peliculas(peliculas_lista);
 
-    barra_buscar.addEventListener("keyup",() => {
+    barra_buscar.addEventListener("keyup", () => {
         let filtro_texto = barra_buscar.value.toLowerCase();
 
         let lista_filtrada = peliculas_lista.filter((pelicula) => {
