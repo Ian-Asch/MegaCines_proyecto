@@ -1,69 +1,69 @@
   'use strict';
 
-const registrar_tanda = async(inicio,finalizacion,hora,sala,precio,pelicula) => {
-    let registro_exitoso = false;
+  const registrar_tanda = async(inicio, hora, sala, precio, pelicula) => {
+      let registro_exitoso = false;
 
-    let response = await axios({
-        method: 'post',
-        url: 'http://localhost:3000/api/registrar-tanda',
-        responseType: 'json',
-        data:{
-            inicio: inicio,
-            finalizacion: finalizacion,
-            hora: hora,
-            sala: sala,
-            precio: precio,
-            pelicula: pelicula
-        }
-    });
-    console.log(response.data)
-    if (response.data.err) {
-        Swal.fire({
-            title: "No se pudo registrar la tanda",
-            icon: 'error',
-            text: response.err
-        })
-    } else {
-        Swal.fire({
-            title: "La tanda se registro correctamente",
-            icon: 'success'
-        })
-        registro_exitoso = true;
-    }
+      let response = await axios({
+          method: 'post',
+          url: 'http://localhost:3000/api/registrar-tanda',
+          responseType: 'json',
+          data: {
+              inicio: inicio,
 
-    return registro_exitoso;
-};
-const listar_tandas = async() => {
-    let lista_tandas = [];
-    
-    await axios({
-        method: 'get',
-        url: 'http://localhost:3000/api/listar-tandas',
-        responseType: 'json'
-    }).then((response) => {
-        lista_tandas = response.data.lista_tandas;
-    }).catch((error) => {});
+              hora: hora,
+              sala: sala,
+              precio: precio,
+              pelicula: pelicula
+          }
+      });
+      console.log(response.data)
+      if (response.data.err) {
+          Swal.fire({
+              title: "No se pudo registrar la tanda",
+              icon: 'error',
+              text: response.err
+          })
+      } else {
+          Swal.fire({
+              title: "La tanda se registro correctamente",
+              icon: 'success'
+          })
+          registro_exitoso = true;
+      }
 
-    return lista_tandas;
+      return registro_exitoso;
+  };
+  const listar_tandas = async() => {
+      let lista_tandas = [];
 
-    //Consegur el valor de este return puede ser complicado
-};
+      await axios({
+          method: 'get',
+          url: 'http://localhost:3000/api/listar-tandas',
+          responseType: 'json'
+      }).then((response) => {
+          lista_tandas = response.data.lista_tandas;
+      }).catch((error) => {});
 
-const conseguir_tandas_pelicula = async(pelicula) => {
-    let lista_tandas = await listar_tandas();
+      return lista_tandas;
 
-    let lista_filtrada = lista_tandas.filter((tanda) => {
-        return tanda.pelicula == pelicula;
-    });
+      //Consegur el valor de este return puede ser complicado
+  };
 
-    return lista_filtrada
-};
+  const conseguir_tandas_pelicula = async(pelicula) => {
+      let lista_tandas = await listar_tandas();
 
-const eliminar_tanda = async(id_tanda) => {
-    await axios({
-        method: 'delete',
-        url: 'http://localhost:3000/api/eliminar-tanda',
-        responseType: 'json',
-        data: { id: id_tanda }
-    });
-};
+      let lista_filtrada = lista_tandas.filter((tanda) => {
+          return tanda.pelicula == pelicula;
+      });
+
+      return lista_filtrada
+  };
+
+  const eliminar_tanda = async(id_tanda) => {
+      await axios({
+          method: 'delete',
+          url: 'http://localhost:3000/api/eliminar-tanda',
+          responseType: 'json',
+          data: { id: id_tanda }
+      });
+  };

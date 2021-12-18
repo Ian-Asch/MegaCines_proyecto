@@ -1,11 +1,15 @@
 'use strict';
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+const id_tanda = params[""];
+
 const lista_asientos = document.querySelectorAll(".butaca");
 const input_number = document.querySelector("input[type=number]");
 let numero_maximo = 1;
 let butacas_seleccionadas = 0;
 
-input_number.addEventListener("change",() => {
+input_number.addEventListener("change", () => {
     numero_maximo = Number(input_number.value);
     if (numero_maximo == 0) {
         numero_maximo = 1;
@@ -19,7 +23,7 @@ input_number.addEventListener("change",() => {
 });
 
 lista_asientos.forEach((butaca) => {
-    butaca.addEventListener('click',() => {
+    butaca.addEventListener('click', () => {
         if (butaca.classList.contains("seleccion")) {
             butaca.classList.remove("seleccion");
             butacas_seleccionadas--;
@@ -72,7 +76,7 @@ lista_asientos.forEach((butaca) => {
 
 //     card.appendChild(numero_asiento);
 //     card.appendChild(opciones);
-    
+
 //     card.addEventListener('mouseover',() => {
 //         opciones.classList.remove('esconder');
 //     });

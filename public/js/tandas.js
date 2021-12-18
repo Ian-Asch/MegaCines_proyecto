@@ -27,7 +27,7 @@ const todo = async() => {
         let precio = row.insertCell();
         precio.innerText = tanda.precio
 
-        row.addEventListener("click",() => {
+        row.addEventListener("click", () => {
             window.location.href = `reserva_asientos.html?=${tanda._id}`;
         });
     });

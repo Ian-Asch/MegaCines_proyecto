@@ -1,138 +1,131 @@
     /* Este archivo se usa en todas las paginas por eso este archivo no se cambia 
 a menos a que el equipo apruebe. Si necesita hacer cambios en su pagina
 por favor cree otro archivo css dedicado para esa pagina */
-
-html {
-    background-image: linear-gradient(#69057e, #50035f 30%, black);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-family: "Montserrat";
-    /* font-family: "Scheherazade New"; */
-    /*Este es la otra fuente por si acaso*/
-    /* height: 100%; <--- Esta linea hace que el color de fondo tenga la altura de la pagina */
-}
-
-main {
-    color: rgb(220, 220, 220);
-    min-height: 950px;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-header {
-    background-color: black;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    margin-bottom: 30px;
-}
-
-header img {
-    height: 100%;
-    cursor: pointer;
-}
-
-header a {
-    color: white;
-    margin: 10px;
-}
-
-nav {
-    width: 100%;
-    margin-left: 18px;
-}
-
-.boton-header {
-    min-width: 120px;
-    margin-right: 20px;
-}
-
-button {
-    background-color: #fad80f;
-    padding: 8px;
-    border-radius: 8px;
-    border: none;
-    font-size: 12pt;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #eb8f38;
-}
-
-button:active {
-    background-color: #fad80f !important;
-}
-
-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    color: #eb8f38;
-    margin-top: 30px;
-    /*width: 100%; <---- Estas 3 lineas son las que hacen que el footer se vaya hacia abajo*/
-    /* bottom: 0; <---- */
-    /* position: fixed; <---- */
-}
-
-#div-logo-info {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-footer a {
-    color: #eb8f38;
-}
-
-footer img {
-    width: 6%
-}
-
-#iconos-footer {
-    font-size: 16pt;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.error {
-    border: solid 2px red !important;
-}
-
-.esconder {
-    display: none !important;
-}
-
-
-/* width */
-
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-
-/* Track */
-
- ::-webkit-scrollbar-track {
-    background: #000000;
-}
-
-
-/* Handle */
-
- ::-webkit-scrollbar-thumb {
-    background: #555;
-}
-
-
-/* Handle on hover */
-
- ::-webkit-scrollbar-thumb:hover {
-    background: #fad80f;
+    
+    html {
+        background-image: linear-gradient(#69057e, #50035f 30%, black);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font-family: "Montserrat";
+        /* font-family: "Scheherazade New"; */
+        /*Este es la otra fuente por si acaso*/
+        /* height: 100%; <--- Esta linea hace que el color de fondo tenga la altura de la pagina */
+    }
+    
+    main {
+        color: rgb(220, 220, 220);
+        min-height: 950px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    header {
+        background-color: black;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    
+    header img {
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    header a {
+        color: white;
+        margin: 10px;
+    }
+    
+    nav {
+        width: 100%;
+        margin-left: 18px;
+    }
+    
+    .boton-header {
+        min-width: 120px;
+        margin-right: 20px;
+    }
+    
+    button {
+        background-color: #fad80f;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        font-size: 12pt;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #eb8f38;
+    }
+    
+    button:active {
+        background-color: #fad80f !important;
+    }
+    
+    footer {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 30px;
+        color: #eb8f38;
+        margin-top: 30px;
+        /*width: 100%; <---- Estas 3 lineas son las que hacen que el footer se vaya hacia abajo*/
+        /* bottom: 0; <---- */
+        /* position: fixed; <---- */
+    }
+    
+    #div-logo-info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    footer a {
+        color: #eb8f38;
+    }
+    
+    footer img {
+        width: 6%
+    }
+    
+    #iconos-footer {
+        font-size: 16pt;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .error {
+        border: solid 2px red !important;
+    }
+    
+    .esconder {
+        display: none !important;
+    }
+    /* width */
+    
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    /* Track */
+    
+     ::-webkit-scrollbar-track {
+        background: #000000;
+    }
+    /* Handle */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #555;
+    }
+    /* Handle on hover */
+    
+     ::-webkit-scrollbar-thumb:hover {
+        background: #fad80f;
+    }
